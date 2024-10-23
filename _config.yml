@@ -20,7 +20,7 @@ baseurl: ''
 lang:                  ko
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title: 걸어서 코드속으로
+title: MiloDev
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -28,7 +28,7 @@ description:           >
   블로그!
 
 # A shorter description for the sidebar.
-tagline: walking into the code
+tagline:  딥다이브를 위해 노력하자!
 
 # A list of keywords for your blog
 keywords:              ["백엔드", "기술 블로그", "개발"]
@@ -36,7 +36,7 @@ keywords:              ["백엔드", "기술 블로그", "개발"]
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/logo.png
+logo:                  /assets/icons/icon-192x192.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -50,22 +50,38 @@ author:
 menu:
   - title:             About
     url:               /about/
-  - title:             Study
-    url:               /study/
   - title:             Project
     url:               /project/
+    submenu:
+      - title:  Devita
+        url:      /devita/
+      - title:  TradeHam
+        url:      /tradeham/
+      - title:  Bami
+        url:      /bami/
+  - title:             Study
+    url:               /study/
+    submenu:
+      - title:  Java
+        url:      /java/
+      - title:  Spring
+        url:      /spring/
+      - title:  Database
+        url:      /database/
+      - title:  CS
+        url:      /cs/
+      - title:  Study-etc
+        url:      /study-etc/
   - title:             Blog
     url:               /blog/
+    submenu:
+      - title:  Daily
+        url:      /daily/
+      - title:  Travel
+        url:      /travel/
+      - title:  Blog-etc
+        url:      /blog-etc/
 
-# Add links to the footer.
-# Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
-legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2024. All rights reserved.
@@ -82,7 +98,8 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 # This will use the gem `jekyll-theme-hydejack`, as defined in the sibling `Gemfile`.
-remote_theme: hydecorp/hydejack@v9
+# remote_theme: hydecorp/hydejack@v9
+theme: jekyll-theme-hydejack
 
 # You can uncomment `theme` above and replace it with `remote_theme` here iff you are using the 
 # `jekyll-remote-theme` plugin (which is the case when using the legacy GitHub Pages pipeline).
@@ -171,7 +188,11 @@ defaults:
     values:
       seo:
         type:          WebPage
-
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+      
 kramdown:
   math_engine:         katex
   math_engine_opts:    {}
@@ -421,3 +442,7 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
+
+sass:
+  sass_dir: _sass
+  style: compressed
