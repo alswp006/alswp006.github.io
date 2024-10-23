@@ -1,731 +1,844 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://alswp006.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alswp006.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2024-10-22T04:36:13+00:00</updated><id>https://alswp006.github.io/feed.xml</id><title type="html">걸어서 코드속으로</title><subtitle>블로그!
-</subtitle><author><name>김민제</name><email>alswp006@gmail.com</email></author><entry><title type="html">X Marks the Spot in Hydejack 9.2</title><link href="https://alswp006.github.io/example/2024-09-08-x-marks-the-spot-in-hydejack-9-2/" rel="alternate" type="text/html" title="X Marks the Spot in Hydejack 9.2" /><published>2024-09-08T00:00:00+00:00</published><updated>2024-10-22T04:35:37+00:00</updated><id>https://alswp006.github.io/example/x-marks-the-spot-in-hydejack-9-2</id><content type="html" xml:base="https://alswp006.github.io/example/2024-09-08-x-marks-the-spot-in-hydejack-9-2/"><![CDATA[<h2 id="new-social-media-icons">New Social Media Icons</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://alswp006.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alswp006.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2024-10-23T07:54:54+00:00</updated><id>https://alswp006.github.io/feed.xml</id><title type="html">MiloDev</title><subtitle>블로그!
+</subtitle><author><name>김민제</name><email>alswp006@gmail.com</email></author><entry><title type="html">팀 프로젝트를 위한 JIRA 가이드라인</title><link href="https://alswp006.github.io/project/devita/2024-10-23-Jira/" rel="alternate" type="text/html" title="팀 프로젝트를 위한 JIRA 가이드라인" /><published>2024-10-23T01:45:51+00:00</published><updated>2024-10-23T07:54:08+00:00</updated><id>https://alswp006.github.io/project/devita/Jira</id><content type="html" xml:base="https://alswp006.github.io/project/devita/2024-10-23-Jira/"><![CDATA[<style>
+.toc {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 
-<p>Lots of things have changed in the world of social media since the last release. To bring Hydejack up to date, the default logo for Twitter has changed:</p>
+.toc ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
 
-<p class="larger"><span class="icon-twitter-old"></span> → <span class="icon-twitter"></span></p>
+.toc li {
+  margin: 5px 0;
+}
 
-<!--more-->
+.toc a {
+  color: #495057;
+  text-decoration: none;
+}
 
-<ul class="large-only" id="markdown-toc">
-  <li><a href="#new-social-media-icons" id="markdown-toc-new-social-media-icons">New Social Media Icons</a></li>
-  <li><a href="#dark-mode-is-now-free" id="markdown-toc-dark-mode-is-now-free">Dark Mode is Now Free</a></li>
-  <li><a href="#updated-docs" id="markdown-toc-updated-docs">Updated Docs</a></li>
-  <li><a href="#google-fonts-off-by-default" id="markdown-toc-google-fonts-off-by-default">Google Fonts Off by Default</a></li>
-</ul>
+.toc a:hover {
+  color: #228be6;
+  text-decoration: none;
+}
+</style>
 
-<p class="note smaller">If you prefer the old Twitter logo, you can use it through <code class="language-plaintext highlighter-rouge">twitter-old</code>.</p>
-
-<p>There are also many new social media networks, some of which are now included by default:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Name</th>
-      <th>Icon</th>
-      <th style="text-align: left">Name</th>
-      <th>Icon</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">signal</td>
-      <td><span class="larger icon-signal"></span></td>
-      <td style="text-align: left">threads</td>
-      <td><span class="larger icon-threads"></span></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">playstation</td>
-      <td><span class="larger icon-playstation"></span></td>
-      <td style="text-align: left">messenger</td>
-      <td><span class="larger icon-messenger"></span></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">stripe</td>
-      <td><span class="larger icon-stripe"></span></td>
-      <td style="text-align: left">slack</td>
-      <td><span class="larger icon-slack"></span></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">gitlab</td>
-      <td><span class="larger icon-gitlab"></span></td>
-      <td style="text-align: left">line</td>
-      <td><span class="larger icon-line"></span></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">medium</td>
-      <td><span class="larger icon-medium"></span></td>
-      <td style="text-align: left">xbox</td>
-      <td><span class="larger icon-xbox"></span></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">wechat</td>
-      <td><span class="larger icon-wechat"></span></td>
-      <td style="text-align: left">discord</td>
-      <td><span class="larger icon-discord"></span></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">mastodon</td>
-      <td><span class="larger icon-mastodon"></span></td>
-      <td style="text-align: left">twitter</td>
-      <td><span class="larger icon-twitter"></span></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>If your perferred network is missing, note that you can always <a href="/docs/advanced/#adding-a-custom-social-media-icon">follow the steps to add custom icons</a> from the docs, which is what I did for this release.</p>
-
-<h2 id="dark-mode-is-now-free">Dark Mode is Now Free</h2>
-<p>When I first added dark mode to Hydejack it was still considered a novelty. 
-Unity, a popular game engine, was limiting dark mode to its paid version at the time — a model that I’ve adopted for Hydejack. 
-Today, dark mode is considered a minimal requirement for any new theme and to reflect that reality, 
-starting with Hydejack 9.2, dark mode is included in all versions of Hydejack.</p>
-
-<h2 id="updated-docs">Updated Docs</h2>
-<p>The documentation has been updated with a focus on deployment via GitHub Actions and CI pipelines. 
-I’ve added a chapter on how to <a href="/docs/deploy/" class="heading flip-title">Deploy</a> and updated many of the existing chapters.</p>
-
-<p>The deployment experience for <strong>PRO customers</strong> has also been improved. You are now automatically added to a “PRO Customers” team on GitHub if you provide a GitHub username during checkout (existing customers can request an invite through <a href="mailto:mail@hydejack.com">mail@hydejack.com</a>).
-Members of this team have read access to the pro repository, which allows the theme to be fetched during a CI run. 
-For detail, check out the new <a href="/docs/deploy/" class="heading flip-title">Deploy</a> chapter.</p>
-
-<h2 id="google-fonts-off-by-default">Google Fonts Off by Default</h2>
-<p>Google Fonts are now turned off by default in the starter kits, but remain in use on hydejack.com for visual continuity. All associated options continue to work as they did before. Only new users have to enable them in the config file if they want to match the look of hydejack.com.</p>
-
-<p>The reason for this change is that sensibilities around privacy have changed in recent years. 
-No Google product feels appropriate as a default option for an ownership and self-hosting oriented product like Hydejack.</p>
-
-<p>To restore the old look that matches hydejack.com, add the following to your <code class="language-plaintext highlighter-rouge">_config.yml</code> file:</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">google_fonts</span><span class="pi">:</span>          <span class="s">Roboto+Slab:700|Noto+Sans:400,400i,700,700i</span>
-<span class="na">font</span><span class="pi">:</span>                  <span class="s">Noto Sans, Helvetica, Arial, sans-serif</span>
-<span class="na">font_heading</span><span class="pi">:</span>          <span class="s">Roboto Slab, Helvetica, Arial, sans-serif</span>
-</code></pre></div></div>
-
-<p>On a related note, I’ve also decided against updating the included Google Analytics script, in part because the upgrade path is incomprehensible, but also due the the same privacy concerns that make Google Fonts a bad default option. I recommend independent analytics services like 
-<a href="https://plausible.io">Plausible</a>, <a href="https://matomo.org/">Matomo</a> or maybe even <a href="https://counterscale.dev">Counterscale</a> (if you are a Cloudflare customer).
-You can include the tracking scripts by <a href="/docs/basics/#adding-custom-html-to-the-head">adding them as custom HTML</a>.</p>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[This feature release adds new social media icons for 2024 and makes dark mode available to everyone.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://alswp006.github.io/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="https://alswp006.github.io/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="https://alswp006.github.io/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+00:00</published><updated>2024-10-22T04:35:37+00:00</updated><id>https://alswp006.github.io/example/introducing-hydejack-9</id><content type="html" xml:base="https://alswp006.github.io/example/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
-
-<p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
-
-<ul class="large-only" id="markdown-toc">
-  <li><a href="#linking-in-style" id="markdown-toc-linking-in-style">Linking in Style</a></li>
-  <li><a href="#ready-for-the-big-screen" id="markdown-toc-ready-for-the-big-screen">Ready for the Big Screen</a></li>
-  <li><a href="#whats-in-the-cards" id="markdown-toc-whats-in-the-cards">What’s in the Cards?</a></li>
-  <li><a href="#built-in-search" id="markdown-toc-built-in-search">Built-In Search</a></li>
-  <li><a href="#auto-hiding-navbar" id="markdown-toc-auto-hiding-navbar">Auto-Hiding Navbar</a></li>
-  <li><a href="#sticky-table-of-contents" id="markdown-toc-sticky-table-of-contents">Sticky Table of Contents</a></li>
-  <li><a href="#and-much-more" id="markdown-toc-and-much-more">…and much more</a></li>
-  <li><a href="#even-more-to-come" id="markdown-toc-even-more-to-come">Even More to Come</a></li>
-  <li><a href="#get-it-now" id="markdown-toc-get-it-now">Get It Now</a></li>
-</ul>
-
-<h2 id="linking-in-style">Linking in Style</h2>
-
-<p>Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the <a href="#linking-in-style">link style</a> has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.</p>
-
-<h2 id="ready-for-the-big-screen">Ready for the Big Screen</h2>
-
-<p>The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.</p>
-
-<p>With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
-
-<h2 id="whats-in-the-cards">What’s in the Cards?</h2>
-
-<p>Hydejack 9 now lets you use content cards for both projects and posts. 
-The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the <code class="language-plaintext highlighter-rouge">blog</code> layout. The new <code class="language-plaintext highlighter-rouge">grid</code> layout lets you do that.</p>
-
-<p>Good images are key to making the most out of content cards. For that reason, a <a href="/docs/basics/#adding-images">chapter on images</a> has been added to the documentation.</p>
-
-<h2 id="built-in-search">Built-In Search</h2>
-
-<p>Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
-
-<p>The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.</p>
-
-<p>Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.</p>
-
-<h2 id="auto-hiding-navbar">Auto-Hiding Navbar</h2>
-
-<p>A navbar that’s there when you need it, and disappears when you don’t. Simple as that.</p>
-
-<h2 id="sticky-table-of-contents">Sticky Table of Contents</h2>
-
-<p>Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
-What’s unique about it is that it simply picks up the table of contents already created by kramdown’s <code class="language-plaintext highlighter-rouge">{:toc}</code> tag and transparently upgrades it to a fully dynamic version.</p>
-
-<h2 id="and-much-more">…and much more</h2>
-
-<p>Other noteworthy changes include:</p>
+<h1 id="팀-프로젝트를-위한-jira-가이드라인">팀 프로젝트를 위한 JIRA 가이드라인</h1>
+<h3 id="이슈-만드는-거-보려면-아래의-이슈-만들어보기로">이슈 만드는 거 보려면 아래의 이슈 만들어보기로!!</h3>
+<h2 id="목차">목차</h2>
 <ul>
-  <li>Support for Jekyll 4</li>
-  <li>Choice between MathJax and KaTeX for math rendering</li>
-  <li>Use of <code class="language-plaintext highlighter-rouge">jekyll-include-cache</code> for drastically improved page building speeds</li>
-  <li>New variables configuration file — adjust content width, sidebar width, font size, etc…</li>
-  <li>…and the option to disable grouping projects by year.</li>
-</ul>
-
-<p>Read the the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> for the full scope of features and improvements made in Hydejack 9.
-Maybe just glance at it to confirm that it is indeed a pretty long list.</p>
-
-<h2 id="even-more-to-come">Even More to Come</h2>
-
-<p>New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.</p>
-
-<h2 id="get-it-now">Get It Now</h2>
-<p>The Free Version of Hydejack is now availabe on <a href="https://rubygems.org/gems/jekyll-theme-hydejack">RubyGems</a>
-and for the first time also on <a href="https://github.com/hydecorp/hydejack/packages">GitHub Packages</a>. 
-The source code is available on <a href="https://github.com/hydecorp/hydejack">GitHub</a> as always.</p>
-
-<p>The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:</p>
-
-<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-    </li>
-    <li id="fn:2" role="doc-endnote">
-
-      <p>Search was mainly tested for English and German. Please let me know about issues in other languages. 
-  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
-  If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://alswp006.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="https://alswp006.github.io/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="https://alswp006.github.io/example/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+00:00</published><updated>2024-10-22T04:35:37+00:00</updated><id>https://alswp006.github.io/example/example-content-iii</id><content type="html" xml:base="https://alswp006.github.io/example/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
-Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
-so that your content remains compatible with other Jekyll themes.</p>
-
-<h2 id="large-tables">Large Tables</h2>
-
-<table class="scroll-table">
-  <thead>
-    <tr>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-    </tr>
-    <tr>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-    </tr>
-    <tr>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-    </tr>
-    <tr>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="code-blocks">Code blocks</h2>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
-<span class="c1">// arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="c1">// Call the function</span>
-<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span>
-</code></pre></div></div>
-
-<h2 id="math">Math</h2>
-<p>Lorem ipsum <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>.</p>
-
-<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>ϕ</mi><mrow><mo fence="true">(</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><msub><mi>e</mi><mi>i</mi></msub><mo separator="true">,</mo><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>y</mi><mi>j</mi></msub><msub><mi>e</mi><mi>j</mi></msub><mo fence="true">)</mo></mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><msub><mi>y</mi><mi>j</mi></msub><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mi>i</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo lspace="0em" rspace="0em">⋯</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi><mi mathvariant="normal">⋮</mi><mpadded height="0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo lspace="0em" rspace="0em">⋱</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi><mi mathvariant="normal">⋮</mi><mpadded height="0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo lspace="0em" rspace="0em">⋯</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>ϕ</mi><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mrow><mo fence="true">(</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>y</mi><mn>1</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi><mi mathvariant="normal">⋮</mi><mpadded height="0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>y</mi><mi>n</mi></msub></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
-  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
-            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
-            &amp;= (x_1, \ldots, x_n)
-               \left(\begin{array}{ccc}
-                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
-                 \vdots          &amp; \ddots &amp; \vdots         \\
-                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
-               \end{array}\right)
-               \left(\begin{array}{c}
-                 y_1    \\
-                 \vdots \\
-                 y_n
-               \end{array}\right)
-\end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:13.2814em;vertical-align:-6.3907em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:6.8907em;"><span style="top:-9.5207em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span><span style="top:-5.2093em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"></span></span><span style="top:-0.1693em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:6.3907em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:6.8907em;"><span style="top:-9.5207em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal">ϕ</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4138em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span></span></span><span style="top:-5.2093em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.4138em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-0.1693em;"><span class="pstrut" style="height:4.38em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,684c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-692c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.2275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.3675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-2.1675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.04em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋯</span></span></span><span style="top:-3.18em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋱</span></span></span><span style="top:-1.98em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋯</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.2275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-3.3675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-2.1675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,609
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-744c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M863,9c0,-2,-2,-5,-6,-9c0,0,-17,0,-17,0c-12.7,0,-19.3,0.3,-20,1
-c-5.3,5.3,-10.3,11,-15,17c-242.7,294.7,-395.3,682,-458,1162c-21.3,163.3,-33.3,349,
--36,557 l0,684c0.2,6,0,26,0,60c2,159.3,10,310.7,24,454c53.3,528,210,
-949.7,470,1265c4.7,6,9.7,11.7,15,17c0.7,0.7,7,1,19,1c0,0,18,0,18,0c4,-4,6,-7,6,-9
-c0,-2.7,-3.3,-8.7,-10,-18c-135.3,-192.7,-235.5,-414.3,-300.5,-665c-65,-250.7,-102.5,
--544.7,-112.5,-882c-2,-104,-3,-167,-3,-189
-l0,-692c0,-162.7,5.7,-314,17,-454c20.7,-272,63.7,-513,129,-723c65.3,
--210,155.3,-396.3,270,-559c6.7,-9.3,10,-15.3,10,-18z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.38em;"><span style="top:-5.2275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.3675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-2.1675em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.88em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.35em;"><span style="top:-4.35em;"><span class="pstrut" style="height:6.2em;"></span><span style="width:0.875em;height:4.200em;"><svg xmlns="http://www.w3.org/2000/svg" width='0.875em' height='4.200em' viewBox='0 0 875 4200'><path d='M76,0c-16.7,0,-25,3,-25,9c0,2,2,6.3,6,13c21.3,28.7,42.3,60.3,
-63,95c96.7,156.7,172.8,332.5,228.5,527.5c55.7,195,92.8,416.5,111.5,664.5
-c11.3,139.3,17,290.7,17,454c0,28,1.7,43,3.3,45l0,609
-c-3,4,-3.3,16.7,-3.3,38c0,162,-5.7,313.7,-17,455c-18.7,248,-55.8,469.3,-111.5,664
-c-55.7,194.7,-131.8,370.3,-228.5,527c-20.7,34.7,-41.7,66.3,-63,95c-2,3.3,-4,7,-6,11
-c0,7.3,5.7,11,17,11c0,0,11,0,11,0c9.3,0,14.3,-0.3,15,-1c5.3,-5.3,10.3,-11,15,-17
-c242.7,-294.7,395.3,-681.7,458,-1161c21.3,-164.7,33.3,-350.7,36,-558
-l0,-744c-2,-159.3,-10,-310.7,-24,-454c-53.3,-528,-210,-949.7,
--470,-1265c-4.7,-6,-9.7,-11.7,-15,-17c-0.7,-0.7,-6.7,-1,-18,-1z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.85em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:6.3907em;"><span></span></span></span></span></span></span></span></span></span></span></span>
-
-<h2 id="message-boxes">Message boxes</h2>
-<p class="message"><strong>NOTE</strong>: You can add a message box.</p>
-
-<h2 id="large-text">Large text</h2>
-<p class="lead">You can add large text.</p>
-
-<h2 id="large-images">Large images</h2>
-<p><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" /></p>
-
-<h2 id="captions-to-images">Captions to images</h2>
-<p class="figure"><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" />
-A caption to an image.</p>
-
-<h2 id="large-quotes">Large quotes</h2>
-<blockquote class="lead">
-  <p>You can make a quote “pop out”.</p>
-</blockquote>
-
-<h2 id="faded-text">Faded text</h2>
-<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://alswp006.github.io/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="https://alswp006.github.io/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="https://alswp006.github.io/example/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+00:00</published><updated>2024-10-22T04:35:37+00:00</updated><id>https://alswp006.github.io/example/example-content-ii</id><content type="html" xml:base="https://alswp006.github.io/example/2017-11-23-example-content-ii/"><![CDATA[<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
-
-<p>There should be whitespace between paragraphs.</p>
-
-<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
-
-<p><a href="another-page">Link to another page</a>.</p>
-
-<ul class="large-only" id="markdown-toc">
-  <li><a href="#header-2" id="markdown-toc-header-2">Header 2</a>    <ul>
-      <li><a href="#header-3" id="markdown-toc-header-3">Header 3</a>        <ul>
-          <li><a href="#header-4" id="markdown-toc-header-4">Header 4</a>            <ul>
-              <li><a href="#header-5" id="markdown-toc-header-5">Header 5</a>                <ul>
-                  <li><a href="#header-6" id="markdown-toc-header-6">Header 6</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+  <li><a href="#프로젝트-이슈-관리">프로젝트 이슈 관리</a>
+    <ul>
+      <li><a href="#이슈-유형">이슈 유형</a>
+        <ul>
+          <li><a href="#epic">EPIC</a></li>
+          <li><a href="#story">STORY</a></li>
+          <li><a href="#task">TASK</a></li>
+          <li><a href="#subtask">SUBTASK</a></li>
         </ul>
       </li>
-      <li><a href="#theres-a-horizontal-rule-below-this" id="markdown-toc-theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</a></li>
-      <li><a href="#here-is-an-unordered-list" id="markdown-toc-here-is-an-unordered-list">Here is an unordered list:</a></li>
-      <li><a href="#and-an-ordered-list" id="markdown-toc-and-an-ordered-list">And an ordered list:</a></li>
-      <li><a href="#and-a-nested-list" id="markdown-toc-and-a-nested-list">And a nested list:</a></li>
-      <li><a href="#small-image" id="markdown-toc-small-image">Small image</a></li>
-      <li><a href="#large-image" id="markdown-toc-large-image">Large image</a></li>
-      <li><a href="#definition-lists" id="markdown-toc-definition-lists">Definition lists</a></li>
+      <li><a href="#이슈-구조">이슈 구조</a></li>
+      <li><a href="#이슈-상태status-관리">이슈 상태(Status) 관리</a></li>
+      <li><a href="#이슈-우선순위-설정">이슈 우선순위 설정</a></li>
+      <li><a href="#이슈의-작성-요령">이슈의 작성 요령</a></li>
     </ul>
   </li>
+  <li><a href="#이슈-만들어보기">이슈 만들어보기👈</a></li>
+  <li><a href="#이슈-확인하기">이슈 확인하기</a></li>
+  <li><a href="#스프린트-확인">스프린트 확인</a>
+    <ul>
+      <li><a href="#백로그-탭">백로그 탭</a></li>
+      <li><a href="#라벨-별로-확인">라벨 별로 확인</a></li>
+    </ul>
+  </li>
+  <li><a href="#보드-확인하기">보드 확인하기</a></li>
+  <li><a href="#전체적인-할-일-보기">전체적인 할 일 보기</a></li>
 </ul>
 
-<h2 id="header-2">Header 2</h2>
+<h1 id="프로젝트-이슈-관리">프로젝트 이슈 관리</h1>
 
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-
-<h3 id="header-3">Header 3</h3>
-
-<blockquote>
-  <p>This is a blockquote following a header.</p>
-
-  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-</blockquote>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nf">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h4 id="header-4">Header 4</h4>
+<h2 id="이슈-유형">이슈 유형</h2>
 
 <ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
+  <li>EPIC</li>
+  <li>STORY</li>
+  <li>TASK</li>
+  <li>SUBTASK</li>
 </ul>
 
-<h5 id="header-5">Header 5</h5>
+<h3 id="epic">EPIC</h3>
 
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
+<ul>
+  <li>큰 단위의 업무 (여러 Task를 묶은 단위)</li>
+  <li>프로젝트의 주요 목표를 달성하기 위한 큰 이정표같은 느낌</li>
+  <li><strong>예시</strong>: “사용자 계정 관리 시스템 구현”, “온라인 쇼핑몰 결제 시스템 구축”</li>
+</ul>
 
-<h6 id="header-6">Header 6</h6>
+<h3 id="story">STORY</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
+<ul>
+  <li>고객에게 가치를 제공하는 기능이나 요구 사항</li>
+  <li>고객 관점에서 이해할 수 있는 기능 단위</li>
+  <li>Epic을 구성하는 작은 단위</li>
+  <li>예시: “사용자가 이메일로 계정 생성”, “결제 과정에서 할인 코드 적용”</li>
+</ul>
 
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+<h3 id="task">TASK</h3>
+
+<ul>
+  <li>주로 개발자나 디자이너가 직접 처리할 수 있는 업무</li>
+  <li>Story나 Epic의 하위 업무 (여러 Sub Task를 묶은 단위)</li>
+  <li>일반적으로 한 명의 팀원이 수행할 수 있는 크기로 설정</li>
+  <li>예시: “사용자 로그인 API 개발”, “데이터베이스 사용자 테이블 설계”</li>
+</ul>
+
+<h3 id="subtask">SUBTASK</h3>
+
+<ul>
+  <li>한 사람이 빠르게 처리할 수 있는 작은 규모의 업무</li>
+  <li>Task의 하위 업무로 모든 SubTask가 끝나야 해당 Task 완료</li>
+  <li>예시: “로그인 API 연동”, “로그인 실패 시 에러 메시지 처리”</li>
+</ul>
+
+<h2 id="이슈-구조">이슈 구조</h2>
+
+<p><img src="/assets/img/2024-10-23-jira/image.png" alt="alt text" /></p>
+
+<blockquote>
+  <p>https://medium.com/dtevangelist/devops-jira%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%98%91%EC%97%85-1%EB%B6%80-63c71489f21d</p>
+
+</blockquote>
+
+<h2 id="이슈-상태status-관리"><strong>이슈 상태(Status) 관리</strong></h2>
+
+<ul>
+  <li><strong>To Do</strong>: 작업이 아직 시작되지 않은 상태</li>
+  <li><strong>In Progress</strong>: 작업이 진행 중인 상태, 다음 밋업까지 해야하는 일로 밋업 때마다 설정</li>
+  <li><strong>Done</strong>: 작업이 완료된 상태</li>
+  <li><strong>Blocked</strong>: 진행이 막힌 상태, 다른 작업이나 조건에 의존</li>
+</ul>
+
+<blockquote>
+  <p>매 주 월, 수, 금에 진행하는 밋업에서 다음 밋업까지 해야 할 일들을 <strong>In Progress상태로 변경
+다음 밋업까지 In Progress인 모든 Task를 완료하고 Done으로 변경해와야 함</strong></p>
+
+</blockquote>
 
 <hr />
 
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
+<h2 id="이슈-우선순위-설정"><strong>이슈 우선순위 설정</strong></h2>
 
 <ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
+  <li><strong>Highest</strong>: 가장 긴급하고 중요한 작업</li>
+  <li><strong>High</strong>: 중요하지만 즉각적인 대응이 필요하지는 않음</li>
+  <li><strong>Medium</strong>: 표준 우선순위</li>
+  <li><strong>Low</strong>: 시간이 남을 때 처리 가능한 작업</li>
 </ul>
 
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
+<h2 id="이슈의-작성-요령"><strong>이슈의 작성 요령</strong></h2>
 
+<ul>
+  <li><strong>제목</strong>: 작업 내용을 한눈에 알 수 있도록 간결하고 명확하게 작성</li>
+  <li><strong>설명</strong>: 이슈의 목적, 요구 사항, 작업 방법, 예상 결과를 팀원들이 쉽게 이해할 수 있도록 상세히 작성</li>
+  <li><strong>첨부파일</strong>: 필요한 경우 디자인, 문서, 코드 스니펫 등을 첨부하여 이해를 돕습니다.</li>
+</ul>
+
+<h1 id="이슈-만들어보기">이슈 만들어보기</h1>
+
+<ul>
+  <li>다음 작업의 이슈 만들어보기</li>
+</ul>
+
+<h3 id="1-사용자-로그인-epic"><strong>1. 사용자 로그인 (Epic)</strong></h3>
+
+<p><strong>Task 1</strong>: 카카오, 네이버, 구글 소셜 로그인 API 연동</p>
+
+<ul>
+  <li><strong>Subtask 1.1</strong>: 카카오 소셜 로그인 API 개발</li>
+  <li><strong>Subtask 1.2</strong>: 네이버 소셜 로그인 API 개발</li>
+  <li><strong>Subtask 1.3</strong>: 구글 소셜 로그인 API 개발</li>
+</ul>
+
+<p><strong>Task 2</strong>: 사용자 인증 토큰 발급 및 관리</p>
+
+<ul>
+  <li><strong>Subtask 2.1</strong>: JWT 기반 토큰 발급 로직 구현</li>
+  <li><strong>Subtask 2.2</strong>: 리프레시 토큰 구현 및 관리</li>
+</ul>
+
+<h3 id="epic-1">Epic</h3>
 <ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
+  <li>
+    <p>상단바의 “만들기” 버튼 클릭 
+<img src="/assets/img/2024-10-23-jira/image-1.png" alt="만들기 버튼" /></p>
+  </li>
+  <li><strong>이슈 유형</strong>: “에픽” 선택</li>
+  <li>상태
+    <ul>
+      <li><strong>To Do</strong>: 작업이 아직 시작되지 않은 상태</li>
+      <li><strong>In Progress</strong>: 작업이 진행 중인 상태</li>
+      <li><strong>Done</strong>: 작업이 완료된 상태
+<img src="/assets/img/2024-10-23-jira/image-2.png" alt="이슈 유형 선택" /></li>
+    </ul>
+  </li>
+  <li><strong>요약</strong>: “사용자 로그인”</li>
+  <li>
+    <p><strong>설명</strong>: “사용자 로그인 기능 개발을 위한 Epic. 카카오, 네이버, 구글 소셜 로그인 API를 연동하고 JWT 토큰을 기반으로 사용자 인증 시스템을 구현”</p>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-3.png" alt="alt text" /></p>
+  </li>
+  <li>
+    <p><strong>Start Date(시작일)</strong>: 2024-10-21, <strong>Due Date(종료일)</strong>: 2024-10-25</p>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-4.png" alt="alt text" /></p>
+  </li>
+  <li>레이블 선택
+    <ul>
+      <li>프론트엔드: FE</li>
+      <li>백엔드: BE</li>
+      <li>인공지능: AI</li>
+      <li>클라우드: Cloud</li>
+    </ul>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-5.png" alt="alt text" /></p>
+  </li>
 </ol>
 
-<h3 id="and-a-nested-list">And a nested list:</h3>
+<h3 id="task-1">Task</h3>
+
+<ol>
+  <li>상단바의 “만들기” 버튼 클릭</li>
+  <li><strong>이슈 유형</strong>: “작업” 선택</li>
+  <li><strong>상태 선택</strong></li>
+  <li>
+    <p><strong>요약</strong>: 소셜 로그인 API 연동</p>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-6.png" alt="alt text" /></p>
+  </li>
+  <li>레이블 선택
+    <ul>
+      <li>프론트엔드: FE</li>
+      <li>백엔드: BE</li>
+      <li>인공지능: AI</li>
+      <li>클라우드: Cloud</li>
+    </ul>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-7.png" alt="alt text" /></p>
+  </li>
+</ol>
+
+<h3 id="subtask-1">Subtask</h3>
+
+<ol>
+  <li>
+    <p>이슈의 상위 작업을 선택 후 “하위 이슈 추가” 선택</p>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-8.png" alt="alt text" /></p>
+  </li>
+  <li><strong>제목 입력: 카카오 소셜 로그인 API 개발</strong></li>
+  <li>
+    <p><strong>하위 이슈 선택</strong></p>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-9.png" alt="alt text" /></p>
+  </li>
+  <li><strong>설명 입력</strong>: “카카오 소셜 로그인 API를 연동하여 사용자가 카카오 계정을 통해 로그인할 수 있도록 함”</li>
+  <li><strong>상태 선택</strong></li>
+  <li>
+    <p><strong>레이블 선택</strong></p>
+
+    <p><img src="/assets/img/2024-10-23-jira/image-10.png" alt="alt text" /></p>
+  </li>
+</ol>
+
+<h1 id="이슈-확인하기">이슈 확인하기</h1>
 
 <ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
+  <li>이슈 탭에서 확인</li>
 </ul>
 
-<h3 id="small-image">Small image</h3>
+<h3 id="유형-별로-확인">유형 별로 확인</h3>
 
-<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
+<p><img src="/assets/img/2024-10-23-jira/image-11.png" alt="alt text" /></p>
 
-<h3 id="large-image">Large image</h3>
+<h2 id="담당자-별로-확인">담당자 별로 확인</h2>
 
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
+<p><img src="/assets/img/2024-10-23-jira/image-12.png" alt="alt text" /></p>
 
-<h3 id="definition-lists">Definition lists</h3>
+<h1 id="스프린트-확인">스프린트 확인</h1>
 
-<dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
-  <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
-</dl>
+<ul>
+  <li>각 스프린트와 스프린트의 Task가 표시</li>
+</ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
-</code></pre></div></div>
+<h2 id="백로그-탭">백로그 탭</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[A page showing how regular markdown content is styled in Hydejack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://alswp006.github.io/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="https://alswp006.github.io/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="https://alswp006.github.io/example/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+00:00</published><updated>2024-10-22T04:35:37+00:00</updated><id>https://alswp006.github.io/example/example-content</id><content type="html" xml:base="https://alswp006.github.io/example/2012-02-07-example-content/"><![CDATA[<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+<p><img src="/assets/img/2024-10-23-jira/image-13.png" alt="alt text" /></p>
+
+<h2 id="라벨-별로-확인">라벨 별로 확인</h2>
+
+<ul>
+  <li>BE</li>
+</ul>
+
+<p><img src="/assets/img/2024-10-23-jira/image-14.png" alt="alt text" /></p>
+
+<ul>
+  <li>AI(임시)</li>
+</ul>
+
+<p><img src="/assets/img/2024-10-23-jira/image-15.png" alt="alt text" /></p>
+
+<h1 id="보드-확인하기">보드 확인하기</h1>
+
+<ul>
+  <li>현재 진행 중인 스프린트의 Task가 표시</li>
+</ul>
+
+<p><img src="/assets/img/2024-10-23-jira/image-16.png" alt="alt text" /></p>
+
+<h1 id="전체적인-할-일-보기">전체적인 할 일 보기</h1>
+
+<ul>
+  <li>필터로 내 할 일만 보기, 활성 스프린트의 할 일 보기, 완료 항목 보기 등 가능</li>
+</ul>
+
+<p><img src="/assets/img/2024-10-23-jira/image-17.png" alt="alt text" /></p>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="project" /><category term="devita" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">단기 알고리즘 동아리 운영 후기!</title><link href="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/" rel="alternate" type="text/html" title="단기 알고리즘 동아리 운영 후기!" /><published>2023-11-27T01:45:51+00:00</published><updated>2024-10-23T07:54:08+00:00</updated><id>https://alswp006.github.io/blog/retrospect/algo-study</id><content type="html" xml:base="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/"><![CDATA[<style>
+.image-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.image-grid img {
+  max-width: 30%; /* 너비 제한 추가 */
+  height: auto;
+  flex: 1;
+  border-radius: 4px;
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap; /* 필요시 줄바꿈 */
+}
+
+.image-cell {
+  flex: 0 1 45%; /* 최대 너비 제한 */
+  text-align: center;
+}
+
+.image-cell img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.image-cell p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 개별 이미지 스타일 */
+.post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .image-grid {
+    flex-direction: column;
+  }
+  
+  .image-grid img {
+    max-width: 100%;
+  }
+  
+  .image-cell {
+    flex: 0 1 100%;
+  }
+}
+
+</style>
+
+<h1 id="단기-알고리즘-동아리-운영-후기">단기 알고리즘 동아리 운영 후기!</h1>
+
+<ul>
+  <li>9월 21일부터 11월 24일까지 진행했던 알고리즘 스터디 동아리가 끝났습니다!</li>
+  <li>처음으로 진행한 스터디이자 처음으로 주도해서 진행해본 스터디여서 느낀 점이 꽤나 많아 이에 대한 회고를 작성해보려 합니다!</li>
+  <li>제가 이 스터디를 진행하게된 계기는 두 가지였습니다.
+    <ol>
+      <li>혼자보다는 여러 명이 함께 진행하는 스터디가 공부에 더 도움이 될 것 같았고 
+  2.학교에서 동아리를 만들어서 진행하라고 돈을 준다..!라는 이유 때문이었습니다! (30만원 받아서 책도 사고 맛있는 것도 많이 사먹었습니다!🍴)</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="시작하자마자-난관">시작하자마자 난관..😢</h1>
+
+<ul>
+  <li>우선 동아리를 신청하려면 최소 3명이 있어야한다는 것이 첫 번째 난관이었습니다..</li>
+  <li>제 주변에 개발자도 손에 꼽을 정도였는데 같은 학교에 재학중인 친구 개발자? 컴퓨터 공학과에 재학중인 친구 한 명이 전부였습니다..</li>
+  <li>하지만 모르는 사람들과 하면 그 사람들이 열심히 할 수 있는 사람인지도 보장이 안 된다는 두려움 때문에 랜덤으로 스터디 원들을 고를 생각은 차마 하지 못했습니다..</li>
+  <li>결국은 그래도 아는 사람과 하면 더 파이팅할 수 있을 것 같아서 컴퓨터 공학과 친구를 설득하고 친구의 친구를 한명 구하여 겨우 동아리를 시작할 수 있게 되었습니다!!</li>
+  <li>지금 생각해보면 좋은 선택이었던 것 같습니다!!</li>
+</ul>
+
+<h1 id="계획-세우기️와-풀어조의-탄생">계획 세우기🗓️와 풀어조의 탄생👶</h1>
+
+<ul>
+  <li>우선 이 동아리를 신청하려면 8주차동안 공부할 내용에 대한 계획서를 만들어서 제출해야 했습니다!</li>
+  <li>저는 python을 이용한 알고리즘 문제 풀이를 목표로 하였기 때문에 계획은 알고리즘 별로 아래와 같이 세웠습니다!</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/alswp006/post/d9f435a4-2334-4264-8a3f-b965325b32c5/image.png" alt="" /></p>
+
+<ul>
+  <li>python과 github, 백준 등이 어색한 팀원이 있을 수도 있기 때문에 사전에 만나 도구들의 사용법을 익히는 것을 시작으로 하여 위와 같이 알고리즘들을 공부하였습니다!</li>
+  <li>흠.. 이 때까지만 해도 저는 제가 계획을 잘 짰다고 생각하고 있었습니다..</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/alswp006/post/72e2c17c-d5f6-4e95-bb30-63ad9cd2c7b6/image.png" alt="" /></p>
+
+<p>(바퀴가 네모나도 굴러만 가면 되는 거면 동아리가 그래도 굴러는 갔다고 할 수 있겠네요..)</p>
+
+<ul>
+  <li>우선 스터디 계획은 1주 동안 각 주제를 공부해오고 만나서 공부해온 것에 대한 발표, 숙제 발표, 문제 풀이를 계획하였습니다!</li>
+  <li>위 계획은 그래도 잘 지켜진 것 같습니다!!</li>
+  <li>팀이름은 동아리를 만들기도 전에 혼자 정말 많이 고민했었는데요…</li>
+  <li>풀어조라는 이름이 탄생한 계기는 한 천재 작명가 덕분이었습니다.</li>
+</ul>
 
 <blockquote>
-  <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+  <p>나 : “팀 이름 뭘로 하는게 좋을까??”</p>
+
+  <p>팀원 1 : “음.. 풀어조는 어떨까요??”</p>
+
 </blockquote>
 
-<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-
-<h2 id="inline-html-elements">Inline <abbr title="HyperText Markup Language">HTML</abbr> elements</h2>
-
-<p><abbr title="HyperText Markup Language">HTML</abbr> defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-
 <ul>
-  <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">**To bold text**</code>.</li>
-  <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">*To italicize text*</code>.</li>
-  <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should be defined like this <code class="language-plaintext highlighter-rouge">*[HTML]: HyperText Markup Language</code>.</li>
-  <li>Citations, like <cite>— Mark otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-  <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">~~deleted~~</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-  <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+  <li>이렇게 적어놓으니까 되게 별거 없어보이는데 저에게는 막힌 속이 뻥뚫렸던 난관 극복기였던 것 같습니다. 진짜 이렇게 보니까 별거없네요..</li>
+  <li>저는 분명 이런 느낌이었는데 말이죠..</li>
 </ul>
 
-<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+<p><img src="https://velog.velcdn.com/images/alswp006/post/2eb35170-2a66-458f-a6af-d486e8dbbcd4/image.png" alt="" /></p>
 
-<h2 id="heading-2">Heading 2</h2>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<ul>
+  <li>아무튼 저희에게는 위대한 한걸음이 되었음은 분명합니다..!!</li>
+</ul>
 
-<h3 id="heading-3">Heading 3</h3>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+<h1 id="우당탕탕트트아으ㅏ아아악ㅏ-진행기️️">우당탕탕트트아으ㅏ아아악ㅏ 진행기.🏃‍♀️🏃🏃‍♂️</h1>
 
-<h4 id="heading-4">Heading 4</h4>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+<ul>
+  <li>만나서 2시간 스터디하는 걸로 계획했지만 기본 3시간은 넘게 하고 같이 머리 싸매고 눈물도 찔끔 흘렸지만 그래도 모두 즐겁고 열심하려고 노력했습니다!</li>
+  <li>우선 스터디를 하며 가장 좋았던 점은 발표였습니다!</li>
+  <li>서로 발표를 준비해오며 예상 질문들을 생각하고 틀린 점이 없도록 더 꼼꼼하게 공부해오는 계기가 되었고 공부해온 것을 설명하며 내용들이 더 잘 정리가 된 것 같아 만약 다음에 스터디를 하게 된다해도 발표는 꼭 넣을 것 같습니다!!</li>
+</ul>
 
-<h5 id="heading-5">Heading 5</h5>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+<h2 id="카톡부터-재밌었던-스터디">카톡부터 재밌었던 스터디</h2>
 
-<h6 id="heading-6">Heading 6</h6>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
+<p>한번도 카톡에서 해결된 적 없는 저녁 고민🤔</p>
+<div class="image-grid">
+  <img src="https://velog.velcdn.com/images/alswp006/post/9b2416c4-5f5e-4c61-b858-f8df40078280/image.png" alt="카톡1" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/4e114106-2870-4011-8920-d54bcfc0e718/image.png" alt="카톡2" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/ff82d726-e0aa-4159-8dd2-9a46cf0a9143/image.png" alt="카톡3" width="32%" />
+</div>
 
-<h2 id="code">Code</h2>
+<p>진짜 많이 웃은 인싸 팀원들 이모티콘🤣</p>
+<div class="image-grid">
+  <img src="https://velog.velcdn.com/images/alswp006/post/60075526-7e3b-409d-937d-e40b6d8a8c4a/image.png" alt="이모티콘1" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/9c004b60-0ecb-4aad-ae15-afbb41f28ca4/image.png" alt="이모티콘2" width="32%" />
+</div>
 
-<p>Cum sociis natoque penatibus et magnis dis <code class="language-plaintext highlighter-rouge">code element</code> montes, nascetur ridiculus mus.</p>
+<div class="image-grid">
+  <img src="https://velog.velcdn.com/images/alswp006/post/23f1a831-25f0-4446-811e-53d62c2bf7b7/image.png" alt="이모티콘3" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/b0e567b5-d88c-4c5f-91ae-4284000f4dd2/image.png" alt="이모티콘4" width="32%" />
+</div>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
+<h2 id="회식">회식🥓</h2>
 
-<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
-<span class="c1">// arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+<div class="image-row">
+  <div class="image-cell">
+    <p>제일 맛있었던 것</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/b770cf2d-49d6-4c97-9fb4-ef7962c5568a/image.png" alt="맛있는 음식1" width="100%" />
+  </div>
+  <div class="image-cell">
+    <p>두 번째로 맛있었던 것</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/478095a5-90fa-47f2-898d-a471f0363f8c/image.png" alt="맛있는 음식2" width="100%" />
+  </div>
+</div>
 
-<span class="c1">// Call the function</span>
-<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span>
+<h1 id="간과한-점">간과한 점..🤔</h1>
+
+<ul>
+  <li>처음 스터디를 계획했을 때는 만나서 5문제, 숙제 5문제를 풀면 괜찮을 거라고 생각하고 계획하였습니다..</li>
+  <li>하지만 그렇게 되니 초반 쉬운 문제를 풀 때는 금방 끝나고 후반에 어려운 문제를 풀 때는 집에 못가는 상황이 발생하였습니다..</li>
+  <li>후반에는 문제 수를 줄여서 난이도 조절이 가능했지만 초반에 쉬운 문제들을 좀 더 많이 풀어보았으면 실력 향상에 도움이 더 많이 되었을텐데라는 아쉬움이 남았던 것 같습니다..</li>
+</ul>
+
+<h1 id="좋았던-점">좋았던 점👍</h1>
+
+<ul>
+  <li>스터디를 하며 좋았던 점은 많았던 것 같습니다!!!</li>
+  <li>발표를 준비하며 정말 많은 공부들을 하였고 발표를 하며 스피치 능력이나 의미 전달에 대해서도 많이 고민하며 성장하였던 것 같습니다!</li>
+  <li>또한 혼자 공부하는 것보다 같은 목표를 보며 공부한 것이 의지력 향상에 더 도움이 되었던 것 같습니다!!</li>
+  <li>가장 좋았던 것은 작지만 개발자 커뮤니티가 생겼다는 점이었습니다! 저희끼리 프로젝트 생각도 해보고 소소하지만 개발에 대한 얘기를 나누는 것이 정말 재밌었던 것 같습니다!</li>
+</ul>
+
+<h1 id="소감">소감</h1>
+
+<ul>
+  <li>사실 이번 스터디를 진행해보기 전에는 스터디의 장점들에 대해서 얘기로만 들었지 그렇게 와닿지는 않았었는데 스터디를 진행해보고 나니 정말 배운 것도 많고 느낀 점도 많았던 것 같습니다!!</li>
+  <li>공부는 물론 개발에 대한 얘기들을 하면서 공부 의욕도 더 생기고 정보도 공유하는 좋은 커뮤니티까지 생긴 것 같아 부가적인 장점들도 정말 많았던 것 같습니다!!</li>
+  <li>개인적으로는 발표를 이용한 공부와 개발에 대한 의욕이 높아진 것이 가장 좋았습니다!</li>
+  <li>스터디원들이 벡엔드를 지망하는 개발자였으면 자바와 스프링 스터디도 더 진행하고 싶었는데 둘 다 프론트엔드를 지망하고 있어서 이 꿈은 못 이룰 것 같습니다..</li>
+  <li>그래도 나중에 같이 프로젝트는 할 수 있겠죠..?</li>
+  <li>스터디가 끝나고 이렇게 회고까지 적으니 시원섭섭 후련하네요!</li>
+  <li>다시 돌아가면 스터디 할거냐구요??
+  → 무조건. 조금 더 일찍 했으면 좋았을 것 같습니다!!</li>
+  <li>어쩌다보니 스터디 찬양론자가 되어버린 것 같기도 하고 회고는 무슨 일기를 쓴 것 같기는 한데 이만하고 회고를 마치겠습니다!!</li>
+  <li>다들 스터디 열심히 해보시면 큰 성장을 얻을 수 있을 거라고 생각합니다!!</li>
+  <li>마지막으로 팀원들에게 들어본 소감으로 지이이인짜 마치겠습니다!</li>
+</ul>
+
+<div class="image-row">
+  <div class="image-cell">
+    <p>기특한 녀석..!!</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/2e9b04e2-f7c7-44fe-8825-24c7452cd8ea/image.png" alt="맛있는 음식1" width="100%" />
+  </div>
+  <div class="image-cell">
+    <p>바쁜 녀석..!</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/9668c8d6-8bf0-43d9-b179-1fbc1aa0fc93/image.png" alt="맛있는 음식2" width="100%" />
+  </div>
+</div>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="blog" /><category term="retrospect" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">자바 API(System.out.prinln() 뜯어보기🔨)</title><link href="https://alswp006.github.io/study/java/2023-10-17-sout/" rel="alternate" type="text/html" title="자바 API(System.out.prinln() 뜯어보기🔨)" /><published>2023-10-17T01:45:51+00:00</published><updated>2024-10-23T07:54:08+00:00</updated><id>https://alswp006.github.io/study/java/sout</id><content type="html" xml:base="https://alswp006.github.io/study/java/2023-10-17-sout/"><![CDATA[<h1 id="java-api">Java Api</h1>
+
+<ul>
+  <li>java 개발자가 제공하는 명령어</li>
+  <li>프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음, 라이브러리라고 부르기도 한다.</li>
+  <li>String 클래스, System 클래스 등도 API에 속하는 클래스임</li>
+</ul>
+
+<h1 id="api-문서">API 문서</h1>
+
+<ul>
+  <li>원하는 API를 쉽게 찾아 이용할 수 있도록 해주는 문서</li>
+  <li>명령어들의 사용법과 규격을 제공하는 문서</li>
+  <li>자바 제공 API 문서
+    <ul>
+      <li>https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html</li>
+      <li>https://docs.oracle.com/javase/8/docs/api/</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="systemoutprintln-뜯어보기-">🔨 System.out.println() 뜯어보기 🔨</h1>
+
+<ul>
+  <li>API에 대해 학습하다보니 System클래스에 대해 자주 예시로 드는 글들이 많다</li>
+  <li>그래서 System.out.println()을 뜯어보며 API문서 참고, 자바 코드 참고 등을 연습해보려 한다!</li>
+  <li>우리는 자바를 사용하며 System.out.println()라는 코드를 수도 없이 사용한다. 이 한 줄의 문장을 하나하나 뜯어보자</li>
+</ul>
+
+<h2 id="system">System</h2>
+
+<ul>
+  <li>우선 System 클래스로 들어가보자</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">System</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">native</span> <span class="kt">void</span> <span class="nf">registerNatives</span><span class="o">();</span>
+  <span class="kd">static</span> <span class="o">{</span>
+        <span class="n">registerNatives</span><span class="o">();</span>
+  <span class="o">}</span>
+	<span class="kd">private</span> <span class="nf">System</span><span class="o">()</span> <span class="o">{</span>
+  <span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">PrintStream</span> <span class="n">out</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+	<span class="o">...</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<h2 id="lists">Lists</h2>
-
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-
 <ul>
-  <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-  <li>Donec id elit non mi porta gravida at eget metus.</li>
-  <li>Nulla vitae elit libero, a pharetra augue.</li>
+  <li>위와 같이 구성되어 있었다.</li>
+  <li>우선 System이라는 클래스에 registerNative라는 변수가 private static native void 형태로 저장이 되어있다.
+    <ul>
+      <li>private : 접근 제한자이며 변수가 클래스 내부에서만 사용될 수 있게 한다.</li>
+      <li>static : 클래스가 메모리에 올라갈 때 static 영역에 고정적으로 할당된다. 객체 생성 없이도 사용 가능하다.</li>
+      <li>native : 자바로 구현하기 까다로운 것을 다른 언어로 구현하여 자바에서 사용하기 위한 키워드</li>
+    </ul>
+  </li>
+  <li>registerNative 메소드가 static 메모리에 올라가있다.
+    <ul>
+      <li>registerNative : Java와 C++ 함수 간의 매핑을 생성하는 데 사용되는 JNI(Java Native Interface)메소드, 인수로 전달된 클래스에 네이티브 메소드를 등록한다.</li>
+    </ul>
+  </li>
+  <li>System클래스의 기본 생성자가 private으로 선언되어 있다.</li>
+  <li>out 필드가 public static final을 가지고 PrintStream타입으로 null값을 가지고 있다.
+    <ul>
+      <li>public : 모든 패키지에서 사용 가능</li>
+      <li>final : 상수값, 변경 불가능</li>
+      <li>정리해보면 out 필드는 모든 패키지에서 사용 가능고 인스턴스를 생성하지 않고 사용해야하며 변경이 불가능한 값이다.</li>
+      <li>그리고 out필드는 PrintStream 타입으로 선언되어 있는데 PrintStream을 살펴보자</li>
+    </ul>
+  </li>
 </ul>
 
-<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+<h2 id="printstream">PrintStream</h2>
 
-<ol>
-  <li>Vestibulum id ligula porta felis euismod semper.</li>
-  <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-</ol>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrintStream</span> <span class="kd">extends</span> <span class="nc">FilterOutputStream</span><span class="o">{</span>
+	<span class="o">...</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">newLine</span><span class="o">();</span>
+    <span class="o">}</span>
 
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+    <span class="cm">/**
+     * Prints a boolean and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(boolean)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code boolean} to be printed
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-<dl>
-  <dt>HyperText Markup Language (<abbr title="HyperText Markup Language">HTML</abbr>)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-  <dt>Cascading Style Sheets (<abbr title="Cascading Style Sheets">CSS</abbr>)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-  <dt>JavaScript (<abbr title="JavaScript">JS</abbr>)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
+    <span class="cm">/**
+     * Prints a character and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(char)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code char} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">char</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+    <span class="cm">/**
+     * Prints an integer and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(int)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code int} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-<h2 id="images">Images</h2>
+    <span class="cm">/**
+     * Prints a long and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(long)} and then
+     * {@link #println()}.
+     *
+     * @param x  a The {@code long} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">long</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+    <span class="cm">/**
+     * Prints a float and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(float)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code float} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">float</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+	<span class="o">...</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="nc">String</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
 
-<p><img src="https://via.placeholder.com/800x400" alt="800x400" title="Large example image" /></p>
+    <span class="cm">/**
+     * Prints an Object and then terminates the line.  This method calls
+     * at first String.valueOf(x) to get the printed object's string value,
+     * then behaves as
+     * though it invokes {@link #print(String)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code Object} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="nc">Object</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// need to apply String.valueOf again since first invocation</span>
+            <span class="c1">// might return null</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">s</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+	<span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
-<p><img src="https://via.placeholder.com/400x200" alt="400x200" title="Medium example image" /></p>
+<ul>
+  <li>위 코드와 같이 PrintStream클래스는 FilterOutputStream클래스를 상속받고 많은 println 메소드에 대해 오버로딩하여 다양한 타입의 매개변수를 받아 구현하고있다.</li>
+  <li>println 메소드를 살펴보자</li>
+</ul>
 
-<p><img src="https://via.placeholder.com/200x200" alt="200x200" title="Small example image" /></p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
 
-<h2 id="tables">Tables</h2>
+<ul>
+  <li>위 코드는 int 타입을 출력하고 줄바꿈을 해주는 println메소드이다.</li>
+  <li>조건식 안의 getClass는 Object 클래스 안에 있는 메소드이다.
+    <ul>
+      <li>근데 얘가 좀 이상한게 자바 파일 안에 있는 getClass메소드 설명과 API 문서에 있는 설명이 다르다.</li>
+      <li>자바 파일에는 이렇게 적혀있다.
+        <ul>
+          <li>Returns a hash code value for the object. This method is supported for the benefit of hash tables such as those provided by java.util.HashMap.</li>
+          <li>‘객체에 대한 해시 코드 값을 반환합니다. 이 메서드는 java.util.HashMap과 같은 해시 테이블에서 사용될 목적으로 지원됩니다.’</li>
+        </ul>
+      </li>
+      <li>다음은 API 문서에 있는 설명이다.
+        <ul>
+          <li>Returns the runtime class of this Object. The returned Class object is the object that is locked by static synchronized methods of the represented class.</li>
+          <li>‘이 Object의 실행 클래스를 반환합니다. 반환된 Class 객체는 표시된 클래스의 static synchronized 메서드에 의해 잠겨진 객체입니다.’</li>
+        </ul>
+      </li>
+      <li>그럼 우선 hash code에 대해 알아보자
+        <ul>
+          <li>해시코드를 간단하게 말하면 해시 알고리즘에 의해 생성된 정수 값이다.</li>
+          <li>int hashCode()로 정의된 hashCode 메소드는 실행 중에(Runtime) 객체의 유일한 integer값을 반환한다. Object 클래스에서는 heap에 저장된 객체의 메모리 주소를 반환하도록 되어있다</li>
+          <li>hashCode는 HashTable과 같은 자료구조를 사용할 때 데이터가 저장되는 위치를 결정하기 위해 사용된다.</li>
+          <li>찾아보니 위와 같은 설명이 있다. 정리해보면 객체의 유일한 Integer값, 그러니까 heap에 저장된 객체의 메모리 주소를 반환하는 메소드인 것 같다.</li>
+        </ul>
+      </li>
+      <li>그러면 다음으로 런타임 클래스를 알아보자
+        <ul>
+          <li>실행 시 JVM에 로드되는 클래스라고 한다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>헷갈려서 간단하게 getClass를 사용해보았다.</p>
 
-<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"kimminje"</span><span class="o">;</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
+  <span class="o">-&gt;</span> <span class="kd">class</span> <span class="nc">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span>
+</code></pre></div>        </div>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Name</th>
-      <th style="text-align: left">Upvotes</th>
-      <th style="text-align: left">Downvotes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Alice</td>
-      <td style="text-align: left">10</td>
-      <td style="text-align: left">11</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Bob</td>
-      <td style="text-align: left">4</td>
-      <td style="text-align: left">3</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Charlie</td>
-      <td style="text-align: left">7</td>
-      <td style="text-align: left">9</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td style="text-align: left">Totals</td>
-      <td style="text-align: left">21</td>
-      <td style="text-align: left">23</td>
-    </tr>
-  </tfoot>
-</table>
+        <ul>
+          <li>현재 변수가 참조중인 클래스를 반환한다.</li>
+          <li>자바 API 문서에 있는 런타임 클래스를 반환한다는 말이 맞는 것 같은데 일단 나의 실력 성장 후 다시 공부해봐야 할 것 같다…</li>
+        </ul>
+      </li>
+      <li><strong>아니다 getClass는 현재 객체의 클래스를 반환한다고 했다.</strong></li>
+      <li>
+        <p><strong>println은 System.out을 사용하니 위에서의 getClass는 System.out 객체의 클래스를 반환하지 않을까?</strong> 시도해보자</p>
 
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[Howdy! This is an example blog post that shows several types of HTML content supported in this theme.]]></summary></entry></feed>
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
+  <span class="o">-&gt;</span><span class="kd">class</span> <span class="nc">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">PrintStream</span>
+</code></pre></div>        </div>
+
+        <ul>
+          <li>이렇게 PrintStream으로 출력되는 것을 알 수 있다.</li>
+          <li>그러면 println의 메소드로 들어가면 if 문이 참이 되어 실행될 것이다.</li>
+          <li>이것도 확인해보자</li>
+        </ul>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">getClass</span><span class="o">()==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">){</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"true"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="o">-&gt;</span><span class="kc">true</span>
+</code></pre></div>        </div>
+
+        <ul>
+          <li>true가 출력된 것으로 보아 println의 메소드도 참이 되어 writeln(String.valueOf(x));가 실행되는 것을 알 수 있다.</li>
+        </ul>
+      </li>
+      <li>그렇다면 getClass()가 PrintStream 클래스와 같으니 writeln에 x값을 String으로 변환하여 넣어준다.</li>
+      <li>x값을 특별한 방식으로 출력하기 위해 사용하는 메소드인 것 같은데 구글에 writeln에 대한 정보가 없다….</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+          <span class="n">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+      <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>하지만 print 메소드가 이렇게 구성되어 화면에 출력을 해주는 메소드이니 writeln은 출력을 하고 줄바꿈을 해주는 메소드라는 것을 알 수 있다.</li>
+    </ul>
+  </li>
+  <li>그리고 현재 객체가 PrintStream클래스가 아닌 경우는 synchronized block을 통해 thread-safe하게 동작하도록 하고 print메소드를 통해 문자를 출력하고 newLine()메소드를 통해 줄바꿈을 해주는 것을 알 수 있다.
+    <ul>
+      <li>synchronized block : Synchronized 키워드는 여러개의 스레드가 한개의 자원을 사용하고자 할 때,현재 데이터를 사용하고 있는 해당 스레드를 제외하고 나머지 스레드들은 데이터에 접근 할 수 없도록 막는 개념</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="회고">회고..👍</h2>
+
+<ul>
+  <li>이렇게 System.out.println을 뜯어봤다. 이것만으로도 API문서와 자바 코드, 구글을 찾아보며 2시간 정도를 썼지만 찾아보는 도중의 깨달음과 자바의 문서와 코드 찾아보는 법을 더 잘 알게된 것 같다. 내가 해냈다는게 사실 너무 뿌듯하다. 한번씩 코드를 뜯어보면 내 실력 향상에 좋을 것 같다!</li>
+</ul>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="study" /><category term="java" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[Java Api]]></summary></entry></feed>

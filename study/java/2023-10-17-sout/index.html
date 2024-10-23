@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="ko"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.0.5 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>자바 API(System.out.prinln() 뜯어보기🔨) | MiloDev</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="자바 API(System.out.prinln() 뜯어보기🔨)" />
+<meta name="author" content="김민제" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="Java Api" />
+<meta property="og:description" content="Java Api" />
+<link rel="canonical" href="https://alswp006.github.io/study/java/2023-10-17-sout/" />
+<meta property="og:url" content="https://alswp006.github.io/study/java/2023-10-17-sout/" />
+<meta property="og:site_name" content="MiloDev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-10-17T01:45:51+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="자바 API(System.out.prinln() 뜯어보기🔨)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"김민제"},"dateModified":"2024-10-23T07:54:08+00:00","datePublished":"2023-10-17T01:45:51+00:00","description":"Java Api","headline":"자바 API(System.out.prinln() 뜯어보기🔨)","mainEntityOfPage":{"@type":"WebPage","@id":"https://alswp006.github.io/study/java/2023-10-17-sout/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://alswp006.github.io/assets/icons/icon-192x192.png"},"name":"김민제"},"url":"https://alswp006.github.io/study/java/2023-10-17-sout/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="백엔드,기술 블로그,개발">
+  
+
+
+<!-- tipuesearch -->
+<link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MiloDev">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="MiloDev">
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v9.0.5" />
+
+<meta name="google-site-verification" content="KZh69-s5X5fSrgXa9XrPDI5R9YHrEgeLBL4X6t6sGOg" />
+
+
+
+<link rel="alternate" href="https://alswp006.github.io/study/java/2023-10-17-sout/" hreflang="ko">
+
+<link type="application/atom+xml" rel="alternate" href="https://alswp006.github.io/feed.xml" title="MiloDev" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/apple-icon.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+  
+  <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_katexPreload">
+  <noscript><link rel="stylesheet" href="/assets/bower_components/katex/dist/katex.min.css"></noscript>
+
+
+
+
+
+<script>((r,a)=>{function d(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=a.createElement("script"),e=(n.src=e,t&&d(n,"load",t,{once:!0}),a.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=a.createElement("script");function o(){r._loaded=!0,t&&d(n,"load",t,{once:!0});var e=a.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():d(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){d(a.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}})(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2024-10-23T07:54:54+00:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.2.1.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.5);--accent-color-highlight: rgba(79, 177, 186, 0.1);--accent-color-darkened: rgb(63.8602040816, 154.5602040816, 162.8897959184);--theme-color: rgb(25,55,71);--dark-mode-body-bg: hsl(200.8695652174, 5.9895833333%, 17.5%);--dark-mode-border-color: hsl(200.8695652174, 5.9895833333%, 22.5%)}
+</style>
+
+
+<!--<![endif]-->
+
+
+<!-- Add HTML tags here to be included in the head -->
+<link rel="dns-prefetch" href="https://assets.gumroad.com">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<script type="module">
+  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
+
+  let p1, p2, io1, io2, embedCreated, overlayCreated;
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    io1 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
+        await p1;
+        !embedCreated && await new Promise(function check1(res) {
+          if (typeof createGumroadEmbed !== 'undefined')  {
+            embedCreated = 1;
+            res(createGumroadEmbed());
+          }
+          else setTimeout(() => check1(res), 200);
+        });
+        await new Promise(function check2(res) {
+          if (typeof GumroadEmbed !== 'undefined') res(GumroadEmbed.reload());
+          else setTimeout(() => check2(res), 200);
+        });
+      }
+    }, { rootMargin: '1440px' });
+
+    io2 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
+        await p2;
+        !overlayCreated && await new Promise(function check(res) {
+          if (typeof createGumroadOverlay !== 'undefined') {
+            overlayCreated = 1;
+            res(createGumroadOverlay());
+          }
+          else setTimeout(() => check(res), 200);
+        });
+      }
+    }, { rootMargin: '300px' });
+
+    document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
+    document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
+  });
+</script>
+
+<script>
+  function spread(id) {
+    const submenu = document.getElementById(`submenu-${id}`);
+    const icon = document.getElementById(`spread-icon-${id}`);
+    
+    if (submenu) {
+      if (submenu.classList.contains('hide')) {
+        submenu.classList.remove('hide');
+        if (icon) {
+          icon.style.transform = 'rotate(90deg)';
+        }
+      } else {
+        submenu.classList.add('hide');
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  ((e,s)=>{var d="light-mode",a="dark-mode",o=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(o=o<=e._sunrise||o>=e._sunset?a:d)==a?d:a,s.body.classList.add(o),s.body.classList.remove(e))})(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <head>
+  <style>
+    .navbar {
+      padding: 0 20px; /* 세로 여백을 최소화 */
+      background-color: #fff; /* 상단바 배경 색상 */
+    }
+
+    .nav-btn-bar, .top-menu, .nav-span {
+      height: 100%; /* 부모의 높이에 맞게 아이템을 채움 */
+      display: flex;
+      align-items: center; /* 아이템들을 세로로 중앙에 배치 */
+    }
+
+    .top-menu {
+      gap: 20px; /* 메뉴 항목들 사이 간격 유지 */
+    }
+
+    .nav-btn {
+      padding: 0 15px; /* 버튼 좌우 여백 조정, 상하 여백 제거 */
+      text-align: center;
+      border: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* 마우스 오버 시 색상 변경 */
+    .top-menu a:hover {
+      background-color: #f0f0f0;
+      color: skyblue;
+    }
+  </style>
+</head>
+
+<!--상단메뉴바-->
+<div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+      <span class="sr-only">Jump to:</span>
+      <div class="nav-btn-bar">
+          <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+          <span class="sr-only">Navigation</span>
+          <span class="icon-menu"></span>
+          </a>
+          <!--상단메뉴 카테고리들 -->
+          <div class="top-menu">
+              
+                  
+                      
+                          <a 
+                          id="_drawer--opened"
+                          href="/about/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          About
+                          </a>
+                  
+                      
+                          <a 
+                          
+                          href="/project/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          Project
+                          </a>
+                  
+                      
+                          <a 
+                          
+                          href="/study/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          Study
+                          </a>
+                  
+                      
+                          <a 
+                          
+                          href="/blog/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          Blog
+                          </a>
+                  
+              
+          </div>
+          
+          <!--검색 tipuesearch -->
+          <div class="nav-span">
+            <form action="/search">
+                <div class="tipue_search_left">
+                  <img src="/assets/tipuesearch/search.png" class="tipue_search_icon">
+                </div>
+                <div class="tipue_search_right">
+                  <input type="text" name="q" id="tipue_search_input" pattern=".{1,}" title="At least 1 characters" required></div>
+                <div style="clear: both;"></div>
+              </form>
+          </div>
+          
+      </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/study/">study</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/study/java/">java</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2023-10-17-sout</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  <!-- _includes/components/post.html -->
+<article class="post" role="article">
+  <header class="post-header">
+    <h1 class="post-title">자바 API(System.out.prinln() 뜯어보기🔨)</h1>
+    
+    <div class="post-meta">
+      
+        <div class="categories-tags">
+          <span class="meta-group">
+            
+              카테고리: 
+              <ul class="category-tag-list">
+                
+                  <li><a href="/category/study">study</a></li>
+                
+                  <li><a href="/category/java">java</a></li>
+                
+              </ul>
+            
+            
+            
+              &nbsp;&nbsp;
+              tag #
+              <ul class="category-tag-list">
+                
+                  <li><a href="/tag/AnomalyDetection">AnomalyDetection</a></li>
+                
+              </ul>
+            
+          </span>
+        </div>
+      
+      
+      <div class="post-date">
+        2023년 10월 17일
+      </div>
+    </div>
+  </header>
+
+  <h1 id="java-api">Java Api</h1>
+
+<ul>
+  <li>java 개발자가 제공하는 명령어</li>
+  <li>프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음, 라이브러리라고 부르기도 한다.</li>
+  <li>String 클래스, System 클래스 등도 API에 속하는 클래스임</li>
+</ul>
+
+<h1 id="api-문서">API 문서</h1>
+
+<ul>
+  <li>원하는 API를 쉽게 찾아 이용할 수 있도록 해주는 문서</li>
+  <li>명령어들의 사용법과 규격을 제공하는 문서</li>
+  <li>자바 제공 API 문서
+    <ul>
+      <li>https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html</li>
+      <li>https://docs.oracle.com/javase/8/docs/api/</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="systemoutprintln-뜯어보기-">🔨 System.out.println() 뜯어보기 🔨</h1>
+
+<ul>
+  <li>API에 대해 학습하다보니 System클래스에 대해 자주 예시로 드는 글들이 많다</li>
+  <li>그래서 System.out.println()을 뜯어보며 API문서 참고, 자바 코드 참고 등을 연습해보려 한다!</li>
+  <li>우리는 자바를 사용하며 System.out.println()라는 코드를 수도 없이 사용한다. 이 한 줄의 문장을 하나하나 뜯어보자</li>
+</ul>
+
+<h2 id="system">System</h2>
+
+<ul>
+  <li>우선 System 클래스로 들어가보자</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">System</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">native</span> <span class="kt">void</span> <span class="nf">registerNatives</span><span class="o">();</span>
+  <span class="kd">static</span> <span class="o">{</span>
+        <span class="n">registerNatives</span><span class="o">();</span>
+  <span class="o">}</span>
+	<span class="kd">private</span> <span class="nf">System</span><span class="o">()</span> <span class="o">{</span>
+  <span class="o">}</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">PrintStream</span> <span class="n">out</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+	<span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>위와 같이 구성되어 있었다.</li>
+  <li>우선 System이라는 클래스에 registerNative라는 변수가 private static native void 형태로 저장이 되어있다.
+    <ul>
+      <li>private : 접근 제한자이며 변수가 클래스 내부에서만 사용될 수 있게 한다.</li>
+      <li>static : 클래스가 메모리에 올라갈 때 static 영역에 고정적으로 할당된다. 객체 생성 없이도 사용 가능하다.</li>
+      <li>native : 자바로 구현하기 까다로운 것을 다른 언어로 구현하여 자바에서 사용하기 위한 키워드</li>
+    </ul>
+  </li>
+  <li>registerNative 메소드가 static 메모리에 올라가있다.
+    <ul>
+      <li>registerNative : Java와 C++ 함수 간의 매핑을 생성하는 데 사용되는 JNI(Java Native Interface)메소드, 인수로 전달된 클래스에 네이티브 메소드를 등록한다.</li>
+    </ul>
+  </li>
+  <li>System클래스의 기본 생성자가 private으로 선언되어 있다.</li>
+  <li>out 필드가 public static final을 가지고 PrintStream타입으로 null값을 가지고 있다.
+    <ul>
+      <li>public : 모든 패키지에서 사용 가능</li>
+      <li>final : 상수값, 변경 불가능</li>
+      <li>정리해보면 out 필드는 모든 패키지에서 사용 가능고 인스턴스를 생성하지 않고 사용해야하며 변경이 불가능한 값이다.</li>
+      <li>그리고 out필드는 PrintStream 타입으로 선언되어 있는데 PrintStream을 살펴보자</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="printstream">PrintStream</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">PrintStream</span> <span class="kd">extends</span> <span class="nc">FilterOutputStream</span><span class="o">{</span>
+	<span class="o">...</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">newLine</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Prints a boolean and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(boolean)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code boolean} to be printed
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">boolean</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Prints a character and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(char)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code char} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">char</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Prints an integer and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(int)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code int} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Prints a long and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(long)} and then
+     * {@link #println()}.
+     *
+     * @param x  a The {@code long} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">long</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Prints a float and then terminates the line.  This method behaves as
+     * though it invokes {@link #print(float)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code float} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">float</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+	<span class="o">...</span>
+	<span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="nc">String</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="cm">/**
+     * Prints an Object and then terminates the line.  This method calls
+     * at first String.valueOf(x) to get the printed object's string value,
+     * then behaves as
+     * though it invokes {@link #print(String)} and then
+     * {@link #println()}.
+     *
+     * @param x  The {@code Object} to be printed.
+     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="nc">Object</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="c1">// need to apply String.valueOf again since first invocation</span>
+            <span class="c1">// might return null</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">s</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+	<span class="o">...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>위 코드와 같이 PrintStream클래스는 FilterOutputStream클래스를 상속받고 많은 println 메소드에 대해 오버로딩하여 다양한 타입의 매개변수를 받아 구현하고있다.</li>
+  <li>println 메소드를 살펴보자</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">getClass</span><span class="o">()</span> <span class="o">==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">writeln</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">x</span><span class="o">));</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="k">this</span><span class="o">)</span> <span class="o">{</span>
+                <span class="n">print</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
+                <span class="n">newLine</span><span class="o">();</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>위 코드는 int 타입을 출력하고 줄바꿈을 해주는 println메소드이다.</li>
+  <li>조건식 안의 getClass는 Object 클래스 안에 있는 메소드이다.
+    <ul>
+      <li>근데 얘가 좀 이상한게 자바 파일 안에 있는 getClass메소드 설명과 API 문서에 있는 설명이 다르다.</li>
+      <li>자바 파일에는 이렇게 적혀있다.
+        <ul>
+          <li>Returns a hash code value for the object. This method is supported for the benefit of hash tables such as those provided by java.util.HashMap.</li>
+          <li>‘객체에 대한 해시 코드 값을 반환합니다. 이 메서드는 java.util.HashMap과 같은 해시 테이블에서 사용될 목적으로 지원됩니다.’</li>
+        </ul>
+      </li>
+      <li>다음은 API 문서에 있는 설명이다.
+        <ul>
+          <li>Returns the runtime class of this Object. The returned Class object is the object that is locked by static synchronized methods of the represented class.</li>
+          <li>‘이 Object의 실행 클래스를 반환합니다. 반환된 Class 객체는 표시된 클래스의 static synchronized 메서드에 의해 잠겨진 객체입니다.’</li>
+        </ul>
+      </li>
+      <li>그럼 우선 hash code에 대해 알아보자
+        <ul>
+          <li>해시코드를 간단하게 말하면 해시 알고리즘에 의해 생성된 정수 값이다.</li>
+          <li>int hashCode()로 정의된 hashCode 메소드는 실행 중에(Runtime) 객체의 유일한 integer값을 반환한다. Object 클래스에서는 heap에 저장된 객체의 메모리 주소를 반환하도록 되어있다</li>
+          <li>hashCode는 HashTable과 같은 자료구조를 사용할 때 데이터가 저장되는 위치를 결정하기 위해 사용된다.</li>
+          <li>찾아보니 위와 같은 설명이 있다. 정리해보면 객체의 유일한 Integer값, 그러니까 heap에 저장된 객체의 메모리 주소를 반환하는 메소드인 것 같다.</li>
+        </ul>
+      </li>
+      <li>그러면 다음으로 런타임 클래스를 알아보자
+        <ul>
+          <li>실행 시 JVM에 로드되는 클래스라고 한다.</li>
+        </ul>
+      </li>
+      <li>
+        <p>헷갈려서 간단하게 getClass를 사용해보았다.</p>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"kimminje"</span><span class="o">;</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
+  <span class="o">-&gt;</span> <span class="kd">class</span> <span class="nc">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span>
+</code></pre></div>        </div>
+
+        <ul>
+          <li>현재 변수가 참조중인 클래스를 반환한다.</li>
+          <li>자바 API 문서에 있는 런타임 클래스를 반환한다는 말이 맞는 것 같은데 일단 나의 실력 성장 후 다시 공부해봐야 할 것 같다…</li>
+        </ul>
+      </li>
+      <li><strong>아니다 getClass는 현재 객체의 클래스를 반환한다고 했다.</strong></li>
+      <li>
+        <p><strong>println은 System.out을 사용하니 위에서의 getClass는 System.out 객체의 클래스를 반환하지 않을까?</strong> 시도해보자</p>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
+  <span class="o">-&gt;</span><span class="kd">class</span> <span class="nc">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">PrintStream</span>
+</code></pre></div>        </div>
+
+        <ul>
+          <li>이렇게 PrintStream으로 출력되는 것을 알 수 있다.</li>
+          <li>그러면 println의 메소드로 들어가면 if 문이 참이 되어 실행될 것이다.</li>
+          <li>이것도 확인해보자</li>
+        </ul>
+
+        <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">getClass</span><span class="o">()==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">){</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"true"</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="o">-&gt;</span><span class="kc">true</span>
+</code></pre></div>        </div>
+
+        <ul>
+          <li>true가 출력된 것으로 보아 println의 메소드도 참이 되어 writeln(String.valueOf(x));가 실행되는 것을 알 수 있다.</li>
+        </ul>
+      </li>
+      <li>그렇다면 getClass()가 PrintStream 클래스와 같으니 writeln에 x값을 String으로 변환하여 넣어준다.</li>
+      <li>x값을 특별한 방식으로 출력하기 위해 사용하는 메소드인 것 같은데 구글에 writeln에 대한 정보가 없다….</li>
+    </ul>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+          <span class="n">write</span><span class="o">(</span><span class="nc">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+      <span class="o">}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>하지만 print 메소드가 이렇게 구성되어 화면에 출력을 해주는 메소드이니 writeln은 출력을 하고 줄바꿈을 해주는 메소드라는 것을 알 수 있다.</li>
+    </ul>
+  </li>
+  <li>그리고 현재 객체가 PrintStream클래스가 아닌 경우는 synchronized block을 통해 thread-safe하게 동작하도록 하고 print메소드를 통해 문자를 출력하고 newLine()메소드를 통해 줄바꿈을 해주는 것을 알 수 있다.
+    <ul>
+      <li>synchronized block : Synchronized 키워드는 여러개의 스레드가 한개의 자원을 사용하고자 할 때,현재 데이터를 사용하고 있는 해당 스레드를 제외하고 나머지 스레드들은 데이터에 접근 할 수 없도록 막는 개념</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="회고">회고..👍</h2>
+
+<ul>
+  <li>이렇게 System.out.println을 뜯어봤다. 이것만으로도 API문서와 자바 코드, 구글을 찾아보며 2시간 정도를 썼지만 찾아보는 도중의 깨달음과 자바의 문서와 코드 찾아보는 법을 더 잘 알게된 것 같다. 내가 해냈다는게 사실 너무 뿌듯하다. 한번씩 코드를 뜯어보면 내 실력 향상에 좋을 것 같다!</li>
+</ul>
+
+</article>
+
+
+<!-- list layout -->
+
+  
+
+  
+  
+  
+
+  
+  
+  <div class="list-post">
+  
+    
+    
+      
+
+      <!-- id="y-2024" -->
+  <h2 class="list-lead">2024</h2>
+    <ul class="related-posts">
+      
+    
+    
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2024-10-23T01:45:51+00:00">23 Oct</time>
+    <a href="/project/devita/2024-10-23-Jira/" class="flip-title"><span>팀 프로젝트를 위한 JIRA 가이드라인 </span></a>
+  </div>
+</li>
+    
+  
+    
+    
+      </ul>
+
+      <!-- id="y-2023" -->
+  <h2 class="list-lead">2023</h2>
+    <ul class="related-posts">
+      
+    
+    
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2023-11-27T01:45:51+00:00">27 Nov</time>
+    <a href="/blog/retrospect/2023-11-27-algo-study/" class="flip-title"><span>단기 알고리즘 동아리 운영 후기! </span></a>
+  </div>
+</li>
+    
+  
+    
+    
+    
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2023-10-17T01:45:51+00:00">17 Oct</time>
+    <a href="/study/java/2023-10-17-sout/" class="flip-title"><span>자바 API(System.out.prinln() 뜯어보기🔨) </span></a>
+  </div>
+</li>
+    </ul>
+  
+  </div>
+
+
+
+
+
+
+<!-- <script>console.log("aboutnewsletterrelatedrandomcomments"); console.log(""); console.log("aboutnewsletterrelatedrandomcomments")</script> -->
+
+  
+    
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4" style="margin: 10px;">
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+
+        
+            
+
+<div class="img-set" style="background-color: rgb(58, 77, 33);">
+  <img
+  
+    src="/assets/img/me.png"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
+    
+  
+  alt="Minje Kim"
+  class="avatar"
+  
+  loading="lazy"
+  style="float: left; margin-left: 5px; margin-top: 5px;  width:140px; height:140px;"
+/>
+</div>
+
+</div>
+        
+
+
+    <div class="author-body-description" style="margin-left: 200px; margin-top: 40px;" >
+        <span style = " font-size:1.4em;  color: rgb(0, 0, 0);"><strong><p>Minje Kim</p>
+</strong></span>
+        <b style = "font-size:0.8em; color: rgb(141, 141, 141);"><p>안녕하세요! 백엔드 개발자 김민제입니다!</p>
+</b>
+    </div>
+       <!--소셜-->
+       <div class="sidebar-social" style="margin-top: 30px; margin-left: 15px;">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/alswp006" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:alswp006@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.youtube.com/@%EC%B9%B4%EB%B6%80%EC%BA%A01%EA%B8%B0%EB%B0%9C%ED%91%9C" title="YouTube" class="no-mark-external">
+      <span class="icon-youtube"></span>
+      <span class="sr-only">YouTube</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://velog.io/@alswp006/posts" title="Medium" class="no-mark-external">
+      <span class="icon-medium"></span>
+      <span class="sr-only">Medium</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+    </div>
+
+</div>
+
+  </aside>
+
+  
+
+  
+  
+
+  
+    
+
+
+<aside class="related mb4" role="complementary">
+  <h2 class="hr-bottom">Related Posts</h2>
+  <ul class="related-posts">
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <a href="/project/devita/2024-10-23-Jira/" class="flip-title"><span>팀 프로젝트를 위한 JIRA 가이드라인 </span></a>
+    <time style="display: inline-block; width: 10rem" class="faded fine" datetime="2024-10-23T01:45:51+00:00">_2024년 10월 23일</time>
+  </div>
+</li>
+      
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <a href="/blog/retrospect/2023-11-27-algo-study/" class="flip-title"><span>단기 알고리즘 동아리 운영 후기! </span></a>
+    <time style="display: inline-block; width: 10rem" class="faded fine" datetime="2023-11-27T01:45:51+00:00">_2023년 11월 27일</time>
+  </div>
+</li>
+      
+    
+  </ul>
+</aside>
+
+  
+
+  
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="alswp006/blog-comments/repo"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2024. All rights reserved.
+</small></p>
+  
+ 
+    <p><span id="_version">김민제의 블로그</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/icons/icon-192x192.png" class="avatar" alt="MiloDev" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">MiloDev</h2></a>
+    
+    
+      <p class="">
+        딥다이브를 위해 노력하자!
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <!--네비게이션바에 메뉴선정-->
+<span class="sr-only">Navigation:</span>
+<ul>
+  
+      <!-- 메뉴 각각을 식별하기위한 인덱스 -->    
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(9)" onmouseout="javascript:spread(9)">
+           <!-- submenu 변수는 _config.yml 에서 추가합니다 -->       
+          <a id="_drawer--opened" href="/about/" class="sidebar-nav-item">
+            About
+          </a>
+       </div>
+      </li>
+    
+      
+      <!-- 메뉴 각각을 식별하기위한 인덱스 -->
+      
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(10)" onmouseout="javascript:spread(10)">
+           <!-- submenu 변수는 _config.yml 에서 추가합니다 -->
+          <a href="/project/" class="sidebar-nav-item">
+            Project
+          </a>       
+       </div>
+      </li>
+        
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(11)" onmouseout="javascript:spread(11)">
+            <!-- submenu 변수는 _config.yml 에서 추가합니다 -->
+             <!-- spread 함수는 js 파일로 작성하고 my-head.html에 추가합니다 -->
+             <!-- spread-btn class는 my-style.scss에 추가합니다. -->
+
+            <button class="spread-btn">
+                <!-- marterial stylesheet를 my-head.html에 추가합니다 -->
+              <span id="spread-icon-11" class="material-icons">arrow_right</span>
+            </button>
+            
+            <a href="/study/" class="sidebar-nav-item ">
+                Study
+            </a>
+    
+            <div id="submenu-11" class="menu-wrapper submenu hide">
+                <ul style="list-style: none;">
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/java/">
+                    Java
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/spring/">
+                    Spring
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/database/">
+                    Database
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/cs/">
+                    CS
+                    </a>
+                </li>
+        
+                <li>
+                    <a class="sidebar-nav-item" href="/study-etc/">
+                    공부 이것저것
+                    </a>
+                </li>
+
+                </ul>
+            </div>  
+        </div>
+      </li>
+    
+      
+      <!-- 메뉴 각각을 식별하기위한 인덱스 -->
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(12)" onmouseout="javascript:spread(12)">
+           <!-- submenu 변수는 _config.yml 에서 추가합니다 -->
+          
+            <!-- spread 함수는 js 파일로 작성하고 my-head.html에 추가합니다 -->
+            <!-- spread-btn class는 my-style.scss에 추가합니다. -->
+            <button class="spread-btn">
+                <!-- marterial stylesheet를 my-head.html에 추가합니다 -->
+              <span id="spread-icon-12" class="material-icons">arrow_right</span>
+            </button>
+          
+            <a href="/blog/" class="sidebar-nav-item">
+                Blog
+            </a>
+            
+            <div id="submenu-12" class="menu-wrapper submenu hide">
+                <ul style="list-style: none;">
+
+                <li>
+                    <a class="sidebar-nav-item" href="/daily/">
+                    일상
+                    </a>
+                </li>
+
+                <li>
+                    <a class="sidebar-nav-item" href="/retrospect/">
+                    후기 및 회고
+                    </a>
+                </li>
+
+                <li>
+                    <a class="sidebar-nav-item" href="/blog-etc/">
+                    blog-etc
+                    </a>
+                </li>
+                </ul>
+            </div>
+          
+       </div>
+      </li>
+    
+</ul>
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/alswp006" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:alswp006@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.youtube.com/@%EC%B9%B4%EB%B6%80%EC%BA%A01%EA%B8%B0%EB%B0%9C%ED%91%9C" title="YouTube" class="no-mark-external">
+      <span class="icon-youtube"></span>
+      <span class="sr-only">YouTube</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://velog.io/@alswp006/posts" title="Medium" class="no-mark-external">
+      <span class="icon-medium"></span>
+      <span class="sr-only">Medium</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>(()=>{var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())})();
+</script>
+  <script src="/assets/js/hydejack-9.2.1.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.2.1.js" nomodule defer></script>
+  
+
+  
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLYQQ238M2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLYQQ238M2');
+</script>
+
+<!--<![endif]-->
+  <!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ko"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.0.5 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>단기 알고리즘 동아리 운영 후기! | MiloDev</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="단기 알고리즘 동아리 운영 후기!" />
+<meta name="author" content="김민제" />
+<meta property="og:locale" content="ko" />
+<meta name="description" content="블로그!" />
+<meta property="og:description" content="블로그!" />
+<link rel="canonical" href="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/" />
+<meta property="og:url" content="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/" />
+<meta property="og:site_name" content="MiloDev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-11-27T01:45:51+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="단기 알고리즘 동아리 운영 후기!" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"김민제"},"dateModified":"2024-10-23T07:54:08+00:00","datePublished":"2023-11-27T01:45:51+00:00","description":"블로그!","headline":"단기 알고리즘 동아리 운영 후기!","mainEntityOfPage":{"@type":"WebPage","@id":"https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://alswp006.github.io/assets/icons/icon-192x192.png"},"name":"김민제"},"url":"https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="백엔드,기술 블로그,개발">
+  
+
+
+<!-- tipuesearch -->
+<link rel="stylesheet" href="/assets/tipuesearch/css/tipuesearch.css">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="MiloDev">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="MiloDev">
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v9.0.5" />
+
+<meta name="google-site-verification" content="KZh69-s5X5fSrgXa9XrPDI5R9YHrEgeLBL4X6t6sGOg" />
+
+
+
+<link rel="alternate" href="https://alswp006.github.io/study/java/2023-10-17-sout/" hreflang="ko">
+
+<link type="application/atom+xml" rel="alternate" href="https://alswp006.github.io/feed.xml" title="MiloDev" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/apple-icon.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+  
+  <link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_katexPreload">
+  <noscript><link rel="stylesheet" href="/assets/bower_components/katex/dist/katex.min.css"></noscript>
+
+
+
+
+
+<script>((r,a)=>{function d(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=a.createElement("script"),e=(n.src=e,t&&d(n,"load",t,{once:!0}),a.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=a.createElement("script");function o(){r._loaded=!0,t&&d(n,"load",t,{once:!0});var e=a.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():d(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){d(a.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}})(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2024-10-23T07:54:54+00:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.2.1.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.5);--accent-color-highlight: rgba(79, 177, 186, 0.1);--accent-color-darkened: rgb(63.8602040816, 154.5602040816, 162.8897959184);--theme-color: rgb(25,55,71);--dark-mode-body-bg: hsl(200.8695652174, 5.9895833333%, 17.5%);--dark-mode-border-color: hsl(200.8695652174, 5.9895833333%, 22.5%)}
+</style>
+
+
+<!--<![endif]-->
+
+
+<!-- Add HTML tags here to be included in the head -->
+<link rel="dns-prefetch" href="https://assets.gumroad.com">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<script type="module">
+  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
+
+  let p1, p2, io1, io2, embedCreated, overlayCreated;
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    io1 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
+        await p1;
+        !embedCreated && await new Promise(function check1(res) {
+          if (typeof createGumroadEmbed !== 'undefined')  {
+            embedCreated = 1;
+            res(createGumroadEmbed());
+          }
+          else setTimeout(() => check1(res), 200);
+        });
+        await new Promise(function check2(res) {
+          if (typeof GumroadEmbed !== 'undefined') res(GumroadEmbed.reload());
+          else setTimeout(() => check2(res), 200);
+        });
+      }
+    }, { rootMargin: '1440px' });
+
+    io2 ||= new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
+        await p2;
+        !overlayCreated && await new Promise(function check(res) {
+          if (typeof createGumroadOverlay !== 'undefined') {
+            overlayCreated = 1;
+            res(createGumroadOverlay());
+          }
+          else setTimeout(() => check(res), 200);
+        });
+      }
+    }, { rootMargin: '300px' });
+
+    document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
+    document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
+  });
+</script>
+
+<script>
+  function spread(id) {
+    const submenu = document.getElementById(`submenu-${id}`);
+    const icon = document.getElementById(`spread-icon-${id}`);
+    
+    if (submenu) {
+      if (submenu.classList.contains('hide')) {
+        submenu.classList.remove('hide');
+        if (icon) {
+          icon.style.transform = 'rotate(90deg)';
+        }
+      } else {
+        submenu.classList.add('hide');
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  ((e,s)=>{var d="light-mode",a="dark-mode",o=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(o=o<=e._sunrise||o>=e._sunset?a:d)==a?d:a,s.body.classList.add(o),s.body.classList.remove(e))})(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <head>
+  <style>
+    .navbar {
+      padding: 0 20px; /* 세로 여백을 최소화 */
+      background-color: #fff; /* 상단바 배경 색상 */
+    }
+
+    .nav-btn-bar, .top-menu, .nav-span {
+      height: 100%; /* 부모의 높이에 맞게 아이템을 채움 */
+      display: flex;
+      align-items: center; /* 아이템들을 세로로 중앙에 배치 */
+    }
+
+    .top-menu {
+      gap: 20px; /* 메뉴 항목들 사이 간격 유지 */
+    }
+
+    .nav-btn {
+      padding: 0 15px; /* 버튼 좌우 여백 조정, 상하 여백 제거 */
+      text-align: center;
+      border: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* 마우스 오버 시 색상 변경 */
+    .top-menu a:hover {
+      background-color: #f0f0f0;
+      color: skyblue;
+    }
+  </style>
+</head>
+
+<!--상단메뉴바-->
+<div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+      <span class="sr-only">Jump to:</span>
+      <div class="nav-btn-bar">
+          <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+          <span class="sr-only">Navigation</span>
+          <span class="icon-menu"></span>
+          </a>
+          <!--상단메뉴 카테고리들 -->
+          <div class="top-menu">
+              
+                  
+                      
+                          <a 
+                          id="_drawer--opened"
+                          href="/about/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          About
+                          </a>
+                  
+                      
+                          <a 
+                          
+                          href="/project/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          Project
+                          </a>
+                  
+                      
+                          <a 
+                          
+                          href="/study/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          Study
+                          </a>
+                  
+                      
+                          <a 
+                          
+                          href="/blog/"
+                          class="nav-btn top-menu "
+                          
+                          >
+                          Blog
+                          </a>
+                  
+              
+          </div>
+          
+          <!--검색 tipuesearch -->
+          <div class="nav-span">
+            <form action="/search">
+                <div class="tipue_search_left">
+                  <img src="/assets/tipuesearch/search.png" class="tipue_search_icon">
+                </div>
+                <div class="tipue_search_right">
+                  <input type="text" name="q" id="tipue_search_input" pattern=".{1,}" title="At least 1 characters" required></div>
+                <div style="clear: both;"></div>
+              </form>
+          </div>
+          
+      </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/retrospect/">retrospect</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2023-11-27-algo-study</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  <!-- _includes/components/post.html -->
+<article class="post" role="article">
+  <header class="post-header">
+    <h1 class="post-title">단기 알고리즘 동아리 운영 후기!</h1>
+    
+    <div class="post-meta">
+      
+        <div class="categories-tags">
+          <span class="meta-group">
+            
+              카테고리: 
+              <ul class="category-tag-list">
+                
+                  <li><a href="/category/blog">blog</a></li>
+                
+                  <li><a href="/category/retrospect">retrospect</a></li>
+                
+              </ul>
+            
+            
+            
+              &nbsp;&nbsp;
+              tag #
+              <ul class="category-tag-list">
+                
+                  <li><a href="/tag/AnomalyDetection">AnomalyDetection</a></li>
+                
+              </ul>
+            
+          </span>
+        </div>
+      
+      
+      <div class="post-date">
+        2023년 11월 27일
+      </div>
+    </div>
+  </header>
+
+  <style>
+.image-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.image-grid img {
+  max-width: 30%; /* 너비 제한 추가 */
+  height: auto;
+  flex: 1;
+  border-radius: 4px;
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap; /* 필요시 줄바꿈 */
+}
+
+.image-cell {
+  flex: 0 1 45%; /* 최대 너비 제한 */
+  text-align: center;
+}
+
+.image-cell img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.image-cell p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 개별 이미지 스타일 */
+.post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 4px;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .image-grid {
+    flex-direction: column;
+  }
+  
+  .image-grid img {
+    max-width: 100%;
+  }
+  
+  .image-cell {
+    flex: 0 1 100%;
+  }
+}
+
+</style>
+
+<h1 id="단기-알고리즘-동아리-운영-후기">단기 알고리즘 동아리 운영 후기!</h1>
+
+<ul>
+  <li>9월 21일부터 11월 24일까지 진행했던 알고리즘 스터디 동아리가 끝났습니다!</li>
+  <li>처음으로 진행한 스터디이자 처음으로 주도해서 진행해본 스터디여서 느낀 점이 꽤나 많아 이에 대한 회고를 작성해보려 합니다!</li>
+  <li>제가 이 스터디를 진행하게된 계기는 두 가지였습니다.
+    <ol>
+      <li>혼자보다는 여러 명이 함께 진행하는 스터디가 공부에 더 도움이 될 것 같았고 
+  2.학교에서 동아리를 만들어서 진행하라고 돈을 준다..!라는 이유 때문이었습니다! (30만원 받아서 책도 사고 맛있는 것도 많이 사먹었습니다!🍴)</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="시작하자마자-난관">시작하자마자 난관..😢</h1>
+
+<ul>
+  <li>우선 동아리를 신청하려면 최소 3명이 있어야한다는 것이 첫 번째 난관이었습니다..</li>
+  <li>제 주변에 개발자도 손에 꼽을 정도였는데 같은 학교에 재학중인 친구 개발자? 컴퓨터 공학과에 재학중인 친구 한 명이 전부였습니다..</li>
+  <li>하지만 모르는 사람들과 하면 그 사람들이 열심히 할 수 있는 사람인지도 보장이 안 된다는 두려움 때문에 랜덤으로 스터디 원들을 고를 생각은 차마 하지 못했습니다..</li>
+  <li>결국은 그래도 아는 사람과 하면 더 파이팅할 수 있을 것 같아서 컴퓨터 공학과 친구를 설득하고 친구의 친구를 한명 구하여 겨우 동아리를 시작할 수 있게 되었습니다!!</li>
+  <li>지금 생각해보면 좋은 선택이었던 것 같습니다!!</li>
+</ul>
+
+<h1 id="계획-세우기️와-풀어조의-탄생">계획 세우기🗓️와 풀어조의 탄생👶</h1>
+
+<ul>
+  <li>우선 이 동아리를 신청하려면 8주차동안 공부할 내용에 대한 계획서를 만들어서 제출해야 했습니다!</li>
+  <li>저는 python을 이용한 알고리즘 문제 풀이를 목표로 하였기 때문에 계획은 알고리즘 별로 아래와 같이 세웠습니다!</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/alswp006/post/d9f435a4-2334-4264-8a3f-b965325b32c5/image.png" alt="" /></p>
+
+<ul>
+  <li>python과 github, 백준 등이 어색한 팀원이 있을 수도 있기 때문에 사전에 만나 도구들의 사용법을 익히는 것을 시작으로 하여 위와 같이 알고리즘들을 공부하였습니다!</li>
+  <li>흠.. 이 때까지만 해도 저는 제가 계획을 잘 짰다고 생각하고 있었습니다..</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/alswp006/post/72e2c17c-d5f6-4e95-bb30-63ad9cd2c7b6/image.png" alt="" /></p>
+
+<p>(바퀴가 네모나도 굴러만 가면 되는 거면 동아리가 그래도 굴러는 갔다고 할 수 있겠네요..)</p>
+
+<ul>
+  <li>우선 스터디 계획은 1주 동안 각 주제를 공부해오고 만나서 공부해온 것에 대한 발표, 숙제 발표, 문제 풀이를 계획하였습니다!</li>
+  <li>위 계획은 그래도 잘 지켜진 것 같습니다!!</li>
+  <li>팀이름은 동아리를 만들기도 전에 혼자 정말 많이 고민했었는데요…</li>
+  <li>풀어조라는 이름이 탄생한 계기는 한 천재 작명가 덕분이었습니다.</li>
+</ul>
+
+<blockquote>
+  <p>나 : “팀 이름 뭘로 하는게 좋을까??”</p>
+
+  <p>팀원 1 : “음.. 풀어조는 어떨까요??”</p>
+
+</blockquote>
+
+<ul>
+  <li>이렇게 적어놓으니까 되게 별거 없어보이는데 저에게는 막힌 속이 뻥뚫렸던 난관 극복기였던 것 같습니다. 진짜 이렇게 보니까 별거없네요..</li>
+  <li>저는 분명 이런 느낌이었는데 말이죠..</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/alswp006/post/2eb35170-2a66-458f-a6af-d486e8dbbcd4/image.png" alt="" /></p>
+
+<ul>
+  <li>아무튼 저희에게는 위대한 한걸음이 되었음은 분명합니다..!!</li>
+</ul>
+
+<h1 id="우당탕탕트트아으ㅏ아아악ㅏ-진행기️️">우당탕탕트트아으ㅏ아아악ㅏ 진행기.🏃‍♀️🏃🏃‍♂️</h1>
+
+<ul>
+  <li>만나서 2시간 스터디하는 걸로 계획했지만 기본 3시간은 넘게 하고 같이 머리 싸매고 눈물도 찔끔 흘렸지만 그래도 모두 즐겁고 열심하려고 노력했습니다!</li>
+  <li>우선 스터디를 하며 가장 좋았던 점은 발표였습니다!</li>
+  <li>서로 발표를 준비해오며 예상 질문들을 생각하고 틀린 점이 없도록 더 꼼꼼하게 공부해오는 계기가 되었고 공부해온 것을 설명하며 내용들이 더 잘 정리가 된 것 같아 만약 다음에 스터디를 하게 된다해도 발표는 꼭 넣을 것 같습니다!!</li>
+</ul>
+
+<h2 id="카톡부터-재밌었던-스터디">카톡부터 재밌었던 스터디</h2>
+
+<p>한번도 카톡에서 해결된 적 없는 저녁 고민🤔</p>
+<div class="image-grid">
+  <img src="https://velog.velcdn.com/images/alswp006/post/9b2416c4-5f5e-4c61-b858-f8df40078280/image.png" alt="카톡1" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/4e114106-2870-4011-8920-d54bcfc0e718/image.png" alt="카톡2" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/ff82d726-e0aa-4159-8dd2-9a46cf0a9143/image.png" alt="카톡3" width="32%" />
+</div>
+
+<p>진짜 많이 웃은 인싸 팀원들 이모티콘🤣</p>
+<div class="image-grid">
+  <img src="https://velog.velcdn.com/images/alswp006/post/60075526-7e3b-409d-937d-e40b6d8a8c4a/image.png" alt="이모티콘1" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/9c004b60-0ecb-4aad-ae15-afbb41f28ca4/image.png" alt="이모티콘2" width="32%" />
+</div>
+
+<div class="image-grid">
+  <img src="https://velog.velcdn.com/images/alswp006/post/23f1a831-25f0-4446-811e-53d62c2bf7b7/image.png" alt="이모티콘3" width="32%" />
+  <img src="https://velog.velcdn.com/images/alswp006/post/b0e567b5-d88c-4c5f-91ae-4284000f4dd2/image.png" alt="이모티콘4" width="32%" />
+</div>
+
+<h2 id="회식">회식🥓</h2>
+
+<div class="image-row">
+  <div class="image-cell">
+    <p>제일 맛있었던 것</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/b770cf2d-49d6-4c97-9fb4-ef7962c5568a/image.png" alt="맛있는 음식1" width="100%" />
+  </div>
+  <div class="image-cell">
+    <p>두 번째로 맛있었던 것</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/478095a5-90fa-47f2-898d-a471f0363f8c/image.png" alt="맛있는 음식2" width="100%" />
+  </div>
+</div>
+
+<h1 id="간과한-점">간과한 점..🤔</h1>
+
+<ul>
+  <li>처음 스터디를 계획했을 때는 만나서 5문제, 숙제 5문제를 풀면 괜찮을 거라고 생각하고 계획하였습니다..</li>
+  <li>하지만 그렇게 되니 초반 쉬운 문제를 풀 때는 금방 끝나고 후반에 어려운 문제를 풀 때는 집에 못가는 상황이 발생하였습니다..</li>
+  <li>후반에는 문제 수를 줄여서 난이도 조절이 가능했지만 초반에 쉬운 문제들을 좀 더 많이 풀어보았으면 실력 향상에 도움이 더 많이 되었을텐데라는 아쉬움이 남았던 것 같습니다..</li>
+</ul>
+
+<h1 id="좋았던-점">좋았던 점👍</h1>
+
+<ul>
+  <li>스터디를 하며 좋았던 점은 많았던 것 같습니다!!!</li>
+  <li>발표를 준비하며 정말 많은 공부들을 하였고 발표를 하며 스피치 능력이나 의미 전달에 대해서도 많이 고민하며 성장하였던 것 같습니다!</li>
+  <li>또한 혼자 공부하는 것보다 같은 목표를 보며 공부한 것이 의지력 향상에 더 도움이 되었던 것 같습니다!!</li>
+  <li>가장 좋았던 것은 작지만 개발자 커뮤니티가 생겼다는 점이었습니다! 저희끼리 프로젝트 생각도 해보고 소소하지만 개발에 대한 얘기를 나누는 것이 정말 재밌었던 것 같습니다!</li>
+</ul>
+
+<h1 id="소감">소감</h1>
+
+<ul>
+  <li>사실 이번 스터디를 진행해보기 전에는 스터디의 장점들에 대해서 얘기로만 들었지 그렇게 와닿지는 않았었는데 스터디를 진행해보고 나니 정말 배운 것도 많고 느낀 점도 많았던 것 같습니다!!</li>
+  <li>공부는 물론 개발에 대한 얘기들을 하면서 공부 의욕도 더 생기고 정보도 공유하는 좋은 커뮤니티까지 생긴 것 같아 부가적인 장점들도 정말 많았던 것 같습니다!!</li>
+  <li>개인적으로는 발표를 이용한 공부와 개발에 대한 의욕이 높아진 것이 가장 좋았습니다!</li>
+  <li>스터디원들이 벡엔드를 지망하는 개발자였으면 자바와 스프링 스터디도 더 진행하고 싶었는데 둘 다 프론트엔드를 지망하고 있어서 이 꿈은 못 이룰 것 같습니다..</li>
+  <li>그래도 나중에 같이 프로젝트는 할 수 있겠죠..?</li>
+  <li>스터디가 끝나고 이렇게 회고까지 적으니 시원섭섭 후련하네요!</li>
+  <li>다시 돌아가면 스터디 할거냐구요??
+  → 무조건. 조금 더 일찍 했으면 좋았을 것 같습니다!!</li>
+  <li>어쩌다보니 스터디 찬양론자가 되어버린 것 같기도 하고 회고는 무슨 일기를 쓴 것 같기는 한데 이만하고 회고를 마치겠습니다!!</li>
+  <li>다들 스터디 열심히 해보시면 큰 성장을 얻을 수 있을 거라고 생각합니다!!</li>
+  <li>마지막으로 팀원들에게 들어본 소감으로 지이이인짜 마치겠습니다!</li>
+</ul>
+
+<div class="image-row">
+  <div class="image-cell">
+    <p>기특한 녀석..!!</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/2e9b04e2-f7c7-44fe-8825-24c7452cd8ea/image.png" alt="맛있는 음식1" width="100%" />
+  </div>
+  <div class="image-cell">
+    <p>바쁜 녀석..!</p>
+    <img src="https://velog.velcdn.com/images/alswp006/post/9668c8d6-8bf0-43d9-b179-1fbc1aa0fc93/image.png" alt="맛있는 음식2" width="100%" />
+  </div>
+</div>
+
+</article>
+
+
+<!-- list layout -->
+
+  
+
+  
+  
+  
+
+  
+  
+  <div class="list-post">
+  
+    
+    
+      
+
+      <!-- id="y-2024" -->
+  <h2 class="list-lead">2024</h2>
+    <ul class="related-posts">
+      
+    
+    
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2024-10-23T01:45:51+00:00">23 Oct</time>
+    <a href="/project/devita/2024-10-23-Jira/" class="flip-title"><span>팀 프로젝트를 위한 JIRA 가이드라인 </span></a>
+  </div>
+</li>
+    
+  
+    
+    
+      </ul>
+
+      <!-- id="y-2023" -->
+  <h2 class="list-lead">2023</h2>
+    <ul class="related-posts">
+      
+    
+    
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2023-11-27T01:45:51+00:00">27 Nov</time>
+    <a href="/blog/retrospect/2023-11-27-algo-study/" class="flip-title"><span>단기 알고리즘 동아리 운영 후기! </span></a>
+  </div>
+</li>
+    
+  
+    
+    
+    
+
+
+<li class="h6">
+  <div>
+    <time style="display: inline-block; width: 2.2rem" class="faded fine" datetime="2023-10-17T01:45:51+00:00">17 Oct</time>
+    <a href="/study/java/2023-10-17-sout/" class="flip-title"><span>자바 API(System.out.prinln() 뜯어보기🔨) </span></a>
+  </div>
+</li>
+    </ul>
+  
+  </div>
+
+
+
+
+
+
+<!-- <script>console.log("aboutnewsletterrelatedrandomcomments"); console.log(""); console.log("aboutnewsletterrelatedrandomcomments")</script> -->
+
+  
+    
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4" style="margin: 10px;">
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+
+        
+            
+
+<div class="img-set" style="background-color: rgb(58, 77, 33);">
+  <img
+  
+    src="/assets/img/me.png"
+    srcset="/assets/img/me.png 1x,/assets/img/me.png 2x"
+    
+  
+  alt="Minje Kim"
+  class="avatar"
+  
+  loading="lazy"
+  style="float: left; margin-left: 5px; margin-top: 5px;  width:140px; height:140px;"
+/>
+</div>
+
+</div>
+        
+
+
+    <div class="author-body-description" style="margin-left: 200px; margin-top: 40px;" >
+        <span style = " font-size:1.4em;  color: rgb(0, 0, 0);"><strong><p>Minje Kim</p>
+</strong></span>
+        <b style = "font-size:0.8em; color: rgb(141, 141, 141);"><p>안녕하세요! 백엔드 개발자 김민제입니다!</p>
+</b>
+    </div>
+       <!--소셜-->
+       <div class="sidebar-social" style="margin-top: 30px; margin-left: 15px;">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/alswp006" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:alswp006@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.youtube.com/@%EC%B9%B4%EB%B6%80%EC%BA%A01%EA%B8%B0%EB%B0%9C%ED%91%9C" title="YouTube" class="no-mark-external">
+      <span class="icon-youtube"></span>
+      <span class="sr-only">YouTube</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://velog.io/@alswp006/posts" title="Medium" class="no-mark-external">
+      <span class="icon-medium"></span>
+      <span class="sr-only">Medium</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+    </div>
+
+</div>
+
+  </aside>
+
+  
+
+  
+  
+
+  
+    
+
+
+<aside class="related mb4" role="complementary">
+  <h2 class="hr-bottom">Related Posts</h2>
+  <ul class="related-posts">
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <a href="/project/devita/2024-10-23-Jira/" class="flip-title"><span>팀 프로젝트를 위한 JIRA 가이드라인 </span></a>
+    <time style="display: inline-block; width: 10rem" class="faded fine" datetime="2024-10-23T01:45:51+00:00">_2024년 10월 23일</time>
+  </div>
+</li>
+      
+    
+      
+        
+
+
+<li class="h6">
+  <div>
+    <a href="/study/java/2023-10-17-sout/" class="flip-title"><span>자바 API(System.out.prinln() 뜯어보기🔨) </span></a>
+    <time style="display: inline-block; width: 10rem" class="faded fine" datetime="2023-10-17T01:45:51+00:00">_2023년 10월 17일</time>
+  </div>
+</li>
+      
+    
+  </ul>
+</aside>
+
+  
+
+  
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+        repo="alswp006/blog-comments/repo"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2024. All rights reserved.
+</small></p>
+  
+ 
+    <p><span id="_version">김민제의 블로그</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/icons/icon-192x192.png" class="avatar" alt="MiloDev" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">MiloDev</h2></a>
+    
+    
+      <p class="">
+        딥다이브를 위해 노력하자!
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <!--네비게이션바에 메뉴선정-->
+<span class="sr-only">Navigation:</span>
+<ul>
+  
+      <!-- 메뉴 각각을 식별하기위한 인덱스 -->    
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(9)" onmouseout="javascript:spread(9)">
+           <!-- submenu 변수는 _config.yml 에서 추가합니다 -->       
+          <a id="_drawer--opened" href="/about/" class="sidebar-nav-item">
+            About
+          </a>
+       </div>
+      </li>
+    
+      
+      <!-- 메뉴 각각을 식별하기위한 인덱스 -->
+      
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(10)" onmouseout="javascript:spread(10)">
+           <!-- submenu 변수는 _config.yml 에서 추가합니다 -->
+          <a href="/project/" class="sidebar-nav-item">
+            Project
+          </a>       
+       </div>
+      </li>
+        
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(11)" onmouseout="javascript:spread(11)">
+            <!-- submenu 변수는 _config.yml 에서 추가합니다 -->
+             <!-- spread 함수는 js 파일로 작성하고 my-head.html에 추가합니다 -->
+             <!-- spread-btn class는 my-style.scss에 추가합니다. -->
+
+            <button class="spread-btn">
+                <!-- marterial stylesheet를 my-head.html에 추가합니다 -->
+              <span id="spread-icon-11" class="material-icons">arrow_right</span>
+            </button>
+            
+            <a href="/study/" class="sidebar-nav-item ">
+                Study
+            </a>
+    
+            <div id="submenu-11" class="menu-wrapper submenu hide">
+                <ul style="list-style: none;">
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/java/">
+                    Java
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/spring/">
+                    Spring
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/database/">
+                    Database
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="sidebar-nav-item" href="/cs/">
+                    CS
+                    </a>
+                </li>
+        
+                <li>
+                    <a class="sidebar-nav-item" href="/study-etc/">
+                    공부 이것저것
+                    </a>
+                </li>
+
+                </ul>
+            </div>  
+        </div>
+      </li>
+    
+      
+      <!-- 메뉴 각각을 식별하기위한 인덱스 -->
+      <li>
+        <div class="menu-wrapper" onmouseover="javascript:spread(12)" onmouseout="javascript:spread(12)">
+           <!-- submenu 변수는 _config.yml 에서 추가합니다 -->
+          
+            <!-- spread 함수는 js 파일로 작성하고 my-head.html에 추가합니다 -->
+            <!-- spread-btn class는 my-style.scss에 추가합니다. -->
+            <button class="spread-btn">
+                <!-- marterial stylesheet를 my-head.html에 추가합니다 -->
+              <span id="spread-icon-12" class="material-icons">arrow_right</span>
+            </button>
+          
+            <a href="/blog/" class="sidebar-nav-item">
+                Blog
+            </a>
+            
+            <div id="submenu-12" class="menu-wrapper submenu hide">
+                <ul style="list-style: none;">
+
+                <li>
+                    <a class="sidebar-nav-item" href="/daily/">
+                    일상
+                    </a>
+                </li>
+
+                <li>
+                    <a class="sidebar-nav-item" href="/retrospect/">
+                    후기 및 회고
+                    </a>
+                </li>
+
+                <li>
+                    <a class="sidebar-nav-item" href="/blog-etc/">
+                    blog-etc
+                    </a>
+                </li>
+                </ul>
+            </div>
+          
+       </div>
+      </li>
+    
+</ul>
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/alswp006" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:alswp006@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.youtube.com/@%EC%B9%B4%EB%B6%80%EC%BA%A01%EA%B8%B0%EB%B0%9C%ED%91%9C" title="YouTube" class="no-mark-external">
+      <span class="icon-youtube"></span>
+      <span class="sr-only">YouTube</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://velog.io/@alswp006/posts" title="Medium" class="no-mark-external">
+      <span class="icon-medium"></span>
+      <span class="sr-only">Medium</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>(()=>{var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())})();
+</script>
+  <script src="/assets/js/hydejack-9.2.1.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.2.1.js" nomodule defer></script>
+  
+
+  
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JLYQQ238M2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JLYQQ238M2');
+</script>
+
+<!--<![endif]-->
+  <!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+</div>
+
+
+</body>
+</html>
