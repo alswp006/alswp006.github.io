@@ -1,5 +1,7 @@
-<!-- Add HTML tags here to be included in the head. You can delete the below: -->
+<!-- Add HTML tags here to be included in the head -->
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <script type="module">
   const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
 
@@ -40,4 +42,25 @@
     document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
     document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
   });
+</script>
+
+<script>
+  function spread(id) {
+    const submenu = document.getElementById(`submenu-${id}`);
+    const icon = document.getElementById(`spread-icon-${id}`);
+    
+    if (submenu) {
+      if (submenu.classList.contains('hide')) {
+        submenu.classList.remove('hide');
+        if (icon) {
+          icon.style.transform = 'rotate(90deg)';
+        }
+      } else {
+        submenu.classList.add('hide');
+        if (icon) {
+          icon.style.transform = 'rotate(0deg)';
+        }
+      }
+    }
+  }
 </script>

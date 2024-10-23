@@ -1,14 +1,115 @@
-.dl-table {
-  a {
-    @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      text-underline-offset: .8rem;
-    }
-    @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      padding-bottom: .45rem;
+// _sass/my-style.scss
+
+// 메뉴 스타일
+.spread-btn {
+  right: 15%;
+  position: absolute;
+  padding: 0;
+  padding-top: 2px;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+
+  .material-icons {
+    display: inline-block !important; // 화살표 아이콘 강제 표시
+    font-size: 18px;
+    vertical-align: middle;
+  }
+}
+
+.menu-wrapper {
+  text-align: left;
+  margin-left: 30%;
+  position: relative;
+
+  .sidebar-nav-item {
+    display: inline-block;
+    padding-right: 25px; // 화살표 버튼을 위한 공간
+  }
+}
+
+.submenu.menu-wrapper {
+  right: 10%;
+  position: absolute;
+  background-color: rgb(34,31,32);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 10rem;
+  z-index: 5;
+
+  ul {
+    margin: 0;
+    padding: 0 1.25rem;
+    list-style: none;
+
+    li {
+      padding: 0.5rem 0;
     }
   }
 
-  .btn, .gumroad-button  {
-    margin: 1rem 0;
+  &.hide {
+    display: none;
+  }
+}
+
+// 화살표 아이콘 스타일
+.material-icons {
+  &.arrow_right {
+    display: inline-block !important;
+    transition: transform 0.3s ease;
+  }
+}
+
+// 서브메뉴가 열렸을 때 화살표 회전
+.submenu:not(.hide) + .spread-btn .material-icons.arrow_right {
+  transform: rotate(90deg);
+}
+
+// _sass/my-style.scss
+
+.post-meta {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #868e96;
+
+  .categories-tags {
+    .meta-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .category-tag-list {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      display: inline;
+      margin-right: 0.5rem;
+      
+      &:not(:last-child)::after {
+        content: ",";
+        margin-left: -0.25rem;
+      }
+
+      a {
+        color: #868e96;
+        
+        &:hover {
+          color: #4a9ae1;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+  .post-date {
+    display: block;
+    margin-top: 0.5rem;
   }
 }

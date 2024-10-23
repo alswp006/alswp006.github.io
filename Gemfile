@@ -37,3 +37,6 @@ end
 # Windows에서만 필요한 gem
 gem 'wdm' if Gem.win_platform?
 gem "tzinfo-data" if Gem.win_platform?
+
+gem 'jekyll-spaceship'
+gem "jekyll-mermaid"
