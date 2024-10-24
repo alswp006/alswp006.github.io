@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://alswp006.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alswp006.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2024-10-24T12:47:47+00:00</updated><id>https://alswp006.github.io/feed.xml</id><title type="html">MiloDev</title><subtitle>블로그!
-</subtitle><author><name>김민제</name><email>alswp006@gmail.com</email></author><entry><title type="html">팀 프로젝트를 위한 JIRA 가이드라인</title><link href="https://alswp006.github.io/project/devita/2024-10-23-Jira/" rel="alternate" type="text/html" title="팀 프로젝트를 위한 JIRA 가이드라인" /><published>2024-10-23T01:45:51+00:00</published><updated>2024-10-24T12:47:10+00:00</updated><id>https://alswp006.github.io/project/devita/Jira</id><content type="html" xml:base="https://alswp006.github.io/project/devita/2024-10-23-Jira/"><![CDATA[<style>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://alswp006.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alswp006.github.io/" rel="alternate" type="text/html" hreflang="ko" /><updated>2024-10-24T13:46:52+00:00</updated><id>https://alswp006.github.io/feed.xml</id><title type="html">MiloDev</title><subtitle>블로그!
+</subtitle><author><name>김민제</name><email>alswp006@gmail.com</email></author><entry><title type="html">팀 프로젝트를 위한 JIRA 가이드라인</title><link href="https://alswp006.github.io/project/devita/2024-10-23-Jira/" rel="alternate" type="text/html" title="팀 프로젝트를 위한 JIRA 가이드라인" /><published>2024-10-23T01:45:51+00:00</published><updated>2024-10-24T13:46:06+00:00</updated><id>https://alswp006.github.io/project/devita/Jira</id><content type="html" xml:base="https://alswp006.github.io/project/devita/2024-10-23-Jira/"><![CDATA[<style>
 .toc {
   background-color: #f8f9fa;
   padding: 15px;
@@ -305,7 +305,7 @@
   <li>필터로 내 할 일만 보기, 활성 스프린트의 할 일 보기, 완료 항목 보기 등 가능</li>
 </ul>
 
-<p><img src="/assets/img/2024-10-23-jira/image-17.png" alt="alt text" /></p>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="project" /><category term="devita" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">단기 알고리즘 동아리 운영 후기!</title><link href="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/" rel="alternate" type="text/html" title="단기 알고리즘 동아리 운영 후기!" /><published>2023-11-27T01:45:51+00:00</published><updated>2024-10-24T12:47:10+00:00</updated><id>https://alswp006.github.io/blog/retrospect/algo-study</id><content type="html" xml:base="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/"><![CDATA[<style>
+<p><img src="/assets/img/2024-10-23-jira/image-17.png" alt="alt text" /></p>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="project" /><category term="devita" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">단기 알고리즘 동아리 운영 후기!</title><link href="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/" rel="alternate" type="text/html" title="단기 알고리즘 동아리 운영 후기!" /><published>2023-11-27T01:45:51+00:00</published><updated>2024-10-24T13:46:06+00:00</updated><id>https://alswp006.github.io/blog/retrospect/algo-study</id><content type="html" xml:base="https://alswp006.github.io/blog/retrospect/2023-11-27-algo-study/"><![CDATA[<style>
 .image-grid {
   display: flex;
   justify-content: space-between;
@@ -524,19 +524,19 @@
     <p>바쁜 녀석..!</p>
     <img src="https://velog.velcdn.com/images/alswp006/post/9668c8d6-8bf0-43d9-b179-1fbc1aa0fc93/image.png" alt="맛있는 음식2" width="100%" />
   </div>
-</div>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="blog" /><category term="retrospect" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">자바 API(System.out.prinln() 뜯어보기🔨)</title><link href="https://alswp006.github.io/study/java/2023-10-17-sout/" rel="alternate" type="text/html" title="자바 API(System.out.prinln() 뜯어보기🔨)" /><published>2023-10-17T01:45:51+00:00</published><updated>2024-10-24T12:47:10+00:00</updated><id>https://alswp006.github.io/study/java/sout</id><content type="html" xml:base="https://alswp006.github.io/study/java/2023-10-17-sout/"><![CDATA[<h1 id="java-api">Java Api</h1>
+</div>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="blog" /><category term="retrospect" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">자바 API(System.out.prinln() 뜯어보기🔨)</title><link href="https://alswp006.github.io/study/java/2023-10-17-sout/" rel="alternate" type="text/html" title="자바 API(System.out.prinln() 뜯어보기🔨)" /><published>2023-10-17T01:45:51+00:00</published><updated>2024-10-24T13:46:06+00:00</updated><id>https://alswp006.github.io/study/java/sout</id><content type="html" xml:base="https://alswp006.github.io/study/java/2023-10-17-sout/"><![CDATA[<h1 id="java-api">Java Api</h1>
 
 <ul>
-  <li>java 개발자가 제공하는 명령어</li>
-  <li>프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음, 라이브러리라고 부르기도 한다.</li>
-  <li>String 클래스, System 클래스 등도 API에 속하는 클래스임</li>
+  <li>java 개발자가 제공하는 명령어입니다.</li>
+  <li>프로그램 개발에 자주 사용되는 클래스 및 인터페이스 모음, 라이브러리라고 부르기도 합니다.</li>
+  <li>String 클래스, System 클래스 등도 API에 속하는 클래스입니다.</li>
 </ul>
 
 <h1 id="api-문서">API 문서</h1>
 
 <ul>
-  <li>원하는 API를 쉽게 찾아 이용할 수 있도록 해주는 문서</li>
-  <li>명령어들의 사용법과 규격을 제공하는 문서</li>
+  <li>원하는 API를 쉽게 찾아 이용할 수 있도록 해주는 문서입니다.</li>
+  <li>명령어들의 사용법과 규격을 제공하는 문서입니다.</li>
   <li>자바 제공 API 문서
     <ul>
       <li>https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/System.html</li>
@@ -548,15 +548,15 @@
 <h1 id="systemoutprintln-뜯어보기-">🔨 System.out.println() 뜯어보기 🔨</h1>
 
 <ul>
-  <li>API에 대해 학습하다보니 System클래스에 대해 자주 예시로 드는 글들이 많다</li>
-  <li>그래서 System.out.println()을 뜯어보며 API문서 참고, 자바 코드 참고 등을 연습해보려 한다!</li>
-  <li>우리는 자바를 사용하며 System.out.println()라는 코드를 수도 없이 사용한다. 이 한 줄의 문장을 하나하나 뜯어보자</li>
+  <li>API에 대해 학습하다보니 System클래스에 대해 자주 예시로 드는 글들이 많습니다.</li>
+  <li>그래서 System.out.println()을 뜯어보며 API문서 참고, 자바 코드 참고 등을 연습해보려 합니다!</li>
+  <li>저희는 자바를 사용하며 System.out.println()라는 코드를 수도 없이 사용합니다. 이 한 줄의 문장을 하나하나 뜯어보겠습니다!</li>
 </ul>
 
 <h2 id="system">System</h2>
 
 <ul>
-  <li>우선 System 클래스로 들어가보자</li>
+  <li>우선 System 클래스로 들어가보겠습니다!</li>
 </ul>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">System</span> <span class="o">{</span>
@@ -573,26 +573,26 @@
 </code></pre></div></div>
 
 <ul>
-  <li>위와 같이 구성되어 있었다.</li>
-  <li>우선 System이라는 클래스에 registerNative라는 변수가 private static native void 형태로 저장이 되어있다.
+  <li>위와 같이 구성되어 있었습니다.</li>
+  <li>우선 System이라는 클래스에 registerNative라는 변수가 private static native void 형태로 저장이 되어있습니다.
     <ul>
-      <li>private : 접근 제한자이며 변수가 클래스 내부에서만 사용될 수 있게 한다.</li>
-      <li>static : 클래스가 메모리에 올라갈 때 static 영역에 고정적으로 할당된다. 객체 생성 없이도 사용 가능하다.</li>
-      <li>native : 자바로 구현하기 까다로운 것을 다른 언어로 구현하여 자바에서 사용하기 위한 키워드</li>
+      <li>private : 접근 제한자이며 변수가 클래스 내부에서만 사용될 수 있게 합니다.</li>
+      <li>static : 클래스가 메모리에 올라갈 때 static 영역에 고정적으로 할당된다. 객체 생성 없이도 사용 가능합니다.</li>
+      <li>native : 자바로 구현하기 까다로운 것을 다른 언어로 구현하여 자바에서 사용하기 위한 키워드입니다.</li>
     </ul>
   </li>
-  <li>registerNative 메소드가 static 메모리에 올라가있다.
+  <li>registerNative 메소드가 static 메모리에 올라가 있습니다.
     <ul>
-      <li>registerNative : Java와 C++ 함수 간의 매핑을 생성하는 데 사용되는 JNI(Java Native Interface)메소드, 인수로 전달된 클래스에 네이티브 메소드를 등록한다.</li>
+      <li>registerNative : Java와 C++ 함수 간의 매핑을 생성하는 데 사용되는 JNI(Java Native Interface)메소드, 인수로 전달된 클래스에 네이티브 메소드를 등록합니다.</li>
     </ul>
   </li>
-  <li>System클래스의 기본 생성자가 private으로 선언되어 있다.</li>
-  <li>out 필드가 public static final을 가지고 PrintStream타입으로 null값을 가지고 있다.
+  <li>System클래스의 기본 생성자가 private으로 선언되어 있습니다.</li>
+  <li>out 필드가 public static final을 가지고 PrintStream타입으로 null값을 가지고 있습니다.
     <ul>
       <li>public : 모든 패키지에서 사용 가능</li>
       <li>final : 상수값, 변경 불가능</li>
-      <li>정리해보면 out 필드는 모든 패키지에서 사용 가능고 인스턴스를 생성하지 않고 사용해야하며 변경이 불가능한 값이다.</li>
-      <li>그리고 out필드는 PrintStream 타입으로 선언되어 있는데 PrintStream을 살펴보자</li>
+      <li>정리해보면 out 필드는 모든 패키지에서 사용 가능고 인스턴스를 생성하지 않고 사용해야하며 변경이 불가능한 값입니다.</li>
+      <li>그리고 out필드는 PrintStream 타입으로 선언되어 있는데 PrintStream을 살펴보겠습니다!</li>
     </ul>
   </li>
 </ul>
@@ -733,8 +733,8 @@
 </code></pre></div></div>
 
 <ul>
-  <li>위 코드와 같이 PrintStream클래스는 FilterOutputStream클래스를 상속받고 많은 println 메소드에 대해 오버로딩하여 다양한 타입의 매개변수를 받아 구현하고있다.</li>
-  <li>println 메소드를 살펴보자</li>
+  <li>위 코드와 같이 PrintStream클래스는 FilterOutputStream클래스를 상속받고 많은 println 메소드에 대해 오버로딩하여 다양한 타입의 매개변수를 받아 구현하고 있습니다.</li>
+  <li>println 메소드를 살펴보겠습니다.</li>
 </ul>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">println</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
@@ -750,37 +750,37 @@
 </code></pre></div></div>
 
 <ul>
-  <li>위 코드는 int 타입을 출력하고 줄바꿈을 해주는 println메소드이다.</li>
-  <li>조건식 안의 getClass는 Object 클래스 안에 있는 메소드이다.
+  <li>위 코드는 int 타입을 출력하고 줄바꿈을 해주는 println메소드입니다.</li>
+  <li>조건식 안의 getClass는 Object 클래스 안에 있는 메소드입니다.
     <ul>
-      <li>근데 얘가 좀 이상한게 자바 파일 안에 있는 getClass메소드 설명과 API 문서에 있는 설명이 다르다.</li>
-      <li>자바 파일에는 이렇게 적혀있다.
+      <li>근데 얘가 좀 이상한게 자바 파일 안에 있는 getClass메소드 설명과 API 문서에 있는 설명이 다릅니다…</li>
+      <li>자바 파일에는 이렇게 적혀있습니다.
         <ul>
           <li>Returns a hash code value for the object. This method is supported for the benefit of hash tables such as those provided by java.util.HashMap.</li>
           <li>‘객체에 대한 해시 코드 값을 반환합니다. 이 메서드는 java.util.HashMap과 같은 해시 테이블에서 사용될 목적으로 지원됩니다.’</li>
         </ul>
       </li>
-      <li>다음은 API 문서에 있는 설명이다.
+      <li>다음은 API 문서에 있는 설명입니다.
         <ul>
           <li>Returns the runtime class of this Object. The returned Class object is the object that is locked by static synchronized methods of the represented class.</li>
           <li>‘이 Object의 실행 클래스를 반환합니다. 반환된 Class 객체는 표시된 클래스의 static synchronized 메서드에 의해 잠겨진 객체입니다.’</li>
         </ul>
       </li>
-      <li>그럼 우선 hash code에 대해 알아보자
+      <li>그럼 우선 hash code에 대해 알아보겠습니다.
         <ul>
-          <li>해시코드를 간단하게 말하면 해시 알고리즘에 의해 생성된 정수 값이다.</li>
-          <li>int hashCode()로 정의된 hashCode 메소드는 실행 중에(Runtime) 객체의 유일한 integer값을 반환한다. Object 클래스에서는 heap에 저장된 객체의 메모리 주소를 반환하도록 되어있다</li>
-          <li>hashCode는 HashTable과 같은 자료구조를 사용할 때 데이터가 저장되는 위치를 결정하기 위해 사용된다.</li>
-          <li>찾아보니 위와 같은 설명이 있다. 정리해보면 객체의 유일한 Integer값, 그러니까 heap에 저장된 객체의 메모리 주소를 반환하는 메소드인 것 같다.</li>
+          <li>해시코드를 간단하게 말하면 해시 알고리즘에 의해 생성된 정수 값입니다.</li>
+          <li>int hashCode()로 정의된 hashCode 메소드는 실행 중에(Runtime) 객체의 유일한 integer값을 반환합니다. Object 클래스에서는 heap에 저장된 객체의 메모리 주소를 반환하도록 되어있습니다.</li>
+          <li>hashCode는 HashTable과 같은 자료구조를 사용할 때 데이터가 저장되는 위치를 결정하기 위해 사용됩니다.</li>
+          <li>찾아보니 위와 같은 설명이 있습니다. 정리해보면 객체의 유일한 Integer값, 그러니까 heap에 저장된 객체의 메모리 주소를 반환하는 메소드인 것 같습니다.</li>
         </ul>
       </li>
-      <li>그러면 다음으로 런타임 클래스를 알아보자
+      <li>그러면 다음으로 런타임 클래스를 알아보겠습니다.
         <ul>
-          <li>실행 시 JVM에 로드되는 클래스라고 한다.</li>
+          <li>실행 시 JVM에 로드되는 클래스라고 합니다.</li>
         </ul>
       </li>
       <li>
-        <p>헷갈려서 간단하게 getClass를 사용해보았다.</p>
+        <p>헷갈려서 간단하게 getClass를 사용해보았습니다.</p>
 
         <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">String</span> <span class="n">s</span> <span class="o">=</span> <span class="s">"kimminje"</span><span class="o">;</span>
   <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
@@ -788,22 +788,22 @@
 </code></pre></div>        </div>
 
         <ul>
-          <li>현재 변수가 참조중인 클래스를 반환한다.</li>
-          <li>자바 API 문서에 있는 런타임 클래스를 반환한다는 말이 맞는 것 같은데 일단 나의 실력 성장 후 다시 공부해봐야 할 것 같다…</li>
+          <li>현재 변수가 참조중인 클래스를 반환합니다.</li>
+          <li>자바 API 문서에 있는 런타임 클래스를 반환한다는 말이 맞는 것 같은데 일단 나의 실력 성장 후 다시 공부해봐야 할 것 같습니다…</li>
         </ul>
       </li>
       <li><strong>아니다 getClass는 현재 객체의 클래스를 반환한다고 했다.</strong></li>
       <li>
-        <p><strong>println은 System.out을 사용하니 위에서의 getClass는 System.out 객체의 클래스를 반환하지 않을까?</strong> 시도해보자</p>
+        <p><strong>println은 System.out을 사용하니 위에서의 getClass는 System.out 객체의 클래스를 반환하지 않을까?</strong> 시도해보겠습니다.</p>
 
         <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">getClass</span><span class="o">());</span>
   <span class="o">-&gt;</span><span class="kd">class</span> <span class="nc">java</span><span class="o">.</span><span class="na">io</span><span class="o">.</span><span class="na">PrintStream</span>
 </code></pre></div>        </div>
 
         <ul>
-          <li>이렇게 PrintStream으로 출력되는 것을 알 수 있다.</li>
-          <li>그러면 println의 메소드로 들어가면 if 문이 참이 되어 실행될 것이다.</li>
-          <li>이것도 확인해보자</li>
+          <li>이렇게 PrintStream으로 출력되는 것을 알 수 있습니다.</li>
+          <li>그러면 println의 메소드로 들어가면 if 문이 참이 되어 실행될 것입니다.</li>
+          <li>이것도 확인해보겠습니다.</li>
         </ul>
 
         <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">getClass</span><span class="o">()==</span> <span class="nc">PrintStream</span><span class="o">.</span><span class="na">class</span><span class="o">){</span>
@@ -813,11 +813,11 @@
 </code></pre></div>        </div>
 
         <ul>
-          <li>true가 출력된 것으로 보아 println의 메소드도 참이 되어 writeln(String.valueOf(x));가 실행되는 것을 알 수 있다.</li>
+          <li>true가 출력된 것으로 보아 println의 메소드도 참이 되어 writeln(String.valueOf(x));가 실행되는 것을 알 수 있습니다.</li>
         </ul>
       </li>
-      <li>그렇다면 getClass()가 PrintStream 클래스와 같으니 writeln에 x값을 String으로 변환하여 넣어준다.</li>
-      <li>x값을 특별한 방식으로 출력하기 위해 사용하는 메소드인 것 같은데 구글에 writeln에 대한 정보가 없다….</li>
+      <li>그렇다면 getClass()가 PrintStream 클래스와 같으니 writeln에 x값을 String으로 변환하여 넣어줍니다.</li>
+      <li>x값을 특별한 방식으로 출력하기 위해 사용하는 메소드인 것 같은데 구글에 writeln에 대한 정보가 없습니다…</li>
     </ul>
 
     <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span>
@@ -826,18 +826,18 @@
 </code></pre></div>    </div>
 
     <ul>
-      <li>하지만 print 메소드가 이렇게 구성되어 화면에 출력을 해주는 메소드이니 writeln은 출력을 하고 줄바꿈을 해주는 메소드라는 것을 알 수 있다.</li>
+      <li>하지만 print 메소드가 이렇게 구성되어 화면에 출력을 해주는 메소드이니 writeln은 출력을 하고 줄바꿈을 해주는 메소드라는 것을 알 수 있습니다.</li>
     </ul>
   </li>
-  <li>그리고 현재 객체가 PrintStream클래스가 아닌 경우는 synchronized block을 통해 thread-safe하게 동작하도록 하고 print메소드를 통해 문자를 출력하고 newLine()메소드를 통해 줄바꿈을 해주는 것을 알 수 있다.
+  <li>그리고 현재 객체가 PrintStream클래스가 아닌 경우는 synchronized block을 통해 thread-safe하게 동작하도록 하고 print메소드를 통해 문자를 출력하고 newLine()메소드를 통해 줄바꿈을 해주는 것을 알 수 있습니다.
     <ul>
       <li>synchronized block : Synchronized 키워드는 여러개의 스레드가 한개의 자원을 사용하고자 할 때,현재 데이터를 사용하고 있는 해당 스레드를 제외하고 나머지 스레드들은 데이터에 접근 할 수 없도록 막는 개념</li>
     </ul>
   </li>
 </ul>
 
-<h2 id="회고">회고..👍</h2>
+<h2 id="정리">정리..👍</h2>
 
 <ul>
-  <li>이렇게 System.out.println을 뜯어봤다. 이것만으로도 API문서와 자바 코드, 구글을 찾아보며 2시간 정도를 썼지만 찾아보는 도중의 깨달음과 자바의 문서와 코드 찾아보는 법을 더 잘 알게된 것 같다. 내가 해냈다는게 사실 너무 뿌듯하다. 한번씩 코드를 뜯어보면 내 실력 향상에 좋을 것 같다!</li>
+  <li>이렇게 System.out.println을 뜯어봤습니다. 이것만으로도 API문서와 자바 코드, 구글을 찾아보며 2시간 정도를 썼지만 찾아보는 도중의 깨달음과 자바의 문서와 코드 찾아보는 법을 더 잘 알게된 것 같습니다. 제가 해냈다는게 사실 너무 뿌듯한 것 같습니다. 한번씩 코드를 뜯어보면 제 실력 향상에 좋을 것 같습니다!</li>
 </ul>]]></content><author><name>김민제</name><email>alswp006@gmail.com</email></author><category term="study" /><category term="java" /><category term="AnomalyDetection" /><summary type="html"><![CDATA[Java Api]]></summary></entry></feed>
