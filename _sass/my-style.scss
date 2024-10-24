@@ -113,3 +113,197 @@
     margin-top: 0.5rem;
   }
 }
+
+
+.list-lead{
+  margin-bottom: 0;
+}
+.list-lead::after{
+  content:"";
+  display:block;
+  position: relative;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  top: -21px;
+  left: 62px;
+  // border: 3px solid;
+
+  background-color: lightgrey;
+  z-index: 1;
+}
+.list-post li {
+  line-height: 3rem;
+}
+.list-post > ul > li:first-child::before, .list-post > ul > li::after{
+  content: "";
+  width: 4px;
+  left: 66px;
+  display: inline-block;
+  float: left;
+  position: relative;
+  background-color: lightgrey;
+}
+.list-post > ul > li > div{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-post > ul > li > div > a{
+  margin-left: 1.5rem;
+  position: relative;
+}
+.list-post > ul > li > div > a::before{
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  float: left;
+  top: 1.35rem;
+  left: 60px;
+  box-shadow: 0 0 5px 0 grey;
+  background-color: white;
+  z-index: 1;
+
+  transition: all 0.5s;
+}
+.list-post > ul > li > div > a:hover::before{
+  background-color: lightgrey;
+  margin-right: 0.3rem;
+  box-shadow: 0 0 2px 0 grey;
+}
+.list-post > ul > li:first-child::before{
+  height: 3.0rem;
+  top: -1.5rem;
+}
+.list-post > ul > li:not(:last-child)::after{
+  height: 3.3rem;
+  top: -1.3rem;
+}
+.list-post ul:not(:last-child)>li:last-child::after{
+  height: 5.2rem;
+  top: -1.3rem;
+}
+
+.list-post .related-posts>li+li{
+  margin-top: 0;
+}
+.list-post li.h6{
+  margin-top: 0;
+}
+
+// scrollbar
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 3px;
+}
+*::-webkit-scrollbar-track {
+  background-color:#4b4f52; 
+  border-radius: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color:#5e6265; 
+  border-radius: 12px;
+}
+*::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(21, 2, 91);
+}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment 
+
+
+.content .avatar {
+  float: left !important;
+  box-sizing: content-box;
+  border: 1rem solid var(--body-bg);
+  transition: border-color 1s ease;
+  margin-top: 5px !important;
+  margin-left: 5px !important;
+  width:140px !important; 
+  height:140px !important;
+}
+
+// for underline u tag
+u{
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(180deg,rgba(240, 20, 20, 0) 50%, #fbe8c9 50%);
+}
+
+// for katex maths
+.katex-display{
+  // 투명
+  background-color: transparent !important;
+}
+
+
+
+// for top-menu
+.top-menu-wrapper{
+  display: inline-block;
+}
+
+.nav-btn, .nav-btn-bar{
+  height: 3rem;
+}
+.top-menu{
+  overflow-x: auto;
+  // overflow-y: hidden;
+  white-space: nowrap;
+}
+.top-menu.nav-btn{
+  border: none;
+  display: inline-flex;
+  width: 6rem;
+  margin-left: -1px;
+}
+.nav-btn:hover,.nav-btn:focus{
+  color: grey;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.nav-span{
+  flex: none;
+}
+
+
+
+// for my collapsible
+.collapsible-title:hover {
+  cursor: pointer;
+
+  #section > span{
+    text-shadow: 2px 2px 2px gray;
+  }
+}
+.collapsible-body[open]{
+  display: block;
+}
+.collapsible-body{
+  display: none;
+}
+
+.collapsible-mark{
+  display: inline-block;
+  width: 30px;
+}
+
+// for my class
+.collapsible-body > p > img{
+
+  padding: 5% 4%;
+}
+
+.ps-problem-img:hover{
+  opacity: 0.5;
+}
+
+a::after{
+  display: block;
+}
+
+// custom hydejack
+.figcaption img {
+  width: 100%;
+}
