@@ -1,5 +1,7 @@
 // _sass/my-style.scss
 
+
+
 // 메뉴 스타일
 .spread-btn {
   right: 15%;
@@ -244,9 +246,16 @@ u{
   display: inline-block;
 }
 
-.nav-btn, .nav-btn-bar{
+.nav-btn{
   height: 3rem;
 }
+.nav-btn-bar {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between; /* 버튼과 검색 창을 양 끝으로 배치 */
+  align-items: center; /* 요소들을 수직 가운데 정렬 */
+}
+
 .top-menu{
   overflow-x: auto;
   // overflow-y: hidden;
@@ -264,6 +273,7 @@ u{
 }
 
 .nav-span{
+  margin-left: auto; /* 검색 창을 오른쪽으로 밀어냄 */
   flex: none;
 }
 
