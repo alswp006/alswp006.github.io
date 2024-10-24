@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: list
 category: study
 bigtitle: study-etc
 description: >
