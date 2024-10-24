@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: list
 category: project
 bigtitle: TradeHam
 description: >
