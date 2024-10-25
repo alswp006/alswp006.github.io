@@ -141,7 +141,6 @@
   content: "";
   width: 4px;
   left: 66px;
-  display: inline-block;
   float: left;
   position: relative;
   background-color: lightgrey;
@@ -157,7 +156,6 @@
 }
 .list-post > ul > li > div > a::before{
   content: "";
-  display: inline-block;
   position: relative;
   border-radius: 50%;
   width: 8px;

@@ -44,6 +44,7 @@ http://www.tipue.com/search
      border: 2px solid #626591;
      border-radius: 0;
      -moz-appearance: none;
+     appearance: button; /* 표준 속성 추가 */
      -webkit-appearance: none;
      box-shadow: none;
      outline: 0;

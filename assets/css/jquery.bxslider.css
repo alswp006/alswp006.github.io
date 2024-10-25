@@ -6,7 +6,6 @@
   position: relative;
   margin-bottom: 60px;
   padding: 0;
-  *zoom: 1;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
 }
@@ -22,8 +21,9 @@ ul.bxslider {
   list-style: none;
 }
 .bx-viewport {
-  /*fix other elements on the page moving (on Chrome)*/
-  -webkit-transform: translatez(0);
+  /* 페이지에서 다른 요소의 움직임을 방지 (Chrome에서) */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 /** THEME
 ===================================*/
@@ -81,8 +81,6 @@ ul.bxslider {
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
   vertical-align: bottom;
-  *zoom: 1;
-  *display: inline;
 }
 .bx-wrapper .bx-pager-item {
   font-size: 0;

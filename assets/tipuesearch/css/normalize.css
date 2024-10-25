@@ -290,6 +290,7 @@ button,
 html [type="button"], /* 1 */
 [type="reset"],
 [type="submit"] {
+  appearance: textfield; /* 표준 속성 추가 */
   -webkit-appearance: button; /* 2 */
 }
 
@@ -387,6 +388,7 @@ textarea {
 
 [type="search"] {
   -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 표준 속성 추가 */
   outline-offset: -2px; /* 2 */
 }
 
