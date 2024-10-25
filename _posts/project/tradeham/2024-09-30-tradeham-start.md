@@ -5,7 +5,7 @@ subtitle: 페어 프로그래밍으로 프로젝트를..?
 date: '2024-10-23 10:45:51 +0900'
 categories:
     - project
-    - devita
+    - tradeham
 tags:
     - AnomalyDetection
 comments: true
