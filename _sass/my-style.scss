@@ -119,6 +119,7 @@
 
 .list-lead{
   margin-bottom: 0;
+  
 }
 .list-lead::after{
   content:"";
@@ -128,7 +129,7 @@
   width: 12px;
   height: 12px;
   top: -21px;
-  left: 62px;
+  left: 68px;
   // border: 3px solid;
 
   background-color: lightgrey;
@@ -140,7 +141,7 @@
 .list-post > ul > li:first-child::before, .list-post > ul > li::after{
   content: "";
   width: 4px;
-  left: 66px;
+  left: 72px;
   float: left;
   position: relative;
   background-color: lightgrey;
@@ -151,7 +152,7 @@
   text-overflow: ellipsis;
 }
 .list-post > ul > li > div > a{
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
   position: relative;
 }
 .list-post > ul > li > div > a::before{
@@ -162,7 +163,7 @@
   height: 8px;
   float: left;
   top: 1.35rem;
-  left: 60px;
+  left: 66px;
   box-shadow: 0 0 5px 0 grey;
   background-color: white;
   z-index: 1;
