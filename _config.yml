@@ -98,7 +98,7 @@ paginate_path:         /:num/
 # ---------------------------------------------------------------------------------------
 
 # This will use the gem `jekyll-theme-hydejack`, as defined in the sibling `Gemfile`.
-remote_theme: hydecorp/hydejack@v9
+remote_theme: hydecorp/hydejack
 # theme: jekyll-theme-hydejack
 
 # You can uncomment `theme` above and replace it with `remote_theme` here iff you are using the 
