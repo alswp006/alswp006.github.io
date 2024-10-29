@@ -8,7 +8,11 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    안녕하세요! 백엔드 개발자 김민제입니다!
+    백엔드 개발 및 회고 블로그입니다!! 💻
+
+    딥다이브를 위해 노력하고 있습니다!! 🤿
+    
+    부족한 점이 많지만 좋게 봐주시면 감사하겠습니다!!🙇‍♂️
 
   # This photo will be used in the about section
   picture:
