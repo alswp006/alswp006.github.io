@@ -2,65 +2,105 @@
 <link rel="dns-prefetch" href="https://assets.gumroad.com">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<script type="module">
-  const loadJS = x => new Promise(r => window.loadJS(x).addEventListener('load', r));
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5696433627232046"
+     crossorigin="anonymous"></script>
 
-  let p1, p2, io1, io2, embedCreated, overlayCreated;
+<script src="/assets/js/sidebar-folder.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script src="/assets/js/swiper-control.js"></script>
+<script src="/assets/js/collapsible.js"></script>
+
+
+// Links to the libraries needed
+<link rel="stylesheet" href="/assets/css/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/assets/css/jquery.bxslider.min.js"></script>
+
+<!-- for my toc affix -->
+<script type="module">
   document.querySelector('hy-push-state').addEventListener('load', () => {
-    io1 ||= new IntersectionObserver(async (entries) => {
-      if (entries.some(x => x.isIntersecting)) {
-        p1 = p1 || loadJS('https://gumroad.com/js/gumroad-embed.js');
-        await p1;
-        !embedCreated && await new Promise(function check1(res) {
-          if (typeof createGumroadEmbed !== 'undefined')  {
-            embedCreated = 1;
-            res(createGumroadEmbed());
+    let tocElement = document.getElementById("markdown-toc");
+
+    if(tocElement){
+      let affixedDiv = document.createElement("div");
+      affixedDiv.style.position = "relative";
+      affixedDiv.style.top = "-1rem";
+      tocElement.parentNode.insertBefore(affixedDiv, tocElement);
+
+      let headerList = document.getElementsByClassName("permalink");
+      if(headerList){
+        let prevElement;
+        window.addEventListener("scroll", () => {
+          let hurdleTop = affixedDiv.getBoundingClientRect().top;
+          if(hurdleTop <= 0) tocElement.classList.add("affix");
+          else tocElement.classList.remove("affix");
+
+          for(let i=0;i<headerList.length;i++){
+            if(headerList[i].getBoundingClientRect().top >= 0){
+              prevElement?.style.removeProperty("font-weight");
+              let tocId = "markdown-toc-" + headerList[i].parentNode.id;
+              prevElement = document.getElementById(tocId);
+              prevElement.style.fontWeight = "bold";;
+
+              break;
+            }
           }
-          else setTimeout(() => check1(res), 200);
         });
+      }
+    }
+  });
+</script>
+
+<script type="module">
+  let p;
+  const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
+  const loadJS = promisify(window.loadJS);
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    const io = new IntersectionObserver(async (entries) => {
+      if (entries.some(x => x.isIntersecting)) {
+        p = p || loadJS('https://gumroad.com/js/gumroad-embed.js');
+        await p;
+        if (!window.GumroadEmbed) {
+          await new Promise(function check1(res) {
+            if ('createGumroadEmbed' in window) res(window.createGumroadEmbed());
+            else setTimeout(() => check1(res), 200);
+          });
+        }
         await new Promise(function check2(res) {
-          if (typeof GumroadEmbed !== 'undefined') res(GumroadEmbed.reload());
+          if ('GumroadEmbed' in window) res(GumroadEmbed.reload());
           else setTimeout(() => check2(res), 200);
         });
       }
     }, { rootMargin: '1440px' });
-
-    io2 ||= new IntersectionObserver(async (entries) => {
+    document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el));
+  });
+</script>
+<script type="module">
+  let p;
+  const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
+  const loadJS = promisify(window.loadJS);
+  document.querySelector('hy-push-state').addEventListener('load', () => {
+    const io = new IntersectionObserver(async (entries) => {
       if (entries.some(x => x.isIntersecting)) {
-        p2 = p2 || loadJS('https://gumroad.com/js/gumroad.js');
-        await p2;
-        !overlayCreated && await new Promise(function check(res) {
-          if (typeof createGumroadOverlay !== 'undefined') {
-            overlayCreated = 1;
-            res(createGumroadOverlay());
-          }
-          else setTimeout(() => check(res), 200);
-        });
+        p = p || loadJS('https://gumroad.com/js/gumroad.js');
+        await p;
+        if (!window.GumroadOverlay) {
+          await new Promise(function check(res) {
+            if ('createGumroadOverlay' in window) res(window.createGumroadOverlay());
+            else setTimeout(() => check(res), 200);
+          });
+        }
       }
     }, { rootMargin: '300px' });
-
-    document.querySelectorAll('.gumroad-product-embed').forEach(el => io1.observe(el));
-    document.querySelectorAll('.gumroad-button').forEach(el => io2.observe(el));
+    document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el));
   });
 </script>
 
-<script>
-  function spread(id) {
-    const submenu = document.getElementById(`submenu-${id}`);
-    const icon = document.getElementById(`spread-icon-${id}`);
-    
-    if (submenu) {
-      if (submenu.classList.contains('hide')) {
-        submenu.classList.remove('hide');
-        if (icon) {
-          icon.style.transform = 'rotate(90deg)';
-        }
-      } else {
-        submenu.classList.add('hide');
-        if (icon) {
-          icon.style.transform = 'rotate(0deg)';
-        }
-      }
-    }
-  }
-</script>
+<!--slick-->
+<link rel="stylesheet" type="text/css" href="/assets/css/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/slick/slick-theme.css"/>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/assets/css/slick/slick.min.js"></script>
