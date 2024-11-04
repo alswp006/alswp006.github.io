@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 2024 오픈소스 컨트리뷰션 아카데미 합격 및 발대식 후기
-subtitle: 2024 오픈소스 컨트리뷰션 아카데미 합격 및 발대식 후기
-date: '2024-09-12 10:45:51 +0900'
+title: 판교 퇴근길 밋업 - 가을 특집 with 개발바닥
+subtitle: 판교 퇴근길 밋업 - 가을 특집 with 개발바닥
+date: '2024-09-26 10:45:51 +0900'
 categories:
     - blog
     - daily
