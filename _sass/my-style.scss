@@ -314,7 +314,7 @@ u{
 }
 
 .toc {
-  position: fixed;
+  position: absolute;
   top: 60px;
   right: 5rem;
   width: 300px;
@@ -324,9 +324,9 @@ u{
   border-left: 2px solid #e0d9e7;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
-  z-index: 1000;  // 다른 요소보다 위에 오도록 설정
+  z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 13px; // 목차 전체의 기본 폰트 크기 설정
+  font-size: 13px;
   line-height: 1.5;
 
   display: none;
