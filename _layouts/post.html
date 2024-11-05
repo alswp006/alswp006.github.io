@@ -5,17 +5,15 @@ layout: base
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
 
-<div class="content-wrapper" style="position: relative;">
+<div class="content-wrapper">
   <article class="post-article">
     {{ content }}
   </article>
+</div>
 
-  <div class="toc-wrapper" style="position: absolute; top: 0; right: 0; height: 100%;">
-    <div class="toc">
-      <a href="#">&lt;맨 위로&gt;</a>
-      {% include toc.html html=content %}
-    </div>
-  </div>
+<div class="toc">
+  <a href="#">&lt;맨 위로&gt;</a>
+  {% include toc.html html=content %}
 </div>
 
 {% assign addons = page.addons | default:site.hydejack.post_addons %}

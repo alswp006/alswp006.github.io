@@ -313,74 +313,72 @@ u{
   width: 100%;
 }
 
+
+
 .content-wrapper {
-  position: relative;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .post-article {
-  max-width: calc(100% - 400px);  // TOC 영역을 고려한 너비
-  margin-right: auto;
-  
-  @media (max-width: 75em) {
-    max-width: 100%;
-  }
-}
-
-.toc-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  
-  @media (max-width: 75em) {
-    display: none;
-  }
+  width: 100%;
+  margin: 0 auto;
 }
 
 .toc {
-  position: sticky;
+  position: fixed;
   top: 60px;
-  width: 300px;
-  padding: 1.5rem;
-  margin-right: 2rem;
+  right: 1rem;
+  width: 240px;
+  color: #333;
+  background-color: #fff;
+  padding: 1rem;
+  border-left: 2px solid #e0d9e7;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
-  border-left: 2px solid #e0d9e7;
-  background-color: #fff;
+  z-index: 1000;
   font-size: 13px;
   line-height: 1.5;
-  z-index: 1000;
-  
-  @media (min-width: 75em) {
-    width: 240px;
-    display: block;
+  margin-left: 2rem;
+
+  @media (max-width: 75em) {
+    display: none;
   }
   
   @media (min-width: 85em) {
     width: 300px;
+    right: 2rem;
   }
   
   @media (min-width: 95em) {
     width: 360px;
+    right: 3rem;
   }
 
   a {
     font-size: 12px;
     line-height: 1.6;
     font-weight: 500;
-    
+    color: inherit;
+    text-decoration: none;
+
     &.toc-active {
-      font-size: 1.2rem;
+      font-size: 13px;
       font-weight: bold;
       color: #9075aa;
     }
-    
+
     &:hover {
       color: #4a9ae1;
       text-decoration: underline;
     }
   }
+
+  ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin: 0;
+  }
 }
+
+// 기존 스크롤 위치 계산을 위한 JavaScript는 그대로 유지
