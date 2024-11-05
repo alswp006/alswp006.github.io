@@ -312,73 +312,55 @@ u{
 .figcaption img {
   width: 100%;
 }
-.content-wrapper {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
 
-.post-article {
-  margin-right: auto;
-  
-  @media (max-width: 75em) {
-    max-width: 100%;
-  }
-}
 
-.toc-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  
-  @media (max-width: 75em) {
-    display: none;
-  }
-}
 
 .toc {
-  position: sticky;
+  position: relative;
   top: 60px;
+  right: 3rem;
   width: 300px;
+  color: #333;
+  background-color: #fff;
   padding: 1.5rem;
-  margin-right: 2rem;
+  border-left: 2px solid #e0d9e7;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
-  border-left: 2px solid #e0d9e7;
-  background-color: #fff;
-  font-size: 13px;
+  z-index: 1000;  // 다른 요소보다 위에 오도록 설정
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 13px; // 목차 전체의 기본 폰트 크기 설정
   line-height: 1.5;
-  z-index: 1000;
-  
-  @media (min-width: 75em) {
+  display: none;
+  @media (min-width: 75em){
     width: 240px;
     display: block;
   }
-  
-  @media (min-width: 85em) {
+  @media (min-width: 85em){
     width: 300px;
+    display: block;
   }
-  
-  @media (min-width: 95em) {
+  @media (min-width: 95em){
     width: 360px;
+    display: block;
   }
-
-  a {
-    font-size: 12px;
-    line-height: 1.6;
-    font-weight: 500;
-    
-    &.toc-active {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #9075aa;
-    }
-    
-    &:hover {
-      color: #4a9ae1;
-      text-decoration: underline;
-    }
+  a.toc-active {
+    font-weight: bold; 
+    transition: all 0.125s ease-in 0s; 
+    font-size: 0.75rem;
+    color: #9075aa;
   }
+}
+.toc a {
+  font-size: 12px; // 목차 링크의 크기를 키움
+  line-height: 1.6; // 줄 간격을 넓게 설정하여 가독성 향상
+  font-weight: 500;
+}
+.toc a.toc-active {
+  font-size: 1.2rem; // 활성화된 항목은 조금 더 크게 설정
+  font-weight: bold;
+  color: #9075aa; // 활성화된 항목의 색상 변경 (필요에 따라 조정 가능)
+}
+.toc a:hover {
+  color: #4a9ae1; // 호버 시 색상 변화
+  text-decoration: underline; // 호버 시 밑줄 표시로 가독성 향상
 }
