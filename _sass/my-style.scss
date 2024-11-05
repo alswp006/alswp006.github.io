@@ -313,22 +313,26 @@ u{
   width: 100%;
 }
 
-
-
 .content-wrapper {
-  width: 100%;
+  position: relative;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.post-article {
-  width: 100%;
-  margin: 0 auto;
+.toc-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  
+  @media (max-width: 75em) {
+    display: none;
+  }
 }
-
 .toc {
-  position: fixed;
-  top: 60px;
-  right: 1rem;
+  position: absolute;  // 시작 위치를 absolute로 설정
+  right: 0;
   width: 240px;
   color: #333;
   background-color: #fff;
@@ -339,7 +343,7 @@ u{
   z-index: 1000;
   font-size: 13px;
   line-height: 1.5;
-  margin-left: 2rem;
+  margin-right: 2rem;
 
   @media (max-width: 75em) {
     display: none;
@@ -347,12 +351,15 @@ u{
   
   @media (min-width: 85em) {
     width: 300px;
-    right: 2rem;
   }
   
   @media (min-width: 95em) {
     width: 360px;
-    right: 3rem;
+  }
+
+  &.fixed {  // JavaScript에서 사용할 fixed 클래스
+    position: fixed;
+    top: 60px;
   }
 
   a {
@@ -381,4 +388,9 @@ u{
   }
 }
 
-// 기존 스크롤 위치 계산을 위한 JavaScript는 그대로 유지
+// 본문 스타일 유지
+.post-article {
+  width: 100%;
+  max-width: calc(100% - 400px);  // TOC 공간 확보
+  margin: 0 auto;
+}

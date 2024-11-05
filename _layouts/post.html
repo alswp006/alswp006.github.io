@@ -72,12 +72,20 @@ layout: base
   var before = undefined;
 
   document.addEventListener('scroll', function(e) {
+    var article = document.getElementsByClassName("post-article")[0];
+    var articleY = window.pageYOffset + article.getBoundingClientRect().top;
+    var toc = document.getElementsByClassName("toc")[0];
+
     // Fixed TOC positioning
-    if (window.scrollY >= articleY-60) {
-      toc.style.cssText = "position: fixed; top: 60px;";
+    if (window.scrollY >= articleY - 60) {
+        if (!toc.classList.contains('fixed')) {
+            toc.classList.add('fixed');
+        }
     } else {
-      toc.style.cssText = "";
-    } 
+        if (toc.classList.contains('fixed')) {
+            toc.classList.remove('fixed');
+        }
+    }
 
     // Active TOC item highlighting
     var current = headerNodes.filter(function(header) {
@@ -104,5 +112,5 @@ layout: base
     } else {
       if (before) before.classList.remove("toc-active");
     }
-  }, false);
+  }, { passive: true });
 </script>
