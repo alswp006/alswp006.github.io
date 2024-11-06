@@ -517,3 +517,7 @@ private void updateDistanceMatrix(int[][] distanceMatrix, List<Integer> sequence
 - 20개의 장소를 불러왔을 떄 처음 API 호출 420번에서 210번 -> 110번 -> 14번까지 줄였습니다.
 - 네이버 API가 느리기도 하고 경유지를 추가할수록 API 응답 시간이 느려져 성능적인 이점은 크게 없지만 네이버 API 무료 호출 횟수가 하루에 6000번, 한 달에 60000번인 것을 고려하면 시간을 들여 API 호출 횟수를 줄인  것이 좋은 노력이었다고 생각합니다.
 - 이제 이를 이용해서 알고리즘으로 경로 최적화를 진행해보겠습니다.
+
+## 머리박기의 흔적들..
+
+<img width="988" alt="image" src="https://github.com/user-attachments/assets/115e0058-560b-49a6-a33c-c28aceca02b1">
