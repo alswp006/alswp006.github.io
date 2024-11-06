@@ -20,9 +20,9 @@ order: 6
 
 # [API 호출 최적화] API 호출을 420번에서 14번으로?
 
-## 문제 상황: [[프로젝트 최적화 및 알고리즘] 추천 여행지 경로 최적화 문제](https://alswp006.github.io/project/bami/java/spring/study/2024-10-10-map/)
-
 - 이전 포스트에서 얘기했던 해결해야할 문제는 다음과 같습니다.
+
+## 문제 상황: [[프로젝트 최적화 및 알고리즘] 추천 여행지 경로 최적화 문제](https://alswp006.github.io/project/bami/java/spring/study/2024-10-10-map/)
 
 1. 너무 가까운 거리는 계산할 수 없다.
 2. API호출이 너무 많고 이 때문에 비용이 너무 많이 발생한다.
@@ -523,3 +523,5 @@ private void updateDistanceMatrix(int[][] distanceMatrix, List<Integer> sequence
 ## 머리박기의 흔적들..
 
 <img width="988" alt="image" src="https://github.com/user-attachments/assets/115e0058-560b-49a6-a33c-c28aceca02b1">
+
+## 다음 포스팅 [[알고리즘 최적화] TSP 알고리즘 시간 복잡도를 반의반의반의반의….반의 반으로 줄여??(과장 조금 보태서)](https://alswp006.github.io/project/bami/java/spring/study/2024-10-15-map-tsp/)
