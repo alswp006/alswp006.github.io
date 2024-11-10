@@ -24,7 +24,7 @@ order: 6
 
 이러한 코드 포맷을 사용할 때도 같다고 생각합니다.
 
-“그냥 쓰던데요..”라기 보다 어떠한 이점을 얻기 위해 각각의 코드를 구성하였는지 직접 생각해봐야 한다고 생각합니다(진짜 주관적인 의견)
+“그냥 쓰던데요..”라기 보다 어떠한 이점을 얻기 위해 각각의 코드를 구성하였는지 직접 생각해봐야 한다고 생각합니다.
 
 그렇다면 API 공통 응답 포맷 중 Envelope Pattern을 차근차근 처음부터 알아보겠습니다!
 
@@ -668,8 +668,9 @@ public class GlobalExceptionHandler {
 
 Exception의 Naming을 잘 못할 경우 의미 전달이 제대로 되지 않을 수도 있습니다.
 
-1. 협업을 하다보면 최초의 Custom Exception을 만든 저자의 의도와 다르게 사용할 수 있다!
-2. Code의 규약이 늘어난다!
+2. 협업을 하다보면 최초의 Custom Exception을 만든 저자의 의도와 다르게 사용할 수 있다!
+
+3. Code의 규약이 늘어난다!
 
 또한 이 외에도 Spring에서 제공하는 기본 Exception들 또한 공식 문서에 계속 업데이트가 되고 있고 Spring에서 의미하는 의도가 명확하기 때문에 최대한 Custom을 지양하라는 얘기가 있습니다!
 
@@ -691,6 +692,6 @@ Custom Exception을 만드는 방법은 매우 쉬우니 필요하신 분은 한
 
 ---
 
-[제가 만든 **Envelope-Pattern**의 링크는 이 곳을 클릭해주세요!](https://github.com/alswp006/API-Response-Format---Envelope-Pattern)
+[제가 만든 **Envelope-Pattern**의 링크는 이 곳을 클릭해주세요!](https://github.com/alswp006/API_Response_Format-Envelope_Pattern)
 
 PR이나 의견, 피드백을 환영합니다!!!
