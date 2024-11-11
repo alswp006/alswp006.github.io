@@ -450,3 +450,10 @@ sass:
 compress_html:
   ignore:
     envs: [development, production]
+
+comments:
+  provider: utterances
+  utterances:
+    repo: alswp006/alswp006.github.io
+    issue-term: pathname
+    theme: github-light
