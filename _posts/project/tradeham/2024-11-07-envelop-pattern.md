@@ -266,17 +266,18 @@ Global Exception Handler은 모든 예외를 중앙에서 관리하기 위한 �
 이를 사용하려면 다음 두 어노테이션에 대해서 알아야 합니다.
 
 1. **@RestControllerAdvice**
-
+<br>
+<br>
 @ControllerAdvice와 @ResponseBody가 결합된 어노테이션입니다. (@RestController가 @Controller와 @ResponseBody이 합쳐진 것과 같습니다.)
-
+<br><br>
 애플리케이션 전체에서 발생하는 예외를 중앙에서 처리하여 JSON 형식의 응답을 반환할 수 있도록 도와줍니다!
-
+<br><br>
 저는 Exception이 훨훨 날아가는 것을 애가 잡아온다고 이해하고 있습니다!!
-
+<br><br>
 2. **@ExceptionHandler**
-
+<br><br>
 @ExceptionHandler는 특정 예외가 발생했을 때 호출될 메서드를 정의합니다!!
-
+<br><br>
 보통 다음과 같이 사용합니다.
 
 ```java
@@ -806,13 +807,13 @@ public class TestController {
 하지만 Exception을 Custom하여 사용하는 것은 다음과 같은 논쟁 거리가 있습니다.
 
 1. 의미 전달이 제대로 되지 않을 수 있다.
-
+<br><br>
 Exception의 Naming을 잘 못할 경우 의미 전달이 제대로 되지 않을 수도 있습니다.
-
+<br><br>
 2. 협업을 하다보면 최초의 Custom Exception을 만든 저자의 의도와 다르게 사용할 수 있다.
-
+<br><br>
 협업자들 간 소통이 제대로 일어나지 않는 경우 각각의 Exception Custom을 할 수 있다는 문제가 생길 수도 있고 신입 개발자의 학습 곡선이 높아진다는 문제도 있습니다.
-
+<br><br>
 3. Code의 규약이 늘어난다.
 
 또한 이 외에도 Spring에서 제공하는 기본 Exception들 또한 공식 문서에 계속 업데이트가 되고 있고 Spring에서 의미하는 의도가 명확하기 때문에 최대한 Custom을 지양하라는 얘기가 있습니다!
