@@ -273,7 +273,7 @@ Global Exception Handler은 모든 예외를 중앙에서 관리하기 위한 �
 
 저는 Exception이 훨훨 날아가는 것을 애가 잡아온다고 이해하고 있습니다!!
 
-1. **@ExceptionHandler**
+2. **@ExceptionHandler**
 
 @ExceptionHandler는 특정 예외가 발생했을 때 호출될 메서드를 정의합니다!!
 
