@@ -658,9 +658,150 @@ public class GlobalExceptionHandler {
 
 # Custom Exception
 
-사실 저는 아래와 같이 Exception에 대한 Custom도 따로 하여 사용하고 있습니다.
+이제 마지막 단계입니다! 직접 Exception을 Custom하는 것입니다!
+
+아래와 같이 Exception에 대한 Custom을 하여 상황에 맞는 Exception을 만들어 사용할 수 있습니다.
 
 <img width="329" alt="image" src="https://github.com/user-attachments/assets/4f8eb409-7c0a-4d35-a61d-d841350ef59d">
+
+기존의 코드는 다음과 같이 3가지 예외에 대한 Handling을 해주고 있습니다.
+
+``` java
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ApiResponse<?>> handleIllegalArgumentException(IllegalArgumentException ex, HttpServletRequest request) {
+        ErrorResponse errorResponse = ErrorResponse.of(
+                ErrorCode.RESOURCE_NOT_FOUND,
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.status(ErrorCode.RESOURCE_NOT_FOUND.getStatus())
+                .body(ApiResponse.error(errorResponse));
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<ApiResponse<String>> handleRuntimeException(RuntimeException ex, HttpServletRequest request) {
+        ErrorResponse errorResponse = ErrorResponse.of(
+                ErrorCode.INTERNAL_SERVER_ERROR,
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(ApiResponse.error(errorResponse));
+
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiResponse<?>> handleGeneralException(Exception ex, HttpServletRequest request) {
+        ErrorResponse errorResponse = ErrorResponse.of(
+                ErrorCode.INTERNAL_SERVER_ERROR,
+                request.getRequestURI()
+        );
+
+        return ResponseEntity.status(ErrorCode.INTERNAL_SERVER_ERROR.getStatus())
+                .body(ApiResponse.error(errorResponse));
+    }
+}
+
+```
+
+하지만 저희는 각 상황에 맞는 보기 쉬운 에러를 내려주고 싶습니다.
+
+만약 Repository에서 객체나 필드를 find할 때 원하는 데이터가 없으면 어떻게 예외를 처리해줄 수 있을까요?
+
+그냥 다음과 같이 처리해줄 수도 있을 것입니다.
+
+``` java
+new RuntimeException("원하는 리소스가 없습니다.");
+```
+
+하지만 에러를 커스텀하여 RuntimeException 외에 자신이 원하는 에러를 내려줄 수 있습니다.
+
+이를 위해서는 다음의 단계가 필요합니다.
+
+- Exception을 확장하는 클래스 만들기
+- ErrorCode에서 code와 message 만들기
+- GlobalExceptionHandler에서 해당 에러를 Handling하는 코드 추가하기
+
+이 단계를 차근차근 진행해보겠습니다.
+
+### Exception을 확장하는 클래스 만들기
+
+위의 예시를 가져와 원하는 리소스를 찾을 수 없을 때 발생하는 예외를 처리해주겠습니다.
+
+``` java
+@Getter
+public class ResourceNotFoundException extends RuntimeException {
+
+    private final ErrorCode errorCode;
+
+    public ResourceNotFoundException(ErrorCode errorCode) {
+        super(errorCode.getMessage());
+        this.errorCode = errorCode;
+    }
+}
+```
+
+이제 다음과 같이 원하는 에러를 던질 수 있게 되었습니다.
+
+``` java
+new ResourceNotFoundException(ErrorCode.~)
+```
+
+### ErrorCode에서 code와 message 만들기
+
+ErrorCode Enum에 다음의 코드를 추가해줍니다.
+
+``` java
+RESOURCE_NOT_FOUND(HttpStatus.NOT_FOUND, "RESOURCE_NOT_FOUND", "리소스를 찾을 수 없습니다.")
+```
+
+### GlobalExceptionHandler에서 해당 에러를 Handling하는 코드 추가하기
+
+GlobalExceptionHandler에 다음의 코드를 추가하여 ResourceNotFoundException을 Handling해줍니다.
+
+``` java
+@ExceptionHandler(ResourceNotFoundException.class)
+public ResponseEntity<ApiResponse<?>> handleNotFoundException(ResourceNotFoundException ex, HttpServletRequest request) {
+    ErrorResponse errorResponse = ErrorResponse.of(ex.getErrorCode(), request.getRequestURI());
+    return new ResponseEntity<>(ApiResponse.error(errorResponse), ex.getErrorCode().getStatus());
+}
+```
+
+### 테스트
+이와 같이 Exception Custom을 통해 다음과 같이 예외 처리를 해줄 수 있습니다.
+
+``` java
+new ResourceNotFoundException(ErrorCode.RESOURCE_NOT_FOUND)
+```
+
+Controller를 다음과 같이 구성하여 테스트해볼 수 있습니다.
+
+``` java
+@RestController
+public class TestController {
+
+    @GetMapping("/api/success")
+    public ApiResponse<String> success() {
+        return ApiResponse.success("성공!!");
+    }
+
+    @GetMapping("/api/fail")
+    public ApiResponse<String> fail() {
+        throw new ResourceNotFoundException(ErrorCode.RESOURCE_NOT_FOUND);
+    }
+}
+```
+
+<img width="1277" alt="image" src="https://github.com/user-attachments/assets/828895bf-cbea-40ec-ba9d-571f2a326f7d">
+
+다음과 같이 에러가 잘 발생하는 것을 확인할 수 있습니다!!
+
+## Custom Exception에 대한 논쟁
+
+위와 같이 Exception Custom은 장점만 있는 것처럼 느껴집니다.
 
 하지만 Exception을 Custom하여 사용하는 것은 다음과 같은 논쟁 거리가 있습니다.
 
@@ -668,19 +809,21 @@ public class GlobalExceptionHandler {
 
 Exception의 Naming을 잘 못할 경우 의미 전달이 제대로 되지 않을 수도 있습니다.
 
-2. 협업을 하다보면 최초의 Custom Exception을 만든 저자의 의도와 다르게 사용할 수 있다!
+2. 협업을 하다보면 최초의 Custom Exception을 만든 저자의 의도와 다르게 사용할 수 있다.
 
-3. Code의 규약이 늘어난다!
+협업자들 간 소통이 제대로 일어나지 않는 경우 각각의 Exception Custom을 할 수 있다는 문제가 생길 수도 있고 신입 개발자의 학습 곡선이 높아진다는 문제도 있습니다.
+
+3. Code의 규약이 늘어난다.
 
 또한 이 외에도 Spring에서 제공하는 기본 Exception들 또한 공식 문서에 계속 업데이트가 되고 있고 Spring에서 의미하는 의도가 명확하기 때문에 최대한 Custom을 지양하라는 얘기가 있습니다!
 
-그래서 이는 Best Practice가 아닌 것 같아 글로 적지는 않겠습니다!
+하지만 저는 이를 사용하여 각 Exception의 의미를 명확하게 해주는 것을 선호합니다!!
 
-Custom Exception을 만드는 방법은 매우 쉬우니 필요하신 분은 한 번 찾아보시면 좋을 것 같습니다!!
+(카카오 멘토님께 여쭤봤을 때도 Exception을 Custom하여 사용한다고 하셨습니다..!!)
 
 # 정리
 
-이렇게 API 공통 응답 포맷 중 Envelope Pattern을 만들어보았습니다. 그래도 코드가 조금 보기 좋아진 것 같죠??
+이렇게 API 공통 응답 포맷 중 Envelope Pattern을 만들어보았습니다. 그래도 코드가 조금 보기 좋아진 것 같습니다!
 
 하지만 또 다른 방법이… 어쩌면 더 좋을 수도 있을 방법이 존재합니다.
 
