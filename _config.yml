@@ -53,6 +53,8 @@ menu:
   - title:             Project
     url:               /project/
     submenu:
+      - title:  OpenSource
+        url:      /opensource/
       - title:  Devita
         url:      /devita/
       - title:  TradeHam
