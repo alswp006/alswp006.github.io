@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spring Security 오픈 소스 기여해보기
-subtitle: Spring Security 오픈 소스 기여해보기
+title: Issue 할당 받고 Contribution을 위한 코드 분석해보기!
+subtitle: Issue 할당 받고 Contribution을 위한 코드 분석해보기!
 date: '2024-11-13 10:45:51 +0900'
 categories:
     - project
@@ -16,9 +16,9 @@ list: true
 order: 6
 ---
 
-# [Spring Security] OidcLogout Issue 기여하기
+# [Spring Security] Issue 할당 받고 Contribution을 위한 코드 분석해보기!
 
-저는 오픈소스 컨트리뷰션 아카데미에서 자신감을 얻고 Spring Security에 대해 기여를 해보려 합니다!
+저는 오픈소스 컨트리뷰션 아카데미 및 전자정부 프레임워크 기여에서 자신감을 얻고 Spring Security에 대해 기여를 해보려 합니다!
 
 저는 이전 전자정부 표준 프레임워크에 기여했던 경험이 있지만 이는 docs에 대한 기여라서 그렇게 코드를 읽고 본격적인 기여는 아니었습니다.
 
