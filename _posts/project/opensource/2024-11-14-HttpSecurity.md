@@ -227,11 +227,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
 }
 ```
 
-저는 이 구조를 처음 봤을 때 굉장히 신기했었습니다.
-
-Method Chaining 방식과 Builder 패턴이 혼합되어 사용되고 있었기 때문입니다.
-
-저희가 흔히 사용하는 Builder 객체를 따로 두고 그 Builder 객체를 통해 최종 객체를 생성하는 것과는 달리 메서드 체이닝 방식을 통해 필드 값을 설정하고 build() 메서드를 통해 최종 객체를 생성합니다.
+Builder 패턴을 사용하고 있습니다.
 
 그래서 저는 이 build() 메서드가 어떻게 설정되어 있는지 궁금해서 코드 안쪽으로 들어가보았습니다.
 
