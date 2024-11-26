@@ -16,7 +16,7 @@ list: true
 order: 6
 ---
 
-# Transaction, Transaction Isolation Level
+# [MySQL] Transaction, Transaction Isolation Level
 
 저는 동시성 문제를 직면하여 이를 해결하기 전 Transaction과 Lock에 대해서 정리를 하고 해결하려고 합니다!
 
