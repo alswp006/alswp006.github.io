@@ -450,7 +450,7 @@ public class ApiResponseAdvice implements ResponseBodyAdvice<Object> {
 
 제가 만든 **Envelope-Pattern**의 링크는 이 곳을 클릭해주세요!
 
-<a href="https://github.com/alswp006/API_Response_Format-Envelope_Pattern" class="card-link">
+<a href="https://github.com/alswp006/API_Response_Format-Envelope_Pattern_ResponseBodyAdvice" class="card-link">
    <img width="597" alt="image" src="https://github.com/user-attachments/assets/447b047b-103f-4f55-8465-0c15d8ef0333">
 </a>
 
