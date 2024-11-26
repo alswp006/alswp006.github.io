@@ -1,4 +1,4 @@
-<a href="https://github.com/KakaoTech-Hackathon-Dream" class="card-link">
+<a href="https://github.com/KakaoTech-Hackathon-Dream" class="card-link" target="_blank" rel="noopener noreferrer">
     <div class="link-card">
         <div class="link-content">
             <h2 class="link-title">KakaoTech-Hackathon-Dream</h2>
@@ -11,8 +11,7 @@
             </div>
         </div>
         <div class="link-image">
-            <img alt="image" src="https://github.com/user-attachments/assets/262ce6df-feb9-4f9e-af7d-ff57effd0bd5">    
-            </div>
+            <img width="399" alt="image" src="https://github.com/user-attachments/assets/0b284d11-5fbc-47d0-84f6-8707690509a6">            </div>
     </div>
 </a>
 <style>

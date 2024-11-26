@@ -836,6 +836,30 @@ Exception의 Naming을 잘 못할 경우 의미 전달이 제대로 되지 않�
 
 ---
 
-[제가 만든 **Envelope-Pattern**의 링크는 이 곳을 클릭해주세요!](https://github.com/alswp006/API_Response_Format-Envelope_Pattern)
+제가 만든 **Envelope-Pattern**의 링크는 이 곳을 클릭해주세요!
+
+<a href="https://github.com/alswp006/API_Response_Format-Envelope_Pattern" class="card-link">
+   <img width="608" alt="image" src="https://github.com/user-attachments/assets/02bc123d-0a9a-45ef-9d7b-b79d0b5ec9a2">
+</a>
 
 PR이나 의견, 피드백을 환영합니다!!!
+
+<style>
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: fit-content;
+    transition: transform 0.2s ease;
+}
+.card-link:hover {
+    transform: translateY(-2px);
+}
+.card-link img {
+    border: 1px solid #e1e4e8;  /* 테두리 추가 */
+    border-radius: 8px;  /* 모서리 둥글게 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* 그림자 효과 */
+    max-width: 100%;  /* 반응형을 위한 최대 너비 설정 */
+    height: auto;  /* 비율 유지 */
+}
+</style>
