@@ -226,3 +226,23 @@ open .
 ## Spring 확인
 
 <img width="1909" alt="image" src="https://github.com/user-attachments/assets/ecc17a8a-ca10-430c-a0e8-3154f3249aa7">
+
+## Header 설정하기
+
+저희 서비스는 HTTP 요청을 할 때 Access Token을 Header에 담아서 인가 작업을 수행합니다.
+
+Header는 다음과 같이 설정할 수 있습니다.
+
+<img width="1909" alt="image" src="https://github.com/user-attachments/assets/6d502904-be55-48a8-bc64-e6071a8baee1">
+
+HTTP Header Manager를 만들고 아래의 add 버튼을 눌러 헤더를 설정해주면 됩니다.
+
+<img width="1780" alt="image" src="https://github.com/user-attachments/assets/b356b885-55a3-4339-9b7f-6a26312cac99">
+
+저는 액세스 토큰을 직접 넣어줬는데 루프를 통해 테스트하는 방법이 있다고 해서 추후 고도화할 계획입니다.
+
+## Body 설정하기
+
+HTTP Request에서 바디를 JSON 형태로 넣어줄 수 있습니다.
+
+<img width="1780" alt="image" src="https://github.com/user-attachments/assets/1a8bb0ed-0480-47c8-9fbd-119ab097c82f">
