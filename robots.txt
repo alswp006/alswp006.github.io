@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://alswp006.github.io/sitemap.xml
+Sitemap: https://alswp006.github.io/sitemap.xml
