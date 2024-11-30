@@ -2,7 +2,7 @@
 layout: post
 title: Jmeter 사용 방법
 subtitle: Jmeter 사용 방법
-date: '2024-11-20 10:45:51 +0900'
+date: '2024-11-26 10:45:51 +0900'
 categories:
     - project
     - devita
