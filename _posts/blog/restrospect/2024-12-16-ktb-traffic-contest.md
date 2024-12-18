@@ -33,8 +33,6 @@ list: true
 }
 </style>
 
-# 대규모 부하테스트 대회, kakao x goorm - 대상(카카오 대표이사 상) 수상🥇
-
 <img width="431" alt="image" src="https://github.com/user-attachments/assets/fca306f0-1726-49dd-89d1-5c356920d027" />
 
 
