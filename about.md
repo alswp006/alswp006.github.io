@@ -11,22 +11,31 @@ redirect_from:
 
 # About
 
+## Experience
+---
+> 금융결제원
+>
+> Korea Financial Telecommunications and Clearings Institute 
+>
+> Jan. 2025 -
+>
+
 
 ## Education
 ---
-> 카카오테크 부트캠프 1기
+> KakaoTech Bootcamp (1st Cohort)
 >
-> 풀스택 과정
+> Full-Stack Developer Program
 >
-> Jul.2024 ~ Dec.2024
+> Jul. 2024 – Dec. 2024
 >
 
 
-> 오픈소스 컨트리뷰션 아카데미 체험형 2차
+> Open Source Contributor Academy 체험형 (2nd Cohort)
 >
-> Git 활용과 표준 프레임워크 MSA
+> Utilized Git and Standard Framework for MSA
 >
-> Sep.2024 ~ Oct.2024
+> Sep. 2024 – Oct. 2024
 >
 
 
@@ -55,6 +64,9 @@ redirect_from:
 
 * OpenSource
     + Spring Security
+
+* AI
+    + RAG
 
 
 
