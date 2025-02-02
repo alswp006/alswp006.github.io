@@ -162,6 +162,8 @@ list: true
  </tr>
 </table>
 
+그래도 협업이 더 원활해졌던 것 같고 팀원들끼리의 진행 상황이 더 잘 확인되어 효과는 긍정적이었다고 생각합니다!
+
 ### 팀 내 기술 교류 세미나 도입
 
 유기적인 협업을 원했지만 저희의 회의는 프론트엔드 1, 백엔드 1, 클라우드 2, AI 2로 진행하였기 때문에 서로의 진행 상황을 들어도 이해하기 힘들고 점점 회의에 대한 집중도가 떨어지는 문제가 발생하였습니다.
@@ -178,8 +180,112 @@ list: true
 
 이로 인해 도메인 지식이 넓어지는 것 뿐만 아니라 저도 백엔드 개발보다 다른 분야의 개발 속도가 필요할 때, 클라우드의 Nginx Reverse Proxy나 AI의 데이터 수집 등에 도움을 주며 유기적인 개발을 할 수 있었습니다.
 
+다음에 프로젝트를 하더라도 꼭 다시 하고 싶은 학습 방법이었습니다!
+
 # 서비스 회고
 
 - 기술 교류 세미나
 
 기술 교류 세미나를 좀 더 빨리 진행했다면 도메인 지식 향상이나 협업에 더 효과적이었을 것이라는 생각이 들었음
+
+- 일정 관리의 아쉬움
+
+여러가지 노력으로 초중반에는 일정 관리가 잘 되어 속도가 계획했던 것보다 더 빠르게 났지만 후반으로 접어들며 특정 파트에서 속도가 나지 않아 최종 목표인 출시를 못했음.
+
+후반으로 갈수록 일정을 조금 더 타이트하게 잡고 팀원들과 함께 으쌰으쌰했으면 마무리를 더 잘하고 출시라는 목표까지 이룰 수 있었을 것 같음.
+
+다음 프로젝트는 초반 MVP 개발을 최우선으로 최대한 빠르게 달리고 수정/보완하는 방식으로 진행해보고 싶다는 생각이 들었음!
+
+- 주제 선정의 아쉬움
+
+분명 우리 주제도 꼭 필요한 서비스라고 생각하지만 카카오 측에서 지원을 많이 받는 만큼 더 혁신적이고 도전적인 프로젝트를 했으면 좋았을 것 같음.
+
+카카오 멘토님이나 구름 멘토님 등 물어볼 사람도 많았고 지원도 많았는데 너무 보편적인..? 프로젝트를 한 것 같다는 생각이 들었음.
+
+백엔드에서는 공통 응답 패턴이나 Virtual Thread 등 새로운 기술 도입은 많이 해보았지만 조회 수나 좋아요 기능 외에는 기술적으로 깊은 고민을 할 거리는 조금 적었던 것 같아서 아쉬운 마음이 들었음.
+
+물론 내가 아는게 적어서 그런 걸 수도 있고 다른 분야에 도움을 주면서 도메인 지식이 넓어졌다는 장점도 있었지만 내가 가는 길은 백엔드 개발자이니 아쉬움이 남는 것 같음!
+
+다음에는 주제 선정을 조금 더 혁신적으로 해보자!
+
+## 👉 프로젝트하며 고민한 것들 보러가기!
+
+<a href="https://alswp006.github.io/devita/" class="card-link" target="_blank" rel="noopener noreferrer">
+    <div class="link-card">
+        <div class="link-content">
+            <h2 class="link-title">devita - Milodev</h2>
+            <p class="link-description">devita - Milodev has 5 repositories available. 
+            <br>Follow their code on GitHub.</p>
+            <div class="link-source">
+                        <img alt="image" src="https://github.com/user-attachments/assets/2efef02d-56ed-417c-b11e-f55f519d8676" 
+                class="source-icon">
+                <span>GitHub</span>
+            </div>
+        </div>
+        <div class="link-image">
+            <img width="171" alt="Image" src="https://github.com/user-attachments/assets/06ef05fa-de7d-490a-a817-4e05889acddf" />
+        </div>
+    </div>
+</a>
+<style>
+.card-link {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 링크 색상 제거 */
+    display: block; /* 블록 레벨 요소로 변경 */
+    width: fit-content; /* 카드 크기에 맞춤 */
+    transition: transform 0.2s ease; /* 호버 효과를 위한 트랜지션 */
+}
+.card-link:hover {
+    transform: translateY(-2px); /* 호버 시 살짝 위로 올라가는 효과 */
+}
+.link-card {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px 0;
+    max-width: 800px;
+}
+.link-content {
+    padding: 20px;
+    flex: 1;
+}
+.link-title {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+.link-description {
+    color: #666;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+}
+.link-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.source-icon {
+    width: 20px;
+    height: 20px;
+}
+.link-image {
+    width: 150px;
+    overflow: hidden;
+}
+.link-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 600px) {
+    .link-card {
+        flex-direction: column;
+    }   
+    .link-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+</style>
