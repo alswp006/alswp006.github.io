@@ -46,7 +46,9 @@ list: true
 ## 1. 기록, 또 기록! - Organization
 - Github organization
 
-<img width="581" alt="Image" src="https://github.com/user-attachments/assets/52e6674f-3bf4-485e-8a31-282705a25708" />
+<a href="https://github.com/KakaotechBootcamp1st-milo-memories" target="_blank">
+    <img src="https://github.com/user-attachments/assets/52e6674f-3bf4-485e-8a31-282705a25708" alt="Image" width="581">
+</a>
 
 우선 첫 번째로 저의 기록 공간이었던 Organization이었습니다.
 
@@ -57,11 +59,15 @@ list: true
 ## 2. 첫 번째 프로젝트 - Bami
 - Github organization
 
-<img width="584" alt="Image" src="https://github.com/user-attachments/assets/4ef7a73a-6ba8-4fa9-b9ef-787d66fdc843" />
+<a href="https://github.com/ktb1-eight" target="_blank">
+    <img src="https://github.com/user-attachments/assets/4ef7a73a-6ba8-4fa9-b9ef-787d66fdc843" alt="Image" width="581">
+</a>
 
 - Blog
 
-<img width="581" alt="Image" src="https://github.com/user-attachments/assets/c819bd16-4f16-47d0-97dc-584ffda172d8" />
+<a href="https://alswp006.github.io/bami/" target="_blank">
+    <img width="581" alt="Image" src="https://github.com/user-attachments/assets/c819bd16-4f16-47d0-97dc-584ffda172d8" />
+</a>
 
 저희 1기는 7 ~ 8월은 온라인, 9 ~ 12월은 오프라인으로 진행되었습니다.
 
@@ -74,11 +80,15 @@ list: true
 ## 3. 두 번째 프로젝트 - Devita
 - Github organization
 
-<img width="584" alt="Image" src="https://github.com/user-attachments/assets/ce78262d-93de-4be7-8fc0-1fcf507b9295" />
+<a href="https://github.com/KTB-FinalProject-Team1" target="_blank">
+    <img width="584" alt="Image" src="https://github.com/user-attachments/assets/ce78262d-93de-4be7-8fc0-1fcf507b9295" />
+</a>
 
 - Blog
 
-<img width="580" alt="Image" src="https://github.com/user-attachments/assets/34539f09-b606-4497-bb78-126f79e93412" />
+<a href="https://alswp006.github.io/devita/" target="_blank">
+    <img width="580" alt="Image" src="https://github.com/user-attachments/assets/34539f09-b606-4497-bb78-126f79e93412" />
+</a>
 
 두 번째 프로젝트는 10 ~ 12월에 진행되었고 모두 오프라인으로 진행되었습니다.
 
@@ -87,12 +97,16 @@ list: true
 1차 프로젝트에서 배운 것들을 적용해볼 수 있는 기회가 되었고 기술적으로도 큰 성장을 했던 프로젝트였습니다.
 
 👉 회고글 보러 가기
-<img width="580" alt="Image" src="https://github.com/user-attachments/assets/02592269-7147-4abf-862d-5446af16a670" />
+<a href="https://alswp006.github.io/blog/retrospect/2024-12-26-ktb-final-projrct/" target="_blank">
+    <img width="580" alt="Image" src="https://github.com/user-attachments/assets/02592269-7147-4abf-862d-5446af16a670" />
+</a>
 
 ## 4. Hackaton, kakao x goorm
 - Github organization
 
-<img width="585" alt="Image" src="https://github.com/user-attachments/assets/514a9943-362e-4ac8-b311-584d9040ddde" />
+<a href="https://github.com/KakaoTech-Hackathon-Dream" target="_blank">
+    <img width="585" alt="Image" src="https://github.com/user-attachments/assets/514a9943-362e-4ac8-b311-584d9040ddde" />
+</a>
 
 또한 해커톤도 진행했었습니다.
 
@@ -103,12 +117,16 @@ list: true
 해커톤과 같이 빠르게 개발을 하는 프로젝트는 언제나 재밌는 것 같습니다!
 
 👉 회고글 보러 가기
-<img width="580" alt="Image" src="https://github.com/user-attachments/assets/7c050a65-f448-48fa-99b6-c56ce65f8b89" />
+<a href="https://alswp006.github.io/blog/retrospect/2024-09-09-dream/" target="_blank">
+    <img width="580" alt="Image" src="https://github.com/user-attachments/assets/7c050a65-f448-48fa-99b6-c56ce65f8b89" />
+</a>
 
 ## 5. Large-Scale Load Testing Challenge, kakao x goorm
 - Github organization
 
-<img width="585" alt="Image" src="https://github.com/user-attachments/assets/862e68e1-5aa3-4a39-a1c0-ffc3d26121ec" />
+<a href="https://github.com/kakaotech-large-scale-challenge" target="_blank">
+    <img width="585" alt="Image" src="https://github.com/user-attachments/assets/862e68e1-5aa3-4a39-a1c0-ffc3d26121ec" />
+</a>
 
 부하 테스트 대회 또한 진행하였습니다.
 
@@ -121,16 +139,23 @@ RDB를 모두 없애고 Redis를 클러스터링하여 모든 데이터를 저�
 정말 좋은 경험이 되었던 것 같습니다.
 
 👉 회고글 보러 가기
-<img width="585" alt="Image" src="https://github.com/user-attachments/assets/f4cffbfd-3a22-42d8-a6b3-03124d699c1b" />
+
+<a href="https://alswp006.github.io/blog/retrospect/2024-12-16-ktb-traffic-contest/" target="_blank">
+    <img width="585" alt="Image" src="https://github.com/user-attachments/assets/f4cffbfd-3a22-42d8-a6b3-03124d699c1b" />
+</a>
 
 ## 6. Trade-Ham, 카카오 테크 부트캠프 내 비대면 중고 거래 서비스
 - Github organization
 
-<img width="586" alt="Image" src="https://github.com/user-attachments/assets/65d255bd-8dd5-4727-825b-13d15ec88d12" />
+<a href="https://github.com/Trade-Ham" target="_blank">
+    <img width="586" alt="Image" src="https://github.com/user-attachments/assets/65d255bd-8dd5-4727-825b-13d15ec88d12" />
+</a>
 
 - Blog
 
-<img width="585" alt="Image" src="https://github.com/user-attachments/assets/44b151c9-9358-4429-87c6-9a5db64a39e7" />
+<a href="https://alswp006.github.io/tradeham/" target="_blank">
+    <img width="585" alt="Image" src="https://github.com/user-attachments/assets/44b151c9-9358-4429-87c6-9a5db64a39e7" />
+</a>
 
 저는 따로 팀을 모아서 프로젝트도 진행하였습니다.
 
@@ -143,7 +168,9 @@ RDB를 모두 없애고 Redis를 클러스터링하여 모든 데이터를 저�
 ## 7. 카카오테크 부트캠프 세션
 - Youtube
 
-<img width="586" alt="Image" src="https://github.com/user-attachments/assets/6d5a9fbe-d0b2-4431-966a-a0c9600173bd" />
+<a href="https://www.youtube.com/@kakaotech-session" target="_blank">
+    <img width="586" alt="Image" src="https://github.com/user-attachments/assets/6d5a9fbe-d0b2-4431-966a-a0c9600173bd" />
+</a>
 
 CS 지식을 발표하거나 본인이 프로젝트를 하며 겪은 일들을 공유하면 좋겠다는 생각을 하여 부트캠프 내에서 세미나를 진행하고 이 영상을 업로드하는 활동을 진행하였습니다.
 
