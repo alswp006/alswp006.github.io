@@ -47,7 +47,7 @@ list: true
 - Github organization
 
 <a href="https://github.com/KakaotechBootcamp1st-milo-memories" target="_blank">
-    <img src="https://github.com/user-attachments/assets/52e6674f-3bf4-485e-8a31-282705a25708" alt="Image" width="581">
+    <img width="581" alt="Image" src="https://github.com/user-attachments/assets/891f1ad8-bf42-4b5a-bda5-f5b5270619e6" />
 </a>
 
 우선 첫 번째로 저의 기록 공간이었던 Organization이었습니다.
@@ -66,7 +66,7 @@ list: true
 - Blog
 
 <a href="https://alswp006.github.io/bami/" target="_blank">
-    <img width="581" alt="Image" src="https://github.com/user-attachments/assets/c819bd16-4f16-47d0-97dc-584ffda172d8" />
+    <img width="579" alt="Image" src="https://github.com/user-attachments/assets/b5c79110-777d-4590-b10b-619f9feb0a2a" />
 </a>
 
 저희 1기는 7 ~ 8월은 온라인, 9 ~ 12월은 오프라인으로 진행되었습니다.
@@ -97,6 +97,7 @@ list: true
 1차 프로젝트에서 배운 것들을 적용해볼 수 있는 기회가 되었고 기술적으로도 큰 성장을 했던 프로젝트였습니다.
 
 👉 회고글 보러 가기
+
 <a href="https://alswp006.github.io/blog/retrospect/2024-12-26-ktb-final-projrct/" target="_blank">
     <img width="580" alt="Image" src="https://github.com/user-attachments/assets/02592269-7147-4abf-862d-5446af16a670" />
 </a>
@@ -117,6 +118,7 @@ list: true
 해커톤과 같이 빠르게 개발을 하는 프로젝트는 언제나 재밌는 것 같습니다!
 
 👉 회고글 보러 가기
+
 <a href="https://alswp006.github.io/blog/retrospect/2024-09-09-dream/" target="_blank">
     <img width="580" alt="Image" src="https://github.com/user-attachments/assets/7c050a65-f448-48fa-99b6-c56ce65f8b89" />
 </a>
