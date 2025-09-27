@@ -2,33 +2,33 @@
 <article class="post" role="article">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    
+
     <div class="post-meta">
       {% if page.categories.size > 0 or page.tags.size > 0 %}
-        <div class="categories-tags">
-          <span class="meta-group">
-            {% if page.categories.size > 0 %}
-              카테고리: 
-              <ul class="category-tag-list">
-                {% for category in page.categories %}
-                  <li><a href="/category/{{ category }}">{{ category }}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-            
-            {% if page.tags.size > 0 %}
-              {% if page.categories.size > 0 %}&nbsp;&nbsp;{% endif %}
-              tag #
-              <ul class="category-tag-list">
-                {% for tag in page.tags %}
-                  <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </span>
-        </div>
+      <div class="categories-tags">
+        <span class="meta-group">
+          {% if page.categories.size > 0 %}
+          카테고리:
+          <ul class="category-tag-list">
+            {% for category in page.categories %}
+            <li><a href="/category/{{ category }}">{{ category }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if page.tags.size > 0 %}
+          {% if page.categories.size > 0 %}&nbsp;&nbsp;{% endif %}
+          tag #
+          <ul class="category-tag-list">
+            {% for tag in page.tags %}
+            <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </span>
+      </div>
       {% endif %}
-      
+
       <div class="post-date">
         {{ page.date | date: "%Y년 %m월 %d일" }}
       </div>

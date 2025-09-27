@@ -2,10 +2,13 @@
 layout: base
 ---
 
-<img src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?style=flat-square&label=Total&color=4fb1ba&labelColor=243241">
-<img src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
+<img
+  src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?style=flat-square&label=Total&color=4fb1ba&labelColor=243241">
+<img
+  src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
 
-{% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
+{% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image
+hide_description=page.hide_description %}
 
 <div class="post-container">
   <div class="post-content">
@@ -15,7 +18,7 @@ layout: base
       </article>
     </div>
   </div>
-  
+
   <div class="toc">
     <a href="#">&lt;맨 위로&gt;</a>
     {% include toc.html html=content %}
@@ -28,47 +31,43 @@ layout: base
 {% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
 
 {% for addon in addons %}
-  {% case addon %}
-  {% when 'about' %}
-    {% include_cached components/about.html author=page.author %}
-  {% when 'related' %}
-    {% include components/related-posts.html %}
-  {% when 'comments' %}
-    {% include body/comments.html %}
-  {% else %}
-  {% endcase %}
+{% case addon %}
+{% when 'about' %}
+{% include_cached components/about.html author=page.author %}
+{% when 'related' %}
+{% include components/related-posts.html %}
+{% when 'comments' %}
+{% include body/comments.html %}
+{% else %}
+{% endcase %}
 {% endfor %}
 
-<script src="https://utteranc.es/client.js"
-        repo="alswp006/alswp006.github.io"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+<script src="https://utteranc.es/client.js" repo="alswp006/alswp006.github.io" issue-term="pathname"
+  theme="github-light" crossorigin="anonymous" async>
+  </script>
 
 <script>
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
-    var tocNodes = nodes.filter(function(elem) {
-        return elem.tagName == "A";
+    var tocNodes = nodes.filter(function (elem) {
+      return elem.tagName == "A";
     });
     return tocNodes;
   }
-  
+
   function getHeaderNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
-    var headerNodes = nodes.filter(function(elem) {
-        return elem.tagName == "H1" || elem.tagName == "H2" || 
-               elem.tagName == "H3" || elem.tagName == "H4" || 
-               elem.tagName == "H5" || elem.tagName == "H6";
+    var headerNodes = nodes.filter(function (elem) {
+      return elem.tagName == "H1" || elem.tagName == "H2" ||
+        elem.tagName == "H3" || elem.tagName == "H4" ||
+        elem.tagName == "H5" || elem.tagName == "H6";
     });
     return headerNodes;
   }
 
   var title = document.getElementsByClassName("post-title")[0];
   var titleY = window.pageYOffset + title.getBoundingClientRect().top;
-  
+
   var article = document.getElementsByClassName("post-article")[0];
   var articleY = window.pageYOffset + article.getBoundingClientRect().top;
 
@@ -79,23 +78,23 @@ layout: base
 
   var before = undefined;
 
-  document.addEventListener('scroll', function(e) {
+  document.addEventListener('scroll', function (e) {
     // Fixed TOC positioning
-    if (window.scrollY >= articleY-60) {
+    if (window.scrollY >= articleY - 60) {
       toc.style.cssText = "position: fixed; top: 60px;";
     } else {
       toc.style.cssText = "";
-    } 
+    }
 
     // Active TOC item highlighting
-    var current = headerNodes.filter(function(header) {
+    var current = headerNodes.filter(function (header) {
       var headerY = window.pageYOffset + header.getBoundingClientRect().top;
       return window.scrollY >= headerY - 60;
     });
 
     if (current.length > 0) {
-      current = current[current.length-1];
-      var currentA = tocNodes.filter(function(tocNode) {
+      current = current[current.length - 1];
+      var currentA = tocNodes.filter(function (tocNode) {
         return tocNode.innerHTML == current.innerHTML;
       })[0];
 
