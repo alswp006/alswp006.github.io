@@ -494,4 +494,8 @@ u {
     flex: 1 0 0;            /* 남는 공간을 위/아래로 나눠 가짐 */
   }
 }
-
+a.hits-badge::after {
+  content: none !important;
+  display: none !important;
+  margin: 0 !important;
+}

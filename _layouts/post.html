@@ -3,13 +3,19 @@ layout: base
 ---
 
 {% if jekyll.environment == "production" %}
-  {% assign domain = site.url | replace: "https://", "" | replace: "http://", "" %}
+  {% assign domain = site.url | replace: "https://","" | replace: "http://","" %}
   {% assign hit_path = domain | append: page.url %}
 
-  <div class="post-views" style="margin: .5rem 0 1rem;">
+  <div class="post-views">
+    <!-- 이 포스트의 '총 조회수' -->
     <img
-      alt="Views"
-      src="https://hits.sh/{{ hit_path }}.svg?style=flat&label=views&color=%234c1&labelColor=%23555" />
+      alt="Total"
+      src="https://hits.sh/{{ hit_path | uri_escape }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241" />
+
+    <!-- 이 포스트의 '오늘 조회수' -->
+    <img
+      alt="Today"
+      src="https://hits.sh/{{ hit_path | uri_escape }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241" />
   </div>
 {% endif %}
 
