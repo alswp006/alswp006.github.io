@@ -2,22 +2,21 @@
 layout: base
 ---
 
-{% if jekyll.environment == "production" %}
-  {% assign domain = site.url | replace: "https://","" | replace: "http://","" %}
-  {% assign hit_path = domain | append: page.url %}
+{%- assign host = site.url | split: '://' | last | replace: '/', '' -%}
+{%- assign path = page.url | replace: 'index.html','' -%}
+{%- assign hit_path = host | append: path -%}
 
-  <div class="post-views">
-    <!-- 이 포스트의 '총 조회수' -->
-    <img
-      alt="Total"
-      src="https://hits.sh/{{ hit_path | uri_escape }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241" />
+<div class="post-views" style="display:inline-flex;gap:.5rem;margin:.5rem 0 1rem;">
+  <!-- 총 조회수 -->
+  <img
+    alt="Total"
+    src="https://hits.sh/{{ hit_path }}.svg?view=total&style=flat-square&label=Total&color=4fb1ba&labelColor=243241&v={{ site.time | date: '%s' }}" />
 
-    <!-- 이 포스트의 '오늘 조회수' -->
-    <img
-      alt="Today"
-      src="https://hits.sh/{{ hit_path | uri_escape }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241" />
-  </div>
-{% endif %}
+  <!-- 오늘 조회수 -->
+  <img
+    alt="Today"
+    src="https://hits.sh/{{ hit_path }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241&v={{ site.time | date: '%s' }}" />
+</div>
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
 
