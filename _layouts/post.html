@@ -1,7 +1,17 @@
 ---
 layout: base
 ---
-<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%231B1C1D&title_bg=%23555555&icon=github.svg&icon_color=%23E7E7E7&title=Views&edge_flat=false"/>
+
+{% if jekyll.environment == "production" %}
+  {% assign domain = site.url | replace: "https://", "" | replace: "http://", "" %}
+  {% assign hit_path = domain | append: page.url %}
+
+  <div class="post-views" style="margin: .5rem 0 1rem;">
+    <img
+      alt="Views"
+      src="https://hits.sh/{{ hit_path }}.svg?style=flat&label=views&color=%234c1&labelColor=%23555" />
+  </div>
+{% endif %}
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
 
