@@ -418,3 +418,47 @@ u{
         height: 200px;
     }
 }
+
+.submenu.menu-wrapper {
+  width: 12.5rem;                    /* 한글 라벨이 한 줄에 들어가도록 살짝 확장 */
+  max-height: calc(100vh - 6rem);    /* 화면 높이 기준으로 제한 */
+  overflow-y: auto;                  /* 내부 스크롤 활성화 */
+  -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+  overscroll-behavior: contain;      /* 스크롤 튐 방지 */
+  z-index: 2000;                     /* 오버레이가 다른 요소 위로 오도록 */
+}
+
+.sidebar,
+.sidebar nav,
+.menu-wrapper {
+  overflow: visible;
+}
+
+.sidebar nav ul ul {
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  z-index: 2000;
+}
+
+.sidebar {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar nav a {
+  word-break: keep-all;   /* 한국어 임의 분절 방지 */
+  hyphens: none;
+  line-height: 1.35;
+}
+@media (min-width: 992px) {
+  .sidebar nav a {
+    white-space: nowrap;      /* 한 줄 고정 */
+    overflow: hidden;         /* 넘치면 숨김 */
+    text-overflow: ellipsis;  /* … 처리 */
+  }
+  .sidebar { width: 18rem; }
+  .content, .page { margin-left: 18rem; } /* 본문도 함께 이동 */
+}
