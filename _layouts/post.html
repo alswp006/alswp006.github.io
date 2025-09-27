@@ -19,7 +19,7 @@ layout: base
      title="Daily views">
     <img
       alt="Today"
-      src="https://hits.sh/{{ site.url | split: '://' | last | split: '/' | first }}{{ page.url }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241"
+      src="https://hits.sh/https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241"
       />
   </a>
 
