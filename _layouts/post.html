@@ -2,17 +2,8 @@
 layout: base
 ---
 
-<div class="post-views">
-  <!-- 이 포스트의 총 조회수 -->
-  <img
-    alt="Total"
-    src="https://hits.sh/alswp006.github.io{{ page.url }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241" />
-
-  <!-- 이 포스트의 오늘 조회수 -->
-  <img
-    alt="Today"
-    src="https://hits.sh/alswp006.github.io{{ page.url }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241" />
-</div>
+<img src="https://hits.sh/{{ site.url | split: '://' | last | split: '/' | first }}{{ page.url }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241">
+<img src="https://hits.sh/{{ site.url | split: '://' | last | split: '/' | first }}{{ page.url }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
 
