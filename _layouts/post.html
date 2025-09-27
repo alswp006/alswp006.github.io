@@ -2,23 +2,21 @@
 layout: base
 ---
 
-{%- if jekyll.environment == "production" -%}
-  {%- assign host = site.url | split: '://' | last | replace: '/', '' -%}
-  {%- assign path = page.url | replace: 'index.html','' -%}
-  {%- assign hit_path = host | append: path -%}
+{%- assign host = site.url | split: '://' | last | split: '/' | first -%}
+{%- assign post_path = page.url | replace: 'index.html','' -%}
+{%- assign hit_path = host | append: post_path -%}
 
-  {%- assign json_total = 'https://hits.sh/' | append: hit_path | append: '.json' | uri_escape -%}
-  {%- assign json_day   = 'https://hits.sh/' | append: hit_path | append: '.json?view=day' | uri_escape -%}
+<div class="post-views" aria-label="post views">
+  <!-- 이 포스트의 '총 조회수' -->
+  <img
+    alt="Total"
+    src="https://hits.sh/{{ hit_path }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241" />
 
-  <div class="post-views" style="display:inline-flex;gap:.5rem;margin:.5rem 0 1rem;">
-    <img
-      alt="Total"
-      src="https://img.shields.io/badge/dynamic/json?url={{ json_total }}&query=%24.value&label=Total&style=flat-square&color=4fb1ba&labelColor=243241" />
-    <img
-      alt="Today"
-      src="https://img.shields.io/badge/dynamic/json?url={{ json_day }}&query=%24.value&label=Today&style=flat-square&color=4fb1ba&labelColor=243241" />
-  </div>
-{%- endif -%}
+  <!-- 이 포스트의 '오늘 조회수' -->
+  <img
+    alt="Today"
+    src="https://hits.sh/{{ hit_path }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241" />
+</div>
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
 
