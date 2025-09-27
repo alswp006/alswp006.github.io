@@ -1,28 +1,10 @@
 ---
 layout: base
 ---
-<!-- 각 포스트 상단에: 이 포스트의 Total / Today 조회수 (hits.sh) -->
-<div class="post-views" style="margin:.5rem 0 1rem; display:flex; gap:.5rem; align-items:center;">
-  <!-- 총 조회수 -->
-  <img
-    alt="Total"
-    src="https://hits.sh/alswp006.github.io{{ page.url | replace:'index.html','' }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241" />
 
-  <!-- 오늘 조회수 -->
-  <img
-    alt="Today"
-    src="https://hits.sh/alswp006.github.io{{ page.url | replace:'index.html','' }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241" />
-</div>
-
-  <a class="hits-badge"
-    href="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}/view=today"
-     title="Daily views">
-    <img
-      alt="Today"
-      src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241"
-      />
-  </a>
-
+<img src="https://hits.sh/{{ site.url | split: '://' | last | split: '/' | first }}{{ page.url }}.svg?style=flat-square&label=Total&color=4fb1ba&labelColor=243241">
+<img src="https://hits.sh/{{ site.url | split: '://' | last | split: '/' | first }}{{ page.url }}.svg?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
+<img src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
 
 <div class="post-container">
