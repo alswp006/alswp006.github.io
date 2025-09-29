@@ -5,7 +5,7 @@ layout: base
 <img
   src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?style=flat-square&label=Total&color=4fb1ba&labelColor=243241">
 <img
-  src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
+  src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today-total&style=flat-square&label=Today&color=4fb1ba&labelColor=243241">
 <div style="padding-bottom:40px;"></div>
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image
