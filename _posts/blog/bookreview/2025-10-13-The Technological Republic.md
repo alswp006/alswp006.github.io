@@ -4,6 +4,7 @@ title: (책 리뷰) 기술공화국 선언
 subtitle: (책 리뷰) 기술공화국 선언
 date: '2025-10-13 10:45:51 +0900'
 categories:
+    - blog
     - book-review
 tags:
     - AnomalyDetection

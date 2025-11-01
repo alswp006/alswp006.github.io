@@ -4,6 +4,7 @@ title: (책 리뷰) 1%를 읽는 힘
 subtitle: (책 리뷰) 1%를 읽는 힘
 date: '2025-10-08 10:45:51 +0900'
 categories:
+    - blog
     - book-review
 tags:
     - AnomalyDetection

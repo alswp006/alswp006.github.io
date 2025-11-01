@@ -4,6 +4,7 @@ title: (책 리뷰) MIT Technology Review 9/10월호 — AI, 에너지 블랙홀
 subtitle: (책 리뷰) MIT Technology Review 9/10월호 — AI, 에너지 블랙홀
 date: '2025-10-25 10:45:51 +0900'
 categories:
+    - blog
     - book-review
 tags:
     - AnomalyDetection

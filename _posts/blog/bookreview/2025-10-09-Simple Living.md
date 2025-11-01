@@ -4,6 +4,7 @@ title: (책 리뷰) 저소비생활
 subtitle: (책 리뷰) 저소비생활
 date: '2025-10-09 10:45:51 +0900'
 categories:
+    - blog
     - book-review
 tags:
     - AnomalyDetection

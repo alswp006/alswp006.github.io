@@ -4,6 +4,7 @@ title: (책 리뷰) 백악관 말하기 수업
 subtitle: (책 리뷰) 백악관 말하기 수업
 date: '2025-10-22 10:45:51 +0900'
 categories:
+    - blog
     - book-review
 tags:
     - AnomalyDetection
