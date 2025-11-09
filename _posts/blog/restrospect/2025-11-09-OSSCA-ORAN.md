@@ -2,7 +2,7 @@
 layout: post
 title: OSSCA 참여형 후기
 subtitle: OSSCA 참여형 후기
-date: '2025-11-09 19:45:51 +0900'
+date: '2025-11-09 14:45:51 +0900'
 categories:
     - project
     - opensource
