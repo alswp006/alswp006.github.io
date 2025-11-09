@@ -70,7 +70,7 @@ order: 6
 
 ## 2. 많은 기여, 많은 리뷰, 많은 소통
 
-(👉 ORAN AIMLFW 코드 기여 정리글 보러 가기)[https://alswp006.github.io/project/opensource/study/2025-11-13-Gerrit-Opensource-case/]
+<a href="https://alswp006.github.io/project/opensource/study/2025-11-13-Gerrit-Opensource-case/" target="_blank">👉 ORAN AIMLFW 코드 기여 정리글 보러 가기</a>
 
 기여에 대한 내용들은 위 링크에 정리해두었습니다.
 
