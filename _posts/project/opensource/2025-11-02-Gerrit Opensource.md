@@ -2,7 +2,7 @@
 layout: post
 title: Gerrit에서 코드 기여 해보기
 subtitle: Gerrit에서 코드 기여 해보기
-date: '2024-11-13 10:45:51 +0900'
+date: '2025-11-02 10:45:51 +0900'
 categories:
     - project
     - opensource
