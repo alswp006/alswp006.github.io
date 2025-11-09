@@ -18,9 +18,9 @@ order: 6
 
 # [OpenSource] OpenSource Contribution Academy - ORAN AIMLFW 프로젝트 후기
 
-저는 이번에 OpenSource Contribution Academy 참여형에 선발되어 프로그램을 진행했는데요
+저는 이번에 OpenSource Contribution Academy 참여형에 선발되어 프로그램을 진행했는데요.
 
-저는 ORAN Software Community AI/ML Framework에 참여하였는데요!
+저는 ORAN Software Community AI/ML Framework에 참여하였습니다!
 
 <img width="1664" alt="image" src="https://velog.velcdn.com/images/alswp006/post/c73d34c9-e743-4626-b8f0-2bab917d6329/image.png">
 
