@@ -2,7 +2,7 @@
 layout: post
 title: ORAN 코드 기여
 subtitle: ORAN 코드 기여
-date: '2024-11-13 10:45:51 +0900'
+date: '2025-11-09 10:45:51 +0900'
 categories:
     - project
     - opensource
