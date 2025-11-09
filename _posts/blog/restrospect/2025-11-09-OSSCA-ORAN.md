@@ -47,7 +47,7 @@ order: 6
 
 기여 내용에 대해서는 따로 모두 정리해두었습니다. 🙌
 
-(👉 ORAN AIMLFW 코드 기여 정리글 보러 가기)[https://alswp006.github.io/project/opensource/study/2025-11-13-Gerrit-Opensource-case/]
+<a href="https://alswp006.github.io/project/opensource/study/2025-11-13-Gerrit-Opensource-case/" target="_blank">👉 ORAN AIMLFW 코드 기여 정리글 보러 가기</a>
 
 # 재밌었던 활동들
 
