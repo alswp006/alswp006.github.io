@@ -70,3 +70,7 @@ list: true
 말하기에 대한 근본적인 두려움을 가진 모든 분께 이 책을 강력히 추천합니다.
 
 재미있는 책이었습니다!
+
+# 완독 - 8일
+
+<img width="1664" alt="image" src="https://velog.velcdn.com/images/alswp006/post/428f62bb-e649-45bb-ac74-9003afb55adf/image.png">

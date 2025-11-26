@@ -55,3 +55,7 @@ list: true
 개인적으로 매우 만족스러운 책이었습니다.
 
 재미있는 책이었습니다!
+
+# 완독 - 10일
+
+<img width="1664" alt="image" src="https://velog.velcdn.com/images/alswp006/post/c890deb2-5917-46b6-ba4d-2d4d2bf7f19e/image.png">

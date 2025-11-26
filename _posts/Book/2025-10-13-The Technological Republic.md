@@ -61,3 +61,7 @@ list: true
 이 책의 말처럼 거대한 국가 프로젝트의 상상력은 각자의 일터에서 시작하는 한 걸음과 만날 때 더 빛날 수 있을 것 같다는 생각이 들었습니다.
 
 재미있는 책이었습니다!
+
+# 완독 - 4일
+
+<img width="1664" alt="image" src="https://velog.velcdn.com/images/alswp006/post/84785d4e-efad-4b54-80c9-24cd43dbe0a8/image.png">

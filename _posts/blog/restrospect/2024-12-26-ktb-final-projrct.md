@@ -174,7 +174,7 @@ list: true
 
 파이널 프로젝트 마무리 기간까지 한 달도 남지않은 시점이었지만 프로젝트에 대한 이해는 필수적이라고 생각했고 넓은 도메인 지식을 갖는 것은 협업을 넘어 개발자로써 성장하는 데에도 도움이 될 것이라 생각하였습니다.
 
-<img width="1250" alt="image" src="https://github.com/user-attachments/assets/25b47cd2-d224-4a2d-a58e-05b607af54d3" />
+<img width="1250" alt="image" src="https://velog.velcdn.com/images/alswp006/post/4a88f314-3427-4bce-bc0e-3687e4bac8ee/image.png" />
 
 이후 진행도 열심히 했습니다!
 

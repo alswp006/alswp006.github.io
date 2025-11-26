@@ -81,3 +81,7 @@ GPT-4급 훈련이 막대한 에너지를 삼키는 건 널리 알려졌지만, 
 새로운 기술에 대한 공부를 멈추지 않고 꾸준히 적응해야되겠다는 생각이 들었습니다..!
 
 재미있는 매거진이었습니다!
+
+# 완독 - 3일
+
+<img width="1664" alt="image" src="https://velog.velcdn.com/images/alswp006/post/a34d1bf9-8662-457c-98f9-515abaabd7d9/image.png">

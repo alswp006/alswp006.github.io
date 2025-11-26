@@ -55,3 +55,7 @@ list: true
 가볍게 읽어보기 좋은 책이었다고 생각합니다.
 
 재미있는 책이었습니다!
+
+# 완독 - 1일
+
+<img width="1664" alt="image" src="https://velog.velcdn.com/images/alswp006/post/1176f028-65cb-4428-8b19-fc61dac31976/image.png">
