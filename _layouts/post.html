@@ -78,23 +78,10 @@ hide_description=page.hide_description %}
   var before;
   var ticking = false;
 
-  function updateTocVisibility() {
-    var articleRect = article.getBoundingClientRect();
-    // 본문이 화면 위로 스크롤된 후 ~ 본문 끝 전까지만 표시
-    if (articleRect.top < 0 && articleRect.bottom > 200) {
-      toc.classList.add('toc-visible');
-    } else {
-      toc.classList.remove('toc-visible');
-    }
-  }
-
   document.addEventListener('scroll', function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      // TOC 표시/숨김
-      updateTocVisibility();
-
       // 활성 헤딩 추적
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
