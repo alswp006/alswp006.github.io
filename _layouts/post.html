@@ -20,7 +20,7 @@ hide_description=page.hide_description %}
   </div>
 </div>
 
-<div class="toc">
+<div class="toc" id="tocDesktop">
   <a href="#">&lt;맨 위로&gt;</a>
   {% include toc.html html=content %}
 </div>
@@ -52,6 +52,12 @@ hide_description=page.hide_description %}
 
 <script>
 (function() {
+  // TOC를 body 직접 하위로 이동 (hy-push-state의 transform 영향 제거)
+  var toc = document.getElementById('tocDesktop');
+  if (toc) {
+    document.body.appendChild(toc);
+  }
+
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
     return nodes.filter(function (elem) { return elem.tagName === "A"; });
@@ -65,7 +71,6 @@ hide_description=page.hide_description %}
   }
 
   var article = document.getElementsByClassName("post-article")[0];
-  var toc = document.getElementsByClassName("toc")[0];
   if (!article || !toc) return;
 
   var headerNodes = getHeaderNodes(article);
