@@ -18,11 +18,11 @@ hide_description=page.hide_description %}
       </article>
     </div>
   </div>
-</div>
 
-<div class="toc" id="tocDesktop" style="opacity:0;pointer-events:none">
-  <a href="#">&lt;맨 위로&gt;</a>
-  {% include toc.html html=content %}
+  <aside class="toc" id="tocDesktop">
+    <a href="#">&lt;맨 위로&gt;</a>
+    {% include toc.html html=content %}
+  </aside>
 </div>
 
 <!-- Mobile TOC FAB -->
@@ -54,28 +54,9 @@ hide_description=page.hide_description %}
 (function() {
   var toc = document.getElementById('tocDesktop');
   var article = document.getElementsByClassName("post-article")[0];
-  var title = document.querySelector('.post-title');
   if (!toc || !article) return;
 
-  // === 1. TOC 표시/숨김: IntersectionObserver로 제목 감시 ===
-  if (title && window.IntersectionObserver) {
-    var tocObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          // 제목이 보임 → TOC 숨김
-          toc.style.opacity = '0';
-          toc.style.pointerEvents = 'none';
-        } else {
-          // 제목이 안 보임 (위로 스크롤됨) → TOC 표시
-          toc.style.opacity = '1';
-          toc.style.pointerEvents = 'auto';
-        }
-      });
-    }, { threshold: 0 });
-    tocObserver.observe(title);
-  }
-
-  // === 2. 활성 헤딩 추적 ===
+  // 활성 헤딩 추적
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
     return nodes.filter(function (elem) { return elem.tagName === "A"; });

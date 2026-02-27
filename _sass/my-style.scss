@@ -360,12 +360,21 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
-// 화면 오른쪽에 고정. 넓은 화면에서만 표시.
-// 초기: opacity:0 (숨김). JS가 .toc-show 추가 시 표시.
+// post-container를 넓은 화면에서 flex 레이아웃으로 변경
+.post-container {
+  @media (min-width: 100em) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.post-content {
+  min-width: 0;
+  flex: 1;
+}
+
+// TOC: 넓은 화면에서 본문 옆에 표시. sticky로 스크롤 추적.
 .toc {
-  position: fixed;
-  top: 60px;
-  right: 2rem;
   width: 200px;
   color: #333;
   background-color: #fff;
@@ -378,17 +387,18 @@ u {
   font-size: 13px;
   line-height: 1.5;
   display: none;
-  transition: opacity 0.2s;
 
-  // 넓은 화면에서만 표시
   @media (min-width: 100em) {
-    width: 280px;
     display: block;
+    width: 280px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    position: sticky;
+    top: 60px;
   }
 
   @media (min-width: 110em) {
     width: 320px;
-    display: block;
   }
 
   a {
