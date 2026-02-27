@@ -56,7 +56,6 @@ hide_description=page.hide_description %}
   var toc = document.getElementById('tocDesktop');
   if (toc) {
     document.body.appendChild(toc);
-    toc.style.display = 'none'; // 초기에는 숨김
   }
 
   function getTOCNodes(master) {
@@ -83,9 +82,9 @@ hide_description=page.hide_description %}
     var articleRect = article.getBoundingClientRect();
     // 본문이 화면 위로 스크롤된 후 ~ 본문 끝 전까지만 표시
     if (articleRect.top < 0 && articleRect.bottom > 200) {
-      toc.style.display = '';
+      toc.classList.add('toc-visible');
     } else {
-      toc.style.display = 'none';
+      toc.classList.remove('toc-visible');
     }
   }
 
