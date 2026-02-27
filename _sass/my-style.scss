@@ -360,27 +360,16 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
-.post-container {
-  @media (min-width: 100em) {
-    display: flex;
-    align-items: flex-start;
-  }
-}
-
-.post-content {
-  flex: 1;
-  min-width: 0;
-}
-
+// position: fixed + JS로 본문 범위 내 스크롤 추적.
+// (hy-push-state의 overflow:hidden 때문에 sticky 사용 불가)
 .toc {
-  position: sticky;
+  position: fixed;
   top: 60px;
-  flex-shrink: 0;
+  right: 2rem;
   width: 200px;
   color: #333;
   background-color: #fff;
   padding: 1.5rem;
-  margin-left: 2rem;
   border-left: 2px solid #e0d9e7;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
@@ -390,7 +379,7 @@ u {
   line-height: 1.5;
   display: none;
 
-  // 반응형 디자인
+  // 반응형 디자인 - 넓은 화면에서만 표시
   @media (min-width: 100em) {
     width: 280px;
     display: block;

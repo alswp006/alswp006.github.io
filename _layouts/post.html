@@ -18,11 +18,11 @@ hide_description=page.hide_description %}
       </article>
     </div>
   </div>
+</div>
 
-  <div class="toc">
-    <a href="#">&lt;맨 위로&gt;</a>
-    {% include toc.html html=content %}
-  </div>
+<div class="toc">
+  <a href="#">&lt;맨 위로&gt;</a>
+  {% include toc.html html=content %}
 </div>
 
 <!-- Mobile TOC FAB -->
@@ -64,20 +64,40 @@ hide_description=page.hide_description %}
     });
   }
 
-  var title = document.getElementsByClassName("post-title")[0];
   var article = document.getElementsByClassName("post-article")[0];
   var toc = document.getElementsByClassName("toc")[0];
-  if (!title || !article || !toc) return;
+  if (!article || !toc) return;
 
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
   var before;
   var ticking = false;
 
+  // TOC 표시/숨김: 본문 범위 내에서만 표시
+  function updateTocVisibility() {
+    var articleRect = article.getBoundingClientRect();
+    var articleTop = articleRect.top;
+    var articleBottom = articleRect.bottom;
+    var tocHeight = toc.offsetHeight;
+
+    // 본문 시작 ~ 본문 끝 범위에서만 TOC 표시
+    if (articleTop < 60 + tocHeight && articleBottom > 60 + tocHeight) {
+      toc.style.opacity = '1';
+      toc.style.visibility = 'visible';
+    } else {
+      toc.style.opacity = '0';
+      toc.style.visibility = 'hidden';
+    }
+  }
+
   document.addEventListener('scroll', function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
+      // TOC 표시/숨김
+      updateTocVisibility();
+
+      // 활성 헤딩 추적
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
         return window.scrollY >= headerY - 60;
@@ -105,6 +125,9 @@ hide_description=page.hide_description %}
       ticking = false;
     });
   }, false);
+
+  // 초기 상태 설정
+  updateTocVisibility();
 
   // Mobile TOC FAB
   var fab = document.getElementById('tocFab');
