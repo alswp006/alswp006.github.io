@@ -360,11 +360,18 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
-// post-container를 넓은 화면에서 flex 레이아웃으로 변경
+// post-container: 넓은 화면에서 flex 레이아웃.
+// negative margin-right로 컨테이너를 오른쪽 여백 영역까지 확장하여
+// 본문 너비를 유지하면서 TOC를 옆에 배치.
 .post-container {
   @media (min-width: 100em) {
     display: flex;
     gap: 2rem;
+    margin-right: -312px; // -(TOC 280px + gap 32px)
+  }
+
+  @media (min-width: 110em) {
+    margin-right: -352px; // -(TOC 320px + gap 32px)
   }
 }
 
@@ -375,7 +382,6 @@ u {
 
 // TOC: 넓은 화면에서 본문 옆에 표시. sticky로 스크롤 추적.
 .toc {
-  width: 200px;
   color: #333;
   background-color: #fff;
   padding: 1.5rem;
