@@ -20,7 +20,7 @@ hide_description=page.hide_description %}
   </div>
 </div>
 
-<div class="toc" id="tocDesktop">
+<div class="toc" id="tocDesktop" style="display:none">
   <a href="#">&lt;맨 위로&gt;</a>
   {% include toc.html html=content %}
 </div>
@@ -52,11 +52,7 @@ hide_description=page.hide_description %}
 
 <script>
 (function() {
-  // TOC를 body 직접 하위로 이동 (hy-push-state의 transform 영향 제거)
   var toc = document.getElementById('tocDesktop');
-  if (toc) {
-    document.body.appendChild(toc);
-  }
 
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
@@ -73,6 +69,7 @@ hide_description=page.hide_description %}
   var article = document.getElementsByClassName("post-article")[0];
   if (!article || !toc) return;
 
+  var wideQuery = window.matchMedia('(min-width: 100em)');
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
   var before;
@@ -82,6 +79,14 @@ hide_description=page.hide_description %}
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
+      // 넓은 화면 + 본문 스크롤 진입 시에만 TOC 표시
+      var articleRect = article.getBoundingClientRect();
+      if (wideQuery.matches && articleRect.top < 0 && articleRect.bottom > 200) {
+        toc.style.display = 'block';
+      } else {
+        toc.style.display = 'none';
+      }
+
       // 활성 헤딩 추적
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
