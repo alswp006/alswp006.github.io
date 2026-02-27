@@ -366,28 +366,33 @@ hy-push-state {
   overflow: clip !important;
 }
 
-// 넓은 화면에서 포스트 페이지와 상단바를 TOC 폭만큼 확장.
+// 넓은 화면에서 상단바를 TOC 폭만큼 확장.
 // 사이드바(21rem) 클리어를 위해 margin-left: 25rem 고정.
 @media (min-width: 100em) {
-  .content.layout-post,
   .navbar > .content {
-    max-width: calc(54rem + 312px) !important; // 본문 54rem + TOC 280px + gap 32px
+    max-width: calc(54rem + 312px) !important;
     margin-left: 25rem !important;
     margin-right: auto !important;
   }
 }
 
 @media (min-width: 110em) {
-  .content.layout-post,
   .navbar > .content {
-    max-width: calc(54rem + 352px) !important; // 본문 54rem + TOC 320px + gap 32px
+    max-width: calc(54rem + 352px) !important;
   }
 }
 
+// post-container: flex 레이아웃 + negative margin으로 TOC 공간 확보.
+// 본문(.content.layout-post)은 원래 54rem 유지, 제목과 상단바 정렬.
 .post-container {
   @media (min-width: 100em) {
     display: flex;
     gap: 2rem;
+    margin-right: -312px;
+  }
+
+  @media (min-width: 110em) {
+    margin-right: -352px;
   }
 }
 
