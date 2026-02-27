@@ -69,7 +69,6 @@ hide_description=page.hide_description %}
   var toc = document.getElementsByClassName("toc")[0];
   if (!title || !article || !toc) return;
 
-  var articleY = window.pageYOffset + article.getBoundingClientRect().top;
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
   var before;
@@ -79,12 +78,6 @@ hide_description=page.hide_description %}
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      if (window.scrollY >= articleY - 60) {
-        toc.style.cssText = "position: fixed; top: 60px;";
-      } else {
-        toc.style.cssText = "";
-      }
-
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
         return window.scrollY >= headerY - 60;
