@@ -360,17 +360,6 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
-// TOC가 보이는 넓은 화면에서 콘텐츠 영역에 오른쪽 여백 확보
-.layout-post {
-  @media (min-width: 100em) {
-    margin-right: 320px;
-  }
-
-  @media (min-width: 110em) {
-    margin-right: 360px;
-  }
-}
-
 // position: fixed + JS로 본문 범위 내 스크롤 추적.
 // (hy-push-state의 overflow:hidden 때문에 sticky 사용 불가)
 .toc {
