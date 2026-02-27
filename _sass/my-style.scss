@@ -360,12 +360,11 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
-// 기본: position:relative로 본문 옆에 배치.
-// JS가 스크롤 시 position:fixed; top:60px으로 전환.
+// 화면 오른쪽에 고정. 넓은 화면에서만 표시.
 .toc {
-  position: relative;
+  position: fixed;
   top: 60px;
-  right: 3rem;
+  right: 2rem;
   width: 200px;
   color: #333;
   background-color: #fff;
