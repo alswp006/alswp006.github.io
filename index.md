@@ -6,7 +6,7 @@ description: >
 hide_description: true
 ---
 
-# About
+# Intro
 
 <!--author-->
 
@@ -16,6 +16,7 @@ hide_description: true
 ---
 
 ## 소개
+
 ---
 
 안녕하세요, 기록과 학습을 통해 성장 곡선을 높여가고 있는 백엔드 개발자 김민제입니다. 🧑‍💻
