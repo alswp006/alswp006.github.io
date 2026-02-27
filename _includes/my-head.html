@@ -1,4 +1,8 @@
 <!-- Add HTML tags here to be included in the head -->
+
+<!-- Hydejack 내장 TOC(#markdown-toc) 숨김: 커스텀 .toc + 모바일 TOC FAB으로 대체 -->
+<style>#markdown-toc { display: none !important; }</style>
+
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5696433627232046"
@@ -11,49 +15,3 @@
 
 <script src="/assets/js/swiper-control.js"></script>
 
-<!-- for my toc affix -->
-<script type="module">
-  (function() {
-    var pushState = document.querySelector('hy-push-state');
-    if (!pushState) return;
-
-    pushState.addEventListener('load', function() {
-      var tocElement = document.getElementById("markdown-toc");
-      if (!tocElement) return;
-
-      var affixedDiv = document.createElement("div");
-      affixedDiv.style.position = "relative";
-      affixedDiv.style.top = "-1rem";
-      tocElement.parentNode.insertBefore(affixedDiv, tocElement);
-
-      var headerList = document.getElementsByClassName("permalink");
-      if (!headerList || headerList.length === 0) return;
-
-      var prevElement;
-      var ticking = false;
-      window.addEventListener("scroll", function() {
-        if (ticking) return;
-        ticking = true;
-        requestAnimationFrame(function() {
-          var hurdleTop = affixedDiv.getBoundingClientRect().top;
-          if (hurdleTop <= 0) tocElement.classList.add("affix");
-          else tocElement.classList.remove("affix");
-
-          for (var i = 0; i < headerList.length; i++) {
-            if (headerList[i].getBoundingClientRect().top >= 0) {
-              if (prevElement) prevElement.style.removeProperty("font-weight");
-              var tocId = "markdown-toc-" + headerList[i].parentNode.id;
-              var tocItem = document.getElementById(tocId);
-              if (tocItem) {
-                prevElement = tocItem;
-                prevElement.style.fontWeight = "bold";
-              }
-              break;
-            }
-          }
-          ticking = false;
-        });
-      });
-    });
-  })();
-</script>
