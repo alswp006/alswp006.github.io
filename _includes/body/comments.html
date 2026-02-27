@@ -1,0 +1,11 @@
+{% if site.comments.provider == 'utterances' %}
+<section class="comments" id="comments">
+  <script src="https://utteranc.es/client.js"
+    repo="{{ site.comments.utterances.repo }}"
+    issue-term="{{ site.comments.utterances.issue-term | default: 'pathname' }}"
+    theme="{{ site.comments.utterances.theme | default: 'github-light' }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+{% endif %}

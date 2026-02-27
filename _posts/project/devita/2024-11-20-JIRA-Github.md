@@ -6,8 +6,7 @@ date: '2024-11-20 10:45:51 +0900'
 categories:
     - project
     - devita
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true

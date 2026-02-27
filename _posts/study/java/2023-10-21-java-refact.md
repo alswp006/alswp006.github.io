@@ -6,8 +6,7 @@ date: '2023-10-21 10:45:51 +0900'
 categories:
     - study
     - java
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true

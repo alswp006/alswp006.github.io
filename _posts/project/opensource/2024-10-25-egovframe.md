@@ -8,8 +8,7 @@ categories:
     - opensource
     - study
     - spring
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true

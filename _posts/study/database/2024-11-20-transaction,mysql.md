@@ -8,8 +8,7 @@ categories:
     - database
     - project
     - tradeham
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true

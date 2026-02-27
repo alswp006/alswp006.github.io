@@ -6,8 +6,7 @@ date: '2024-11-28 10:45:51 +0900'
 categories:
     - blog
     - daily
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true

@@ -9,8 +9,7 @@ categories:
     - java
     - spring
     - study
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true
@@ -251,7 +250,7 @@ for (B부터 : S까지 : 2)
     for (int i = 0; i < n; i++){
         for (int j = n / 2 + 1 + i; j < n; j ++){
             dist[i][j] += 1;
-            count += 1;ㄱ
+            count += 1;
         }
     }
     
@@ -524,4 +523,4 @@ private void updateDistanceMatrix(int[][] distanceMatrix, List<Integer> sequence
 
 <img width="988" alt="image" src="https://github.com/user-attachments/assets/115e0058-560b-49a6-a33c-c28aceca02b1">
 
-## 다음 포스팅 [[알고리즘 최적화] TSP 알고리즘 시간 복잡도를 반의반의반의반의….반의 반으로 줄여??(과장 조금 보태서)](https://alswp006.github.io/project/bami/java/spring/study/2024-10-15-map-tsp/)
+## 다음 포스팅 [[알고리즘 최적화] TSP 알고리즘 시간 복잡도를 반의반의반의반의….반의 반으로 줄여??(과장 조금 보태서)](https://alswp006.github.io/project/bami/java/spring/study/2024-10-20-map-tsp/)

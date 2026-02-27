@@ -5,8 +5,7 @@ subtitle: (책 리뷰) 숫자 감각의 힘
 date: '2025-09-28 10:45:51 +0900'
 categories:
     - book
-tags:
-    - AnomalyDetection
+tags: []
 comments: true
 published: true
 list: true

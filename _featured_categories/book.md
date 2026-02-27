@@ -1,6 +1,6 @@
 ---
 layout: list
-type: book
+type: category
 bigtitle: book
 slug: book
 menu: true

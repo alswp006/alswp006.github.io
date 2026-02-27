@@ -32,11 +32,10 @@ group :jekyll_plugins do
   # GitHub Pages에서 지원하지 않는 플러그인들
   gem "jekyll-last-modified-at"
   gem "jekyll-compose"
+  gem "jekyll-spaceship"
+  gem "jekyll-mermaid"
 end
 
 # Windows에서만 필요한 gem
 gem 'wdm' if Gem.win_platform?
 gem "tzinfo-data" if Gem.win_platform?
-
-gem 'jekyll-spaceship'
-gem "jekyll-mermaid"

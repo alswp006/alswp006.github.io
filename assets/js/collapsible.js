@@ -9,7 +9,7 @@ let bodyElement;
 function collapsibleInit(){
     titleElement = document.getElementsByClassName("collapsible-title")[0];
     bodyElement = document.getElementsByClassName("collapsible-body")[0];
-    if(!checkRefernce([titleElement, bodyElement])) return;
+    if(!checkReference([titleElement, bodyElement])) return;
 
     folded = bodyElement.hasAttribute("open") ? false : true;
     
@@ -23,15 +23,15 @@ function collapsibleInit(){
 }
 
 function collapsibleClick(){
-    if(!checkRefernce([markElement, bodyElement])) return;
+    if(!checkReference([markElement, bodyElement])) return;
 
     folded = !folded;
     markElement.innerHTML = folded ? '✊' : '🖐';
     bodyElement.style.display = folded ? 'none' : 'block';
 }
 
-function checkRefernce(list){
-    for(let item in list){
+function checkReference(list){
+    for(let item of list){
         if(!item) return false;
     }
     return true;
