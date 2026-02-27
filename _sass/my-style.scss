@@ -361,6 +361,7 @@ u {
 // ==========================================
 
 // 화면 오른쪽에 고정. 넓은 화면에서만 표시.
+// 초기: opacity:0 (숨김). JS가 .toc-show 추가 시 표시.
 .toc {
   position: fixed;
   top: 60px;
@@ -377,8 +378,11 @@ u {
   font-size: 13px;
   line-height: 1.5;
   display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
 
-  // 반응형 디자인 - 넓은 화면에서만 표시
+  // 넓은 화면에서만 표시 (display 제어)
   @media (min-width: 100em) {
     width: 280px;
     display: block;
@@ -387,6 +391,12 @@ u {
   @media (min-width: 110em) {
     width: 320px;
     display: block;
+  }
+
+  // JS가 스크롤 조건 충족 시 이 클래스 추가
+  &.toc-show {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   a {

@@ -20,7 +20,7 @@ hide_description=page.hide_description %}
   </div>
 </div>
 
-<div class="toc" id="tocDesktop" style="display:none">
+<div class="toc" id="tocDesktop">
   <a href="#">&lt;맨 위로&gt;</a>
   {% include toc.html html=content %}
 </div>
@@ -69,7 +69,6 @@ hide_description=page.hide_description %}
   var article = document.getElementsByClassName("post-article")[0];
   if (!article || !toc) return;
 
-  var wideQuery = window.matchMedia('(min-width: 100em)');
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
   var before;
@@ -79,12 +78,12 @@ hide_description=page.hide_description %}
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      // 넓은 화면 + 본문 스크롤 진입 시에만 TOC 표시
+      // 본문 스크롤 진입 시 toc-show 클래스 토글
       var articleRect = article.getBoundingClientRect();
-      if (wideQuery.matches && articleRect.top < 0 && articleRect.bottom > 200) {
-        toc.style.display = 'block';
+      if (articleRect.top < 0 && articleRect.bottom > 200) {
+        toc.classList.add('toc-show');
       } else {
-        toc.style.display = 'none';
+        toc.classList.remove('toc-show');
       }
 
       // 활성 헤딩 추적
