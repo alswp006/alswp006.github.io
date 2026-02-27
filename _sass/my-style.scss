@@ -360,16 +360,12 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
-// position: fixed + JS로 본문 시작점에 맞춰 스크롤 추적.
-// (hy-push-state의 overflow:hidden 때문에 sticky 사용 불가)
-// 초기에는 숨김. JS가 본문 스크롤 진입 시 표시.
+// 기본: position:relative로 본문 옆에 배치.
+// JS가 스크롤 시 position:fixed; top:60px으로 전환.
 .toc {
-  position: fixed;
+  position: relative;
   top: 60px;
-  right: 2rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s;
+  right: 3rem;
   width: 200px;
   color: #333;
   background-color: #fff;

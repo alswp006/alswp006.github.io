@@ -18,11 +18,11 @@ hide_description=page.hide_description %}
       </article>
     </div>
   </div>
-</div>
 
-<div class="toc">
-  <a href="#">&lt;맨 위로&gt;</a>
-  {% include toc.html html=content %}
+  <div class="toc">
+    <a href="#">&lt;맨 위로&gt;</a>
+    {% include toc.html html=content %}
+  </div>
 </div>
 
 <!-- Mobile TOC FAB -->
@@ -68,32 +68,22 @@ hide_description=page.hide_description %}
   var toc = document.getElementsByClassName("toc")[0];
   if (!article || !toc) return;
 
+  var articleY = window.pageYOffset + article.getBoundingClientRect().top;
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
   var before;
   var ticking = false;
 
-  // TOC: 본문에 스크롤 진입했을 때만 표시
-  function updateToc() {
-    var articleRect = article.getBoundingClientRect();
-    var tocHeight = toc.offsetHeight;
-
-    // 본문 상단이 화면 위로 넘어간 후 ~ 본문 끝 전까지만 표시
-    if (articleRect.top < 0 && articleRect.bottom > tocHeight) {
-      toc.style.opacity = '1';
-      toc.style.visibility = 'visible';
-    } else {
-      toc.style.opacity = '0';
-      toc.style.visibility = 'hidden';
-    }
-  }
-
   document.addEventListener('scroll', function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      // TOC 표시/숨김
-      updateToc();
+      // 본문 시작점 이후 → TOC를 fixed로 전환
+      if (window.scrollY >= articleY - 60) {
+        toc.style.cssText = "position: fixed; top: 60px;";
+      } else {
+        toc.style.cssText = "";
+      }
 
       // 활성 헤딩 추적
       var current = headerNodes.filter(function (header) {
@@ -123,9 +113,6 @@ hide_description=page.hide_description %}
       ticking = false;
     });
   }, false);
-
-  // 초기 상태 설정
-  updateToc();
 
   // Mobile TOC FAB
   var fab = document.getElementById('tocFab');
