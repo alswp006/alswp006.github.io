@@ -73,20 +73,32 @@ hide_description=page.hide_description %}
   var before;
   var ticking = false;
 
-  // TOC 표시/숨김: 본문 범위 내에서만 표시
-  function updateTocVisibility() {
+  // TOC 위치 및 표시/숨김: 본문 범위 내에서만 본문 옆에 표시
+  var TOC_GAP = 20; // 본문 상단으로부터의 여백(px)
+
+  function updateToc() {
     var articleRect = article.getBoundingClientRect();
     var articleTop = articleRect.top;
     var articleBottom = articleRect.bottom;
     var tocHeight = toc.offsetHeight;
 
-    // 본문이 화면 위로 스크롤된 후 ~ 본문 끝까지만 TOC 표시
-    if (articleTop < 0 && articleBottom > 60 + tocHeight) {
+    // 본문 상단이 뷰포트 위에 있으면 → fixed로 상단 고정
+    // 본문 상단이 뷰포트 안에 있으면 → 본문 시작점에 맞춤
+    // 본문 끝을 지나면 → 숨김
+    if (articleBottom < tocHeight + TOC_GAP) {
+      // 본문 끝 지남 → 숨김
+      toc.style.opacity = '0';
+      toc.style.visibility = 'hidden';
+    } else if (articleTop <= TOC_GAP) {
+      // 본문이 스크롤되어 상단에 도달 → 상단 고정
+      toc.style.top = TOC_GAP + 'px';
       toc.style.opacity = '1';
       toc.style.visibility = 'visible';
     } else {
-      toc.style.opacity = '0';
-      toc.style.visibility = 'hidden';
+      // 아직 본문 위 (제목 영역) → 본문 시작점에 맞춤
+      toc.style.top = articleTop + 'px';
+      toc.style.opacity = '1';
+      toc.style.visibility = 'visible';
     }
   }
 
@@ -95,7 +107,7 @@ hide_description=page.hide_description %}
     ticking = true;
     requestAnimationFrame(function () {
       // TOC 표시/숨김
-      updateTocVisibility();
+      updateToc();
 
       // 활성 헤딩 추적
       var current = headerNodes.filter(function (header) {
@@ -127,7 +139,7 @@ hide_description=page.hide_description %}
   }, false);
 
   // 초기 상태 설정
-  updateTocVisibility();
+  updateToc();
 
   // Mobile TOC FAB
   var fab = document.getElementById('tocFab');
