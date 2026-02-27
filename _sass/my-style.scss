@@ -362,10 +362,10 @@ u {
 
 // position: fixed + JS로 본문 시작점에 맞춰 스크롤 추적.
 // (hy-push-state의 overflow:hidden 때문에 sticky 사용 불가)
-// top은 JS가 동적으로 설정. 초기에는 숨김 상태.
+// 초기에는 숨김. JS가 본문 스크롤 진입 시 표시.
 .toc {
   position: fixed;
-  top: 0;
+  top: 60px;
   right: 2rem;
   opacity: 0;
   visibility: hidden;

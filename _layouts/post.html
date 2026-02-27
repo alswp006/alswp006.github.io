@@ -73,32 +73,18 @@ hide_description=page.hide_description %}
   var before;
   var ticking = false;
 
-  // TOC 위치 및 표시/숨김: 본문 범위 내에서만 본문 옆에 표시
-  var TOC_GAP = 20; // 본문 상단으로부터의 여백(px)
-
+  // TOC: 본문에 스크롤 진입했을 때만 표시
   function updateToc() {
     var articleRect = article.getBoundingClientRect();
-    var articleTop = articleRect.top;
-    var articleBottom = articleRect.bottom;
     var tocHeight = toc.offsetHeight;
 
-    // 본문 상단이 뷰포트 위에 있으면 → fixed로 상단 고정
-    // 본문 상단이 뷰포트 안에 있으면 → 본문 시작점에 맞춤
-    // 본문 끝을 지나면 → 숨김
-    if (articleBottom < tocHeight + TOC_GAP) {
-      // 본문 끝 지남 → 숨김
-      toc.style.opacity = '0';
-      toc.style.visibility = 'hidden';
-    } else if (articleTop <= TOC_GAP) {
-      // 본문이 스크롤되어 상단에 도달 → 상단 고정
-      toc.style.top = TOC_GAP + 'px';
+    // 본문 상단이 화면 위로 넘어간 후 ~ 본문 끝 전까지만 표시
+    if (articleRect.top < 0 && articleRect.bottom > tocHeight) {
       toc.style.opacity = '1';
       toc.style.visibility = 'visible';
     } else {
-      // 아직 본문 위 (제목 영역) → 본문 시작점에 맞춤
-      toc.style.top = articleTop + 'px';
-      toc.style.opacity = '1';
-      toc.style.visibility = 'visible';
+      toc.style.opacity = '0';
+      toc.style.visibility = 'hidden';
     }
   }
 
