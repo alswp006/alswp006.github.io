@@ -1,106 +1,59 @@
 <!-- Add HTML tags here to be included in the head -->
-<link rel="dns-prefetch" href="https://assets.gumroad.com">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5696433627232046"
      crossorigin="anonymous"></script>
 
 <script src="/assets/js/sidebar-folder.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.css" integrity="sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51" crossorigin="anonymous">
+<script src="https://unpkg.com/swiper@11.2.10/swiper-bundle.min.js" integrity="sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav" crossorigin="anonymous"></script>
 
 <script src="/assets/js/swiper-control.js"></script>
-<script src="/assets/js/collapsible.js"></script>
-
-
-// Links to the libraries needed
-<link rel="stylesheet" href="/assets/css/jquery.bxslider.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="/assets/css/jquery.bxslider.min.js"></script>
 
 <!-- for my toc affix -->
 <script type="module">
-  document.querySelector('hy-push-state').addEventListener('load', () => {
-    let tocElement = document.getElementById("markdown-toc");
+  (function() {
+    var pushState = document.querySelector('hy-push-state');
+    if (!pushState) return;
 
-    if(tocElement){
-      let affixedDiv = document.createElement("div");
+    pushState.addEventListener('load', function() {
+      var tocElement = document.getElementById("markdown-toc");
+      if (!tocElement) return;
+
+      var affixedDiv = document.createElement("div");
       affixedDiv.style.position = "relative";
       affixedDiv.style.top = "-1rem";
       tocElement.parentNode.insertBefore(affixedDiv, tocElement);
 
-      let headerList = document.getElementsByClassName("permalink");
-      if(headerList){
-        let prevElement;
-        window.addEventListener("scroll", () => {
-          let hurdleTop = affixedDiv.getBoundingClientRect().top;
-          if(hurdleTop <= 0) tocElement.classList.add("affix");
+      var headerList = document.getElementsByClassName("permalink");
+      if (!headerList || headerList.length === 0) return;
+
+      var prevElement;
+      var ticking = false;
+      window.addEventListener("scroll", function() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
+          var hurdleTop = affixedDiv.getBoundingClientRect().top;
+          if (hurdleTop <= 0) tocElement.classList.add("affix");
           else tocElement.classList.remove("affix");
 
-          for(let i=0;i<headerList.length;i++){
-            if(headerList[i].getBoundingClientRect().top >= 0){
-              prevElement?.style.removeProperty("font-weight");
-              let tocId = "markdown-toc-" + headerList[i].parentNode.id;
-              prevElement = document.getElementById(tocId);
-              prevElement.style.fontWeight = "bold";;
-
+          for (var i = 0; i < headerList.length; i++) {
+            if (headerList[i].getBoundingClientRect().top >= 0) {
+              if (prevElement) prevElement.style.removeProperty("font-weight");
+              var tocId = "markdown-toc-" + headerList[i].parentNode.id;
+              var tocItem = document.getElementById(tocId);
+              if (tocItem) {
+                prevElement = tocItem;
+                prevElement.style.fontWeight = "bold";
+              }
               break;
             }
           }
+          ticking = false;
         });
-      }
-    }
-  });
+      });
+    });
+  })();
 </script>
-
-<script type="module">
-  let p;
-  const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
-  const loadJS = promisify(window.loadJS);
-  document.querySelector('hy-push-state').addEventListener('load', () => {
-    const io = new IntersectionObserver(async (entries) => {
-      if (entries.some(x => x.isIntersecting)) {
-        p = p || loadJS('https://gumroad.com/js/gumroad-embed.js');
-        await p;
-        if (!window.GumroadEmbed) {
-          await new Promise(function check1(res) {
-            if ('createGumroadEmbed' in window) res(window.createGumroadEmbed());
-            else setTimeout(() => check1(res), 200);
-          });
-        }
-        await new Promise(function check2(res) {
-          if ('GumroadEmbed' in window) res(GumroadEmbed.reload());
-          else setTimeout(() => check2(res), 200);
-        });
-      }
-    }, { rootMargin: '1440px' });
-    document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el));
-  });
-</script>
-<script type="module">
-  let p;
-  const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
-  const loadJS = promisify(window.loadJS);
-  document.querySelector('hy-push-state').addEventListener('load', () => {
-    const io = new IntersectionObserver(async (entries) => {
-      if (entries.some(x => x.isIntersecting)) {
-        p = p || loadJS('https://gumroad.com/js/gumroad.js');
-        await p;
-        if (!window.GumroadOverlay) {
-          await new Promise(function check(res) {
-            if ('createGumroadOverlay' in window) res(window.createGumroadOverlay());
-            else setTimeout(() => check(res), 200);
-          });
-        }
-      }
-    }, { rootMargin: '300px' });
-    document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el));
-  });
-</script>
-
-<!--slick-->
-<link rel="stylesheet" type="text/css" href="/assets/css/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="/assets/css/slick/slick-theme.css"/>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript" src="/assets/css/slick/slick.min.js"></script>

@@ -1,10 +1,11 @@
 ---
 layout: about
-image: /assets/img/me.jpg
+image: /assets/img/me.png
 description: >
+  백엔드 개발자 김민제의 기술 블로그 — Java, Spring, 데이터베이스, CS 학습 기록과 프로젝트 경험을 공유합니다.
 hide_description: true
 redirect_from:
-  -
+  - /
 ---
 
 # About

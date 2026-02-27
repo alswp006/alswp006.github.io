@@ -3,7 +3,8 @@ layout: base
 ---
 
 <img
-  src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today-total&style=flat-square&label=Today/Total&color=4fb1ba&labelColor=243241">
+  src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today-total&style=flat-square&label=Today/Total&color=4fb1ba&labelColor=243241"
+  alt="" role="presentation">
 <div style="padding-bottom:40px;"></div>
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image
@@ -24,7 +25,15 @@ hide_description=page.hide_description %}
   </div>
 </div>
 
-
+<!-- Mobile TOC FAB -->
+<button class="toc-fab" id="tocFab" aria-label="목차 열기" aria-expanded="false">
+  <span class="material-icons" aria-hidden="true">toc</span>
+</button>
+<div class="toc-mobile-overlay" id="tocOverlay"></div>
+<div class="toc-mobile-panel" id="tocMobilePanel" role="navigation" aria-label="목차">
+  <a href="#">&lt;맨 위로&gt;</a>
+  {% include toc.html html=content %}
+</div>
 
 {% assign addons = page.addons | default:site.hydejack.post_addons %}
 {% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
@@ -41,74 +50,86 @@ hide_description=page.hide_description %}
 {% endcase %}
 {% endfor %}
 
-<script src="https://utteranc.es/client.js" repo="alswp006/alswp006.github.io" issue-term="pathname"
-  theme="github-light" crossorigin="anonymous" async>
-  </script>
-
 <script>
+(function() {
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
-    var tocNodes = nodes.filter(function (elem) {
-      return elem.tagName == "A";
-    });
-    return tocNodes;
+    return nodes.filter(function (elem) { return elem.tagName === "A"; });
   }
 
   function getHeaderNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
-    var headerNodes = nodes.filter(function (elem) {
-      return elem.tagName == "H1" || elem.tagName == "H2" ||
-        elem.tagName == "H3" || elem.tagName == "H4" ||
-        elem.tagName == "H5" || elem.tagName == "H6";
+    return nodes.filter(function (elem) {
+      return /^H[1-6]$/.test(elem.tagName);
     });
-    return headerNodes;
   }
 
   var title = document.getElementsByClassName("post-title")[0];
-  var titleY = window.pageYOffset + title.getBoundingClientRect().top;
-
   var article = document.getElementsByClassName("post-article")[0];
-  var articleY = window.pageYOffset + article.getBoundingClientRect().top;
-
   var toc = document.getElementsByClassName("toc")[0];
+  if (!title || !article || !toc) return;
 
+  var articleY = window.pageYOffset + article.getBoundingClientRect().top;
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
+  var before;
+  var ticking = false;
 
-  var before = undefined;
+  document.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      if (window.scrollY >= articleY - 60) {
+        toc.style.cssText = "position: fixed; top: 60px;";
+      } else {
+        toc.style.cssText = "";
+      }
 
-  document.addEventListener('scroll', function (e) {
-    // Fixed TOC positioning
-    if (window.scrollY >= articleY - 60) {
-      toc.style.cssText = "position: fixed; top: 60px;";
-    } else {
-      toc.style.cssText = "";
-    }
+      var current = headerNodes.filter(function (header) {
+        var headerY = window.pageYOffset + header.getBoundingClientRect().top;
+        return window.scrollY >= headerY - 60;
+      });
 
-    // Active TOC item highlighting
-    var current = headerNodes.filter(function (header) {
-      var headerY = window.pageYOffset + header.getBoundingClientRect().top;
-      return window.scrollY >= headerY - 60;
-    });
+      if (current.length > 0) {
+        current = current[current.length - 1];
+        var currentA = tocNodes.filter(function (tocNode) {
+          return tocNode.innerHTML === current.innerHTML;
+        })[0];
 
-    if (current.length > 0) {
-      current = current[current.length - 1];
-      var currentA = tocNodes.filter(function (tocNode) {
-        return tocNode.innerHTML == current.innerHTML;
-      })[0];
-
-      if (currentA) {
-        if (before == undefined) before = currentA;
-        if (before != currentA) {
-          before.classList.remove("toc-active");
-          before = currentA;
+        if (currentA) {
+          if (!before) before = currentA;
+          if (before !== currentA) {
+            before.classList.remove("toc-active");
+            before = currentA;
+          }
+          currentA.classList.add("toc-active");
+        } else {
+          if (before) before.classList.remove("toc-active");
         }
-        currentA.classList.add("toc-active");
       } else {
         if (before) before.classList.remove("toc-active");
       }
-    } else {
-      if (before) before.classList.remove("toc-active");
-    }
+      ticking = false;
+    });
   }, false);
+
+  // Mobile TOC FAB
+  var fab = document.getElementById('tocFab');
+  var overlay = document.getElementById('tocOverlay');
+  var panel = document.getElementById('tocMobilePanel');
+  if (fab && overlay && panel) {
+    function toggleMobileToc(open) {
+      var isOpen = typeof open === 'boolean' ? open : !panel.classList.contains('toc-mobile-open');
+      panel.classList.toggle('toc-mobile-open', isOpen);
+      overlay.classList.toggle('toc-mobile-open', isOpen);
+      fab.setAttribute('aria-expanded', String(isOpen));
+      fab.setAttribute('aria-label', isOpen ? '목차 닫기' : '목차 열기');
+    }
+    fab.addEventListener('click', function() { toggleMobileToc(); });
+    overlay.addEventListener('click', function() { toggleMobileToc(false); });
+    panel.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() { toggleMobileToc(false); });
+    });
+  }
+})();
 </script>

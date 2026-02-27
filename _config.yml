@@ -25,7 +25,7 @@ title: MiloDev
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  블로그!
+  백엔드 개발자 김민제의 기술 블로그 — Java, Spring, 데이터베이스, CS 학습 기록과 프로젝트 경험을 공유합니다.
 
 # A shorter description for the sidebar.
 tagline:  딥다이브를 위해 노력하자!
@@ -81,8 +81,8 @@ menu:
         url:      /daily/
       - title:  Book-Review
         url:      /book-review/
-      - title:  Travel
-        url:      /travel/
+      - title:  Retrospect
+        url:      /retrospect/
       - title:  Blog-etc
         url:      /blog-etc/
   - title:             Book
@@ -117,7 +117,7 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.png
+accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
@@ -307,8 +307,7 @@ hydejack:
   offline:
     enabled:           false
     cache_version:     13
-    precache_assets:
-      - /assets/img/swipe.svg
+    precache_assets: []
 
 
 # Collections
@@ -363,6 +362,8 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-last-modified-at
+  - jekyll-spaceship
+  - jekyll-mermaid
 
 
 # SEO Tag
@@ -418,6 +419,7 @@ compress_html:
     envs:              [development]
 
 sass:
+  sass_dir:            _sass
   style:               compressed
 
 # Jekyll Compose Defaults
@@ -450,12 +452,6 @@ jekyll_compose:
         - title: Project Link
           url: https://example.com
 
-sass:
-  sass_dir: _sass
-  style: compressed
-compress_html:
-  ignore:
-    envs: [development, production]
 
 comments:
   provider: utterances

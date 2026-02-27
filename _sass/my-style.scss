@@ -499,3 +499,154 @@ a.hits-badge::after {
   display: none !important;
   margin: 0 !important;
 }
+
+// ==========================================
+// 접근성: 포커스 스타일
+// ==========================================
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #4a9ae1;
+  outline-offset: 2px;
+}
+
+// ==========================================
+// 접근성: 스킵 링크
+// ==========================================
+
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4a9ae1;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  z-index: 10000;
+  border-radius: 0 0 4px 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: top 0.2s;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+// ==========================================
+// 검색 버튼 스타일
+// ==========================================
+
+.tipue_search_button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// ==========================================
+// 모바일 TOC (FAB 토글)
+// ==========================================
+
+.toc-fab {
+  display: none;
+}
+
+.toc-mobile-overlay {
+  display: none;
+}
+
+.toc-mobile-panel {
+  display: none;
+}
+
+@media (max-width: 99.99em) {
+  .toc-fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #4fb1ba;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 9000;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .material-icons {
+      font-size: 28px;
+    }
+  }
+
+  .toc-mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 8999;
+
+    &.toc-mobile-open {
+      display: block;
+    }
+  }
+
+  .toc-mobile-panel {
+    display: block;
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 280px;
+    max-height: 60vh;
+    overflow-y: auto;
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 9001;
+    font-size: 13px;
+    line-height: 1.6;
+    transform: translateY(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s;
+
+    &.toc-mobile-open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    a {
+      font-size: 12px;
+      line-height: 1.6;
+      font-weight: 500;
+      color: #333;
+
+      &:hover {
+        color: #4a9ae1;
+        text-decoration: underline;
+      }
+
+      &.toc-active {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #9075aa;
+      }
+    }
+  }
+}
