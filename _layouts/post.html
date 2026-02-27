@@ -80,8 +80,8 @@ hide_description=page.hide_description %}
     var articleBottom = articleRect.bottom;
     var tocHeight = toc.offsetHeight;
 
-    // 본문 시작 ~ 본문 끝 범위에서만 TOC 표시
-    if (articleTop < 60 + tocHeight && articleBottom > 60 + tocHeight) {
+    // 본문이 화면 위로 스크롤된 후 ~ 본문 끝까지만 TOC 표시
+    if (articleTop < 0 && articleBottom > 60 + tocHeight) {
       toc.style.opacity = '1';
       toc.style.visibility = 'visible';
     } else {
