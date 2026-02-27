@@ -360,6 +360,12 @@ u {
 // 목차(TOC) 스타일
 // ==========================================
 
+// hy-push-state의 overflow:hidden이 position:sticky를 차단하므로
+// overflow:clip으로 변경 (클리핑 유지, 스크롤 컨테이너 생성 방지)
+hy-push-state {
+  overflow: clip !important;
+}
+
 // post-container: 넓은 화면에서 flex 레이아웃.
 // negative margin-right로 컨테이너를 오른쪽 여백 영역까지 확장하여
 // 본문 너비를 유지하면서 TOC를 옆에 배치.
