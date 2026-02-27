@@ -83,7 +83,7 @@
 .post-meta {
   margin-bottom: 2rem;
   font-size: 0.9rem;
-  color: #868e96;
+  color: #6c757d;
 
   .categories-tags {
     .meta-group {
@@ -109,7 +109,7 @@
       }
 
       a {
-        color: #868e96;
+        color: #6c757d;
         
         &:hover {
           color: #4a9ae1;
@@ -223,7 +223,7 @@
 // 스크롤바 커스텀 스타일
 // ==========================================
 
-* {
+body {
   &::-webkit-scrollbar {
     width: 12px;
     height: 3px;
