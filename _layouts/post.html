@@ -20,7 +20,7 @@ hide_description=page.hide_description %}
   </div>
 </div>
 
-<div class="toc" id="tocDesktop">
+<div class="toc" id="tocDesktop" style="opacity:0;pointer-events:none">
   <a href="#">&lt;맨 위로&gt;</a>
   {% include toc.html html=content %}
 </div>
@@ -53,12 +53,33 @@ hide_description=page.hide_description %}
 <script>
 (function() {
   var toc = document.getElementById('tocDesktop');
+  var article = document.getElementsByClassName("post-article")[0];
+  var title = document.querySelector('.post-title');
+  if (!toc || !article) return;
 
+  // === 1. TOC 표시/숨김: IntersectionObserver로 제목 감시 ===
+  if (title && window.IntersectionObserver) {
+    var tocObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          // 제목이 보임 → TOC 숨김
+          toc.style.opacity = '0';
+          toc.style.pointerEvents = 'none';
+        } else {
+          // 제목이 안 보임 (위로 스크롤됨) → TOC 표시
+          toc.style.opacity = '1';
+          toc.style.pointerEvents = 'auto';
+        }
+      });
+    }, { threshold: 0 });
+    tocObserver.observe(title);
+  }
+
+  // === 2. 활성 헤딩 추적 ===
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
     return nodes.filter(function (elem) { return elem.tagName === "A"; });
   }
-
   function getHeaderNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
     return nodes.filter(function (elem) {
@@ -66,27 +87,15 @@ hide_description=page.hide_description %}
     });
   }
 
-  var article = document.getElementsByClassName("post-article")[0];
-  if (!article || !toc) return;
-
   var headerNodes = getHeaderNodes(article);
   var tocNodes = getTOCNodes(toc);
   var before;
   var ticking = false;
 
-  document.addEventListener('scroll', function () {
+  window.addEventListener('scroll', function () {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
-      // 본문 스크롤 진입 시 toc-show 클래스 토글
-      var articleRect = article.getBoundingClientRect();
-      if (articleRect.top < 0 && articleRect.bottom > 200) {
-        toc.classList.add('toc-show');
-      } else {
-        toc.classList.remove('toc-show');
-      }
-
-      // 활성 헤딩 추적
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
         return window.scrollY >= headerY - 60;
@@ -115,7 +124,7 @@ hide_description=page.hide_description %}
     });
   }, false);
 
-  // Mobile TOC FAB
+  // === 3. Mobile TOC FAB ===
   var fab = document.getElementById('tocFab');
   var overlay = document.getElementById('tocOverlay');
   var panel = document.getElementById('tocMobilePanel');
