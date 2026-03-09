@@ -77,6 +77,14 @@
 }
 
 // ==========================================
+// 포스트 제목 스타일
+// ==========================================
+
+.post-header {
+  max-width: 42rem;
+}
+
+// ==========================================
 // 포스트 메타데이터 스타일
 // ==========================================
 
@@ -367,23 +375,10 @@ hy-push-state {
 }
 
 // 사이드바가 항상 보이는 화면에서 상단바를 사이드바 오른쪽으로 밀기.
+// navbar > .content는 테마 기본 max-width(54rem)를 그대로 사용하여 본문과 정렬.
 @media (min-width: 64em) {
   .navbar {
     left: 21rem !important;
-  }
-}
-
-// 넓은 화면에서 상단바를 TOC 폭만큼 확장.
-@media (min-width: 100em) {
-  .navbar > .content {
-    max-width: calc(54rem + 312px) !important;
-    margin-right: auto !important;
-  }
-}
-
-@media (min-width: 110em) {
-  .navbar > .content {
-    max-width: calc(54rem + 352px) !important;
   }
 }
 
