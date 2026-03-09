@@ -366,12 +366,17 @@ hy-push-state {
   overflow: clip !important;
 }
 
+// 사이드바가 항상 보이는 화면에서 상단바를 사이드바 오른쪽으로 밀기.
+@media (min-width: 64em) {
+  .navbar {
+    left: 21rem !important;
+  }
+}
+
 // 넓은 화면에서 상단바를 TOC 폭만큼 확장.
-// 사이드바(21rem) 클리어를 위해 margin-left: 25rem 고정.
 @media (min-width: 100em) {
   .navbar > .content {
     max-width: calc(54rem + 312px) !important;
-    margin-left: 25rem !important;
     margin-right: auto !important;
   }
 }
