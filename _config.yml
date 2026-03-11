@@ -454,8 +454,19 @@ jekyll_compose:
 
 
 comments:
-  provider: utterances
-  utterances:
+  provider: giscus
+  giscus:
     repo: alswp006/alswp006.github.io
-    issue-term: pathname
-    theme: github-light
+    repo-id: ""          # https://giscus.app 에서 repo-id 확인 후 입력
+    category: Announcements
+    category-id: ""      # https://giscus.app 에서 category-id 확인 후 입력
+    mapping: pathname
+    input-position: bottom
+    theme: preferred_color_scheme
+    lang: ko
+  # utterances (백업용):
+  # provider: utterances
+  # utterances:
+  #   repo: alswp006/alswp006.github.io
+  #   issue-term: pathname
+  #   theme: github-light

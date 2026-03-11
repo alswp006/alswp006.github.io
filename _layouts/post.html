@@ -2,6 +2,9 @@
 layout: base
 ---
 
+<!-- 읽기 진행률 바 -->
+<div class="reading-progress" id="readingProgress"></div>
+
 <img
   src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today-total&style=flat-square&label=Today/Total&color=4fb1ba&labelColor=243241"
   alt="" role="presentation">
@@ -9,6 +12,10 @@ layout: base
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image
 hide_description=page.hide_description %}
+
+{% if page.series %}
+{% include components/post-series.html %}
+{% endif %}
 
 <div class="post-container">
   <div class="post-content">
@@ -24,6 +31,29 @@ hide_description=page.hide_description %}
     {% include toc.html html=content %}
   </aside>
 </div>
+
+<!-- 이전/다음 포스트 네비게이션 -->
+{% if page.previous or page.next %}
+<nav class="post-nav" aria-label="포스트 네비게이션">
+  {% if page.previous %}
+  <a class="post-nav-item post-nav-prev" href="{{ page.previous.url }}">
+    <span class="post-nav-label">이전 글</span>
+    <span class="post-nav-title">{{ page.previous.title }}</span>
+  </a>
+  {% else %}
+  <span class="post-nav-item"></span>
+  {% endif %}
+
+  {% if page.next %}
+  <a class="post-nav-item post-nav-next" href="{{ page.next.url }}">
+    <span class="post-nav-label">다음 글</span>
+    <span class="post-nav-title">{{ page.next.title }}</span>
+  </a>
+  {% else %}
+  <span class="post-nav-item"></span>
+  {% endif %}
+</nav>
+{% endif %}
 
 <!-- Mobile TOC FAB -->
 <button class="toc-fab" id="tocFab" aria-label="목차 열기" aria-expanded="false">
@@ -50,13 +80,27 @@ hide_description=page.hide_description %}
 {% endcase %}
 {% endfor %}
 
+<!-- 이미지 라이트박스 -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
 <script>
 (function() {
   var toc = document.getElementById('tocDesktop');
   var article = document.getElementsByClassName("post-article")[0];
   if (!toc || !article) return;
 
-  // 활성 헤딩 추적
+  // === 1. 읽기 진행률 바 ===
+  var progressBar = document.getElementById('readingProgress');
+  function updateProgress() {
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+
+  // === 2. TOC 활성 헤딩 추적 ===
   function getTOCNodes(master) {
     var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
     return nodes.filter(function (elem) { return elem.tagName === "A"; });
@@ -77,6 +121,8 @@ hide_description=page.hide_description %}
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(function () {
+      updateProgress();
+
       var current = headerNodes.filter(function (header) {
         var headerY = window.pageYOffset + header.getBoundingClientRect().top;
         return window.scrollY >= headerY - 60;
@@ -105,20 +151,64 @@ hide_description=page.hide_description %}
     });
   }, false);
 
-  // === 3. Mobile TOC FAB ===
+  updateProgress();
+
+  // === 3. 코드 블록 복사 버튼 ===
+  document.querySelectorAll('pre').forEach(function(pre) {
+    if (pre.querySelector('code')) {
+      var btn = document.createElement('button');
+      btn.className = 'code-copy-btn';
+      btn.textContent = '복사';
+      btn.setAttribute('aria-label', '코드 복사');
+      btn.addEventListener('click', function() {
+        var code = pre.querySelector('code');
+        navigator.clipboard.writeText(code.textContent).then(function() {
+          btn.textContent = '완료!';
+          setTimeout(function() { btn.textContent = '복사'; }, 1500);
+        });
+      });
+      pre.style.position = 'relative';
+      pre.appendChild(btn);
+    }
+  });
+
+  // === 4. 이미지 라이트박스 ===
+  var overlay = document.getElementById('lightboxOverlay');
+  var lbImg = document.getElementById('lightboxImg');
+
+  article.querySelectorAll('img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function() {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      overlay.classList.add('lightbox-open');
+    });
+  });
+
+  overlay.addEventListener('click', function() {
+    overlay.classList.remove('lightbox-open');
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.classList.contains('lightbox-open')) {
+      overlay.classList.remove('lightbox-open');
+    }
+  });
+
+  // === 5. Mobile TOC FAB ===
   var fab = document.getElementById('tocFab');
-  var overlay = document.getElementById('tocOverlay');
+  var tocOverlay = document.getElementById('tocOverlay');
   var panel = document.getElementById('tocMobilePanel');
-  if (fab && overlay && panel) {
+  if (fab && tocOverlay && panel) {
     function toggleMobileToc(open) {
       var isOpen = typeof open === 'boolean' ? open : !panel.classList.contains('toc-mobile-open');
       panel.classList.toggle('toc-mobile-open', isOpen);
-      overlay.classList.toggle('toc-mobile-open', isOpen);
+      tocOverlay.classList.toggle('toc-mobile-open', isOpen);
       fab.setAttribute('aria-expanded', String(isOpen));
       fab.setAttribute('aria-label', isOpen ? '목차 닫기' : '목차 열기');
     }
     fab.addEventListener('click', function() { toggleMobileToc(); });
-    overlay.addEventListener('click', function() { toggleMobileToc(false); });
+    tocOverlay.addEventListener('click', function() { toggleMobileToc(false); });
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && panel.classList.contains('toc-mobile-open')) {
         toggleMobileToc(false);
