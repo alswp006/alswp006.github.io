@@ -14,7 +14,7 @@ hide_description=page.hide_description %}
   <div class="post-content">
     <div class="post">
       <article class="post-article">
-        {{ content }}
+        {{ content | replace: '<img src=', '<img loading="lazy" src=' }}
       </article>
     </div>
   </div>
@@ -119,6 +119,11 @@ hide_description=page.hide_description %}
     }
     fab.addEventListener('click', function() { toggleMobileToc(); });
     overlay.addEventListener('click', function() { toggleMobileToc(false); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && panel.classList.contains('toc-mobile-open')) {
+        toggleMobileToc(false);
+      }
+    });
     panel.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() { toggleMobileToc(false); });
     });

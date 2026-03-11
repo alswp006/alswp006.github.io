@@ -91,7 +91,7 @@
 .post-meta {
   margin-bottom: 2rem;
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #596069;
 
   .categories-tags {
     .meta-group {
@@ -117,7 +117,7 @@
       }
 
       a {
-        color: #6c757d;
+        color: #596069;
         
         &:hover {
           color: #4a9ae1;
@@ -232,6 +232,9 @@
 // ==========================================
 
 body {
+  scrollbar-color: #5e6265 #4b4f52;
+  scrollbar-width: thin;
+
   &::-webkit-scrollbar {
     width: 12px;
     height: 3px;
@@ -322,43 +325,8 @@ u {
 }
 
 // ==========================================
-// 접을 수 있는 컨텐츠 스타일
-// ==========================================
-
-.collapsible-title {
-  &:hover {
-    cursor: pointer;
-
-    #section > span {
-      text-shadow: 2px 2px 2px gray;
-    }
-  }
-}
-
-.collapsible-body {
-  display: none;
-
-  &[open] {
-    display: block;
-  }
-
-  > p > img {
-    padding: 5% 4%;
-  }
-}
-
-.collapsible-mark {
-  display: inline-block;
-  width: 30px;
-}
-
-// ==========================================
 // 기타 커스텀 스타일
 // ==========================================
-
-.ps-problem-img:hover {
-  opacity: 0.5;
-}
 
 .figcaption img {
   width: 100%;
@@ -711,6 +679,132 @@ button:focus-visible {
         font-weight: bold;
         color: #9075aa;
       }
+    }
+  }
+}
+
+// ==========================================
+// 다크 모드 (시스템 설정 자동 감지)
+// ==========================================
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #1a1a2e;
+    --body-color: #e0e0e0;
+    --accent-color: #4fb1ba;
+    --gray: #9e9e9e;
+    --border-color: #333;
+  }
+
+  body {
+    background-color: var(--body-bg);
+    color: var(--body-color);
+    scrollbar-color: #555 #1a1a2e;
+  }
+
+  // 상단바
+  #_navbar {
+    background-color: #16213e !important;
+  }
+
+  .nav-btn:hover,
+  .nav-btn:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ccc;
+  }
+
+  // 포스트 메타
+  .post-meta {
+    color: #9e9e9e;
+
+    .category-tag-list li a {
+      color: #9e9e9e;
+
+      &:hover {
+        color: #4fb1ba;
+      }
+    }
+  }
+
+  // TOC
+  .toc {
+    background-color: #16213e;
+    color: #ccc;
+    border-left-color: #4fb1ba;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    a {
+      color: #bbb;
+
+      &:hover {
+        color: #4fb1ba;
+      }
+
+      &.toc-active {
+        color: #7c5cad;
+      }
+    }
+  }
+
+  .toc-mobile-panel {
+    background: #16213e;
+    color: #ccc;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    a {
+      color: #bbb !important;
+
+      &:hover {
+        color: #4fb1ba !important;
+      }
+
+      &.toc-active {
+        color: #7c5cad !important;
+      }
+    }
+  }
+
+  // 링크 카드
+  .link-card {
+    background: #16213e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .link-title {
+    color: #e0e0e0;
+  }
+
+  .link-description {
+    color: #9e9e9e;
+  }
+
+  // 서브메뉴
+  .submenu.menu-wrapper {
+    background-color: #16213e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  // 밑줄 하이라이트
+  u {
+    background: linear-gradient(180deg, rgba(240, 20, 20, 0) 50%, rgba(79, 177, 186, 0.3) 50%);
+  }
+
+  // 코드 블록
+  .content .highlight,
+  .content code {
+    background-color: #0f3460;
+  }
+
+  // 스크롤바
+  &::-webkit-scrollbar-track {
+    background-color: #1a1a2e;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #555;
+
+    &:hover {
+      background-color: #4fb1ba;
     }
   }
 }
