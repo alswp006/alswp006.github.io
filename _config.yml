@@ -457,9 +457,9 @@ comments:
   provider: giscus
   giscus:
     repo: alswp006/alswp006.github.io
-    repo-id: ""          # https://giscus.app 에서 repo-id 확인 후 입력
+    repo-id: "R_kgDOND4_FQ"
     category: Announcements
-    category-id: ""      # https://giscus.app 에서 category-id 확인 후 입력
+    category-id: "DIC_kwDOND4_Fc4C4Kh3"
     mapping: pathname
     input-position: bottom
     theme: preferred_color_scheme
