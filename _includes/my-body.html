@@ -101,7 +101,11 @@ Example code for using Matamo as alternative analytics solution.
   if (!bg) return;
   bg.style.cursor = 'pointer';
   bg.addEventListener('click', function() {
-    drawer.opened = false;
+    if (window._drawer) {
+      window._drawer.close();
+    } else {
+      drawer.close();
+    }
   });
 })();
 </script>
