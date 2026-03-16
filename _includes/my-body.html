@@ -92,3 +92,23 @@ Example code for using Matamo as alternative analytics solution.
 {% endif %}
 {% endcomment %}
 
+<!-- 사이드바 드로어: 바깥 클릭으로 닫기 -->
+<script>
+(function() {
+  var drawer = document.getElementById('_drawer');
+  if (!drawer) return;
+
+  var overlay = document.createElement('div');
+  overlay.className = 'drawer-overlay';
+  document.body.appendChild(overlay);
+
+  overlay.addEventListener('click', function() {
+    drawer.removeAttribute('opened');
+  });
+
+  new MutationObserver(function() {
+    overlay.classList.toggle('visible', drawer.hasAttribute('opened'));
+  }).observe(drawer, { attributes: true, attributeFilter: ['opened'] });
+})();
+</script>
+

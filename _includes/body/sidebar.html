@@ -7,9 +7,6 @@
   {% if include.cover %}opened{% endif %}
 >
   <header id="_sidebar" class="sidebar{% if include.invert %} invert{% endif %}" role="banner">
-    <button class="sidebar-close" aria-label="사이드바 닫기" onclick="document.getElementById('_drawer').removeAttribute('opened')">
-      <span class="material-icons" aria-hidden="true">close</span>
-    </button>
     {% include_cached body/sidebar-bg.html image=include.image color=include.color theme_color=include.theme_color %}
     {% include_cached body/sidebar-sticky.html %}
   </header>

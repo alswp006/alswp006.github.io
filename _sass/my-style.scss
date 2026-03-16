@@ -2,39 +2,16 @@
 // 네비게이션 & 메뉴 스타일
 // ==========================================
 
-// 사이드바 닫기 버튼 (드로어 모드에서만 표시)
-.sidebar {
-  position: relative;
-}
-
-.sidebar-close {
+// 사이드바 드로어 오버레이 (바깥 클릭으로 닫기)
+.drawer-overlay {
   display: none;
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  z-index: 10;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.35);
-  cursor: pointer;
-  min-width: 44px;
-  min-height: 44px;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.2s;
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.3);
 
-  &:hover {
-    color: rgba(255, 255, 255, 0.7);
-  }
-
-  .material-icons {
-    font-size: 22px;
-  }
-}
-
-@media (max-width: 63.99em) {
-  .sidebar-close {
-    display: flex;
+  &.visible {
+    display: block;
   }
 }
 
