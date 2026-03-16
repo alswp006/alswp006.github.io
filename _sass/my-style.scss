@@ -2,18 +2,6 @@
 // 네비게이션 & 메뉴 스타일
 // ==========================================
 
-// 사이드바 드로어 오버레이 (바깥 클릭으로 닫기)
-.drawer-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9;
-  background: rgba(0, 0, 0, 0.3);
-
-  &.visible {
-    display: block;
-  }
-}
 
 // 펼치기 버튼 스타일
 .spread-btn {
