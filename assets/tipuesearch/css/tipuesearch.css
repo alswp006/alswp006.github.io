@@ -239,14 +239,32 @@ http://www.tipue.com/search
 @keyframes stretchdelay
 {
      0%, 40%, 100%
-     { 
+     {
           transform: scaleY(0.4);
           -webkit-transform: scaleY(0.4);
      }
      20%
-     { 
+     {
           transform: scaleY(1.0);
           -webkit-transform: scaleY(1.0);
+     }
+}
+
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+     .tipue_search_left,
+     .tipue_search_right {
+          float: none;
+          display: block;
+          padding: 5px 0;
+     }
+
+     #tipue_search_input {
+          max-width: 100%;
+          width: 100%;
+          box-sizing: border-box;
      }
 }
 

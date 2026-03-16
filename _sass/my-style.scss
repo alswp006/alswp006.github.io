@@ -13,12 +13,17 @@
   color: #fff;
   cursor: pointer;
   z-index: 1;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .material-icons {
     display: inline-block !important;
     font-size: 18px;
     vertical-align: middle;
-    
+
     &.arrow_right {
       transition: transform 0.3s ease;
     }
@@ -683,7 +688,6 @@ button:focus-visible {
   }
 }
 
-// ==========================================
 // 읽기 진행률 바
 // ==========================================
 
@@ -955,5 +959,88 @@ body.dark-mode {
   .post-series {
     border-color: var(--border-color);
     background: var(--gray-bg);
+  }
+}
+
+// ==========================================
+// 모바일 반응형 개선
+// ==========================================
+
+@media (max-width: 768px) {
+  // Fix 2: 타임라인 left 값 축소 (모바일에서 잘림 방지)
+  .list-lead::after {
+    left: 28px;
+  }
+
+  .list-post > ul > li {
+    &:first-child::before,
+    &::after {
+      left: 32px;
+    }
+
+    > div > a {
+      margin-left: 1rem;
+
+      &::before {
+        left: 26px;
+      }
+    }
+  }
+
+  // Fix 3: 상단 여백 축소
+  .content {
+    padding-top: 4rem;
+  }
+
+  // Fix 4: 서브메뉴 인라인 표시 (오버플로 방지)
+  .submenu.menu-wrapper {
+    position: relative;
+    right: auto;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: rgba(34, 31, 32, 0.9);
+  }
+
+  // Fix 6: 코드 블록 스크롤 힌트
+  div.highlight {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 24px;
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.15));
+      pointer-events: none;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  // Fix 7: 검색 폼 전체 너비
+  .tipue_search_left,
+  .tipue_search_right {
+    float: none;
+    display: block;
+  }
+
+  #tipue_search_input {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  // Fix 8: 브레드크럼 폰트 축소
+  #breadcrumbs > ul {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  // Fix 5: 링크 카드 제목 폰트 축소
+  .link-title {
+    font-size: 18px;
   }
 }
