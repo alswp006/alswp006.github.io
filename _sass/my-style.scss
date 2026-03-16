@@ -3,6 +3,10 @@
 // ==========================================
 
 // 사이드바 닫기 버튼 (드로어 모드에서만 표시)
+.sidebar {
+  position: relative;
+}
+
 .sidebar-close {
   display: none;
   position: absolute;
@@ -28,7 +32,6 @@
   }
 }
 
-// 사이드바가 드로어(오버레이)로 동작하는 화면에서만 표시
 @media (max-width: 63.99em) {
   .sidebar-close {
     display: flex;
