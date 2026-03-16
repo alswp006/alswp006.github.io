@@ -2,6 +2,31 @@
 // 네비게이션 & 메뉴 스타일
 // ==========================================
 
+// 사이드바 닫기 버튼
+.sidebar-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #fff;
+  }
+
+  .material-icons {
+    font-size: 28px;
+  }
+}
+
 // 펼치기 버튼 스타일
 .spread-btn {
   position: absolute;

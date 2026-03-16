@@ -1,4 +1,7 @@
 <div class="sidebar-sticky">
+  <button class="sidebar-close" aria-label="사이드바 닫기" onclick="document.getElementById('_drawer').removeAttribute('opened')">
+    <span class="material-icons" aria-hidden="true">close</span>
+  </button>
   <div class="sidebar-about">
     {% if site.logo %}
       <a class="no-hover" href="{{ '/' | relative_url }}" tabindex="-1">
