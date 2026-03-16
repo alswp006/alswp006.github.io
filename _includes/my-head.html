@@ -1,16 +1,5 @@
 <!-- Add HTML tags here to be included in the head -->
 
-<!-- 시스템 다크모드 감지: FOUC 방지를 위해 head에서 즉시 실행 -->
-<script>
-(function() {
-  var saved = localStorage.getItem('theme');
-  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark-mode-pending');
-  }
-})();
-</script>
-<style>.dark-mode-pending body, html.dark-mode-pending { background-color: #2a2d2f; }</style>
-
 <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous"></noscript>
 

@@ -92,30 +92,3 @@ Example code for using Matamo as alternative analytics solution.
 {% endif %}
 {% endcomment %}
 
-<!-- 시스템 다크모드 감지 및 토글 -->
-<script>
-(function() {
-  var body = document.body;
-
-  function applyTheme(dark) {
-    body.classList.toggle('dark-mode', dark);
-    body.classList.toggle('light-mode', !dark);
-    document.documentElement.classList.remove('dark-mode-pending');
-  }
-
-  // 저장된 설정 또는 시스템 설정 적용
-  var saved = localStorage.getItem('theme');
-  if (saved) {
-    applyTheme(saved === 'dark');
-  } else {
-    applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  }
-
-  // 시스템 설정 변경 실시간 감지
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
-    if (!localStorage.getItem('theme')) {
-      applyTheme(e.matches);
-    }
-  });
-})();
-</script>
