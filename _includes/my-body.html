@@ -92,18 +92,32 @@ Example code for using Matamo as alternative analytics solution.
 {% endif %}
 {% endcomment %}
 
-<!-- Mermaid: DOM 준비 후 code.language-mermaid → div.mermaid 변환 -->
+<!-- Mermaid: 초기 로드 + SPA 네비게이션 후 모두 실행 -->
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
-  document.querySelectorAll('code.language-mermaid').forEach(function(el) {
-    var pre = el.parentElement;
-    var div = document.createElement('div');
-    div.className = 'mermaid';
-    div.textContent = el.textContent;
-    pre.parentNode.replaceChild(div, pre);
-  });
-  await mermaid.run();
+
+  function renderMermaid() {
+    document.querySelectorAll('code.language-mermaid').forEach(function(el) {
+      var pre = el.parentElement;
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = el.textContent;
+      pre.parentNode.replaceChild(div, pre);
+    });
+    if (document.querySelectorAll('.mermaid').length > 0) {
+      mermaid.run();
+    }
+  }
+
+  // 초기 로드
+  renderMermaid();
+
+  // SPA 네비게이션 후 재실행
+  var pushState = document.getElementById('_pushState');
+  if (pushState) {
+    pushState.addEventListener('hy-push-state-after', renderMermaid);
+  }
 </script>
 
 <!-- 사이드바 배경 이미지 클릭으로 닫기 -->
