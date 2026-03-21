@@ -2,11 +2,12 @@
 layout: post
 title: 우아한 테크코스 6기 최종 코딩테스트 후기
 subtitle: 우아한 테크코스 6기 최종 코딩테스트 후기
+description: "우아한테크코스 6기 최종 코딩테스트 후기. 5일간의 준비 과정, 5시간 실전 구현과 리팩토링 경험, 프리코스에서 배운 성장 이야기를 담았습니다."
 date: '2023-12-16 10:45:51 +0900'
 categories:
     - blog
     - retrospect
-tags: []
+tags: [우아한테크코스, 코딩테스트, Java, 프리코스, 회고]
 comments: true
 published: true
 list: true

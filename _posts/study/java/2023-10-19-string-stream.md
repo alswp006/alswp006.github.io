@@ -1,12 +1,12 @@
 ---
 layout: post
-title: StringTokenizer와 StreamTokenizer(feat.StringTokenizer뜯어보기🔨)
-subtitle: StringTokenizer와 StreamTokenizer(feat.StringTokenizer뜯어보기🔨)
+title: StringTokenizer와 StreamTokenizer 비교 분석
 date: '2023-10-19 10:45:51 +0900'
+description: Java의 StringTokenizer와 StreamTokenizer의 차이점을 API 문서와 소스 코드를 통해 비교 분석합니다. 생성자, 메소드, 메모리 효율성까지 실전 예제로 알아봅니다.
 categories:
     - study
     - java
-tags: []
+tags: [Java, StringTokenizer, StreamTokenizer, 문자열 처리, Java API]
 comments: true
 published: true
 list: true

@@ -2,11 +2,12 @@
 layout: post
 title: 판교 퇴근길 밋업 - 가을 특집 with 개발바닥
 subtitle: 판교 퇴근길 밋업 - 가을 특집 with 개발바닥
+description: "인프런 판교 퇴근길 밋업 가을 특집 후기. 향로&호돌맨의 개발바닥 토크쇼와 주니어 개발자 네트워킹에서 얻은 인사이트를 공유합니다."
 date: '2024-09-26 10:45:51 +0900'
 categories:
     - blog
     - daily
-tags: []
+tags: [밋업, 개발바닥, 인프런, 네트워킹, 판교]
 comments: true
 published: true
 list: true

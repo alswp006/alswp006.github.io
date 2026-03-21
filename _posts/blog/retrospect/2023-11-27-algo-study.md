@@ -2,11 +2,12 @@
 layout: post
 title: 단기 알고리즘 동아리 운영 후기!
 subtitle: 좋은 경험이었다!!
+description: "8주간 운영한 알고리즘 스터디 동아리 '풀어조' 후기. Python 기반 알고리즘 학습, 발표 중심 스터디 운영 경험과 난이도 조절에 대한 회고를 담았습니다."
 date: '2023-11-27 10:45:51 +0900'
 categories:
     - blog
     - retrospect
-tags: []
+tags: [알고리즘, 스터디, Python, 동아리, 회고]
 comments: true
 published: true
 list: true

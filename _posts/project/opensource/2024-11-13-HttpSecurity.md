@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Issue 할당 받고 Contribution을 위한 코드 분석해보기!
-subtitle: Issue 할당 받고 Contribution을 위한 코드 분석해보기!
+title: "Spring Security 오픈소스 기여: HttpSecurity 이슈 분석"
 date: '2024-11-13 10:45:51 +0900'
 categories:
     - project
     - opensource
     - study
     - spring
-tags: []
+description: Spring Security의 OIDC 백채널 로그아웃 DSL 단순화 이슈를 할당받고, HttpSecurity 빌드 과정과 SecurityConfigurer 동작 원리를 코드 레벨에서 분석합니다.
+tags: [Spring Security, 오픈소스, HttpSecurity, OIDC, DSL]
 comments: true
 published: true
 list: true

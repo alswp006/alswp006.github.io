@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Devita, kakaotech bootcamp Final Project
-subtitle: Devita, kakaotech bootcamp Final Project
+title: "카카오테크 부트캠프 파이널 프로젝트: Devita 개발기"
+description: "카카오테크 부트캠프 파이널 프로젝트로 개발자 맞춤형 성장 미션 서비스 Devita를 개발한 후기. Jira 도입, 기술 교류 세미나 등 협업 방법과 회고를 담았습니다."
 date: '2024-12-26 10:45:51 +0900'
 categories:
     - blog
     - retrospect
-tags: []
+tags: [카카오테크부트캠프, 팀프로젝트, Jira, 협업, Spring]
 comments: true
 published: true
 list: true

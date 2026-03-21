@@ -9,7 +9,8 @@ categories:
     - java
     - spring
     - study
-tags: []
+description: 거리 계산 API 호출을 420번에서 14번으로 줄이는 최적화 과정을 소개합니다. Naver Directions API 경유지 기능을 활용한 자체 알고리즘을 개발하여 API 비용과 응답 시간을 대폭 절감합니다.
+tags: [API 최적화, Naver API, 경로 최적화, Spring, 알고리즘]
 comments: true
 published: true
 list: true

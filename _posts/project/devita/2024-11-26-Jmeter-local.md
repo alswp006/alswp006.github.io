@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Jmeter 사용 방법
-subtitle: Jmeter 사용 방법
+title: "JMeter를 활용한 성능 테스트: 로컬 환경 설정 가이드"
 date: '2024-11-26 10:45:51 +0900'
 categories:
     - project
     - devita
-tags: []
+description: JMeter를 로컬 환경에 설치하고 성능 테스트를 수행하는 방법을 안내합니다. Thread Group 설정, TPS 그래프 플러그인 설치, Header/Body 설정까지 실전 예제를 포함합니다.
+tags: [JMeter, 성능 테스트, 부하 테스트, TPS, Spring]
 comments: true
 published: true
 list: true

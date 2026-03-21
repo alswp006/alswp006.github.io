@@ -1,12 +1,12 @@
 ---
 layout: post
-title: for문에 Stream을 적용해보자!👊
-subtitle: for문에 Stream을 적용해보자!👊
+title: "for문을 Stream으로 리팩토링하기: 실전 예제"
 date: '2023-11-14 10:45:51 +0900'
+description: 우테코 프리코스 미션의 for문을 Java Stream으로 리팩토링한 실전 적용기입니다. EnumMap 초기화, 문자열 변환, filter/map/collect 활용 예제를 다룹니다.
 categories:
     - study
     - java
-tags: []
+tags: [Java, Stream, 리팩토링, 우아한테크코스, Lambda]
 comments: true
 published: true
 list: true

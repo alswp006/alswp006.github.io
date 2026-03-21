@@ -2,11 +2,12 @@
 layout: post
 title: 소프트웨어 마에스트로 15기 코테 및 면접 후기
 subtitle: 소프트웨어 마에스트로 15기 코테 및 면접 후기
+description: "SW 마에스트로 15기 1차/2차 코딩테스트와 심층 면접 후기. 문제 유형별 체감 난이도, 면접 예상 질문 정리, 최종 탈락에서 얻은 깨달음을 공유합니다."
 date: '2024-03-23 10:45:51 +0900'
 categories:
     - blog
     - retrospect
-tags: []
+tags: [SW마에스트로, 코딩테스트, 면접, 알고리즘, 회고]
 comments: true
 published: true
 list: true

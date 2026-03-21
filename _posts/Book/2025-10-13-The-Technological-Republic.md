@@ -1,11 +1,11 @@
 ---
 layout: post
 title: (책 리뷰) 기술공화국 선언
-subtitle: (책 리뷰) 기술공화국 선언
 date: '2025-10-13 10:45:51 +0900'
+description: 팔란티어 CEO 알렉스 카프가 주장하는 기술과 국가의 관계를 다룬 책 리뷰. 소프트웨어 산업의 공공 역할 재정립, AI 시대 국가 안보, 기술의 본질적 역할에 대해 논합니다.
 categories:
     - book
-tags: []
+tags: [팔란티어, Palantir, 국가안보, AI, 서평]
 comments: true
 published: true
 list: true

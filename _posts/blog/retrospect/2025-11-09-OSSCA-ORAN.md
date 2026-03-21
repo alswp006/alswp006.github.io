@@ -1,14 +1,14 @@
 ---
 layout: post
-title: OSSCA 참여형 후기
-subtitle: OSSCA 참여형 후기
+title: "OSSCA 참여형: ORAN AI/ML Framework 오픈소스 기여 경험"
+description: "OpenSource Contribution Academy 참여형에서 ORAN AI/ML Framework에 기여한 경험기. LLM ChatBot 설계, DB 정규화, Gerrit 코드 리뷰 등 3개월 반의 오픈소스 기여 과정을 공유합니다."
 date: '2025-11-09 14:45:51 +0900'
 categories:
     - project
     - opensource
     - blog
     - retrospect
-tags: []
+tags: [OSSCA, 오픈소스, ORAN, Gerrit, 코드리뷰]
 comments: true
 published: true
 list: true

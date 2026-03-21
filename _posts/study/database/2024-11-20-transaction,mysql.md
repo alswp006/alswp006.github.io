@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Transaction, Transaction Isolation Level(feat.MySQL 테스트)
-subtitle: Transaction, Transaction Isolation Level(feat.MySQL 테스트)
 date: '2024-11-20 10:45:51 +0900'
+description: 트랜잭션의 ACID 원칙과 4단계 격리 수준을 정리합니다. Dirty Read, Non-Repeatable Read, Phantom Read 문제와 각 격리 수준의 해결 방식을 다룹니다.
 categories:
     - study
     - database
     - project
     - tradeham
-tags: []
+tags: [MySQL, Transaction, Isolation Level, ACID, 동시성 제어]
 comments: true
 published: true
 list: true

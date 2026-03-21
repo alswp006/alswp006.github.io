@@ -1,11 +1,11 @@
 ---
 layout: post
 title: (책 리뷰) 1%를 읽는 힘
-subtitle: (책 리뷰) 1%를 읽는 힘
 date: '2025-10-08 10:45:51 +0900'
+description: 세상의 연결성을 파악해 남들이 보지 못하는 투자 기회를 찾는 방법을 다루는 책 리뷰. 전기차-희토류-우주개발 등 나비효과를 통한 근거 기반 투자 사고법을 소개합니다.
 categories:
     - book
-tags: []
+tags: [투자, 나비효과, 희토류, 기초지식, 서평]
 comments: true
 published: true
 list: true

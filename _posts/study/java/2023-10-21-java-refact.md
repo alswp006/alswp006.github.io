@@ -1,12 +1,12 @@
 ---
 layout: post
 title: 객체지향 생활체조(feat. 코드 리팩토링)
-subtitle: 객체지향 생활체조(feat. 코드 리팩토링)
 date: '2023-10-21 10:45:51 +0900'
+description: 객체지향 생활체조 9가지 규칙을 코드 예제와 함께 정리합니다. 들여쓰기 제한, else 금지, 원시값 포장, 일급 컬렉션 등 클린 코드 작성법을 다룹니다.
 categories:
     - study
     - java
-tags: []
+tags: [Java, 객체지향, 클린코드, 리팩토링, 객체지향 생활체조]
 comments: true
 published: true
 list: true

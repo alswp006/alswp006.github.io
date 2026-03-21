@@ -2,11 +2,12 @@
 layout: post
 title: 판교 퇴근길 밋업 - 수많은 AI 회사들을 만나며 느낀 AI 개발의 현주소
 subtitle: 판교 퇴근길 밋업 - 수많은 AI 회사들을 만나며 느낀 AI 개발의 현주소
+description: "인프런 판교 퇴근길 밋업 AI 특집 후기. RAG 실전 활용, Data Processing, Evaluation 등 AI 개발 현주소에 대한 발표와 백엔드 개발자 네트워킹 경험을 공유합니다."
 date: '2024-11-28 10:45:51 +0900'
 categories:
     - blog
     - daily
-tags: []
+tags: [밋업, AI, RAG, 인프런, 네트워킹]
 comments: true
 published: true
 list: true

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: (책 리뷰) 숫자 감각의 힘
-subtitle: (책 리뷰) 숫자 감각의 힘
 date: '2025-09-28 10:45:51 +0900'
+description: 통계학 기반으로 숫자 감각을 키우는 방법을 소개하는 책 리뷰. 평균과 중앙값의 활용, 표준편차, 검사 정확도의 함정 등 실생활에 적용 가능한 통계 개념을 다룹니다.
 categories:
     - book
-tags: []
+tags: [통계학, 숫자감각, 데이터분석, 서평, book review]
 comments: true
 published: true
 list: true

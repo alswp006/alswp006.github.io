@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Gerrit에서 코드 기여 해보기
-subtitle: Gerrit에서 코드 기여 해보기
+title: "Gerrit 워크플로우: 오픈소스 코드 기여 가이드"
 date: '2025-11-02 10:45:51 +0900'
 categories:
     - project
     - opensource
     - study
-tags: []
+description: GitHub와 다른 Gerrit 기반 오픈소스 기여 방법을 정리합니다. SSH 키 설정, Change-Id 관리, 패치셋 수정, 코드 리뷰 점수 체계까지 실전 워크플로우를 안내합니다.
+tags: [Gerrit, 오픈소스, Git, 코드리뷰, ORAN]
 comments: true
 published: true
 list: true

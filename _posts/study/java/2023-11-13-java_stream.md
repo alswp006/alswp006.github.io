@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Stream을 부숴보기👊
-subtitle: Stream을 부숴보기👊
+title: "Java Stream API 완벽 가이드: 내부 동작 원리부터 활용까지"
 date: '2023-11-13 10:45:51 +0900'
+description: Java Stream API의 생성, 중간 연산, 최종 연산을 실전 예제로 정리합니다. filter, map, sorted, findAny 등 주요 메소드 사용법과 메소드 레퍼런스까지 다룹니다.
 categories:
     - study
     - java
-tags: []
+tags: [Java, Stream API, 함수형 프로그래밍, 컬렉션, Lambda]
 comments: true
 published: true
 list: true

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 10월 구름 커밋
-subtitle: 10월 구름 커밋
+title: "구름 커밋: 카프카와 데이터 인프라 이야기"
+description: "10월 구름 커밋 후기. SKT 고승범 엔지니어님의 카프카 강연을 통해 빅데이터 기초, 카프카 에코시스템, 스키마 레지스트리, KSQL 등 데이터 인프라 핵심 내용을 정리했습니다."
 date: '2024-11-06 10:45:51 +0900'
 categories:
     - blog
     - daily
-tags: []
+tags: [Kafka, 구름커밋, 데이터인프라, 빅데이터, 세미나]
 comments: true
 published: true
 list: true

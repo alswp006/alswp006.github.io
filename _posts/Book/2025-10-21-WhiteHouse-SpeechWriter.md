@@ -1,11 +1,11 @@
 ---
 layout: post
 title: (책 리뷰) 백악관 말하기 수업
-subtitle: (책 리뷰) 백악관 말하기 수업
 date: '2025-10-22 10:45:51 +0900'
+description: 오바마 백악관 스피치라이터 테리 수플렛의 말하기 기술을 다룬 책 리뷰. 발표 불안 극복, 감정 재평가, 신뢰를 쌓는 팩트체크 원칙 등 실전 스피치 노하우를 소개합니다.
 categories:
     - book
-tags: []
+tags: [스피치, 발표, 커뮤니케이션, 자기계발, 서평]
 comments: true
 published: true
 list: true

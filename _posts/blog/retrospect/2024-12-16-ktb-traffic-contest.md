@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Large-Scale Load Testing Challenge, kakao x goorm - 대상(카카오 대표이사 상)🥇
-subtitle: Large-Scale Load Testing Challenge, kakao x goorm - 대상(카카오 대표이사 상)🥇
+title: 카카오 x 구름 대규모 부하 테스트 챌린지 대상 수상 후기
+description: "카카오 x 구름 대규모 부하 테스트 챌린지에서 대상(카카오 대표이사상)을 수상한 후기. Redis 클러스터링, MongoDB 제거 전략 등 채팅 서비스 최적화 과정을 공유합니다."
 date: '2024-12-16 10:45:51 +0900'
 categories:
     - blog
     - retrospect
-tags: []
+tags: [부하테스트, Redis, 클러스터링, 카카오테크부트캠프, 대규모트래픽]
 comments: true
 published: true
 list: true

@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 우테코 프리코스 테스트 코드 뜯어보기🔨
-subtitle: 우테코 프리코스 테스트 코드 뜯어보기🔨
+title: 우테코 프리코스 테스트 코드 뜯어보기
 date: '2023-10-25 10:45:51 +0900'
+description: 우아한테크코스 프리코스의 NsTest, ApplicationTest 테스트 코드를 소스 레벨에서 분석합니다. JUnit5 어노테이션, Mockito, assertThat 등 테스트 프레임워크 핵심 개념을 다룹니다.
 categories:
     - study
     - java
-tags: []
+tags: [Java, 테스트코드, JUnit5, Mockito, 우아한테크코스]
 comments: true
 published: true
 list: true

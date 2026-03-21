@@ -1,14 +1,14 @@
 ---
 layout: post
 title: MySQL 8.0의 Shared Lock, Exclusive Lock
-subtitle: MySQL 8.0의 Shared Lock, Exclusive Lock
 date: '2024-11-21 10:45:51 +0900'
+description: MySQL 8.0의 공유 락과 배타 락을 실제 터미널 테스트로 검증합니다. 데드락 발생 시나리오, InnoDB 잠금없는 읽기, FOR SHARE/FOR UPDATE 사용법을 다룹니다.
 categories:
     - study
     - database
     - project
     - tradeham
-tags: []
+tags: [MySQL, Lock, 공유락, 배타락, 데드락]
 comments: true
 published: true
 list: true

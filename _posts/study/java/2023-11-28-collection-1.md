@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 일급 컬렉션을 잡았..나..?🤔
-subtitle: 일급 컬렉션을 잡았..나..?🤔
+title: "일급 컬렉션(First-Class Collection) 패턴 이해와 적용"
 date: '2023-11-28 10:45:51 +0900'
+description: 일급 컬렉션의 개념과 장점을 실전 예제로 정리합니다. 비즈니스 종속 자료구조, 상태와 행위의 한 곳 관리, 불변성 보장 등 핵심 이점을 다룹니다.
 categories:
     - study
     - java
-tags: []
+tags: [Java, 일급 컬렉션, 객체지향, 디자인패턴, 클린코드]
 comments: true
 published: true
 list: true

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: (책 리뷰) 저소비생활
-subtitle: (책 리뷰) 저소비생활
 date: '2025-10-09 10:45:51 +0900'
+description: 월 70만원으로 생활하는 저자의 저소비 노하우와 마음가짐을 다룬 책 리뷰. 가계부 정리, 소비 습관 개선, 자기 자신을 돌아보는 계기를 제공하는 책입니다.
 categories:
     - book
-tags: []
+tags: [저소비, 절약, 소비습관, 자기계발, 서평]
 comments: true
 published: true
 list: true

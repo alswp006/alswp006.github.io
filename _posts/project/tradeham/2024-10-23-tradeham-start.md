@@ -1,18 +1,18 @@
 ---
 layout: post
-title: 페어 프로그래밍으로 프로젝트를..?
-subtitle: 페어 프로그래밍으로 프로젝트를..?
+title: "페어 프로그래밍으로 시작하는 팀 프로젝트: TradeHam 기획"
 date: '2024-10-23 10:45:51 +0900'
 categories:
     - project
     - tradeham
-tags: []
+description: 카카오테크 부트캠프에서 사물함 기반 비대면 중고거래 플랫폼 TradeHam을 기획한 과정을 공유합니다. 페어 프로그래밍 방식의 스터디 운영과 기능별 점수 분배를 통한 일정 관리 방법을 소개합니다.
+tags: [프로젝트 기획, 페어 프로그래밍, TradeHam, 팀 프로젝트, Spring]
 comments: true
 published: true
 list: true
 order: 6
 ---
-# [프로젝트 기획] 페어 프로그래밍으로 프로젝트를..?
+# [프로젝트 기획] 페어 프로그래밍으로 시작하는 팀 프로젝트: TradeHam 기획
 
 - 이번 카카오테크 부트캠프에서 백엔드 프로젝트 스터디를 만들었습니다!
 - 이미 CS스터디와 알고리즘 스터디를 참여하고 있지만 저에게 필요할 것 같아서 직접 스터디를 만들기로 했습니다!
@@ -172,5 +172,5 @@ order: 6
 - 꼭 열심히 해서 좋은 결과(프로젝트 결과와 팀원들의 큰 성장..?)를 들고 오겠습니다!
 
 
-👉[백엔드 프로젝트 Organization](https://github.com/Dream-Backend-Study)입니다!
+[백엔드 프로젝트 Organization](https://github.com/Dream-Backend-Study)입니다!
 나중에 보시는 분들이 봤을 때 유의미한 결과가 있도록 열심히 하겠습니다!

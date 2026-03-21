@@ -2,11 +2,12 @@
 layout: post
 title: kakaotech bootcamp 1기 수료 후기
 subtitle: kakaotech bootcamp 1기 수료 후기
+description: "카카오테크 부트캠프 1기 6개월 수료 후기. 2개의 팀 프로젝트, 해커톤, 부하테스트 대상, 사이드 프로젝트, 유튜브 세션 운영 등 활동 전반을 돌아봅니다."
 date: '2025-1-10 10:45:51 +0900'
 categories:
     - blog
     - retrospect
-tags: []
+tags: [카카오테크부트캠프, 수료, 부트캠프, 회고, 취업]
 comments: true
 published: true
 list: true

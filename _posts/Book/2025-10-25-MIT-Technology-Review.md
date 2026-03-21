@@ -1,11 +1,11 @@
 ---
 layout: post
 title: (책 리뷰) MIT Technology Review 9/10월호 — AI, 에너지 블랙홀
-subtitle: (책 리뷰) MIT Technology Review 9/10월호 — AI, 에너지 블랙홀
 date: '2025-10-25 10:45:51 +0900'
+description: MIT 테크놀로지 리뷰 9/10월호 리뷰. AI 전력 소비 문제, 데이터센터 에너지 수요, 원자력 대안, 양자컴퓨팅과 제약 바이오 협업 등 최신 기술 동향을 정리합니다.
 categories:
     - book
-tags: []
+tags: [AI, 에너지, 양자컴퓨팅, MIT, 데이터센터]
 comments: true
 published: true
 list: true

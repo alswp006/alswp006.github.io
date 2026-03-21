@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Mock 데이터로 MySQL 최적화해보기
-subtitle: Mock 데이터로 MySQL 최적화해보기
 date: '2024-08-21 10:45:51 +0900'
+description: 400만 건의 Mock 데이터로 MySQL 쿼리 최적화와 인덱스 성능을 실측합니다. EXPLAIN 분석, CTE 리팩토링, 단일/복합 인덱스 비교까지 단계별로 다룹니다.
 categories:
     - study
     - database
-tags: []
+tags: [MySQL, 쿼리 최적화, 인덱스, EXPLAIN, 데이터베이스]
 comments: true
 published: true
 list: true

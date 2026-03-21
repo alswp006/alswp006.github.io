@@ -1,12 +1,12 @@
 ---
 layout: post
 title: 팀 프로젝트를 위한 JIRA + GITHUB 가이드라인
-subtitle: 팀 프로젝트를 위한 JIRA + GITHUB 가이드라인
 date: '2024-11-20 10:45:51 +0900'
 categories:
     - project
     - devita
-tags: []
+description: JIRA와 GitHub를 연동하여 브랜치 생성, 커밋 추적, PR 관리를 일원화하는 방법을 스크린샷과 함께 단계별로 안내합니다.
+tags: [JIRA, GitHub, 협업, 브랜치 관리, PR]
 comments: true
 published: true
 list: true

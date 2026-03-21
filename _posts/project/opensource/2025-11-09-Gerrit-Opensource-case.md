@@ -1,13 +1,13 @@
 ---
 layout: post
-title: ORAN 코드 기여
-subtitle: ORAN 코드 기여
+title: "ORAN AIMLFW 프로젝트: 오픈소스 코드 기여 실전"
 date: '2025-11-09 10:45:51 +0900'
 categories:
     - project
     - opensource
     - study
-tags: []
+description: OSSCA 참가형 프로그램에서 O-RAN AIMLFW 프로젝트에 기여한 경험을 정리합니다. 환경 설정부터 LLM 챗봇 설계, DB 구조 개선, 테스트 코드 추가까지 네 가지 기여 내용을 소개합니다.
+tags: [오픈소스, ORAN, AIMLFW, Gerrit, OSSCA]
 comments: true
 published: true
 list: true

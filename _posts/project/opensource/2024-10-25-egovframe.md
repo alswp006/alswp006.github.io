@@ -1,14 +1,14 @@
 ---
 layout: post
 title: OpenSource Contribution 한 걸음 내딛고 감사장까지 받기
-subtitle: OpenSource Contribution 한 걸음 내딛고 감사장까지 받기
 date: '2024-10-25 10:45:51 +0900'
 categories:
     - project
     - opensource
     - study
     - spring
-tags: []
+description: 전자정부 표준 프레임워크 문서의 오탈자와 중복 내용을 수정하여 오픈소스에 첫 기여를 하고 감사장을 받기까지의 경험을 공유합니다.
+tags: [오픈소스, 전자정부프레임워크, OpenSource Contribution, Spring]
 comments: true
 published: true
 list: true
