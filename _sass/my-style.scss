@@ -544,16 +544,31 @@ hy-push-state {
   }
 }
 
+// 넓은 화면에서 상단바를 TOC 폭만큼 확장.
+@media (min-width: 100em) {
+  .navbar > .content {
+    max-width: calc(54rem + 282px) !important;
+    margin-left: 25rem !important;
+    margin-right: auto !important;
+  }
+}
+
+@media (min-width: 110em) {
+  .navbar > .content {
+    max-width: calc(54rem + 312px) !important;
+  }
+}
+
 // post-container: flex 레이아웃 + negative margin으로 TOC 공간 확보.
 .post-container {
   @media (min-width: 100em) {
     display: flex;
     gap: 1.5rem;
-    margin-right: -232px;
+    margin-right: -282px;
   }
 
   @media (min-width: 110em) {
-    margin-right: -252px;
+    margin-right: -312px;
   }
 }
 
@@ -578,7 +593,7 @@ hy-push-state {
 
   @media (min-width: 100em) {
     display: block;
-    width: 200px;
+    width: 250px;
     flex-shrink: 0;
     align-self: flex-start;
     position: sticky;
@@ -586,7 +601,7 @@ hy-push-state {
   }
 
   @media (min-width: 110em) {
-    width: 220px;
+    width: 280px;
   }
 
   a {
