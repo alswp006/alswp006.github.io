@@ -87,7 +87,19 @@
 // ==========================================
 
 .post-header {
-  max-width: 42rem;
+  max-width: 54rem;
+
+  @media (min-width: 86em) {
+    max-width: calc(54rem + 212px);
+  }
+
+  @media (min-width: 100em) {
+    max-width: calc(54rem + 282px);
+  }
+
+  @media (min-width: 110em) {
+    max-width: calc(54rem + 312px);
+  }
 }
 
 // ==========================================
