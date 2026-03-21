@@ -94,7 +94,7 @@ Example code for using Matamo as alternative analytics solution.
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose' });
+  mermaid.initialize({ startOnLoad: false, securityLevel: 'loose', theme: 'base', themeVariables: { primaryColor: '#e8f4f8', primaryTextColor: '#2c3e50', primaryBorderColor: '#4fb1ba', lineColor: '#95a5a6', secondaryColor: '#f0f4f8', tertiaryColor: '#fff3cd', fontFamily: 'inherit', fontSize: '13px', nodeBorder: '#4fb1ba', mainBkg: '#e8f4f8', clusterBkg: '#f8f9fa', clusterBorder: '#dee2e6' } });
   function renderMermaid() {
     document.querySelectorAll('code.language-mermaid').forEach(function(el) {
       var pre = el.parentElement;
