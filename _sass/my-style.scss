@@ -381,16 +381,15 @@ hy-push-state {
 }
 
 // post-container: flex 레이아웃 + negative margin으로 TOC 공간 확보.
-// 본문(.content.layout-post)은 원래 54rem 유지, 제목과 상단바 정렬.
 .post-container {
   @media (min-width: 100em) {
     display: flex;
-    gap: 2rem;
-    margin-right: -312px;
+    gap: 1.5rem;
+    margin-right: -232px;
   }
 
   @media (min-width: 110em) {
-    margin-right: -352px;
+    margin-right: -252px;
   }
 }
 
@@ -399,23 +398,23 @@ hy-push-state {
   flex: 1;
 }
 
-// TOC: 넓은 화면에서 본문 옆에 표시. sticky로 스크롤 추적.
+// TOC: Velog/Notion 스타일 미니멀 디자인.
+// 배경 투명, 왼쪽 액센트 라인만, 크기 고정.
 .toc {
-  color: #333;
-  background-color: #fff;
-  padding: 1.5rem;
+  color: #888;
+  background-color: transparent;
+  padding: 0.5rem 0 0.5rem 0.75rem;
   border-left: 2px solid #e0d9e7;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
   z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   display: none;
 
   @media (min-width: 100em) {
     display: block;
-    width: 280px;
+    width: 200px;
     flex-shrink: 0;
     align-self: flex-start;
     position: sticky;
@@ -423,24 +422,25 @@ hy-push-state {
   }
 
   @media (min-width: 110em) {
-    width: 320px;
+    width: 220px;
   }
 
   a {
     font-size: 12px;
-    line-height: 1.6;
-    font-weight: 500;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #888;
+    transition: color 0.15s;
 
     &:hover {
-      color: #4a9ae1;
-      text-decoration: underline;
+      color: #333;
+      text-decoration: none;
     }
 
     &.toc-active {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: 600;
       color: #9075aa;
-      transition: all 0.125s ease-in 0s;
+      transition: color 0.15s;
     }
   }
 }
@@ -647,16 +647,16 @@ button:focus-visible {
     position: fixed;
     bottom: 6rem;
     right: 2rem;
-    width: 280px;
+    width: 260px;
     max-height: 60vh;
     overflow-y: auto;
     background: #fff;
-    color: #333;
+    color: #888;
     border-radius: 8px;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     z-index: 9001;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.6;
     transform: translateY(20px);
     opacity: 0;
@@ -671,18 +671,18 @@ button:focus-visible {
 
     a {
       font-size: 12px;
-      line-height: 1.6;
-      font-weight: 500;
-      color: #333;
+      line-height: 1.8;
+      font-weight: 400;
+      color: #888;
+      transition: color 0.15s;
 
       &:hover {
-        color: #4a9ae1;
-        text-decoration: underline;
+        color: #333;
+        text-decoration: none;
       }
 
       &.toc-active {
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: 600;
         color: #9075aa;
       }
     }
