@@ -13,8 +13,6 @@ published: true
 list: true
 ---
 
-# 우아한 테크코스 6기 최종 코딩테스트 후기
-
 - 안녕하세요! 저는 오늘 최종 코딩테스트를 마치고 집가는 기차 안에서 최종 코테를 마친 복잡한 기분 그대로 회고를 쭉쭉 작성해보려 합니다!!(소제목 이런거 없이 쭉쭉 적을겁니다! 약간 일기랄까요..) 그 전에 최종 코딩테스트를 진행하며 찍은 사진들 먼저 자랑 좀 하겠습니다!!
 
 | ![](https://velog.velcdn.com/images/alswp006/post/a197bea9-e169-44a0-bd22-ca90d3a2ad30/image.png) | ![](https://velog.velcdn.com/images/alswp006/post/b27ef78d-789c-4b8b-a261-707cc2a3de6b/image.png) |
