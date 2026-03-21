@@ -561,6 +561,22 @@ hy-push-state {
   }
 }
 
+// 포스트 페이지에서 .content 부모 컨테이너의 max-width를 TOC 포함 너비로 확장
+// (테마 기본값 54rem이 자식 요소의 확장을 차단하므로 오버라이드 필요)
+.content.layout-post {
+  @media screen and (min-width: 86em) {
+    max-width: calc(54rem + 212px) !important;
+  }
+
+  @media screen and (min-width: 100em) {
+    max-width: calc(54rem + 282px) !important;
+  }
+
+  @media screen and (min-width: 110em) {
+    max-width: calc(54rem + 312px) !important;
+  }
+}
+
 // 상단바를 TOC 폭만큼 확장 (max-width만 조정, margin은 기존 유지)
 @media (min-width: 86em) {
   .navbar > .content {
