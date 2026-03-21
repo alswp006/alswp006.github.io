@@ -72,19 +72,13 @@ menu:
         url:      /database/
       - title:  CS
         url:      /cs/
-      - title:  Study-etc
-        url:      /study-etc/
   - title:             Blog
     url:               /blog/
     submenu:
-      - title:  Daily
-        url:      /daily/
-      - title:  Book-Review
-        url:      /book-review/
       - title:  Retrospect
         url:      /retrospect/
-      - title:  Blog-etc
-        url:      /blog-etc/
+      - title:  Daily
+        url:      /daily/
   - title:             Book
     url:               /book/
 
