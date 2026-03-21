@@ -87,11 +87,12 @@
 // ==========================================
 
 // 상단바와 동일한 너비로 확장 (width를 명시적으로 확장)
-.post-header,
+// .page: 제목+메타 래퍼, .about.related: 저자 소개, .post-series, .post-nav, .comments
+.page,
 .post-series,
 .post-nav,
-.comments,
-.about {
+.about.related,
+.comments {
   @media (min-width: 86em) {
     width: calc(100% + 212px);
     max-width: none;
