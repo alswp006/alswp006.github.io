@@ -544,12 +544,18 @@ hy-push-state {
   }
 }
 
-// 넓은 화면에서 상단바를 TOC 폭만큼 확장.
+// 상단바를 TOC 폭만큼 확장 (유동적 브레이크포인트)
+@media (min-width: 86em) {
+  .navbar > .content {
+    max-width: calc(54rem + 212px) !important;
+    margin-left: 25rem !important;
+    margin-right: auto !important;
+  }
+}
+
 @media (min-width: 100em) {
   .navbar > .content {
     max-width: calc(54rem + 282px) !important;
-    margin-left: 25rem !important;
-    margin-right: auto !important;
   }
 }
 
@@ -561,8 +567,13 @@ hy-push-state {
 
 // post-container: flex 레이아웃 + negative margin으로 TOC 공간 확보.
 .post-container {
-  @media (min-width: 100em) {
+  @media (min-width: 86em) {
     display: flex;
+    gap: 1rem;
+    margin-right: -212px;
+  }
+
+  @media (min-width: 100em) {
     gap: 1.5rem;
     margin-right: -282px;
   }
@@ -577,8 +588,8 @@ hy-push-state {
   flex: 1;
 }
 
-// TOC: Velog/Notion 스타일 미니멀 디자인.
-// 배경 투명, 왼쪽 액센트 라인만, 크기 고정.
+// TOC: 화면 크기에 따라 유동적으로 표시.
+// 86em부터 표시, 화면이 커질수록 너비 확대.
 .toc {
   color: #888;
   background-color: transparent;
@@ -591,15 +602,22 @@ hy-push-state {
   line-height: 1.5;
   display: none;
 
-  @media (min-width: 100em) {
+  // 일반 노트북 (1376px+)
+  @media (min-width: 86em) {
     display: block;
-    width: 250px;
+    width: 180px;
     flex-shrink: 0;
     align-self: flex-start;
     position: sticky;
     top: 60px;
   }
 
+  // 큰 화면 (1600px+)
+  @media (min-width: 100em) {
+    width: 250px;
+  }
+
+  // 와이드 (1760px+)
   @media (min-width: 110em) {
     width: 280px;
   }
@@ -781,7 +799,7 @@ button:focus-visible {
   display: none;
 }
 
-@media (max-width: 99.99em) {
+@media (max-width: 85.99em) {
   .toc-fab {
     display: flex;
     align-items: center;
