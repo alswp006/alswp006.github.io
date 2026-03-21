@@ -1,6 +1,6 @@
 {% if page.series %}
 {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
-{% if series_posts.size > 1 %}
+{% if series_posts.size > 0 %}
 <nav class="post-series" aria-label="시리즈 네비게이션">
   <h3 class="post-series-title">{{ page.series }} 시리즈 ({{ series_posts.size }}편)</h3>
   <ol class="post-series-list">
