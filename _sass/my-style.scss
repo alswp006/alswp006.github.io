@@ -331,6 +331,170 @@ u {
 }
 
 // ==========================================
+// 본문 가독성 개선
+// ==========================================
+
+.post-article {
+  line-height: 1.9;
+  word-break: keep-all;
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  // 코드블록과 본문 사이 여백
+  pre,
+  div.highlight {
+    margin: 1.75rem 0;
+  }
+
+  // 헤딩과 본문 사이 여백
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+// ==========================================
+// 포스트 헤더 여백
+// ==========================================
+
+.post-series {
+  margin-top: 2rem;
+}
+
+// ==========================================
+// 이미지 스타일링
+// ==========================================
+
+.post-article img {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 1rem 0;
+}
+
+.post-article figure,
+.post-article .figcaption {
+  margin: 1.5rem 0;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 0.5rem;
+  }
+}
+
+// ==========================================
+// 코드블록 언어 라벨
+// ==========================================
+
+div.highlight {
+  position: relative;
+
+  &[class]::before {
+    content: "";
+  }
+}
+
+// 언어별 라벨 표시
+div.language-javascript,
+div.language-js {
+  &::before { content: "js" !important; }
+}
+div.language-typescript,
+div.language-ts {
+  &::before { content: "ts" !important; }
+}
+div.language-tsx {
+  &::before { content: "tsx" !important; }
+}
+div.language-jsx {
+  &::before { content: "jsx" !important; }
+}
+div.language-python,
+div.language-py {
+  &::before { content: "python" !important; }
+}
+div.language-java {
+  &::before { content: "java" !important; }
+}
+div.language-ruby,
+div.language-rb {
+  &::before { content: "ruby" !important; }
+}
+div.language-html {
+  &::before { content: "html" !important; }
+}
+div.language-css {
+  &::before { content: "css" !important; }
+}
+div.language-scss {
+  &::before { content: "scss" !important; }
+}
+div.language-bash,
+div.language-sh,
+div.language-shell {
+  &::before { content: "bash" !important; }
+}
+div.language-json {
+  &::before { content: "json" !important; }
+}
+div.language-yaml,
+div.language-yml {
+  &::before { content: "yaml" !important; }
+}
+div.language-sql {
+  &::before { content: "sql" !important; }
+}
+div.language-markdown,
+div.language-md {
+  &::before { content: "md" !important; }
+}
+div.language-xml {
+  &::before { content: "xml" !important; }
+}
+div.language-go {
+  &::before { content: "go" !important; }
+}
+div.language-rust {
+  &::before { content: "rust" !important; }
+}
+div.language-c {
+  &::before { content: "c" !important; }
+}
+div.language-cpp {
+  &::before { content: "c++" !important; }
+}
+div.language-diff {
+  &::before { content: "diff" !important; }
+}
+
+// 라벨 공통 스타일
+div[class*="language-"]::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 0 4px 0 4px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+// ==========================================
 // 기타 커스텀 스타일
 // ==========================================
 
@@ -710,7 +874,7 @@ button:focus-visible {
 .code-copy-btn {
   position: absolute;
   top: 6px;
-  right: 6px;
+  right: 60px;
   padding: 4px 10px;
   font-size: 12px;
   background: rgba(255, 255, 255, 0.15);
