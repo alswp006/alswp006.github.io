@@ -32,6 +32,10 @@ hide_description=page.hide_description %}
   </aside>
 </div>
 
+{% if page.series %}
+{% include components/post-series.html %}
+{% endif %}
+
 <!-- 이전/다음 포스트 네비게이션 -->
 {% if page.previous or page.next %}
 <nav class="post-nav" aria-label="포스트 네비게이션">

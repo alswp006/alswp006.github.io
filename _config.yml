@@ -458,7 +458,7 @@ comments:
     category-id: "DIC_kwDOND4_Fc4C4Kh3"
     mapping: pathname
     input-position: bottom
-    theme: preferred_color_scheme
+    theme: light
     lang: ko
   # utterances (백업용):
   # provider: utterances
