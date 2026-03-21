@@ -53,6 +53,8 @@ menu:
   - title:             Project
     url:               /project/
     submenu:
+      - title:  AI Factory
+        url:      /ai-factory/
       - title:  OpenSource
         url:      /opensource/
       - title:  Devita

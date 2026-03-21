@@ -1,9 +1,9 @@
 ---
 layout: list
 category: project
-bigtitle: TradeHam
+bigtitle: AI Factory
 description: >
-  카카오테크 부트캠프 내 비대면 중고거래 플랫폼
+  아이디어 하나로 AI가 설계부터 코딩, 배포까지 자동으로 처리하는 파이프라인
 related_posts:
   -
 addons:
