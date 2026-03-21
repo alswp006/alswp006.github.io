@@ -86,22 +86,23 @@
 // 포스트 제목 스타일
 // ==========================================
 
-// 상단바와 동일한 너비로 확장 (negative margin-right, post-container와 동일 방식)
+// 상단바와 동일한 너비로 확장 (width를 명시적으로 확장)
 .post-header,
 .post-series,
 .post-nav,
 .comments,
 .about {
   @media (min-width: 86em) {
-    margin-right: -212px;
+    width: calc(100% + 212px);
+    max-width: none;
   }
 
   @media (min-width: 100em) {
-    margin-right: -282px;
+    width: calc(100% + 282px);
   }
 
   @media (min-width: 110em) {
-    margin-right: -312px;
+    width: calc(100% + 312px);
   }
 }
 
