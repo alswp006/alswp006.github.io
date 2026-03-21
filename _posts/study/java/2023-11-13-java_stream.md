@@ -7,6 +7,7 @@ categories:
     - study
     - java
 tags: [Java, Stream API, 함수형 프로그래밍, 컬렉션, Lambda]
+series: Java Stream
 comments: true
 published: true
 list: true

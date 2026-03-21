@@ -9,6 +9,7 @@ categories:
     - spring
 description: Envelope Pattern을 활용한 API 공통 응답 포맷 구현 방법을 단계별로 설명합니다. ApiResponse 클래스, GlobalExceptionHandler, ErrorCode Enum, Custom Exception까지 실전 코드와 함께 안내합니다.
 tags: [Spring, API, Envelope Pattern, 예외처리, REST API]
+series: 공통 API 응답 포맷
 comments: true
 published: true
 list: true

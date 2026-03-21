@@ -9,6 +9,7 @@ categories:
     - spring
 description: Envelope Pattern의 코드 중복과 규약 문제를 ResponseBodyAdvice로 해결하는 방법을 소개합니다. String 반환 시 발생하는 ClassCastException 디버깅과 해결 과정도 포함합니다.
 tags: [Spring, ResponseBodyAdvice, AOP, API, Envelope Pattern]
+series: 공통 API 응답 포맷
 comments: true
 published: true
 list: true

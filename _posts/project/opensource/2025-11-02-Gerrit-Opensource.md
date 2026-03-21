@@ -8,6 +8,7 @@ categories:
     - study
 description: GitHub와 다른 Gerrit 기반 오픈소스 기여 방법을 정리합니다. SSH 키 설정, Change-Id 관리, 패치셋 수정, 코드 리뷰 점수 체계까지 실전 워크플로우를 안내합니다.
 tags: [Gerrit, 오픈소스, Git, 코드리뷰, ORAN]
+series: ORAN 오픈소스 기여
 comments: true
 published: true
 list: true

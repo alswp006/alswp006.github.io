@@ -9,6 +9,7 @@ categories:
     - spring
 description: Spring Security의 OIDC 백채널 로그아웃 DSL 단순화 이슈를 할당받고, HttpSecurity 빌드 과정과 SecurityConfigurer 동작 원리를 코드 레벨에서 분석합니다.
 tags: [Spring Security, 오픈소스, HttpSecurity, OIDC, DSL]
+series: "OSSCA 체험형: 표준프레임워크"
 comments: true
 published: true
 list: true

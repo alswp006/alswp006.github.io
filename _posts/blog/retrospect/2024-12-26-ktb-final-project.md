@@ -7,6 +7,7 @@ categories:
     - blog
     - retrospect
 tags: [카카오테크부트캠프, 팀프로젝트, Jira, 협업, Spring]
+series: 카카오테크 부트캠프 여정
 comments: true
 published: true
 list: true

@@ -9,6 +9,7 @@ categories:
     - project
     - tradeham
 tags: [MySQL, Lock, 공유락, 배타락, 데드락]
+series: MySQL 트랜잭션과 락
 comments: true
 published: true
 list: true

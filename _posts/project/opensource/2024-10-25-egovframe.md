@@ -9,6 +9,7 @@ categories:
     - spring
 description: 전자정부 표준 프레임워크 문서의 오탈자와 중복 내용을 수정하여 오픈소스에 첫 기여를 하고 감사장을 받기까지의 경험을 공유합니다.
 tags: [오픈소스, 전자정부프레임워크, OpenSource Contribution, Spring]
+series: "OSSCA 체험형: 표준프레임워크"
 comments: true
 published: true
 list: true

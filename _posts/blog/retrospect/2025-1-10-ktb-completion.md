@@ -8,6 +8,7 @@ categories:
     - blog
     - retrospect
 tags: [카카오테크부트캠프, 수료, 부트캠프, 회고, 취업]
+series: 카카오테크 부트캠프 여정
 comments: true
 published: true
 list: true

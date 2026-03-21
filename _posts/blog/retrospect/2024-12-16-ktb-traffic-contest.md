@@ -7,6 +7,7 @@ categories:
     - blog
     - retrospect
 tags: [부하테스트, Redis, 클러스터링, 카카오테크부트캠프, 대규모트래픽]
+series: 카카오테크 부트캠프 여정
 comments: true
 published: true
 list: true

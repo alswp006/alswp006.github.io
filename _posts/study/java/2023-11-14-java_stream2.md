@@ -7,6 +7,7 @@ categories:
     - study
     - java
 tags: [Java, Stream, 리팩토링, 우아한테크코스, Lambda]
+series: Java Stream
 comments: true
 published: true
 list: true

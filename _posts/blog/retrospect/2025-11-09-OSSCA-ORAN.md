@@ -9,6 +9,7 @@ categories:
     - blog
     - retrospect
 tags: [OSSCA, 오픈소스, ORAN, Gerrit, 코드리뷰]
+series: ORAN 오픈소스 기여
 comments: true
 published: true
 list: true

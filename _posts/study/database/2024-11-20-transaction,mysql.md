@@ -9,6 +9,7 @@ categories:
     - project
     - tradeham
 tags: [MySQL, Transaction, Isolation Level, ACID, 동시성 제어]
+series: MySQL 트랜잭션과 락
 comments: true
 published: true
 list: true
