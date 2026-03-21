@@ -86,7 +86,12 @@
 // 포스트 제목 스타일
 // ==========================================
 
-.post-header {
+// 상단바와 동일한 너비로 확장되는 요소들
+.post-header,
+.post-series,
+.post-nav,
+.comments,
+.about {
   max-width: 54rem;
 
   @media (min-width: 86em) {
