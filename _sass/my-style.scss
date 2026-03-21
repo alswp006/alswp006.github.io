@@ -544,12 +544,10 @@ hy-push-state {
   }
 }
 
-// 상단바를 TOC 폭만큼 확장 (유동적 브레이크포인트)
+// 상단바를 TOC 폭만큼 확장 (max-width만 조정, margin은 기존 유지)
 @media (min-width: 86em) {
   .navbar > .content {
     max-width: calc(54rem + 212px) !important;
-    margin-left: 25rem !important;
-    margin-right: auto !important;
   }
 }
 
