@@ -126,13 +126,15 @@
   
   .category-tag-list {
     display: inline-flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     li {
       display: inline;
       margin-right: 0.5rem;
+      white-space: nowrap;
       
       &:not(:last-child)::after {
         content: ",";
