@@ -53,7 +53,7 @@ menu:
   - title:             Project
     url:               /project/
     submenu:
-      - title:  AI Factory
+      - title:  AI Harness
         url:      /ai-factory/
       - title:  OpenSource
         url:      /opensource/
