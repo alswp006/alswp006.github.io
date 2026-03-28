@@ -25,13 +25,13 @@ title: MiloDev
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  백엔드 개발자 김민제의 기술 블로그 — Java, Spring, 데이터베이스, CS 학습 기록과 프로젝트 경험을 공유합니다.
+  김민제의 기술 블로그 — 백엔드에서 시작해 인프라, AI 엔지니어링까지. 학습 기록과 프로젝트 경험을 공유합니다.
 
 # A shorter description for the sidebar.
 tagline:  딥다이브를 위해 노력하자!
 
 # A list of keywords for your blog
-keywords:              ["백엔드", "기술 블로그", "개발"]
+keywords:              ["AI 엔지니어링", "인프라", "백엔드", "기술 블로그"]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
