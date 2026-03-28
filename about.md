@@ -64,9 +64,10 @@ redirect_from:
     + LLM Agent, Prompt Engineering
     + AI 코딩 자동화 (Claude Code, Aider)
 
-* Infrastructure
+* Infrastructure & Network
     + Kubernetes, Docker
     + CI/CD, Railway
+    + Network
 
 * Backend
     + Java/Spring, JPA
