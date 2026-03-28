@@ -31,13 +31,20 @@ redirect_from:
 >
 
 
-> Open Source Contributor Academy 체험형 (2nd Cohort)
+> Open Source Contribution Academy 참여형
 >
-> Utilized Git and Standard Framework for MSA
+> O-RAN AI/ML Framework — LLM ChatBot, DB 정규화, Gerrit 코드 리뷰
+>
+> Jul. 2025 – Oct. 2025
+>
+
+
+> Open Source Contribution Academy 체험형
+>
+> Git 활용 및 표준프레임워크 MSA
 >
 > Sep. 2024 – Oct. 2024
 >
-
 
 
 ## Personal Data
@@ -53,29 +60,33 @@ redirect_from:
 ## Interest
 ---
 
-* Java/Spring
-    + Algorithm
-    + JPA
-    + OAuth2
+* AI Engineering
+    + LLM Agent, Prompt Engineering
+    + AI 코딩 자동화 (Claude Code, Aider)
 
-* Database
-    + MySQL
-    + Redis
+* Infrastructure
+    + Kubernetes, Docker
+    + CI/CD, Railway
 
-* OpenSource
-    + Spring Security
+* Backend
+    + Java/Spring, JPA
+    + MySQL, Redis
 
-* AI
-    + RAG
+* Open Source
+    + O-RAN AIMLFW, Spring Security
 
 
 
-## Skills and Certification
+## Skills
 ---
-- Language: Java, Python
+- Language: Java, Python, TypeScript
 
-- FrameWork: Spring
+- AI/LLM: Claude Code, OpenAI API, Anthropic API, Prompt Engineering
 
-- Database: MySQL, Redis
+- Backend: Spring Boot, JPA, Drizzle ORM
 
-- Tool: Git, Github, Jira, Notion
+- Infrastructure: Docker, Kubernetes, Railway
+
+- Database: MySQL, Redis, SQLite
+
+- Tool: Git, GitHub, Jira, Notion, Gerrit
