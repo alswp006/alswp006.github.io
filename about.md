@@ -23,19 +23,19 @@ redirect_from:
 
 ## Education
 ---
-> KakaoTech Bootcamp (1st Cohort)
->
-> Full-Stack Developer Program
->
-> Jul. 2024 – Dec. 2024
->
-
-
 > Open Source Contribution Academy 참여형
 >
 > O-RAN AI/ML Framework — LLM ChatBot, DB 정규화, Gerrit 코드 리뷰
 >
 > Jul. 2025 – Oct. 2025
+>
+
+
+> KakaoTech Bootcamp (1st Cohort)
+>
+> Full-Stack Developer Program
+>
+> Jul. 2024 – Dec. 2024
 >
 
 
