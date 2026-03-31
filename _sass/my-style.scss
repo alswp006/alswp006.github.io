@@ -1091,6 +1091,48 @@ pre:hover .code-copy-btn {
 // 모바일 반응형 개선
 // ==========================================
 
+// 모바일: 사이드바 숨김, 검색 숨김, 상단 메뉴 표시
+@media (max-width: 63.99em) {
+  // 사이드바 완전 숨김
+  hy-drawer {
+    display: none !important;
+  }
+
+  // 메뉴 햄버거 버튼 숨김 (사이드바 토글용이므로 불필요)
+  #_menu {
+    display: none !important;
+  }
+
+  // 검색 영역 숨김
+  .nav-span {
+    display: none !important;
+  }
+
+  // 상단 메뉴 보이게 + 가로 스크롤 방지
+  .top-menu {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0;
+    flex: 1;
+    justify-content: center;
+
+    .nav-btn {
+      font-size: 0.85rem;
+      padding: 0 0.5rem;
+      white-space: nowrap;
+    }
+  }
+
+  // 상단바 왼쪽부터 시작 (사이드바 없으므로)
+  .navbar {
+    left: 0 !important;
+  }
+
+  .navbar > .content {
+    margin-left: 0 !important;
+  }
+}
+
 @media (max-width: 768px) {
   // Fix 2: 타임라인 left 값 축소 (모바일에서 잘림 방지)
   .list-lead::after {
