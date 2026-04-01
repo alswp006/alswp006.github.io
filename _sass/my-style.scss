@@ -357,6 +357,73 @@ u {
   line-height: 1.9;
   word-break: keep-all;
 
+  // 표 스타일 (GitHub + Notion 참고)
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    overflow: hidden;
+
+    thead {
+      th {
+        background-color: #f6f8fa;
+        color: #24292f;
+        font-weight: 600;
+        text-align: left;
+        padding: 0.75rem 1rem;
+        border-bottom: 2px solid #d0d7de;
+        white-space: nowrap;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 0.6rem 1rem;
+        border-top: 1px solid #d0d7de;
+        color: #444;
+        vertical-align: top;
+      }
+
+      tr {
+        transition: background-color 0.15s;
+
+        &:nth-child(even) {
+          background-color: #f6f8fa;
+        }
+
+        &:hover {
+          background-color: #edf4fc;
+        }
+      }
+    }
+
+    // 코드 인라인이 표 안에 있을 때
+    code {
+      font-size: 0.85em;
+      padding: 0.15em 0.4em;
+      background: rgba(175, 184, 193, 0.2);
+      border-radius: 4px;
+    }
+  }
+
+  // 모바일: 표 가로 스크롤
+  .table-wrapper,
+  & > table {
+    @media (max-width: 768px) {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      table {
+        min-width: 500px;
+      }
+    }
+  }
+
   p {
     margin-bottom: 1.5rem;
   }
