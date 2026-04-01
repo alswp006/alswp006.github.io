@@ -1088,6 +1088,59 @@ pre:hover .code-copy-btn {
 }
 
 // ==========================================
+// 조회수~제목 사이 간격
+// ==========================================
+
+.hits-spacer {
+  padding-bottom: 40px;
+
+  @media (max-width: 63.99em) {
+    padding-bottom: 12px;
+  }
+}
+
+// ==========================================
+// 카테고리/태그 접기 (모바일)
+// ==========================================
+
+.meta-toggle {
+  display: none; // 데스크톱에서는 숨김
+}
+
+@media (max-width: 63.99em) {
+  .meta-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    color: #596069;
+    cursor: pointer;
+
+    .meta-toggle-icon {
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    &[aria-expanded="true"] .meta-toggle-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .meta-detail {
+    display: none;
+
+    &.meta-open {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// ==========================================
 // 모바일 반응형 개선
 // ==========================================
 
@@ -1127,6 +1180,11 @@ pre:hover .code-copy-btn {
 
   .nav-btn-bar {
     justify-content: center;
+  }
+
+  // 브레드크럼이 상단바 아래로 오도록 여백 확보
+  .content {
+    padding-top: 4rem !important;
   }
 
   // 상단 메뉴 보이게 + 가독성 확보
