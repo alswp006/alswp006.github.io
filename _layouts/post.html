@@ -93,7 +93,7 @@ hide_description=page.hide_description %}
 (function() {
   var article = document.getElementsByClassName("post-article")[0];
 
-  // === 1. 읽기 진행률 바 ===
+  /* 읽기 진행률 바 */
   var progressBar = document.getElementById('readingProgress');
   function updateProgress() {
     var scrollTop = window.scrollY;
@@ -102,7 +102,7 @@ hide_description=page.hide_description %}
     if (progressBar) progressBar.style.width = progress + '%';
   }
 
-  // === 2. TOC 활성 헤딩 추적 ===
+  /* TOC 활성 헤딩 추적 */
   var toc = document.getElementById('tocDesktop');
   if (toc && article) {
     var tocNodesAll = Array.prototype.slice.call(toc.getElementsByTagName("A"), 0);
@@ -117,54 +117,42 @@ hide_description=page.hide_description %}
       ticking = true;
       requestAnimationFrame(function () {
         updateProgress();
-
         var current = headerNodes.filter(function (header) {
           var headerY = window.pageYOffset + header.getBoundingClientRect().top;
           return window.scrollY >= headerY - 60;
         });
-
         if (current.length > 0) {
           current = current[current.length - 1];
           var currentA = tocNodesAll.filter(function (tocNode) {
             return tocNode.innerHTML === current.innerHTML;
           })[0];
-
           if (currentA) {
             if (!before) before = currentA;
-            if (before !== currentA) {
-              before.classList.remove("toc-active");
-              before = currentA;
-            }
+            if (before !== currentA) { before.classList.remove("toc-active"); before = currentA; }
             currentA.classList.add("toc-active");
-          } else {
-            if (before) before.classList.remove("toc-active");
-          }
-        } else {
-          if (before) before.classList.remove("toc-active");
-        }
+          } else { if (before) before.classList.remove("toc-active"); }
+        } else { if (before) before.classList.remove("toc-active"); }
         ticking = false;
       });
     }, false);
   } else {
-    window.addEventListener('scroll', function() {
-      requestAnimationFrame(updateProgress);
-    });
+    window.addEventListener('scroll', function() { requestAnimationFrame(updateProgress); });
   }
   updateProgress();
 
-  // === 3. 코드 블록 복사 버튼 ===
+  /* 코드 블록 복사 버튼 */
   if (article) {
     document.querySelectorAll('pre').forEach(function(pre) {
       if (pre.querySelector('code')) {
         var btn = document.createElement('button');
         btn.className = 'code-copy-btn';
-        btn.textContent = '복사';
-        btn.setAttribute('aria-label', '코드 복사');
+        btn.textContent = '\uBCF5\uC0AC';
+        btn.setAttribute('aria-label', '\uCF54\uB4DC \uBCF5\uC0AC');
         btn.addEventListener('click', function() {
           var code = pre.querySelector('code');
           navigator.clipboard.writeText(code.textContent).then(function() {
-            btn.textContent = '완료!';
-            setTimeout(function() { btn.textContent = '복사'; }, 1500);
+            btn.textContent = '\uC644\uB8CC!';
+            setTimeout(function() { btn.textContent = '\uBCF5\uC0AC'; }, 1500);
           });
         });
         pre.style.position = 'relative';
@@ -172,10 +160,9 @@ hide_description=page.hide_description %}
       }
     });
 
-    // === 4. 이미지 라이트박스 ===
+    /* 이미지 라이트박스 */
     var overlay = document.getElementById('lightboxOverlay');
     var lbImg = document.getElementById('lightboxImg');
-
     if (overlay && lbImg) {
       article.querySelectorAll('img').forEach(function(img) {
         img.style.cursor = 'zoom-in';
@@ -185,20 +172,14 @@ hide_description=page.hide_description %}
           overlay.classList.add('lightbox-open');
         });
       });
-
-      overlay.addEventListener('click', function() {
-        overlay.classList.remove('lightbox-open');
-      });
-
+      overlay.addEventListener('click', function() { overlay.classList.remove('lightbox-open'); });
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('lightbox-open')) {
-          overlay.classList.remove('lightbox-open');
-        }
+        if (e.key === 'Escape' && overlay.classList.contains('lightbox-open')) { overlay.classList.remove('lightbox-open'); }
       });
     }
   }
 
-  // === 5. Mobile TOC FAB ===
+  /* Mobile TOC FAB */
   var fab = document.getElementById('tocFab');
   var tocOverlay = document.getElementById('tocOverlay');
   var panel = document.getElementById('tocMobilePanel');
@@ -212,14 +193,11 @@ hide_description=page.hide_description %}
         panel.classList.toggle('toc-mobile-open', isOpen);
         tocOverlay.classList.toggle('toc-mobile-open', isOpen);
         fab.setAttribute('aria-expanded', String(isOpen));
-        fab.setAttribute('aria-label', isOpen ? '목차 닫기' : '목차 열기');
       };
       fab.addEventListener('click', function() { toggleMobileToc(); });
       tocOverlay.addEventListener('click', function() { toggleMobileToc(false); });
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && panel.classList.contains('toc-mobile-open')) {
-          toggleMobileToc(false);
-        }
+        if (e.key === 'Escape' && panel.classList.contains('toc-mobile-open')) { toggleMobileToc(false); }
       });
       panel.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() { toggleMobileToc(false); });
@@ -227,7 +205,7 @@ hide_description=page.hide_description %}
     }
   }
 
-  // === 6. 카테고리 토글 (모바일) ===
+  /* 카테고리/태그 토글 */
   document.querySelectorAll('.meta-toggle').forEach(function(btn) {
     var targetId = btn.getAttribute('aria-controls');
     var target = document.getElementById(targetId);
