@@ -110,19 +110,21 @@ Example code for using Matamo as alternative analytics solution.
   if (ps) { ps.addEventListener('hy-push-state-after', renderMermaid); }
 </script>
 
-<!-- 상단바 높이에 맞춰 본문 여백 동적 조정 -->
 <script>
 (function() {
   var navbar = document.getElementById('_navbar');
-  var main = document.getElementById('_main');
-  if (!navbar || !main) return;
+  if (!navbar) return;
   function adjustPadding() {
+    var main = document.getElementById('_main');
+    if (!main) return;
     var h = navbar.offsetHeight;
     main.style.paddingTop = (h + 12) + 'px';
   }
   adjustPadding();
   window.addEventListener('resize', adjustPadding);
   window.addEventListener('load', adjustPadding);
+  var ps = document.getElementById('_pushState');
+  if (ps) { ps.addEventListener('hy-push-state-after', function() { setTimeout(adjustPadding, 100); }); }
 })();
 </script>
 

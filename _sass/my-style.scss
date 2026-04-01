@@ -1170,18 +1170,28 @@ pre:hover .code-copy-btn {
 // 카테고리/태그 접기 (모바일)
 // ==========================================
 
+.categories-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
 .meta-section {
   display: inline;
 }
 
 .meta-toggle {
-  display: none; // 데스크톱에서는 숨김
+  display: none;
 }
 
 @media (max-width: 63.99em) {
+  .categories-tags {
+    gap: 0.4rem;
+  }
+
   .meta-section {
-    display: block;
-    margin-bottom: 0.4rem;
+    display: inline-block;
   }
 
   .meta-toggle {
