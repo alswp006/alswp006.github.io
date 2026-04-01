@@ -8,7 +8,7 @@ layout: base
 <img
   src="https://hits.sh/{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url | replace:'index.html','' | append: '.svg' | replace: '/.svg', '.svg' }}?view=today-total&style=flat-square&label=Today/Total&color=4fb1ba&labelColor=243241"
   alt="" role="presentation">
-<div style="padding-bottom:40px;"></div>
+<div class="hits-spacer"></div>
 
 {% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image
 hide_description=page.hide_description %}
@@ -204,22 +204,39 @@ hide_description=page.hide_description %}
   var tocOverlay = document.getElementById('tocOverlay');
   var panel = document.getElementById('tocMobilePanel');
   if (fab && tocOverlay && panel) {
-    function toggleMobileToc(open) {
-      var isOpen = typeof open === 'boolean' ? open : !panel.classList.contains('toc-mobile-open');
-      panel.classList.toggle('toc-mobile-open', isOpen);
-      tocOverlay.classList.toggle('toc-mobile-open', isOpen);
-      fab.setAttribute('aria-expanded', String(isOpen));
-      fab.setAttribute('aria-label', isOpen ? '목차 닫기' : '목차 열기');
-    }
-    fab.addEventListener('click', function() { toggleMobileToc(); });
-    tocOverlay.addEventListener('click', function() { toggleMobileToc(false); });
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && panel.classList.contains('toc-mobile-open')) {
-        toggleMobileToc(false);
+    // 목차 링크가 없으면 FAB 숨김
+    var tocLinks = panel.querySelectorAll('a[href^="#"]');
+    if (tocLinks.length === 0) {
+      fab.style.display = 'none';
+    } else {
+      function toggleMobileToc(open) {
+        var isOpen = typeof open === 'boolean' ? open : !panel.classList.contains('toc-mobile-open');
+        panel.classList.toggle('toc-mobile-open', isOpen);
+        tocOverlay.classList.toggle('toc-mobile-open', isOpen);
+        fab.setAttribute('aria-expanded', String(isOpen));
+        fab.setAttribute('aria-label', isOpen ? '목차 닫기' : '목차 열기');
       }
-    });
-    panel.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() { toggleMobileToc(false); });
+      fab.addEventListener('click', function() { toggleMobileToc(); });
+      tocOverlay.addEventListener('click', function() { toggleMobileToc(false); });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && panel.classList.contains('toc-mobile-open')) {
+          toggleMobileToc(false);
+        }
+      });
+      tocLinks.forEach(function(link) {
+        link.addEventListener('click', function() { toggleMobileToc(false); });
+      });
+    }
+  }
+
+  // === 6. 카테고리/태그 접기 토글 (모바일) ===
+  var metaToggle = document.querySelector('.meta-toggle');
+  var metaDetail = document.getElementById('metaDetail');
+  if (metaToggle && metaDetail) {
+    metaToggle.addEventListener('click', function() {
+      var expanded = metaToggle.getAttribute('aria-expanded') === 'true';
+      metaToggle.setAttribute('aria-expanded', String(!expanded));
+      metaDetail.classList.toggle('meta-open', !expanded);
     });
   }
 })();

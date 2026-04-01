@@ -357,6 +357,73 @@ u {
   line-height: 1.9;
   word-break: keep-all;
 
+  // 표 스타일 (GitHub + Notion 참고)
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    overflow: hidden;
+
+    thead {
+      th {
+        background-color: #f6f8fa;
+        color: #24292f;
+        font-weight: 600;
+        text-align: left;
+        padding: 0.75rem 1rem;
+        border-bottom: 2px solid #d0d7de;
+        white-space: nowrap;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 0.6rem 1rem;
+        border-top: 1px solid #d0d7de;
+        color: #444;
+        vertical-align: top;
+      }
+
+      tr {
+        transition: background-color 0.15s;
+
+        &:nth-child(even) {
+          background-color: #f6f8fa;
+        }
+
+        &:hover {
+          background-color: #edf4fc;
+        }
+      }
+    }
+
+    // 코드 인라인이 표 안에 있을 때
+    code {
+      font-size: 0.85em;
+      padding: 0.15em 0.4em;
+      background: rgba(175, 184, 193, 0.2);
+      border-radius: 4px;
+    }
+  }
+
+  // 모바일: 표 가로 스크롤
+  .table-wrapper,
+  & > table {
+    @media (max-width: 768px) {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      table {
+        min-width: 500px;
+      }
+    }
+  }
+
   p {
     margin-bottom: 1.5rem;
   }
@@ -1088,6 +1155,59 @@ pre:hover .code-copy-btn {
 }
 
 // ==========================================
+// 조회수~제목 사이 간격
+// ==========================================
+
+.hits-spacer {
+  padding-bottom: 40px;
+
+  @media (max-width: 63.99em) {
+    padding-bottom: 12px;
+  }
+}
+
+// ==========================================
+// 카테고리/태그 접기 (모바일)
+// ==========================================
+
+.meta-toggle {
+  display: none; // 데스크톱에서는 숨김
+}
+
+@media (max-width: 63.99em) {
+  .meta-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    color: #596069;
+    cursor: pointer;
+
+    .meta-toggle-icon {
+      font-size: 18px;
+      transition: transform 0.2s;
+    }
+
+    &[aria-expanded="true"] .meta-toggle-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .meta-detail {
+    display: none;
+
+    &.meta-open {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// ==========================================
 // 모바일 반응형 개선
 // ==========================================
 
@@ -1108,7 +1228,33 @@ pre:hover .code-copy-btn {
     display: none !important;
   }
 
-  // 상단 메뉴 보이게 + 가로 스크롤 방지
+  // 상단바 왼쪽부터 시작 (사이드바 없으므로)
+  .navbar {
+    left: 0 !important;
+  }
+
+  // 상단바 배경 강화 + 높이 확보
+  #_navbar {
+    background-color: var(--theme-color, rgb(8, 46, 57)) !important;
+    height: auto !important;
+    min-height: 3rem;
+  }
+
+  .navbar > .content {
+    margin-left: 0 !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .nav-btn-bar {
+    justify-content: center;
+  }
+
+  // 브레드크럼이 상단바 아래로 오도록 여백 확보
+  .content {
+    padding-top: 4rem !important;
+  }
+
+  // 상단 메뉴 보이게 + 가독성 확보
   .top-menu {
     display: flex !important;
     flex-wrap: wrap;
@@ -1117,19 +1263,19 @@ pre:hover .code-copy-btn {
     justify-content: center;
 
     .nav-btn {
-      font-size: 0.85rem;
-      padding: 0 0.5rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
       white-space: nowrap;
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      line-height: 1.4;
+
+      &:hover,
+      &:focus {
+        color: #fff !important;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
     }
-  }
-
-  // 상단바 왼쪽부터 시작 (사이드바 없으므로)
-  .navbar {
-    left: 0 !important;
-  }
-
-  .navbar > .content {
-    margin-left: 0 !important;
   }
 }
 
