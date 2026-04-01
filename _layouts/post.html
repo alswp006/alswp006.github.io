@@ -91,9 +91,7 @@ hide_description=page.hide_description %}
 
 <script>
 (function() {
-  var toc = document.getElementById('tocDesktop');
   var article = document.getElementsByClassName("post-article")[0];
-  if (!toc || !article) return;
 
   // === 1. 읽기 진행률 바 ===
   var progressBar = document.getElementById('readingProgress');
@@ -101,121 +99,121 @@ hide_description=page.hide_description %}
     var scrollTop = window.scrollY;
     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
     var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progressBar.style.width = progress + '%';
+    if (progressBar) progressBar.style.width = progress + '%';
   }
 
   // === 2. TOC 활성 헤딩 추적 ===
-  function getTOCNodes(master) {
-    var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
-    return nodes.filter(function (elem) { return elem.tagName === "A"; });
-  }
-  function getHeaderNodes(master) {
-    var nodes = Array.prototype.slice.call(master.getElementsByTagName("*"), 0);
-    return nodes.filter(function (elem) {
-      return /^H[1-6]$/.test(elem.tagName);
+  var toc = document.getElementById('tocDesktop');
+  if (toc && article) {
+    var tocNodesAll = Array.prototype.slice.call(toc.getElementsByTagName("A"), 0);
+    var headerNodes = Array.prototype.slice.call(article.getElementsByTagName("*"), 0).filter(function(el) {
+      return /^H[1-6]$/.test(el.tagName);
     });
-  }
+    var before;
+    var ticking = false;
 
-  var headerNodes = getHeaderNodes(article);
-  var tocNodes = getTOCNodes(toc);
-  var before;
-  var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        updateProgress();
 
-  window.addEventListener('scroll', function () {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(function () {
-      updateProgress();
+        var current = headerNodes.filter(function (header) {
+          var headerY = window.pageYOffset + header.getBoundingClientRect().top;
+          return window.scrollY >= headerY - 60;
+        });
 
-      var current = headerNodes.filter(function (header) {
-        var headerY = window.pageYOffset + header.getBoundingClientRect().top;
-        return window.scrollY >= headerY - 60;
-      });
+        if (current.length > 0) {
+          current = current[current.length - 1];
+          var currentA = tocNodesAll.filter(function (tocNode) {
+            return tocNode.innerHTML === current.innerHTML;
+          })[0];
 
-      if (current.length > 0) {
-        current = current[current.length - 1];
-        var currentA = tocNodes.filter(function (tocNode) {
-          return tocNode.innerHTML === current.innerHTML;
-        })[0];
-
-        if (currentA) {
-          if (!before) before = currentA;
-          if (before !== currentA) {
-            before.classList.remove("toc-active");
-            before = currentA;
+          if (currentA) {
+            if (!before) before = currentA;
+            if (before !== currentA) {
+              before.classList.remove("toc-active");
+              before = currentA;
+            }
+            currentA.classList.add("toc-active");
+          } else {
+            if (before) before.classList.remove("toc-active");
           }
-          currentA.classList.add("toc-active");
         } else {
           if (before) before.classList.remove("toc-active");
         }
-      } else {
-        if (before) before.classList.remove("toc-active");
-      }
-      ticking = false;
+        ticking = false;
+      });
+    }, false);
+  } else {
+    window.addEventListener('scroll', function() {
+      requestAnimationFrame(updateProgress);
     });
-  }, false);
-
+  }
   updateProgress();
 
   // === 3. 코드 블록 복사 버튼 ===
-  document.querySelectorAll('pre').forEach(function(pre) {
-    if (pre.querySelector('code')) {
-      var btn = document.createElement('button');
-      btn.className = 'code-copy-btn';
-      btn.textContent = '복사';
-      btn.setAttribute('aria-label', '코드 복사');
-      btn.addEventListener('click', function() {
-        var code = pre.querySelector('code');
-        navigator.clipboard.writeText(code.textContent).then(function() {
-          btn.textContent = '완료!';
-          setTimeout(function() { btn.textContent = '복사'; }, 1500);
+  if (article) {
+    document.querySelectorAll('pre').forEach(function(pre) {
+      if (pre.querySelector('code')) {
+        var btn = document.createElement('button');
+        btn.className = 'code-copy-btn';
+        btn.textContent = '복사';
+        btn.setAttribute('aria-label', '코드 복사');
+        btn.addEventListener('click', function() {
+          var code = pre.querySelector('code');
+          navigator.clipboard.writeText(code.textContent).then(function() {
+            btn.textContent = '완료!';
+            setTimeout(function() { btn.textContent = '복사'; }, 1500);
+          });
+        });
+        pre.style.position = 'relative';
+        pre.appendChild(btn);
+      }
+    });
+
+    // === 4. 이미지 라이트박스 ===
+    var overlay = document.getElementById('lightboxOverlay');
+    var lbImg = document.getElementById('lightboxImg');
+
+    if (overlay && lbImg) {
+      article.querySelectorAll('img').forEach(function(img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          overlay.classList.add('lightbox-open');
         });
       });
-      pre.style.position = 'relative';
-      pre.appendChild(btn);
+
+      overlay.addEventListener('click', function() {
+        overlay.classList.remove('lightbox-open');
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('lightbox-open')) {
+          overlay.classList.remove('lightbox-open');
+        }
+      });
     }
-  });
-
-  // === 4. 이미지 라이트박스 ===
-  var overlay = document.getElementById('lightboxOverlay');
-  var lbImg = document.getElementById('lightboxImg');
-
-  article.querySelectorAll('img').forEach(function(img) {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('click', function() {
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
-      overlay.classList.add('lightbox-open');
-    });
-  });
-
-  overlay.addEventListener('click', function() {
-    overlay.classList.remove('lightbox-open');
-  });
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && overlay.classList.contains('lightbox-open')) {
-      overlay.classList.remove('lightbox-open');
-    }
-  });
+  }
 
   // === 5. Mobile TOC FAB ===
   var fab = document.getElementById('tocFab');
   var tocOverlay = document.getElementById('tocOverlay');
   var panel = document.getElementById('tocMobilePanel');
   if (fab && tocOverlay && panel) {
-    // 목차 링크가 없으면 FAB 숨김
-    var tocLinks = panel.querySelectorAll('a[href^="#"]');
+    var tocLinks = panel.querySelectorAll('a:not([href="#"])');
     if (tocLinks.length === 0) {
       fab.style.display = 'none';
     } else {
-      function toggleMobileToc(open) {
+      var toggleMobileToc = function(open) {
         var isOpen = typeof open === 'boolean' ? open : !panel.classList.contains('toc-mobile-open');
         panel.classList.toggle('toc-mobile-open', isOpen);
         tocOverlay.classList.toggle('toc-mobile-open', isOpen);
         fab.setAttribute('aria-expanded', String(isOpen));
         fab.setAttribute('aria-label', isOpen ? '목차 닫기' : '목차 열기');
-      }
+      };
       fab.addEventListener('click', function() { toggleMobileToc(); });
       tocOverlay.addEventListener('click', function() { toggleMobileToc(false); });
       document.addEventListener('keydown', function(e) {
@@ -223,21 +221,23 @@ hide_description=page.hide_description %}
           toggleMobileToc(false);
         }
       });
-      tocLinks.forEach(function(link) {
+      panel.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function() { toggleMobileToc(false); });
       });
     }
   }
 
-  // === 6. 카테고리/태그 접기 토글 (모바일) ===
-  var metaToggle = document.querySelector('.meta-toggle');
-  var metaDetail = document.getElementById('metaDetail');
-  if (metaToggle && metaDetail) {
-    metaToggle.addEventListener('click', function() {
-      var expanded = metaToggle.getAttribute('aria-expanded') === 'true';
-      metaToggle.setAttribute('aria-expanded', String(!expanded));
-      metaDetail.classList.toggle('meta-open', !expanded);
-    });
-  }
+  // === 6. 카테고리 토글 (모바일) ===
+  document.querySelectorAll('.meta-toggle').forEach(function(btn) {
+    var targetId = btn.getAttribute('aria-controls');
+    var target = document.getElementById(targetId);
+    if (target) {
+      btn.addEventListener('click', function() {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        target.classList.toggle('meta-open', !expanded);
+      });
+    }
+  });
 })();
 </script>
