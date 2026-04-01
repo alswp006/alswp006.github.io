@@ -1233,11 +1233,12 @@ pre:hover .code-copy-btn {
     left: 0 !important;
   }
 
-  // 상단바 배경 강화 + 높이 확보
+  // 상단바 스타일
   #_navbar {
-    background-color: var(--theme-color, rgb(8, 46, 57)) !important;
     height: auto !important;
     min-height: 3rem;
+    border-bottom: 1px solid #e1e4e8;
+    background: #fff !important;
   }
 
   .navbar > .content {
@@ -1250,7 +1251,7 @@ pre:hover .code-copy-btn {
   }
 
   // 브레드크럼이 상단바 아래로 오도록 여백 확보
-  .content {
+  #_main.content {
     padding-top: 4rem !important;
   }
 
@@ -1266,14 +1267,14 @@ pre:hover .code-copy-btn {
       font-size: 0.9rem;
       padding: 0.5rem 0.75rem;
       white-space: nowrap;
-      color: rgba(255, 255, 255, 0.9) !important;
+      color: #24292f !important;
       font-weight: 500;
       line-height: 1.4;
 
       &:hover,
       &:focus {
-        color: #fff !important;
-        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--accent-color, #4fb1ba) !important;
+        background-color: rgba(0, 0, 0, 0.04);
       }
     }
   }
