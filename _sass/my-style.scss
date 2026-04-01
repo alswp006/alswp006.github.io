@@ -1108,7 +1108,28 @@ pre:hover .code-copy-btn {
     display: none !important;
   }
 
-  // 상단 메뉴 보이게 + 가로 스크롤 방지
+  // 상단바 왼쪽부터 시작 (사이드바 없으므로)
+  .navbar {
+    left: 0 !important;
+  }
+
+  // 상단바 배경 강화 + 높이 확보
+  #_navbar {
+    background-color: var(--theme-color, rgb(8, 46, 57)) !important;
+    height: auto !important;
+    min-height: 3rem;
+  }
+
+  .navbar > .content {
+    margin-left: 0 !important;
+    padding: 0 0.5rem !important;
+  }
+
+  .nav-btn-bar {
+    justify-content: center;
+  }
+
+  // 상단 메뉴 보이게 + 가독성 확보
   .top-menu {
     display: flex !important;
     flex-wrap: wrap;
@@ -1117,19 +1138,19 @@ pre:hover .code-copy-btn {
     justify-content: center;
 
     .nav-btn {
-      font-size: 0.85rem;
-      padding: 0 0.5rem;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.75rem;
       white-space: nowrap;
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      line-height: 1.4;
+
+      &:hover,
+      &:focus {
+        color: #fff !important;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
     }
-  }
-
-  // 상단바 왼쪽부터 시작 (사이드바 없으므로)
-  .navbar {
-    left: 0 !important;
-  }
-
-  .navbar > .content {
-    margin-left: 0 !important;
   }
 }
 
