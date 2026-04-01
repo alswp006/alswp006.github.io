@@ -4,36 +4,46 @@
     <h1 class="post-title">{{ page.title }}</h1>
 
     <div class="post-meta">
-      {% if page.categories.size > 0 or page.tags.size > 0 %}
       <div class="categories-tags">
-        <button class="meta-toggle" aria-expanded="false" aria-controls="metaDetail">
-          <span class="meta-toggle-label">카테고리 / 태그</span>
-          <span class="meta-toggle-icon material-icons" aria-hidden="true">expand_more</span>
-        </button>
-        <div class="meta-detail" id="metaDetail">
-          <span class="meta-group">
-            {% if page.categories.size > 0 %}
-            카테고리:
-            <ul class="category-tag-list">
-              {% for category in page.categories %}
-              <li><a href="/category/{{ category }}">{{ category }}</a></li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-
-            {% if page.tags.size > 0 %}
-            {% if page.categories.size > 0 %}&nbsp;&nbsp;{% endif %}
-            tag #
-            <ul class="category-tag-list">
-              {% for tag in page.tags %}
-              <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </span>
+        <!-- 데스크톱: 항상 표시 / 모바일: 토글로 표시 -->
+        {% if page.categories.size > 0 %}
+        <div class="meta-section">
+          <button class="meta-toggle" aria-expanded="false" aria-controls="metaCat">
+            <span class="meta-toggle-label">카테고리</span>
+            <span class="meta-toggle-icon material-icons" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="meta-detail" id="metaCat">
+            <span class="meta-group">
+              카테고리:
+              <ul class="category-tag-list">
+                {% for category in page.categories %}
+                <li><a href="/category/{{ category }}">{{ category }}</a></li>
+                {% endfor %}
+              </ul>
+            </span>
+          </div>
         </div>
+        {% endif %}
+
+        {% if page.tags.size > 0 %}
+        <div class="meta-section">
+          <button class="meta-toggle" aria-expanded="false" aria-controls="metaTag">
+            <span class="meta-toggle-label">태그</span>
+            <span class="meta-toggle-icon material-icons" aria-hidden="true">expand_more</span>
+          </button>
+          <div class="meta-detail" id="metaTag">
+            <span class="meta-group">
+              tag #
+              <ul class="category-tag-list">
+                {% for tag in page.tags %}
+                <li><a href="/tag/{{ tag }}">{{ tag }}</a></li>
+                {% endfor %}
+              </ul>
+            </span>
+          </div>
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
 
       <div class="post-date">
         {% assign words = content | strip_html | number_of_words %}

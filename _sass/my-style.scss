@@ -1170,11 +1170,20 @@ pre:hover .code-copy-btn {
 // 카테고리/태그 접기 (모바일)
 // ==========================================
 
+.meta-section {
+  display: inline;
+}
+
 .meta-toggle {
   display: none; // 데스크톱에서는 숨김
 }
 
 @media (max-width: 63.99em) {
+  .meta-section {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
   .meta-toggle {
     display: inline-flex;
     align-items: center;
@@ -1202,7 +1211,8 @@ pre:hover .code-copy-btn {
 
     &.meta-open {
       display: block;
-      margin-top: 0.5rem;
+      margin-top: 0.4rem;
+      margin-bottom: 0.25rem;
     }
   }
 }
@@ -1301,10 +1311,7 @@ pre:hover .code-copy-btn {
     }
   }
 
-  // Fix 3: 상단 여백 축소
-  .content {
-    padding-top: 4rem;
-  }
+  // Fix 3: 상단 여백 — 63.99em 미디어쿼리에서 처리
 
   // Fix 4: 서브메뉴 인라인 표시 (오버플로 방지)
   .submenu.menu-wrapper {
