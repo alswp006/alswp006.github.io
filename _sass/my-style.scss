@@ -311,13 +311,8 @@ u {
 // 상단 메뉴 스타일
 // ==========================================
 
-// fixed navbar 아래 content가 가려지지 않도록 스페이서
 .navbar-spacer {
-  height: 0;
-
-  @media (max-width: 63.99em) {
-    height: 1rem;
-  }
+  display: none;
 }
 
 .top-menu-wrapper {
