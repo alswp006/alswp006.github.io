@@ -311,12 +311,13 @@ u {
 // 상단 메뉴 스타일
 // ==========================================
 
-// navbar를 sticky로 변경하여 content 겹침 방지
-.navbar-sticky {
-  position: sticky !important;
-  top: 0;
-  z-index: 100;
-  background: var(--body-bg, #fff);
+// fixed navbar 아래 content가 가려지지 않도록 스페이서
+.navbar-spacer {
+  height: 3.5rem;
+
+  @media (min-width: 64em) {
+    height: 3rem;
+  }
 }
 
 .top-menu-wrapper {
@@ -622,10 +623,9 @@ hy-push-state {
 }
 
 // 사이드바가 항상 보이는 화면에서 상단바를 사이드바 오른쪽부터 시작.
-// sticky에서는 left 대신 margin-left 사용.
 @media (min-width: 64em) {
   .navbar {
-    margin-left: 21rem;
+    left: 21rem !important;
   }
   .navbar > .content {
     margin-left: 3rem !important;
@@ -640,7 +640,7 @@ hy-push-state {
 
 @media (min-width: 104em) {
   .navbar {
-    margin-left: calc(50% - 31rem);
+    left: calc(50% - 31rem) !important;
   }
 }
 
@@ -1249,6 +1249,7 @@ pre:hover .code-copy-btn {
 
   // 모바일 상단바 스타일
   #_navbar {
+    left: 0 !important;
     height: auto !important;
     min-height: 3rem;
     border-bottom: 1px solid #e1e4e8;
