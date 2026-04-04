@@ -311,6 +311,14 @@ u {
 // 상단 메뉴 스타일
 // ==========================================
 
+// navbar를 sticky로 변경하여 content 겹침 방지
+.navbar-sticky {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+  background: var(--body-bg, #fff);
+}
+
 .top-menu-wrapper {
   display: inline-block;
 }
@@ -613,17 +621,11 @@ hy-push-state {
   overflow: clip !important;
 }
 
-// 사이드바가 항상 보이는 화면에서 상단바를 사이드바 바로 오른쪽부터 시작.
-// 테마 인라인 CSS가 .content에 margin-left를 설정하므로,
-// navbar를 left로 옮긴 뒤 .content margin을 보정하여 본문과 정렬.
-//
-// 테마 기본값:
-//   64em: .content { margin-left: 24rem }  → 24 - 21 = 3rem
-//   86em: .content { margin-left: 25rem }  → 25 - 21 = 4rem
-//  104em: .content { margin: auto }, hy-drawer { width: calc(50% - 31rem) }
+// 사이드바가 항상 보이는 화면에서 상단바를 사이드바 오른쪽부터 시작.
+// sticky에서는 left 대신 margin-left 사용.
 @media (min-width: 64em) {
   .navbar {
-    left: 21rem !important;
+    margin-left: 21rem;
   }
   .navbar > .content {
     margin-left: 3rem !important;
@@ -636,12 +638,9 @@ hy-push-state {
   }
 }
 
-// 104em 이상: 사이드바 너비가 calc(50% - 31rem)으로 동적 변화.
-// 본문 .content는 margin:auto로 센터링 → 좌측 = 50% - 27rem.
-// navbar left = 50% - 31rem → margin-left = 4rem 으로 동일 위치.
 @media (min-width: 104em) {
   .navbar {
-    left: calc(50% - 31rem) !important;
+    margin-left: calc(50% - 31rem);
   }
 }
 
@@ -1248,12 +1247,7 @@ pre:hover .code-copy-btn {
     display: none !important;
   }
 
-  // 상단바 왼쪽부터 시작 (사이드바 없으므로)
-  .navbar {
-    left: 0 !important;
-  }
-
-  // 상단바 스타일
+  // 모바일 상단바 스타일
   #_navbar {
     height: auto !important;
     min-height: 3rem;
@@ -1268,11 +1262,6 @@ pre:hover .code-copy-btn {
 
   .nav-btn-bar {
     justify-content: center;
-  }
-
-  // 브레드크럼이 상단바 아래로 오도록 여백 확보
-  #_main.content {
-    padding-top: 4rem !important;
   }
 
   // 상단 메뉴 보이게 + 가독성 확보
@@ -1321,7 +1310,7 @@ pre:hover .code-copy-btn {
     }
   }
 
-  // Fix 3: 상단 여백 — 63.99em 미디어쿼리에서 처리
+  // Fix 3: 상단 여백 — sticky navbar로 해결
 
   // Fix 4: 서브메뉴 인라인 표시 (오버플로 방지)
   .submenu.menu-wrapper {
