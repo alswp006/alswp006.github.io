@@ -730,7 +730,7 @@ hy-push-state {
     transition: color 0.15s;
 
     &:hover {
-      color: #9075aa;
+      color: #5fb3a8;
       text-decoration: none;
     }
   }
@@ -768,17 +768,17 @@ hy-push-state {
     transition: color 0.15s, background-color 0.15s, border-color 0.15s;
 
     &:hover {
-      color: #333;
-      background-color: rgba(144, 117, 170, 0.05);
-      border-left-color: #d5c8e8;
+      color: #1a4d5c;
+      background-color: #f6fbfa;
+      border-left-color: #a7d4c1;
       text-decoration: none;
     }
 
     &.toc-active {
       font-weight: 600;
-      color: #9075aa;
-      background-color: rgba(144, 117, 170, 0.08);
-      border-left-color: #9075aa;
+      color: #0f6e56;
+      background-color: #ecf6f3;
+      border-left-color: #5fb3a8;
     }
   }
 
@@ -790,7 +790,7 @@ hy-push-state {
     padding-bottom: 3px;
 
     &.toc-active {
-      color: #9075aa;
+      color: #0f6e56;
     }
   }
 }
@@ -1034,7 +1034,7 @@ button:focus-visible {
       transition: color 0.15s;
 
       &:hover {
-        color: #9075aa;
+        color: #5fb3a8;
         text-decoration: none;
       }
     }
@@ -1069,17 +1069,17 @@ button:focus-visible {
       transition: color 0.15s, background-color 0.15s, border-color 0.15s;
 
       &:hover {
-        color: #333;
-        background-color: rgba(144, 117, 170, 0.05);
-        border-left-color: #d5c8e8;
+        color: #1a4d5c;
+        background-color: #f6fbfa;
+        border-left-color: #a7d4c1;
         text-decoration: none;
       }
 
       &.toc-active {
         font-weight: 600;
-        color: #9075aa;
-        background-color: rgba(144, 117, 170, 0.08);
-        border-left-color: #9075aa;
+        color: #0f6e56;
+        background-color: #ecf6f3;
+        border-left-color: #5fb3a8;
       }
     }
 
@@ -1090,7 +1090,7 @@ button:focus-visible {
       padding-bottom: 3px;
 
       &.toc-active {
-        color: #9075aa;
+        color: #0f6e56;
       }
     }
   }

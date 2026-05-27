@@ -102,36 +102,51 @@ hide_description=page.hide_description %}
     if (progressBar) progressBar.style.width = progress + '%';
   }
 
-  /* TOC 활성 헤딩 추적 */
-  var toc = document.getElementById('tocDesktop');
-  if (toc && article) {
-    var tocNodesAll = Array.prototype.slice.call(toc.getElementsByTagName("A"), 0);
-    var headerNodes = Array.prototype.slice.call(article.getElementsByTagName("*"), 0).filter(function(el) {
-      return /^H[1-6]$/.test(el.tagName);
+  /* TOC 활성 헤딩 추적 (데스크톱 + 모바일 공통) */
+  var tocDesktop = document.getElementById('tocDesktop');
+  var tocMobile = document.getElementById('tocMobilePanel');
+  var allTocLinks = [];
+  [tocDesktop, tocMobile].forEach(function(t) {
+    if (t) allTocLinks = allTocLinks.concat(Array.prototype.slice.call(t.querySelectorAll('ul a'), 0));
+  });
+
+  if (allTocLinks.length && article) {
+    var idToLinks = {};
+    allTocLinks.forEach(function(a) {
+      var href = a.getAttribute('href');
+      if (href && href.charAt(0) === '#') {
+        var id = decodeURIComponent(href.slice(1));
+        if (!idToLinks[id]) idToLinks[id] = [];
+        idToLinks[id].push(a);
+      }
     });
-    var before;
+
+    var headerNodes = Array.prototype.slice.call(article.querySelectorAll('h1,h2,h3,h4,h5,h6'), 0)
+      .filter(function(h) { return h.id && idToLinks[h.id]; });
+
+    var activeHeading = null;
     var ticking = false;
 
-    window.addEventListener('scroll', function () {
+    function updateTocActive() {
+      var scrollY = window.scrollY;
+      var current = null;
+      for (var i = headerNodes.length - 1; i >= 0; i--) {
+        var hY = scrollY + headerNodes[i].getBoundingClientRect().top;
+        if (scrollY >= hY - 80) { current = headerNodes[i]; break; }
+      }
+      if (current !== activeHeading) {
+        allTocLinks.forEach(function(a) { a.classList.remove('toc-active'); });
+        if (current) (idToLinks[current.id] || []).forEach(function(a) { a.classList.add('toc-active'); });
+        activeHeading = current;
+      }
+    }
+
+    window.addEventListener('scroll', function() {
       if (ticking) return;
       ticking = true;
-      requestAnimationFrame(function () {
+      requestAnimationFrame(function() {
         updateProgress();
-        var current = headerNodes.filter(function (header) {
-          var headerY = window.pageYOffset + header.getBoundingClientRect().top;
-          return window.scrollY >= headerY - 60;
-        });
-        if (current.length > 0) {
-          current = current[current.length - 1];
-          var currentA = tocNodesAll.filter(function (tocNode) {
-            return tocNode.innerHTML === current.innerHTML;
-          })[0];
-          if (currentA) {
-            if (!before) before = currentA;
-            if (before !== currentA) { before.classList.remove("toc-active"); before = currentA; }
-            currentA.classList.add("toc-active");
-          } else { if (before) before.classList.remove("toc-active"); }
-        } else { if (before) before.classList.remove("toc-active"); }
+        updateTocActive();
         ticking = false;
       });
     }, false);
