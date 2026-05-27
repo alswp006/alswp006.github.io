@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="480" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    free-gas의 비밀 — 가스비는 본질이 아니라 신뢰 모델의 부산물
+  </text>
+
+  <defs>
+    <marker id="arrowGreenF" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a8b6f"/>
+    </marker>
+  </defs>
+
+  <!-- 상단: 공개형 (가스비 필요한 이유) -->
+  <g>
+    <rect x="40" y="60" width="720" height="170" rx="10" fill="#fffafa" stroke="#fdc4ca" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="60" y="85" font-size="13" fill="#b8404d" font-weight="600">⛓️ 공개형 이더리움 — 가스비가 꼭 필요한 두 가지 이유</text>
+
+    <!-- 이유 1: 스팸 방어 -->
+    <rect x="80" y="110" width="300" height="90" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="100" y="135" font-size="18" fill="#b8404d">🚫</text>
+    <text x="230" y="132" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">스팸 방어</text>
+    <text x="230" y="153" text-anchor="middle" font-size="11" fill="#6b7280">익명의 누군가가 무한정 트랜잭션 날림</text>
+    <text x="230" y="170" text-anchor="middle" font-size="11" fill="#6b7280">→ 가스비로 비용 부담시켜 막아야 함</text>
+    <text x="230" y="190" text-anchor="middle" font-size="10" fill="#b8404d" font-style="italic">"누구나 검증자라 신뢰 X"</text>
+
+    <!-- 이유 2: 검증자 보상 -->
+    <rect x="420" y="110" width="300" height="90" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="440" y="135" font-size="18" fill="#b8404d">💰</text>
+    <text x="570" y="132" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">검증자 보상</text>
+    <text x="570" y="153" text-anchor="middle" font-size="11" fill="#6b7280">채굴자·검증자에게 블록 생성 유인 필요</text>
+    <text x="570" y="170" text-anchor="middle" font-size="11" fill="#6b7280">→ 가스비를 보상으로 지급</text>
+    <text x="570" y="190" text-anchor="middle" font-size="10" fill="#b8404d" font-style="italic">"공짜로 일할 사람 없음"</text>
+
+    <text x="60" y="220" font-size="11" fill="#6b7280" font-style="italic">→ 가스비는 공개형의 익명·무신뢰 환경 때문에 필요한 장치</text>
+  </g>
+
+  <!-- 가운데 화살표 -->
+  <line x1="400" y1="240" x2="400" y2="270" stroke="#5fb3a8" stroke-width="2" marker-end="url(#arrowGreenF)"/>
+  <text x="430" y="260" font-size="11" fill="#4a8b6f" font-weight="600">허가형에선 두 이유 모두 사라짐</text>
+
+  <!-- 하단: 허가형 (왜 0원 가능한가) -->
+  <g>
+    <rect x="40" y="285" width="720" height="155" rx="10" fill="#f8fcfa" stroke="#a7d4c1" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="60" y="310" font-size="13" fill="#4a8b6f" font-weight="600">🔒 허가형 Besu — 두 이유가 모두 해결되어 있음</text>
+
+    <!-- 해결 1 -->
+    <rect x="80" y="330" width="300" height="80" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="100" y="355" font-size="18" fill="#4a8b6f">✓</text>
+    <text x="230" y="352" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">스팸 자체가 불가능</text>
+    <text x="230" y="370" text-anchor="middle" font-size="11" fill="#6b7280">검증자가 사전 승인된 기관</text>
+    <text x="230" y="386" text-anchor="middle" font-size="11" fill="#6b7280">클라이언트도 인증 거쳐 접속</text>
+    <text x="230" y="402" text-anchor="middle" font-size="10" fill="#4a8b6f" font-style="italic">→ 스팸 방어 가스비 불필요</text>
+
+    <!-- 해결 2 -->
+    <rect x="420" y="330" width="300" height="80" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="440" y="355" font-size="18" fill="#4a8b6f">✓</text>
+    <text x="570" y="352" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">운영비 별도 정산</text>
+    <text x="570" y="370" text-anchor="middle" font-size="11" fill="#6b7280">검증자는 컨소시엄 멤버</text>
+    <text x="570" y="386" text-anchor="middle" font-size="11" fill="#6b7280">운영비는 회원 분담금 등으로 충당</text>
+    <text x="570" y="402" text-anchor="middle" font-size="10" fill="#4a8b6f" font-style="italic">→ 검증자 보상 가스비 불필요</text>
+  </g>
+
+  <!-- 결론 박스 -->
+  <rect x="180" y="450" width="440" height="22" rx="6" fill="#ecf6f3" stroke="#5fb3a8" stroke-width="1.5"/>
+  <text x="400" y="466" text-anchor="middle" font-size="11" fill="#1a4d5c" font-weight="600">
+    genesis.json에 zeroBaseFee: true + 노드 옵션 --min-gas-price=0
+  </text>
+
+  <text x="400" y="430" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — 가스비가 본질이 아니었음. 신뢰 모델이 다르면 가스비도 필요 없어진다
+  </text>
+</svg>

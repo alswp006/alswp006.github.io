@@ -1,0 +1,61 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="400" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    결제 인프라별 TPS — Besu는 만능이 아니다
+  </text>
+
+  <!-- Bitcoin (PoW, 가장 느림 - 코랄) -->
+  <g>
+    <text x="200" y="85" text-anchor="end" font-size="12" fill="#2a2a2a" font-weight="500">Bitcoin</text>
+    <text x="200" y="100" text-anchor="end" font-size="10" fill="#9ca3af">공개형 PoW</text>
+    <rect x="210" y="78" width="14" height="28" rx="4" fill="#b8404d"/>
+    <text x="232" y="97" font-size="11" fill="#b8404d" font-weight="700">7 TPS</text>
+  </g>
+
+  <!-- Ethereum L1 (코랄, 살짝 길게) -->
+  <g>
+    <text x="200" y="145" text-anchor="end" font-size="12" fill="#2a2a2a" font-weight="500">Ethereum L1</text>
+    <text x="200" y="160" text-anchor="end" font-size="10" fill="#9ca3af">공개형 PoS</text>
+    <rect x="210" y="138" width="50" height="28" rx="4" fill="#b8404d" opacity="0.75"/>
+    <text x="268" y="157" font-size="11" fill="#b8404d" font-weight="700">15~30 TPS</text>
+  </g>
+
+  <!-- Hyperledger Besu QBFT (오렌지 - 강조, 본 글의 주제) -->
+  <g>
+    <text x="200" y="205" text-anchor="end" font-size="12" fill="#d97757" font-weight="700">Besu QBFT ★</text>
+    <text x="200" y="220" text-anchor="end" font-size="10" fill="#d97757">허가형 (이 글의 주제)</text>
+    <rect x="210" y="198" width="220" height="28" rx="4" fill="#d97757"/>
+    <text x="438" y="217" font-size="11" fill="#d97757" font-weight="700">420 ~ 1,000 TPS</text>
+  </g>
+
+  <!-- Visa (청록 - 카드망) -->
+  <g>
+    <text x="200" y="265" text-anchor="end" font-size="12" fill="#2a2a2a" font-weight="500">Visa (평균)</text>
+    <text x="200" y="280" text-anchor="end" font-size="10" fill="#9ca3af">전세계 카드망</text>
+    <rect x="210" y="258" width="380" height="28" rx="4" fill="#2c7a8c" opacity="0.7"/>
+    <text x="598" y="277" font-size="11" fill="#1a4d5c" font-weight="700">24,000 TPS</text>
+  </g>
+
+  <!-- Visa peak (청록 진하게) -->
+  <g>
+    <text x="200" y="325" text-anchor="end" font-size="12" fill="#2a2a2a" font-weight="500">Visa (피크)</text>
+    <text x="200" y="340" text-anchor="end" font-size="10" fill="#9ca3af">블랙프라이데이 등</text>
+    <rect x="210" y="318" width="500" height="28" rx="4" fill="#1a4d5c"/>
+    <text x="610" y="337" font-size="11" fill="#ffffff" font-weight="700">65,000 TPS</text>
+  </g>
+
+  <!-- X축 -->
+  <line x1="210" y1="360" x2="720" y2="360" stroke="#9ca3af" stroke-width="1"/>
+  <text x="210" y="376" text-anchor="middle" font-size="10" fill="#9ca3af">0</text>
+  <text x="295" y="376" text-anchor="middle" font-size="10" fill="#9ca3af">100</text>
+  <text x="380" y="376" text-anchor="middle" font-size="10" fill="#9ca3af">1K</text>
+  <text x="465" y="376" text-anchor="middle" font-size="10" fill="#9ca3af">5K</text>
+  <text x="550" y="376" text-anchor="middle" font-size="10" fill="#9ca3af">20K</text>
+  <text x="710" y="376" text-anchor="middle" font-size="10" fill="#9ca3af">65K</text>
+
+  <text x="465" y="394" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — Besu는 카드망 대체용은 아니지만, AI 에이전트 결제 영역엔 충분
+  </text>
+</svg>

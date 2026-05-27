@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="460" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    EVM 호환의 진짜 의미 — 15년치 이더리움 생태계를 그대로 흡수
+  </text>
+
+  <!-- 최상위 레이어: AI 결제 표준 -->
+  <g>
+    <rect x="100" y="65" width="600" height="50" rx="8" fill="#fdf3ee" stroke="#d97757" stroke-width="2"/>
+    <text x="120" y="95" font-size="18" fill="#d97757">🎯</text>
+    <text x="400" y="89" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">AI 결제 표준 (x402)</text>
+    <text x="400" y="106" text-anchor="middle" font-size="11" fill="#6b7280">Coinbase, 2025.5 — EVM 호환 환경을 전제로 설계</text>
+  </g>
+
+  <!-- 연결선 (위에서 아래로) -->
+  <line x1="400" y1="118" x2="400" y2="133" stroke="#5fb3a8" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+  <!-- 표준 레이어: 토큰·서명 -->
+  <g>
+    <rect x="100" y="135" width="600" height="50" rx="8" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="120" y="165" font-size="18" fill="#2c7a8c">📜</text>
+    <text x="200" y="159" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">ERC-20</text>
+    <text x="200" y="175" text-anchor="middle" font-size="10" fill="#6b7280">토큰 표준</text>
+    <text x="320" y="159" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">ERC-3009</text>
+    <text x="320" y="175" text-anchor="middle" font-size="10" fill="#6b7280">사전 서명</text>
+    <text x="440" y="159" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">EIP-712</text>
+    <text x="440" y="175" text-anchor="middle" font-size="10" fill="#6b7280">구조화 서명</text>
+    <text x="560" y="159" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">ERC-721</text>
+    <text x="560" y="175" text-anchor="middle" font-size="10" fill="#6b7280">NFT 표준</text>
+  </g>
+
+  <line x1="400" y1="188" x2="400" y2="203" stroke="#5fb3a8" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+  <!-- 라이브러리 레이어 -->
+  <g>
+    <rect x="100" y="205" width="600" height="50" rx="8" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="120" y="235" font-size="18" fill="#2c7a8c">📚</text>
+    <text x="240" y="229" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">OpenZeppelin</text>
+    <text x="240" y="245" text-anchor="middle" font-size="10" fill="#6b7280">검증된 표준 라이브러리</text>
+    <text x="440" y="229" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Solidity / Vyper</text>
+    <text x="440" y="245" text-anchor="middle" font-size="10" fill="#6b7280">스마트계약 언어</text>
+    <text x="610" y="229" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">ethers.js</text>
+    <text x="610" y="245" text-anchor="middle" font-size="10" fill="#6b7280">JS 클라이언트</text>
+  </g>
+
+  <line x1="400" y1="258" x2="400" y2="273" stroke="#5fb3a8" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+  <!-- 개발도구 레이어 -->
+  <g>
+    <rect x="100" y="275" width="600" height="50" rx="8" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="120" y="305" font-size="18" fill="#2c7a8c">🛠️</text>
+    <text x="220" y="299" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Hardhat</text>
+    <text x="220" y="315" text-anchor="middle" font-size="10" fill="#6b7280">개발·테스트 프레임워크</text>
+    <text x="400" y="299" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Foundry</text>
+    <text x="400" y="315" text-anchor="middle" font-size="10" fill="#6b7280">고속 빌드 도구</text>
+    <text x="580" y="299" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">MetaMask</text>
+    <text x="580" y="315" text-anchor="middle" font-size="10" fill="#6b7280">표준 지갑</text>
+  </g>
+
+  <line x1="400" y1="328" x2="400" y2="343" stroke="#5fb3a8" stroke-width="2"/>
+
+  <!-- 베이스 레이어: Besu -->
+  <g>
+    <rect x="100" y="345" width="600" height="60" rx="8" fill="#1a4d5c"/>
+    <text x="120" y="380" font-size="20" fill="#ffffff">⛓️</text>
+    <text x="400" y="374" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="700">Hyperledger Besu</text>
+    <text x="400" y="392" text-anchor="middle" font-size="11" fill="#a7d4c1">EVM 호환 허가형 블록체인 — 위 모든 레이어를 그대로 받음</text>
+  </g>
+
+  <text x="400" y="440" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — Fabric으로 가면 이 표준들을 처음부터 다시 만들어야 한다
+  </text>
+</svg>

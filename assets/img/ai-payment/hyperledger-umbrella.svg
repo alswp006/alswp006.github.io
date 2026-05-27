@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="400" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    Hyperledger 재단 — 기업용 블록체인 우산 프로젝트
+  </text>
+
+  <!-- Root: Hyperledger Foundation -->
+  <rect x="280" y="60" width="240" height="60" rx="10" fill="#1a4d5c"/>
+  <text x="400" y="86" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">☂️ Hyperledger Foundation</text>
+  <text x="400" y="106" text-anchor="middle" font-size="11" fill="#a7d4c1">2015~ · Linux Foundation 산하</text>
+
+  <!-- 연결선 (root → 4 카테고리) -->
+  <line x1="400" y1="125" x2="130" y2="170" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="400" y1="125" x2="310" y2="170" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="400" y1="125" x2="490" y2="170" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="400" y1="125" x2="670" y2="170" stroke="#5fb3a8" stroke-width="1.5"/>
+
+  <!-- Fabric (좌측) -->
+  <g>
+    <rect x="40" y="175" width="180" height="180" rx="10" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="130" y="200" text-anchor="middle" font-size="20" fill="#2c7a8c">🧵</text>
+    <text x="130" y="225" text-anchor="middle" font-size="14" fill="#1a4d5c" font-weight="600">Fabric</text>
+    <text x="130" y="245" text-anchor="middle" font-size="11" fill="#6b7280">IBM 주도</text>
+    <text x="60" y="275" font-size="11" fill="#2a2a2a">• 가장 많이 쓰임</text>
+    <text x="60" y="293" font-size="11" fill="#2a2a2a">• 채널별 격리</text>
+    <text x="60" y="311" font-size="11" fill="#b8404d">✗ EVM 호환 X</text>
+    <text x="130" y="340" text-anchor="middle" font-size="10" fill="#6b7280" font-style="italic">자체 표준</text>
+  </g>
+
+  <!-- Besu (좌중) - 강조 (오렌지) -->
+  <g>
+    <rect x="220" y="175" width="180" height="180" rx="10" fill="#fdf3ee" stroke="#d97757" stroke-width="2"/>
+    <text x="310" y="200" text-anchor="middle" font-size="20" fill="#d97757">⛓️</text>
+    <text x="310" y="225" text-anchor="middle" font-size="14" fill="#d97757" font-weight="700">Besu ★</text>
+    <text x="310" y="245" text-anchor="middle" font-size="11" fill="#6b7280">ConsenSys 기여</text>
+    <text x="240" y="275" font-size="11" fill="#2a2a2a">• EVM 호환 ★</text>
+    <text x="240" y="293" font-size="11" fill="#2a2a2a">• QBFT 합의</text>
+    <text x="240" y="311" font-size="11" fill="#4a8b6f">✓ Solidity·ERC-20</text>
+    <text x="310" y="340" text-anchor="middle" font-size="10" fill="#d97757" font-style="italic" font-weight="600">2편의 주인공</text>
+  </g>
+
+  <!-- Indy (우중) -->
+  <g>
+    <rect x="400" y="175" width="180" height="180" rx="10" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="490" y="200" text-anchor="middle" font-size="20" fill="#2c7a8c">🪪</text>
+    <text x="490" y="225" text-anchor="middle" font-size="14" fill="#1a4d5c" font-weight="600">Indy</text>
+    <text x="490" y="245" text-anchor="middle" font-size="11" fill="#6b7280">신원확인 특화</text>
+    <text x="420" y="275" font-size="11" fill="#2a2a2a">• 분산신원(DID)</text>
+    <text x="420" y="293" font-size="11" fill="#2a2a2a">• VC, VP 표준</text>
+    <text x="420" y="311" font-size="11" fill="#2a2a2a">• SSI 아키텍처</text>
+    <text x="490" y="340" text-anchor="middle" font-size="10" fill="#6b7280" font-style="italic">DID 전용</text>
+  </g>
+
+  <!-- Cacti (우측) -->
+  <g>
+    <rect x="580" y="175" width="180" height="180" rx="10" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="670" y="200" text-anchor="middle" font-size="20" fill="#2c7a8c">🌵</text>
+    <text x="670" y="225" text-anchor="middle" font-size="14" fill="#1a4d5c" font-weight="600">Cacti</text>
+    <text x="670" y="245" text-anchor="middle" font-size="11" fill="#6b7280">체인 간 연결</text>
+    <text x="600" y="275" font-size="11" fill="#2a2a2a">• 상호운용 SDK</text>
+    <text x="600" y="293" font-size="11" fill="#2a2a2a">• Fabric ↔ Besu</text>
+    <text x="600" y="311" font-size="11" fill="#2a2a2a">• 플러그인 구조</text>
+    <text x="670" y="340" text-anchor="middle" font-size="10" fill="#6b7280" font-style="italic">브릿지 역할</text>
+  </g>
+
+  <text x="400" y="385" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — IBM·Intel·JP모건 등 30개 founding members가 참여한 우산 조직, 본 시리즈가 다루는 건 Besu
+  </text>
+</svg>

@@ -1,0 +1,104 @@
+<svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="520" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    QBFT 2/3 합의 — 4명 검증자, 3명이 동의하면 블록 확정
+  </text>
+
+  <defs>
+    <marker id="arrowMintQ" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5fb3a8"/>
+    </marker>
+    <marker id="arrowGreenQ" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4a8b6f"/>
+    </marker>
+  </defs>
+
+  <!-- 4명 검증자 헤더 (가로 배치) -->
+  <g>
+    <!-- Validator 1 (Proposer - 강조) -->
+    <rect x="40" y="60" width="160" height="60" rx="8" fill="#fdf3ee" stroke="#d97757" stroke-width="2"/>
+    <text x="60" y="92" font-size="18" fill="#d97757">👑</text>
+    <text x="120" y="86" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Validator 1</text>
+    <text x="120" y="103" text-anchor="middle" font-size="10" fill="#d97757" font-weight="600">Proposer (제안자)</text>
+
+    <!-- Validator 2 -->
+    <rect x="220" y="60" width="160" height="60" rx="8" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="240" y="92" font-size="18" fill="#2c7a8c">🛡️</text>
+    <text x="300" y="86" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Validator 2</text>
+    <text x="300" y="103" text-anchor="middle" font-size="10" fill="#6b7280">검증자</text>
+
+    <!-- Validator 3 -->
+    <rect x="400" y="60" width="160" height="60" rx="8" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1.5"/>
+    <text x="420" y="92" font-size="18" fill="#2c7a8c">🛡️</text>
+    <text x="480" y="86" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Validator 3</text>
+    <text x="480" y="103" text-anchor="middle" font-size="10" fill="#6b7280">검증자</text>
+
+    <!-- Validator 4 (faulty - 코랄) -->
+    <rect x="580" y="60" width="160" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="600" y="92" font-size="18" fill="#b8404d">⚠️</text>
+    <text x="660" y="86" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">Validator 4</text>
+    <text x="660" y="103" text-anchor="middle" font-size="10" fill="#b8404d" font-weight="600">배신 / 장애 (f=1)</text>
+  </g>
+
+  <!-- 라이프라인 -->
+  <line x1="120" y1="125" x2="120" y2="430" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="300" y1="125" x2="300" y2="430" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="480" y1="125" x2="480" y2="430" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="660" y1="125" x2="660" y2="430" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Phase 1: Pre-Prepare (제안자 → 모두) -->
+  <g>
+    <rect x="40" y="140" width="120" height="22" rx="4" fill="#fdf3ee"/>
+    <text x="100" y="155" text-anchor="middle" font-size="11" fill="#d97757" font-weight="600">① Pre-Prepare</text>
+    <line x1="170" y1="151" x2="650" y2="151" stroke="#5fb3a8" stroke-width="2" marker-end="url(#arrowMintQ)"/>
+    <text x="410" y="144" text-anchor="middle" font-size="10" fill="#5fb3a8" font-weight="600">"이 블록을 제안합니다"</text>
+  </g>
+
+  <!-- Phase 2: Prepare (검증자들 → 서로) -->
+  <g>
+    <rect x="40" y="185" width="720" height="50" rx="6" fill="#ecf6f3" stroke="#5fb3a8" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="400" y="205" text-anchor="middle" font-size="12" fill="#1a4d5c" font-weight="600">② Prepare — 검증자들이 서로 "동의" 메시지 교환</text>
+    <text x="400" y="223" text-anchor="middle" font-size="10" fill="#6b7280">2f+1 = 3개의 Prepare 메시지가 모이면 다음 단계</text>
+  </g>
+
+  <!-- Phase 3: Commit -->
+  <g>
+    <rect x="40" y="255" width="720" height="50" rx="6" fill="#ecf6f3" stroke="#5fb3a8" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="400" y="275" text-anchor="middle" font-size="12" fill="#1a4d5c" font-weight="600">③ Commit — 검증자들이 "확정" 메시지 교환</text>
+    <text x="400" y="293" text-anchor="middle" font-size="10" fill="#6b7280">2f+1 = 3개의 Commit 메시지가 모이면 블록 확정</text>
+  </g>
+
+  <!-- 합의 결과 -->
+  <g>
+    <rect x="80" y="325" width="120" height="40" rx="6" fill="#fdf3ee" stroke="#d97757" stroke-width="1.5"/>
+    <text x="140" y="349" text-anchor="middle" font-size="12" fill="#d97757" font-weight="600">✓ V1 (제안)</text>
+
+    <rect x="240" y="325" width="120" height="40" rx="6" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="300" y="349" text-anchor="middle" font-size="12" fill="#4a8b6f" font-weight="600">✓ V2 (동의)</text>
+
+    <rect x="420" y="325" width="120" height="40" rx="6" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="480" y="349" text-anchor="middle" font-size="12" fill="#4a8b6f" font-weight="600">✓ V3 (동의)</text>
+
+    <rect x="600" y="325" width="120" height="40" rx="6" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="660" y="349" text-anchor="middle" font-size="12" fill="#b8404d" font-weight="600">✗ V4 (무응답)</text>
+  </g>
+
+  <!-- 합의 도달 박스 -->
+  <g>
+    <rect x="80" y="385" width="640" height="50" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="2"/>
+    <text x="400" y="408" text-anchor="middle" font-size="13" fill="#4a8b6f" font-weight="700">✅ 3/4 동의 (≥ 2/3) → 블록 확정 (Finality)</text>
+    <text x="400" y="426" text-anchor="middle" font-size="11" fill="#6b7280">V4가 배신해도 시스템 정상 작동 — 한 번 확정되면 되돌릴 수 없음</text>
+  </g>
+
+  <!-- 공식 박스 -->
+  <g>
+    <rect x="220" y="455" width="360" height="38" rx="6" fill="#ecf6f3" stroke="#5fb3a8" stroke-width="1.5"/>
+    <text x="400" y="480" text-anchor="middle" font-size="13" fill="#1a4d5c" font-weight="600">공식: N ≥ 3f + 1 (4명 → 1명 배신 OK)</text>
+  </g>
+
+  <text x="400" y="510" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — 비잔틴 장군 문제의 답, 금융 결제에 필요한 "즉시 확정"의 핵심
+  </text>
+</svg>
