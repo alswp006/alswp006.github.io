@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="400" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    30년 실패의 분류 — 3가지 벽
+  </text>
+
+  <!-- Root -->
+  <rect x="280" y="60" width="240" height="50" rx="10" fill="#1a4d5c"/>
+  <text x="400" y="84" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">30년간의 마이크로페이먼트 시도</text>
+  <text x="400" y="100" text-anchor="middle" font-size="11" fill="#a7d4c1">1994 ~ 2024 (FirstVirtual ~ Brave BAT)</text>
+
+  <!-- 연결선 -->
+  <line x1="400" y1="115" x2="150" y2="155" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="400" y1="115" x2="400" y2="155" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="400" y1="115" x2="650" y2="155" stroke="#5fb3a8" stroke-width="1.5"/>
+
+  <!-- 벽 1: 카드 수수료 -->
+  <g>
+    <rect x="40" y="160" width="220" height="200" rx="10" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="150" y="190" text-anchor="middle" font-size="20" fill="#b8404d">💸</text>
+    <text x="150" y="215" text-anchor="middle" font-size="14" fill="#b8404d" font-weight="600">카드 수수료의 벽</text>
+
+    <text x="60" y="248" font-size="11" fill="#2a2a2a">• FirstVirtual (1994)</text>
+    <text x="60" y="268" font-size="11" fill="#2a2a2a">• CyberCash (1995)</text>
+    <text x="60" y="288" font-size="11" fill="#2a2a2a">• Flooz (1999-2001)</text>
+
+    <text x="150" y="335" text-anchor="middle" font-size="10" fill="#6b7280" font-style="italic">"$0.30 고정비를 못 넘음"</text>
+  </g>
+
+  <!-- 벽 2: 인간 결제 마찰 -->
+  <g>
+    <rect x="290" y="160" width="220" height="200" rx="10" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="400" y="190" text-anchor="middle" font-size="20" fill="#b8404d">🧠</text>
+    <text x="400" y="215" text-anchor="middle" font-size="14" fill="#b8404d" font-weight="600">인간 결제 마찰의 벽</text>
+
+    <text x="310" y="248" font-size="11" fill="#2a2a2a">• Millicent (1996)</text>
+    <text x="310" y="268" font-size="11" fill="#2a2a2a">• W3C 워킹그룹 (1999)</text>
+
+    <text x="400" y="335" text-anchor="middle" font-size="10" fill="#6b7280" font-style="italic">"사람이 매번 못 누름"</text>
+  </g>
+
+  <!-- 벽 3: 표준 부재 -->
+  <g>
+    <rect x="540" y="160" width="220" height="200" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="650" y="190" text-anchor="middle" font-size="20" fill="#78350f">📜</text>
+    <text x="650" y="215" text-anchor="middle" font-size="14" fill="#78350f" font-weight="600">표준 부재의 벽</text>
+
+    <text x="560" y="248" font-size="11" fill="#2a2a2a">• Lightning (2016-18)</text>
+    <text x="560" y="268" font-size="11" fill="#2a2a2a">• Brave BAT (2017-19)</text>
+
+    <text x="650" y="335" text-anchor="middle" font-size="10" fill="#78350f" font-style="italic">— 자체 표준에 갇힘</text>
+  </g>
+
+  <text x="400" y="385" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — 30년간 시도된 마이크로페이먼트가 부딪힌 3가지 벽
+  </text>
+</svg>
