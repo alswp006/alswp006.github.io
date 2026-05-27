@@ -1,0 +1,63 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="320" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    가스비 부담의 주체가 바뀐다 — ERC-20 vs EIP-3009
+  </text>
+
+  <defs>
+    <marker id="arrCoral6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b8404d"/>
+    </marker>
+    <marker id="arrMint6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5fb3a8"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="75" font-size="12" fill="#b8404d" font-weight="600">⚠️ 기존 ERC-20 transfer</text>
+
+  <g>
+    <rect x="40" y="85" width="200" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="140" y="108" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">사용자 보유</text>
+    <text x="140" y="128" text-anchor="middle" font-size="11" fill="#b8404d" font-weight="600">USDC + ETH (가스용)</text>
+
+    <line x1="250" y1="115" x2="290" y2="115" stroke="#b8404d" stroke-width="1.5" marker-end="url(#arrCoral6)"/>
+
+    <rect x="300" y="85" width="200" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="400" y="108" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">사용자가 직접</text>
+    <text x="400" y="128" text-anchor="middle" font-size="11" fill="#6b7280">트랜잭션 제출</text>
+
+    <line x1="510" y1="115" x2="550" y2="115" stroke="#b8404d" stroke-width="1.5" marker-end="url(#arrCoral6)"/>
+
+    <rect x="560" y="85" width="200" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="660" y="108" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">가스비 부담</text>
+    <text x="660" y="128" text-anchor="middle" font-size="11" fill="#b8404d" font-weight="600">사용자가 ETH로</text>
+  </g>
+
+  <line x1="40" y1="170" x2="760" y2="170" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <text x="40" y="200" font-size="12" fill="#4a8b6f" font-weight="600">✅ EIP-3009 transferWithAuthorization</text>
+
+  <g>
+    <rect x="40" y="210" width="200" height="60" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="140" y="233" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">사용자 보유</text>
+    <text x="140" y="253" text-anchor="middle" font-size="11" fill="#4a8b6f" font-weight="600">USDC만 (ETH 불필요)</text>
+
+    <line x1="250" y1="240" x2="290" y2="240" stroke="#5fb3a8" stroke-width="1.5" marker-end="url(#arrMint6)"/>
+
+    <rect x="300" y="210" width="200" height="60" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="400" y="233" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">사용자는</text>
+    <text x="400" y="253" text-anchor="middle" font-size="11" fill="#6b7280">서명만 생성</text>
+
+    <line x1="510" y1="240" x2="550" y2="240" stroke="#5fb3a8" stroke-width="1.5" marker-end="url(#arrMint6)"/>
+
+    <rect x="560" y="210" width="200" height="60" rx="8" fill="#fdf3ee" stroke="#d97757" stroke-width="1.5"/>
+    <text x="660" y="233" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">가스비 부담</text>
+    <text x="660" y="253" text-anchor="middle" font-size="11" fill="#d97757" font-weight="600">서비스 제공자가</text>
+  </g>
+
+  <text x="400" y="305" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — "서명 생성"과 "트랜잭션 제출"이 분리되며 AI 에이전트는 ETH가 불필요해진다
+  </text>
+</svg>
