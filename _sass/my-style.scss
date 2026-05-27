@@ -686,8 +686,7 @@ hy-push-state {
 .toc {
   color: #888;
   background-color: transparent;
-  padding: 0.5rem 0 0.5rem 0.75rem;
-  border-left: 2px solid #e0d9e7;
+  padding: 0.5rem 0;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
   z-index: 1000;
@@ -715,22 +714,83 @@ hy-push-state {
     width: 280px;
   }
 
-  a {
-    font-size: 12px;
-    line-height: 1.8;
-    font-weight: 400;
-    color: #888;
+  // "맨 위로" 링크
+  > a {
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #c0c4c8;
+    padding: 0 6px 8px 10px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #ebebeb;
+    border-left: 2px solid transparent;
+    text-decoration: none;
     transition: color 0.15s;
 
     &:hover {
+      color: #9075aa;
+      text-decoration: none;
+    }
+  }
+
+  // 목록 리셋
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  // 중첩 목록 (h3, h4) — 들여쓰기 + 점선 세로선
+  ul ul {
+    padding-left: 8px;
+    margin: 1px 0 1px 2px;
+    border-left: 1px dashed #e4e4e4;
+  }
+
+  // 모든 TOC 링크 (맨 위로 제외)
+  ul a {
+    display: block;
+    font-size: 12px;
+    line-height: 1.55;
+    font-weight: 400;
+    color: #999;
+    text-decoration: none;
+    padding: 4px 6px 4px 10px;
+    border-left: 2px solid transparent;
+    border-radius: 0 3px 3px 0;
+    transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+
+    &:hover {
       color: #333;
+      background-color: rgba(144, 117, 170, 0.05);
+      border-left-color: #d5c8e8;
       text-decoration: none;
     }
 
     &.toc-active {
       font-weight: 600;
       color: #9075aa;
-      transition: color 0.15s;
+      background-color: rgba(144, 117, 170, 0.08);
+      border-left-color: #9075aa;
+    }
+  }
+
+  // 중첩 항목 (h3, h4) — 살짝 작고 흐리게
+  ul ul a {
+    font-size: 11px;
+    color: #aaa;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    &.toc-active {
+      color: #9075aa;
     }
   }
 }
@@ -959,20 +1019,77 @@ button:focus-visible {
       visibility: visible;
     }
 
-    a {
-      font-size: 12px;
-      line-height: 1.8;
-      font-weight: 400;
-      color: #888;
+    // "맨 위로" 링크
+    > a {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #c0c4c8;
+      padding: 0 6px 8px 6px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #ebebeb;
+      text-decoration: none;
       transition: color 0.15s;
 
       &:hover {
+        color: #9075aa;
+        text-decoration: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul ul {
+      padding-left: 8px;
+      margin: 1px 0 1px 2px;
+      border-left: 1px dashed #e4e4e4;
+    }
+
+    ul a {
+      display: block;
+      font-size: 12px;
+      line-height: 1.55;
+      font-weight: 400;
+      color: #999;
+      text-decoration: none;
+      padding: 4px 6px 4px 8px;
+      border-left: 2px solid transparent;
+      border-radius: 0 3px 3px 0;
+      transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+
+      &:hover {
         color: #333;
+        background-color: rgba(144, 117, 170, 0.05);
+        border-left-color: #d5c8e8;
         text-decoration: none;
       }
 
       &.toc-active {
         font-weight: 600;
+        color: #9075aa;
+        background-color: rgba(144, 117, 170, 0.08);
+        border-left-color: #9075aa;
+      }
+    }
+
+    ul ul a {
+      font-size: 11px;
+      color: #aaa;
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      &.toc-active {
         color: #9075aa;
       }
     }
