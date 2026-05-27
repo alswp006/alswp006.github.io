@@ -1,0 +1,91 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="800" height="480" fill="#fafafa" rx="12"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    수탁 vs 비수탁 — 결제 신뢰 모델의 차이
+  </text>
+
+  <defs>
+    <marker id="arrCoral7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b8404d"/>
+    </marker>
+    <marker id="arrMint7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#5fb3a8"/>
+    </marker>
+  </defs>
+
+  <!-- 상단: 수탁 -->
+  <g>
+    <rect x="30" y="60" width="740" height="170" rx="10" fill="#fffafa" stroke="#fdc4ca" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="50" y="85" font-size="13" fill="#b8404d" font-weight="600">⚠️ 수탁 (Custodial) — 카드 PG사 방식</text>
+
+    <rect x="60" y="110" width="140" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="130" y="135" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">사용자 카드</text>
+    <text x="130" y="153" text-anchor="middle" font-size="11" fill="#6b7280">결제 요청</text>
+
+    <line x1="210" y1="140" x2="260" y2="140" stroke="#b8404d" stroke-width="1.5" marker-end="url(#arrCoral7)"/>
+    <text x="235" y="132" text-anchor="middle" font-size="10" fill="#b8404d" font-weight="600">결제</text>
+
+    <rect x="270" y="110" width="180" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="2"/>
+    <text x="290" y="135" font-size="18" fill="#b8404d">💰</text>
+    <text x="370" y="135" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">PG사</text>
+    <text x="370" y="155" text-anchor="middle" font-size="11" fill="#b8404d" font-weight="600">자금 보유</text>
+
+    <line x1="460" y1="140" x2="510" y2="140" stroke="#b8404d" stroke-width="1.5" marker-end="url(#arrCoral7)"/>
+    <text x="485" y="132" text-anchor="middle" font-size="10" fill="#b8404d" font-weight="600">정산 (D+N)</text>
+
+    <rect x="520" y="110" width="140" height="60" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+    <text x="590" y="135" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">판매자</text>
+    <text x="590" y="153" text-anchor="middle" font-size="11" fill="#6b7280">수령</text>
+
+    <rect x="60" y="190" width="600" height="30" rx="6" fill="#fef2f2" stroke="#fca5a5" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="360" y="210" text-anchor="middle" font-size="11" fill="#b8404d" font-weight="600">
+      ⚠️ PG사가 파산하거나 악의적이면 사용자·판매자 자금 손실 위험
+    </text>
+  </g>
+
+  <!-- 하단: 비수탁 -->
+  <g>
+    <rect x="30" y="250" width="740" height="200" rx="10" fill="#f8fcfa" stroke="#a7d4c1" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="50" y="275" font-size="13" fill="#4a8b6f" font-weight="600">✅ 비수탁 (Non-Custodial) — x402 Facilitator 방식</text>
+
+    <rect x="40" y="300" width="130" height="60" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="105" y="325" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">사용자 지갑</text>
+    <text x="105" y="343" text-anchor="middle" font-size="11" fill="#6b7280">자금 보유</text>
+
+    <line x1="180" y1="330" x2="230" y2="330" stroke="#5fb3a8" stroke-width="1.5" marker-end="url(#arrMint7)"/>
+    <text x="205" y="322" text-anchor="middle" font-size="10" fill="#5fb3a8" font-weight="600">서명만</text>
+
+    <rect x="240" y="300" width="160" height="60" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="2"/>
+    <text x="260" y="325" font-size="18" fill="#4a8b6f">⚙️</text>
+    <text x="330" y="325" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Facilitator</text>
+    <text x="330" y="345" text-anchor="middle" font-size="11" fill="#4a8b6f" font-weight="600">검증·제출만</text>
+
+    <line x1="410" y1="330" x2="460" y2="330" stroke="#5fb3a8" stroke-width="1.5" marker-end="url(#arrMint7)"/>
+    <text x="435" y="322" text-anchor="middle" font-size="10" fill="#5fb3a8" font-weight="600">제출</text>
+
+    <rect x="470" y="300" width="130" height="60" rx="8" fill="#dbe9ed" stroke="#1a4d5c" stroke-width="1.5"/>
+    <text x="535" y="325" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">블록체인</text>
+    <text x="535" y="343" text-anchor="middle" font-size="11" fill="#6b7280">실행</text>
+
+    <line x1="610" y1="330" x2="650" y2="330" stroke="#5fb3a8" stroke-width="1.5" marker-end="url(#arrMint7)"/>
+
+    <rect x="660" y="300" width="100" height="60" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+    <text x="710" y="325" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">판매자 지갑</text>
+    <text x="710" y="343" text-anchor="middle" font-size="11" fill="#6b7280">수령</text>
+
+    <text x="400" y="385" text-anchor="middle" font-size="11" fill="#6b7280" font-style="italic">
+      자금은 사용자 지갑 → 블록체인 → 판매자 지갑으로 직행 (Facilitator를 거치지 않음)
+    </text>
+
+    <rect x="40" y="400" width="720" height="32" rx="6" fill="#ecf6f3" stroke="#a7d4c1" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="400" y="421" text-anchor="middle" font-size="11" fill="#4a8b6f" font-weight="600">
+      ✅ Facilitator가 악의적이어도 서명에 명시된 금액·수신자로만 송금 가능 — 신뢰 불필요
+    </text>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — 길목에는 서지만 자금은 못 만지는 구조. 결제 신뢰 모델의 근본적 전환
+  </text>
+</svg>

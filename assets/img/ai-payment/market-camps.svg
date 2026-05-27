@@ -1,0 +1,91 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;">
+  <rect width="900" height="480" fill="#fafafa" rx="12"/>
+
+  <text x="450" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    AI 에이전트 결제 시장의 3대 진영 (2025~2026)
+  </text>
+
+  <!-- Root -->
+  <rect x="330" y="60" width="240" height="55" rx="10" fill="#1a4d5c"/>
+  <text x="450" y="85" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">AI 에이전트 결제 시장</text>
+  <text x="450" y="103" text-anchor="middle" font-size="11" fill="#a7d4c1">x402 등장 후 1년 만의 분화</text>
+
+  <!-- 연결선 -->
+  <line x1="450" y1="120" x2="160" y2="165" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="450" y1="120" x2="450" y2="165" stroke="#5fb3a8" stroke-width="1.5"/>
+  <line x1="450" y1="120" x2="740" y2="165" stroke="#5fb3a8" stroke-width="1.5"/>
+
+  <!-- 진영 1: 크립토 -->
+  <rect x="40" y="170" width="240" height="55" rx="10" fill="#4a8b6f"/>
+  <text x="60" y="200" font-size="20" fill="#ffffff">🟢</text>
+  <text x="180" y="195" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">크립토 진영</text>
+  <text x="180" y="213" text-anchor="middle" font-size="11" fill="#d1fae5">원조 — 표준 주도</text>
+
+  <!-- 진영 2: 빅테크 -->
+  <rect x="330" y="170" width="240" height="55" rx="10" fill="#2c7a8c"/>
+  <text x="350" y="200" font-size="20" fill="#ffffff">🔵</text>
+  <text x="450" y="195" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">빅테크 진영</text>
+  <text x="450" y="213" text-anchor="middle" font-size="11" fill="#bce0e8">에이전트 측 통합</text>
+
+  <!-- 진영 3: 카드 -->
+  <rect x="620" y="170" width="240" height="55" rx="10" fill="#d97757"/>
+  <text x="640" y="200" font-size="20" fill="#ffffff">🟠</text>
+  <text x="740" y="195" text-anchor="middle" font-size="14" fill="#ffffff" font-weight="600">카드 진영</text>
+  <text x="740" y="213" text-anchor="middle" font-size="11" fill="#fde2d4">⚡ 위협받고 대응</text>
+
+  <!-- 수직 연결선 -->
+  <line x1="160" y1="230" x2="160" y2="370" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="160" y1="265" x2="145" y2="265" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="160" y1="320" x2="145" y2="320" stroke="#d1d5db" stroke-width="1"/>
+
+  <line x1="450" y1="230" x2="450" y2="370" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="450" y1="265" x2="435" y2="265" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="450" y1="320" x2="435" y2="320" stroke="#d1d5db" stroke-width="1"/>
+
+  <line x1="740" y1="230" x2="740" y2="425" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="740" y1="265" x2="725" y2="265" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="740" y1="320" x2="725" y2="320" stroke="#d1d5db" stroke-width="1"/>
+  <line x1="740" y1="375" x2="725" y2="375" stroke="#d1d5db" stroke-width="1"/>
+
+  <!-- 크립토 항목 -->
+  <rect x="40" y="250" width="240" height="40" rx="6" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1"/>
+  <text x="160" y="266" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Coinbase x402 V1/V2</text>
+  <text x="160" y="282" text-anchor="middle" font-size="10" fill="#6b7280">2025.5 / 2025.12</text>
+
+  <rect x="40" y="305" width="240" height="40" rx="6" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1"/>
+  <text x="160" y="321" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Cloudflare 재단</text>
+  <text x="160" y="337" text-anchor="middle" font-size="10" fill="#6b7280">표준 운영체</text>
+
+  <!-- 빅테크 항목 -->
+  <rect x="330" y="250" width="240" height="40" rx="6" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1"/>
+  <text x="450" y="266" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Google AP2</text>
+  <text x="450" y="282" text-anchor="middle" font-size="10" fill="#6b7280">2025.9 — Agent Payments</text>
+
+  <rect x="330" y="305" width="240" height="40" rx="6" fill="#e8f1f4" stroke="#2c7a8c" stroke-width="1"/>
+  <text x="450" y="321" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">OpenAI / Anthropic</text>
+  <text x="450" y="337" text-anchor="middle" font-size="10" fill="#6b7280">에이전트 측 통합</text>
+
+  <!-- 카드 항목 -->
+  <rect x="620" y="250" width="240" height="40" rx="6" fill="#fdf3ee" stroke="#d97757" stroke-width="1"/>
+  <text x="740" y="266" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Stripe + Tempo MPP</text>
+  <text x="740" y="282" text-anchor="middle" font-size="10" fill="#6b7280">2026.3</text>
+
+  <rect x="620" y="305" width="240" height="40" rx="6" fill="#fdf3ee" stroke="#d97757" stroke-width="1"/>
+  <text x="740" y="321" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Mastercard Agent Pay</text>
+  <text x="740" y="337" text-anchor="middle" font-size="10" fill="#6b7280">2026 상반기</text>
+
+  <rect x="620" y="360" width="240" height="40" rx="6" fill="#fdf3ee" stroke="#d97757" stroke-width="1"/>
+  <text x="740" y="376" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">Visa TAP</text>
+  <text x="740" y="392" text-anchor="middle" font-size="10" fill="#6b7280">Trusted Agent Protocol</text>
+
+  <!-- 인사이트 박스 -->
+  <rect x="40" y="425" width="820" height="32" rx="6" fill="#ecf6f3" stroke="#5fb3a8" stroke-width="1"/>
+  <text x="450" y="446" text-anchor="middle" font-size="12" fill="#1a4d5c" font-weight="600">
+    💡 카드 진영의 합류 자체가 "AI 결제 시장이 진짜로 온다"는 가장 강한 시그널
+  </text>
+
+  <text x="450" y="473" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — 1년 만에 3진영이 동시 분화. 카드 업계는 처음으로 위협받는 입장
+  </text>
+</svg>
