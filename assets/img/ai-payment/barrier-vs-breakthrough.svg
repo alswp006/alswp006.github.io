@@ -1,0 +1,118 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"
+     style="max-width: 100%; height: auto; font-family: 'Pretendard', -apple-system, sans-serif;">
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="#fafafa" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">
+    30년의 장벽 → 2025년의 돌파
+  </text>
+
+  <!-- Left Group: 30년의 장벽 -->
+  <g>
+    <text x="180" y="80" text-anchor="middle" font-size="13" fill="#b8404d" font-weight="600" letter-spacing="0.5">
+      30년의 장벽
+    </text>
+
+    <!-- Wall 1 -->
+    <g>
+      <rect x="60" y="100" width="240" height="50" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+      <text x="80" y="130" font-size="18" fill="#b8404d">💸</text>
+      <text x="180" y="124" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">
+        카드 수수료 $0.30 하한선
+      </text>
+      <text x="180" y="142" text-anchor="middle" font-size="11" fill="#6b7280">
+        마이크로페이먼트 수학적 불가
+      </text>
+    </g>
+
+    <!-- Wall 2 -->
+    <g>
+      <rect x="60" y="160" width="240" height="50" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+      <text x="80" y="190" font-size="18" fill="#b8404d">🧠</text>
+      <text x="180" y="184" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">
+        인간 결제 마찰
+      </text>
+      <text x="180" y="202" text-anchor="middle" font-size="11" fill="#6b7280">
+        매번 누르는 비용이 큼
+      </text>
+    </g>
+
+    <!-- Wall 3 -->
+    <g>
+      <rect x="60" y="220" width="240" height="50" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+      <text x="80" y="250" font-size="18" fill="#b8404d">📜</text>
+      <text x="180" y="244" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">
+        결제 표준 부재
+      </text>
+      <text x="180" y="262" text-anchor="middle" font-size="11" fill="#6b7280">
+        클라이언트 동작 약속 X
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrows -->
+  <g>
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 z" fill="#5fb3a8"/>
+      </marker>
+    </defs>
+    <line x1="310" y1="125" x2="490" y2="125" stroke="#5fb3a8" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="0"/>
+    <line x1="310" y1="185" x2="490" y2="185" stroke="#5fb3a8" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="310" y1="245" x2="490" y2="245" stroke="#5fb3a8" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <text x="400" y="118" text-anchor="middle" font-size="10" fill="#5fb3a8" font-weight="600">우회</text>
+    <text x="400" y="178" text-anchor="middle" font-size="10" fill="#5fb3a8" font-weight="600">제거</text>
+    <text x="400" y="238" text-anchor="middle" font-size="10" fill="#5fb3a8" font-weight="600">채움</text>
+  </g>
+
+  <!-- Right Group: 2025년의 돌파 -->
+  <g>
+    <text x="620" y="80" text-anchor="middle" font-size="13" fill="#4a8b6f" font-weight="600" letter-spacing="0.5">
+      2025년의 돌파
+    </text>
+
+    <!-- Breakthrough 1 -->
+    <g>
+      <rect x="500" y="100" width="240" height="50" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+      <text x="520" y="130" font-size="18" fill="#4a8b6f">💰</text>
+      <text x="620" y="124" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">
+        스테이블코인 + L2
+      </text>
+      <text x="620" y="142" text-anchor="middle" font-size="11" fill="#6b7280">
+        건당 1센트 미만 결제
+      </text>
+    </g>
+
+    <!-- Breakthrough 2 -->
+    <g>
+      <rect x="500" y="160" width="240" height="50" rx="8" fill="#fdf3ee" stroke="#d97757" stroke-width="1.5"/>
+      <text x="520" y="190" font-size="18" fill="#d97757">🤖</text>
+      <text x="620" y="184" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">
+        AI 에이전트
+      </text>
+      <text x="620" y="202" text-anchor="middle" font-size="11" fill="#6b7280">
+        마찰 0인 첫 결제 주체
+      </text>
+    </g>
+
+    <!-- Breakthrough 3 -->
+    <g>
+      <rect x="500" y="220" width="240" height="50" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+      <text x="520" y="250" font-size="18" fill="#4a8b6f">⚡</text>
+      <text x="620" y="244" text-anchor="middle" font-size="13" fill="#2a2a2a" font-weight="600">
+        x402 프로토콜
+      </text>
+      <text x="620" y="262" text-anchor="middle" font-size="11" fill="#6b7280">
+        HTTP 402의 부활
+      </text>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <text x="400" y="300" text-anchor="middle" font-size="11" fill="#9ca3af">
+    그림 — 30년간의 벽 3개가 2025년에 동시에 무너진 구조
+  </text>
+</svg>
