@@ -1,0 +1,28 @@
+<svg viewBox="0 0 860 250" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <rect width="860" height="250" fill="#fafafa" rx="12"/>
+  <defs>
+    <marker id="m2mint" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#5fb3a8"/></marker>
+    <marker id="m2teal" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#2c7a8c"/></marker>
+  </defs>
+  <text x="430" y="32" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">X-PAYMENT 헤더가 만들어지는 과정 — 서명 + 내용을 통째로 인코딩</text>
+  <rect x="28" y="92" width="170" height="70" rx="9" fill="#fdf3ee" stroke="#d97757" stroke-width="1.5"/>
+  <text x="113" y="120" text-anchor="middle" font-size="12.5" fill="#2a2a2a" font-weight="600">PaymentPayload</text>
+  <text x="113" y="139" text-anchor="middle" font-size="10.5" fill="#6b7280">signature +</text>
+  <text x="113" y="153" text-anchor="middle" font-size="10.5" fill="#6b7280">authorization</text>
+  <line x1="198" y1="127" x2="232" y2="127" stroke="#5fb3a8" stroke-width="2" marker-end="url(#m2mint)"/>
+  <rect x="234" y="92" width="150" height="70" rx="9" fill="#e8f0f2" stroke="#1a4d5c" stroke-width="1.5"/>
+  <text x="309" y="124" text-anchor="middle" font-size="12.5" fill="#2a2a2a" font-weight="600">JSON 직렬화</text>
+  <text x="309" y="143" text-anchor="middle" font-size="10.5" fill="#6b7280">구조체 → 문자열</text>
+  <line x1="384" y1="127" x2="418" y2="127" stroke="#2c7a8c" stroke-width="2" marker-end="url(#m2teal)"/>
+  <rect x="420" y="92" width="150" height="70" rx="9" fill="#e8f0f2" stroke="#1a4d5c" stroke-width="1.5"/>
+  <text x="495" y="124" text-anchor="middle" font-size="12.5" fill="#2a2a2a" font-weight="600">base64 인코딩</text>
+  <text x="495" y="143" text-anchor="middle" font-size="10.5" fill="#6b7280">헤더에 실을 형태로</text>
+  <line x1="570" y1="127" x2="604" y2="127" stroke="#5fb3a8" stroke-width="2" marker-end="url(#m2mint)"/>
+  <rect x="606" y="92" width="226" height="70" rx="9" fill="#fdf3ee" stroke="#d97757" stroke-width="1.5"/>
+  <text x="719" y="120" text-anchor="middle" font-size="12.5" fill="#2a2a2a" font-weight="600">X-PAYMENT 헤더로 재전송</text>
+  <text x="719" y="139" text-anchor="middle" font-size="10.5" fill="#6b7280">eyJ4NDAyVmVyc2lvbiI6…</text>
+  <text x="719" y="153" text-anchor="middle" font-size="10.5" fill="#6b7280">같은 요청 + 헤더</text>
+  <rect x="28" y="182" width="804" height="34" rx="8" fill="#ecf6f3" stroke="#a7d4c1" stroke-width="1"/>
+  <text x="430" y="204" text-anchor="middle" font-size="11.5" fill="#2f6b5b" font-weight="600">서버는 디코딩만으로 "누가·어떤 옵션으로·무엇에 서명했는지" 그대로 복원</text>
+  <text x="430" y="238" text-anchor="middle" font-size="11" fill="#9ca3af">그림 — 헤더 안에 서명(signature)과 서명한 내용(authorization)이 함께 들어간다</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <rect width="800" height="330" fill="#fafafa" rx="12"/>
+  <defs>
+    <marker id="d5teal" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#2c7a8c"/></marker>
+  </defs>
+  <text x="400" y="32" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">EIP-3009 vs Permit2 — 우아함 vs 적용 범위</text>
+
+  <rect x="36" y="56" width="352" height="118" rx="10" fill="#e8f0f2" stroke="#1a4d5c" stroke-width="1.5"/>
+  <text x="58" y="84" font-size="13" fill="#1a4d5c" font-weight="700">EIP-3009</text>
+  <line x1="56" y1="94" x2="368" y2="94" stroke="#d4e1e6" stroke-width="1"/>
+  <rect x="56" y="106" width="312" height="24" rx="6" fill="#f3f7f9"/>
+  <text x="68" y="123" font-size="11.5" fill="#2a2a2a">토큰이 직접 transferWithAuthorization 구현</text>
+  <line x1="212" y1="130" x2="212" y2="142" stroke="#2c7a8c" stroke-width="1.5" marker-end="url(#d5teal)"/>
+  <rect x="56" y="144" width="312" height="22" rx="6" fill="#dbe9ed"/>
+  <text x="212" y="159" text-anchor="middle" font-size="11.5" fill="#1a4d5c" font-weight="600">USDC 등 일부만 지원 · 사전 작업 없음</text>
+
+  <rect x="412" y="56" width="352" height="118" rx="10" fill="#eef3f5" stroke="#2c7a8c" stroke-width="1.5"/>
+  <text x="434" y="84" font-size="13" fill="#2c7a8c" font-weight="700">Permit2 (Uniswap)</text>
+  <line x1="432" y1="94" x2="744" y2="94" stroke="#d4e1e6" stroke-width="1"/>
+  <rect x="432" y="106" width="312" height="24" rx="6" fill="#f3f7f9"/>
+  <text x="444" y="123" font-size="11.5" fill="#2a2a2a">Permit2에 1회 approve (가스 한 번)</text>
+  <line x1="588" y1="130" x2="588" y2="142" stroke="#2c7a8c" stroke-width="1.5" marker-end="url(#d5teal)"/>
+  <rect x="432" y="144" width="312" height="22" rx="6" fill="#dde7ea"/>
+  <text x="588" y="159" text-anchor="middle" font-size="11.5" fill="#1a4d5c" font-weight="600">이후 어떤 ERC-20이든 오프체인 서명으로 가스리스</text>
+
+  <rect x="36" y="190" width="728" height="98" rx="10" fill="#ffffff" stroke="#e1e4e8" stroke-width="1"/>
+  <text x="400" y="212" text-anchor="middle" font-size="11.5" fill="#6b7280" font-weight="600">한눈 비교</text>
+  <line x1="280" y1="224" x2="280" y2="278" stroke="#eeeeee" stroke-width="1"/>
+  <line x1="540" y1="224" x2="540" y2="278" stroke="#eeeeee" stroke-width="1"/>
+  <text x="60" y="244" font-size="11" fill="#9ca3af">지원 범위</text>
+  <text x="60" y="266" font-size="11" fill="#9ca3af">사전 작업</text>
+  <text x="300" y="244" font-size="11.5" fill="#1a4d5c" font-weight="600">EIP-3009 — 구현된 토큰만</text>
+  <text x="300" y="266" font-size="11.5" fill="#1a4d5c" font-weight="600">없음</text>
+  <text x="560" y="244" font-size="11.5" fill="#2c7a8c" font-weight="600">Permit2 — 모든 ERC-20</text>
+  <text x="560" y="266" font-size="11.5" fill="#2c7a8c" font-weight="600">1회 approve (가스 1번)</text>
+
+  <text x="400" y="312" text-anchor="middle" font-size="11" fill="#9ca3af">그림 — "EIP-3009로 서명한다" 한 줄 뒤에 토큰별 경로 분기가 숨어 있다</text>
+</svg>

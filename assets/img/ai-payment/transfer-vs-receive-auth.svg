@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <rect width="800" height="320" fill="#fafafa" rx="12"/>
+  <defs>
+    <marker id="m4coral" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#b8404d"/></marker>
+    <marker id="m4green" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#4a8b6f"/></marker>
+  </defs>
+  <text x="400" y="32" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">함수 이름 한 끗 차이 — "누가 제출하느냐"로 보안이 갈린다</text>
+  <text x="40" y="74" font-size="12.5" fill="#b8404d" font-weight="700">transferWithAuthorization</text>
+  <rect x="40" y="84" width="300" height="52" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+  <text x="190" y="107" text-anchor="middle" font-size="12.5" fill="#2a2a2a" font-weight="600">누구나 제출 가능</text>
+  <text x="190" y="125" text-anchor="middle" font-size="10.5" fill="#6b7280">호출자 제한 없음</text>
+  <line x1="340" y1="110" x2="392" y2="110" stroke="#b8404d" stroke-width="1.5" marker-end="url(#m4coral)"/>
+  <rect x="394" y="84" width="366" height="52" rx="8" fill="#fdf1f2" stroke="#b8404d" stroke-width="1.5"/>
+  <text x="577" y="107" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">공격자가 같은 서명으로 먼저 제출</text>
+  <text x="577" y="125" text-anchor="middle" font-size="10.5" fill="#b8404d">→ 토큰은 이동, 원 호출은 nonce 중복 revert (front-running 여지)</text>
+  <line x1="40" y1="166" x2="760" y2="166" stroke="#eeeeee" stroke-width="1"/>
+  <text x="40" y="200" font-size="12.5" fill="#4a8b6f" font-weight="700">receiveWithAuthorization</text>
+  <rect x="40" y="210" width="300" height="52" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+  <text x="190" y="233" text-anchor="middle" font-size="12" fill="#2a2a2a" font-weight="600">require( to == msg.sender )</text>
+  <text x="190" y="251" text-anchor="middle" font-size="10.5" fill="#6b7280">한 줄이 더 있다</text>
+  <line x1="340" y1="236" x2="392" y2="236" stroke="#4a8b6f" stroke-width="1.5" marker-end="url(#m4green)"/>
+  <rect x="394" y="210" width="366" height="52" rx="8" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+  <text x="577" y="233" text-anchor="middle" font-size="12.5" fill="#2a2a2a" font-weight="600">수신자만 제출 가능</text>
+  <text x="577" y="251" text-anchor="middle" font-size="10.5" fill="#4a8b6f">→ front-running 차단</text>
+  <text x="400" y="300" text-anchor="middle" font-size="11" fill="#9ca3af">그림 — 서명자(AI)와 제출자(Facilitator)가 다르기에, 어느 함수를 쓰느냐가 실제 보안을 가른다</text>
+</svg>

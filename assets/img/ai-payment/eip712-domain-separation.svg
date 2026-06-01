@@ -1,0 +1,30 @@
+<svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;">
+  <rect width="820" height="400" fill="#fafafa" rx="12"/>
+  <defs>
+    <marker id="m3teal" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#2c7a8c"/></marker>
+  </defs>
+  <text x="410" y="32" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="500">EIP-712 — 두 조각을 해시해 "특정 체인·특정 컨트랙트"에만 묶는다</text>
+  <rect x="40" y="60" width="350" height="96" rx="9" fill="#e8f0f2" stroke="#1a4d5c" stroke-width="1.5"/>
+  <text x="60" y="86" font-size="12.5" fill="#1a4d5c" font-weight="700">도메인 구분자 (domain separator)</text>
+  <text x="60" y="112" font-size="11.5" fill="#6b7280">name · version</text>
+  <rect x="58" y="122" width="138" height="22" rx="5" fill="#dbe9ed"/>
+  <text x="127" y="137" text-anchor="middle" font-size="11.5" fill="#1a4d5c" font-weight="700">chainId</text>
+  <rect x="204" y="122" width="170" height="22" rx="5" fill="#dbe9ed"/>
+  <text x="289" y="137" text-anchor="middle" font-size="11.5" fill="#1a4d5c" font-weight="700">verifyingContract</text>
+  <rect x="430" y="60" width="350" height="96" rx="9" fill="#e8f0f2" stroke="#1a4d5c" stroke-width="1.5"/>
+  <text x="450" y="86" font-size="12.5" fill="#1a4d5c" font-weight="700">메시지 구조 해시 (struct hash)</text>
+  <text x="450" y="111" font-size="11" fill="#6b7280">from · to · value</text>
+  <text x="450" y="131" font-size="11" fill="#6b7280">validAfter · validBefore · nonce</text>
+  <text x="450" y="148" font-size="10" fill="#9ca3af">keccak256(타입해시 ‖ 인코딩된 값)</text>
+  <line x1="215" y1="158" x2="360" y2="206" stroke="#2c7a8c" stroke-width="2" marker-end="url(#m3teal)"/>
+  <line x1="605" y1="158" x2="460" y2="206" stroke="#2c7a8c" stroke-width="2" marker-end="url(#m3teal)"/>
+  <rect x="210" y="210" width="400" height="54" rx="9" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+  <text x="410" y="234" text-anchor="middle" font-size="12.5" fill="#1f3b2c" font-weight="600">keccak256( 0x1901 ++ 도메인 ++ 메시지 )</text>
+  <text x="410" y="253" text-anchor="middle" font-size="10.5" fill="#6b7280">= 서명 다이제스트</text>
+  <line x1="410" y1="264" x2="410" y2="286" stroke="#4a8b6f" stroke-width="2" marker-end="url(#m3teal)"/>
+  <rect x="150" y="290" width="520" height="48" rx="9" fill="#f0f7f3" stroke="#4a8b6f" stroke-width="1.5"/>
+  <text x="410" y="319" text-anchor="middle" font-size="12.5" fill="#1f3b2c" font-weight="600">특정 체인(chainId)·특정 컨트랙트(verifyingContract)에만 유효</text>
+  <text x="60" y="362" font-size="11" fill="#b8404d" font-weight="600">&#10007; chainId 달라 Polygon에서 재사용 불가</text>
+  <text x="430" y="362" font-size="11" fill="#b8404d" font-weight="600">&#10007; verifyingContract 달라 타 토큰서 재사용 불가</text>
+  <text x="410" y="388" text-anchor="middle" font-size="11" fill="#9ca3af">그림 — 도메인 분리가 곧 크로스체인·크로스컨트랙트 재사용 차단</text>
+</svg>
